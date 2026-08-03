@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/amazon-marketplace", "destination": "/amazon-marketplace.html" },
+    { "source": "/content-marketing", "destination": "/content-marketing.html" },
+    { "source": "/google-ads", "destination": "/google-ads.html" },
+    { "source": "/meta-ads", "destination": "/meta-ads.html" },
+    { "source": "/seo-services", "destination": "/seo-services.html" },
+    { "source": "/shopify-ecommerce", "destination": "/shopify-ecommerce.html" },
+    { "source": "/web-design", "destination": "/web-design.html" }
+  ]
+}
