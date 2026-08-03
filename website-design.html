@@ -4,47 +4,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Website Design South Africa | From R12,000 Once-off | AJ ROIse</title>
-<meta name="description" content="Professional website design South Africa. 5-page business websites from R12,000 once-off. Mobile-first, SEO ready, delivered in 7 days. Get a free quote.">
+<meta name="description" content="Professional website design South Africa. 5-page business websites from R12,000 once-off. Mobile-first, SEO ready, delivered in 7 days. Get a free quote from AJ ROIse.">
 <link rel="canonical" href="https://ajroise.co.za/website-design.html">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--emerald:#16A34A; --cyan:#06B6D4; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px;}
-[data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; }
+:root{--emerald:#16A34A; --cyan:#06B6D4; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px; --border:rgba(0,0,0,.08);}
+[data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; --border:rgba(255,255,255,.1);}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 .container{max-width:1150px;margin:0 auto;padding:0 20px}
-.btn{background:var(--emerald);color:#fff;padding:16px 32px;border-radius:14px;text-decoration:none;font-weight:700;display:inline-block;transition:.3s}
+.btn{background:var(--emerald);color:#fff;padding:16px 32px;border-radius:14px;text-decoration:none;font-weight:700;display:inline-block;transition:.3s;border:none;cursor:pointer;text-align:center}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(22,163,74,.3)} 
+.btn-outline{background:transparent;color:var(--emerald);border:2px solid var(--emerald)}
+.btn-outline:hover{background:var(--emerald);color:#fff}
 .btn-whatsapp{background:#25D366}
-nav{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid rgba(0,0,0,.05)}
+
+/* NAV + DROPDOWN FIX */
+nav{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
+[data-theme="dark"] nav{background:rgba(11,15,25,.9)}
 nav .container{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
 .logo-text{font-family:Poppins,sans-serif;font-size:1.9rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--emerald)}
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
+.dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;background:var(--card);min-width:280px;border-radius:14px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.2);border:1px solid var(--border);z-index:999;margin-top:10px} /* ADDED margin-top to kill gap */
+.dropdown:hover .dropdown-content{display:block;}
+.dropdown-content a{display:block;padding:10px 14px;font-size:.9rem;border-radius:10px;font-weight:500;color:var(--text);}
+.dropdown-content a:hover{background:var(--emerald);color:#fff}
+
 .hero-service{padding:100px 0;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;text-align:center}
 .hero-service h1{font-size:2.8rem;margin-bottom:16px}
+.hero-service p{font-size:1.1rem;opacity:.9;margin-bottom:24px}
 .section{padding:80px 0}
 .section-title{text-align:center;font-size:2.2rem;margin-bottom:40px}
-.card{background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid rgba(0,0,0,.05)}
+.card{background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid var(--border)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.problem-list{list-style:none;max-width:700px;margin:0 auto}
+.problem-list li{padding:12px 0;padding-left:32px;position:relative;font-size:1.1rem}
+.problem-list li:before{content:"✗";position:absolute;left:0;color:#EF4444;font-weight:700}
+.process-step{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.process-num{background:var(--emerald);color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
 .pricing-highlight{background:var(--emerald);color:#fff;padding:40px;border-radius:20px;text-align:center;margin:40px 0}
 .pricing-highlight .price{font-size:3rem;font-weight:800}
-.faq-item{border-bottom:1px solid rgba(0,0,0,.1);padding:20px 0}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
 .faq-item h3{color:var(--emerald);margin-bottom:10px}
 footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card)}
 .blog-content{max-width:800px;margin:0 auto}
 .blog-content h2{margin:40px 0 15px;color:var(--emerald);font-size:1.8rem}
 .blog-content p{margin-bottom:16px}
-.blog-content ul{margin-left:20px;margin-bottom:16px}
 @media(max-width:768px){.nav-links{display:none}}
 </style>
 </head>
 <body>
 <nav><div class="container"><a href="/" class="logo-text">AJ <span>ROIse</span></a>
 <ul class="nav-links">
-<li><a href="/#services">Services</a></li>
+<li class="dropdown">
+  <a href="/#services">Services ▾</a>
+  <div class="dropdown-content">
+    <a href="/website-design.html">Website Design South Africa</a>
+    <a href="/seo.html">SEO Services South Africa</a>
+    <a href="/google-ads.html">Google Ads Management</a>
+    <a href="/meta-ads.html">Facebook & Instagram Ads</a>
+    <a href="/content-marketing.html">Content Marketing Services</a>
+    <a href="/amazon-marketplace.html">Amazon Marketplace Management</a>
+    <a href="/shopify-ecommerce.html">Shopify eCommerce Website</a>
+  </div>
+</li>
 <li><a href="/#pricing">Pricing</a></li>
 <li><a href="/blog.html">Blog</a></li>
 <li><a href="/#contact">Contact</a></li>
@@ -52,69 +79,103 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
 <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
 </div></nav>
 
+<!-- 1. HERO -->
 <section class="hero-service">
 <div class="container">
 <h1>Website Design South Africa</h1>
-<p>Websites that rank on Google and turn visitors into customers. From R12,000 once-off.</p>
-<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald);margin-top:20px">Get Your Free Quote</a>
+<p>Mobile-first business websites from R12,000 once-off. Delivered in 7 days. SEO ready.</p>
+<div>
+<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald);margin-right:12px">Get Free Quote</a>
+<a href="/#contact" class="btn btn-outline" style="border-color:#fff;color:#fff">See Examples</a>
+</div>
+<p style="margin-top:16px;font-size:.9rem;opacity:.8">4+ Years Experience • No Monthly Fees • You Own Your Website</p>
 </div>
 </section>
 
+<!-- 2. THE PROBLEM -->
 <section class="section">
 <div class="container blog-content">
-<h2>Professional Website Design for South African Businesses</h2>
-<p>If your website doesn't show up on Google or load fast on mobile, you're losing customers every day. At AJ ROIse, we build websites for SA businesses that are built to rank and convert.</p>
+<h2 class="section-title">Is Your Website Losing You Customers?</h2>
+<ul class="problem-list">
+<li>Loads slow on mobile and people leave</li>
+<li>Not showing on Google when people search</li>
+<li>Looks outdated and kills trust</li>
+<li>No WhatsApp button or easy way to contact you</li>
+</ul>
+<p style="text-align:center;margin-top:20px">If this sounds like you, we need to talk.</p>
+</div>
+</section>
 
-<h2>What You Get With Our Website Design Service</h2>
+<!-- 3. WHAT YOU GET -->
+<section class="section" style="background:var(--card)">
+<div class="container">
+<h2 class="section-title">What You Get With Our Website Design</h2>
 <div class="grid">
 <div class="card"><h3>📱 Mobile-First Design</h3><p>Over 70% of SA searches happen on mobile. Your site will look perfect on phones and tablets.</p></div>
 <div class="card"><h3>⚡ Fast & SEO Ready</h3><p>We build with clean code and proper structure so Google can find and rank you faster.</p></div>
 <div class="card"><h3>🎯 Built to Convert</h3><p>WhatsApp buttons, contact forms, and clear CTAs that turn visitors into leads.</p></div>
+<div class="card"><h3>🇿🇦 Built for SA Market</h3><p>We understand load-shedding, data costs, and "near me" searches. Your site is optimized for SA.</p></div>
 </div>
+</div>
+</section>
 
-<h2>How Much Does Website Design Cost in South Africa?</h2>
-<p>Most agencies charge monthly hosting fees and lock you in. We don't. You pay once and own your website.</p>
+<!-- 4. PRICING -->
+<section class="section">
+<div class="container blog-content">
+<h2 class="section-title">Transparent Website Design Pricing</h2>
+<p style="text-align:center">No monthly fees. No hidden costs. You own everything.</p>
 <div class="pricing-highlight">
 <div>5-Page Business Website</div>
 <div class="price">From R12,000</div>
 <div>Once-off payment • Delivered in 7 Days</div>
 </div>
-
-<h2>Our Web Design Process</h2>
-<ol>
-<li><strong>Discovery Call:</strong> We learn about your business, target customers, and goals</li>
-<li><strong>Design Mockups:</strong> We send you 2 design options in 3 days</li>
-<li><strong>Development:</strong> We build, test on all devices, and optimize for speed</li>
-<li><strong>Launch + Handover:</strong> You own everything. Domain, hosting, code. No lock-ins.</li>
-</ol>
-
-<h2>Frequently Asked Questions</h2>
-<div class="faq-item">
-<h3>How long does it take to build a website?</h3>
-<p>7 days from when we get your content. Rush delivery in 3 days available.</p>
+<p><strong>Includes:</strong> 5 Pages, Mobile Responsive, SEO Setup, WhatsApp Button, Contact Form, 7 Day Delivery</p>
+<p><strong>Not Included:</strong> Hosting & Domain - but we set it up in YOUR name so you’re never locked in.</p>
 </div>
-<div class="faq-item">
-<h3>Do you do hosting and domain?</h3>
-<p>Yes, but we recommend you own them. We’ll set it up in your name so you’re never locked in.</p>
-</div>
-<div class="faq-item">
-<h3>Will my website rank on Google?</h3>
-<p>Yes. Every site is SEO-ready with proper structure, speed, and meta tags. For ranking #1 you’ll need our monthly SEO service too.</p>
-</div>
+</section>
 
-<div style="text-align:center;margin-top:50px">
-<h2>Ready to Get a Website That Works?</h2>
-<p>Chat with Alvirno directly and get a free quote in 10 minutes.</p>
-<a href="https://wa.me/27690151081" target="_blank" class="btn">Chat On WhatsApp: 069 015 1081</a>
+<!-- 5. PROCESS -->
+<section class="section" style="background:var(--card)">
+<div class="container blog-content">
+<h2 class="section-title">Our Simple 4-Step Process</h2>
+<div class="process-step"><div class="process-num">1</div><div><h3>Discovery Call</h3><p>We learn about your business, target customers, and goals. 15 minutes on WhatsApp or call.</p></div></div>
+<div class="process-step"><div class="process-num">2</div><div><h3>Design Mockups</h3><p>We send you 2 design options in 3 days. You pick and we revise.</p></div></div>
+<div class="process-step"><div class="process-num">3</div><div><h3>Development</h3><p>We build, test on all devices, and optimize for speed. 7 days total.</p></div></div>
+<div class="process-step"><div class="process-num">4</div><div><h3>Launch + Handover</h3><p>We launch your site and train you. You own domain, hosting, and code.</p></div></div>
+</div>
+</section>
+
+<!-- 6. WHY US -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">Why Choose AJ ROIse</h2>
+<div class="grid">
+<div class="card"><h3>🎯 ROI First</h3><p>We build websites to make you money, not just look pretty.</p></div>
+<div class="card"><h3>🤝 No Lock-ins</h3><p>Stay because you see results. Month-to-month for marketing. You own your site.</p></div>
+<div class="card"><h3>👨‍💼 Direct Access</h3><p>You're WhatsApping Alvirno directly. 069 015 1081. Real person, real answers.</p></div>
 </div>
 </div>
 </section>
 
-<footer><div class="container"><p>© 2026 AJ ROIse. Website Design South Africa</p>
-<p style="margin-top:10px;font-size:.9rem">
-<a href="/" style="color:var(--muted);margin:0 8px">Home</a> |
-<a href="/seo.html" style="color:var(--muted);margin:0 8px">SEO Services</a> |
-<a href="/google-ads.html" style="color:var(--muted);margin:0 8px">Google Ads</a>
-</p></div></footer>
+<!-- 7. FAQ -->
+<section class="section" style="background:var(--card)">
+<div class="container blog-content">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq-item"><h3>How long does it take to build a website?</h3><p>7 days from when we get your content and logo. Rush delivery in 3 days available.</p></div>
+<div class="faq-item"><h3>Do you provide hosting and domain?</h3><p>Yes, but we recommend you own them. We’ll set it up in your name for full control.</p></div>
+<div class="faq-item"><h3>Will my website rank on Google?</h3><p>Yes. Every site is SEO-ready with proper structure and speed. For ranking #1 you’ll need our monthly SEO service too.</p></div>
+</div>
+</section>
+
+<!-- 8. FINAL CTA -->
+<section class="section">
+<div class="container blog-content" style="text-align:center">
+<h2>Ready for a Website That Brings Leads?</h2>
+<p>Chat with Alvirno directly and get a free quote in 10 minutes.</p>
+<a href="https://wa.me/27690151081" target="_blank" class="btn">Chat On WhatsApp: 069 015 1081</a>
+</div>
+</section>
+
+<footer><div class="container"><p>© 2026 AJ ROIse. Website Design South Africa</p></div></footer>
 </body>
 </html>
