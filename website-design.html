@@ -3,65 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Design South Africa | From R12,000 Once-off | Web Designers | AJ ROIse</title>
-<meta name="description" content="Professional website design South Africa. Business, eCommerce & WordPress websites from R12,000 once-off. Mobile-first, SEO ready, delivered in 7 days. Web designers in JHB, CPT, DBN. Get a free quote.">
-<meta name="keywords" content="website design south africa, web design south africa, website design cost, business website, wordpress website, ecommerce website, web designer johannesburg, web designer cape town, website development south africa">
-<link rel="canonical" href="https://ajroise.co.za/website-design.html">
+<title>Website Design South Africa | Fast, Mobile-First Sites That Convert | AJ ROIse</title>
+<meta name="description" content="Professional Website Design South Africa by AJ ROIse. Get a 5-page, mobile-first, SEO-ready website from R12,000 once-off. No monthly fees. Built to get you leads. Founded by Alvirno Jordan.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--emerald:#16A34A; --charcoal:#111827; --cyan:#06B6D4; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px; --border:rgba(0,0,0,.08);}
+:root{--emerald:#16A34A; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px; --border:rgba(0,0,0,.08);}
 [data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; --border:rgba(255,255,255,.08);}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 .container{max-width:1150px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Poppins,sans-serif;font-weight:700}
 .btn{background:var(--emerald);color:#fff;padding:16px 32px;border-radius:14px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(22,163,74,.3)} 
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(22,163,74,.3)}
 .btn-whatsapp{background:#25D366}
-.btn-outline{background:transparent;color:var(--emerald);border:2px solid var(--emerald)}
-.btn-outline:hover{background:var(--emerald);color:#fff}
-nav{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
-[data-theme="dark"] nav{background:rgba(11,15,25,.9)}
+.btn-outline{background:var(--emerald);color:#fff;border:2px solid var(--emerald)}
+.btn-outline:hover{background:#15803d}
+[data-theme="dark"] .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+[data-theme="dark"] .btn-outline:hover{background:#fff;color:var(--emerald)}
+nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
+[data-theme="dark"] nav{background:rgba(11,15,25,.95)}
 nav .container{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
 .logo-text{font-family:Poppins,sans-serif;font-size:1.9rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--emerald)}
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
-.dropdown{position:relative}
-.dropdown-content{display:none;position:absolute;top:100%;left:0;background:var(--card);min-width:280px;border-radius:14px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.2);border:1px solid var(--border);z-index:999;margin-top:8px}
-.dropdown:hover .dropdown-content{display:block;}
-.dropdown-content a{display:block;padding:10px 14px;font-size:.9rem;border-radius:10px;font-weight:500;color:var(--text);text-decoration:none}
-.dropdown-content a:hover{background:var(--emerald);color:#fff}
+.theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text)}
 
-.hero-service{padding:100px 0;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;text-align:center}
-.hero-service h1{font-size:2.8rem;margin-bottom:16px;line-height:1.2}
-.hero-service p{font-size:1.1rem;opacity:.9;margin-bottom:24px}
+/* DROPDOWN FIX */
+.dropdown{position:relative}
+.dropdown > a{padding-bottom:20px}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;background:var(--card);min-width:280px;border-radius:14px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.2);border:1px solid var(--border);z-index:999}
+.dropdown:hover .dropdown-content{display:block}
+.dropdown-content a{display:block;padding:10px 14px;font-size:.9rem;border-radius:10px;font-weight:500;color:var(--text);text-decoration:none;}
+.dropdown-content a:hover{background:var(--emerald);color:#fff}
+@media(max-width:768px){.nav-links{display:none}}
+
+.hero{padding:100px 0;background:linear-gradient(135deg,var(--emerald) 0%,#06B6D4 100%);color:#fff;text-align:center}
+.hero h1{font-size:2.8rem;margin-bottom:16px}
 .section{padding:80px 0}
 .section-title{text-align:center;font-size:2.2rem;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .card{background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid var(--border)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.problem-list{list-style:none;max-width:700px;margin:0 auto}
-.problem-list li{padding:12px 0;padding-left:32px;position:relative;font-size:1.1rem}
-.problem-list li:before{content:"✗";position:absolute;left:0;color:#EF4444;font-weight:700}
-.process-step{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
-.process-num{background:var(--emerald);color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
-
-/* CALCULATOR */
-.calc-wrapper{max-width:600px;margin:0 auto}
-.calc-box{background:var(--card);padding:32px;border-radius:20px;border:2px solid var(--emerald)}
-.calc-box input[type="range"]{width:100%;margin:20px 0;accent-color:var(--emerald)}
-.calc-price{font-size:3rem;color:var(--emerald);font-weight:800;text-align:center;margin:16px 0}
-
-.pricing-table{width:100%;border-collapse:collapse;margin:30px 0}
-.pricing-table th, .pricing-table td{padding:16px;border:1px solid var(--border);text-align:left}
-.pricing-table th{background:var(--emerald);color:#fff;font-weight:600}
-.location-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.location-grid a{display:block;padding:14px;background:var(--card);border-radius:12px;text-align:center;text-decoration:none;color:var(--text);border:1px solid var(--border);font-weight:600}
-.location-grid a:hover{background:var(--emerald);color:#fff}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-item h3{color:var(--emerald);margin-bottom:10px}
-footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card)}
-@media(max-width:768px){.nav-links{display:none}}
+.card h3{color:var(--emerald);margin-bottom:12px;font-size:1.3rem}
+.includes{list-style:none;margin-top:16px}
+.includes li{margin-bottom:10px} .includes li:before{content:"✓ ";color:var(--emerald);font-weight:700;margin-right:8px}
+.pricing-box{background:var(--emerald);color:#fff;padding:40px;border-radius:20px;text-align:center}
+.pricing-box .price{font-size:3rem;font-weight:800}
+.floating-wa{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:28px;text-decoration:none;z-index:999}
+footer{padding:40px 0;text-align:center;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -83,154 +72,64 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
 <li><a href="/blog.html">Blog</a></li>
 <li><a href="/#contact">Contact</a></li>
 </ul>
-<a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-</div></nav>
+<button class="theme-toggle" id="themeToggle">🌙</button></div></nav>
 
-<!-- 1. HERO -->
-<section class="hero-service">
-<div class="container">
-<h1>Website Design South Africa</h1>
-<p>Professional business websites from R12,000 once-off. Mobile-first, SEO ready, delivered in 7 days.</p>
-<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald)">Get Free Quote</a>
-<a href="#calculator" class="btn btn-outline" style="border-color:#fff;color:#fff">Calculate Price</a>
-</div>
-<p style="margin-top:16px;font-size:.9rem;opacity:.8">4+ Years Experience • No Monthly Fees • You Own Your Website</p>
-</div>
-</section>
+<section class="hero"><div class="container">
+<h1>Website Design South Africa That Actually Gets You Customers</h1>
+<p>Stop paying monthly for a website that doesn't sell. Get a fast, mobile-first site built to convert visitors into leads.</p>
+<a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp" style="margin-top:20px">Get Your Website Quote</a>
+</div></section>
 
-<!-- 2. THE PROBLEM -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Is Your Website Losing You Customers?</h2>
-<ul class="problem-list">
-<li>Takes too long to load on mobile - 53% of people leave</li>
-<li>Not showing on Google when people search "near me"</li>
-<li>Looks outdated and kills trust with new customers</li>
-<li>No WhatsApp button or easy way to contact you</li>
-<li>Not optimized for South African data costs and load-shedding</li>
+<section class="section"><div class="container">
+<h2 class="section-title">What's Included in Every Website</h2>
+<div class="grid">
+<div class="card"><h3>💻 Mobile-First Design</h3><p>Over 80% of SA traffic is on mobile. Your site will look perfect and load fast on any phone.</p></div>
+<div class="card"><h3>⚡ Speed Optimized</h3><p>We build light, fast sites. No bloated templates. Better Google rankings + less bounce.</p></div>
+<div class="card"><h3>📈 SEO Ready Foundation</h3><p>Proper structure, fast loading, and mobile friendly. So Google can actually find you.</p></div>
+<div class="card"><h3>🎯 Built to Convert</h3><p>Clear CTAs, WhatsApp button, and contact forms. Every page has one goal: get you leads.</p></div>
+<div class="card"><h3>🔒 Secure & Reliable</h3><p>SSL Certificate + fast hosting included. Your customers' data is safe.</p></div>
+<div class="card"><h3>✍️ Content Help</h3><p>We help you write copy that sells. No "Lorem Ipsum". Real words that bring in business.</p></div>
+</div>
+</div></section>
+
+<section class="section" style="background:var(--card)"><div class="container">
+<h2 class="section-title">Simple Once-Off Pricing</h2>
+<div class="pricing-box">
+<div class="price">From R12,000</div>
+<p style="font-size:1.1rem;margin:10px 0 20px">Once-off payment. No monthly website fees.</p>
+<ul class="includes" style="text-align:left;max-width:500px;margin:0 auto 30px">
+<li>5 Page Business Website</li>
+<li>Mobile-First + Speed Optimized</li>
+<li>SEO Foundation + Google Setup</li>
+<li>Contact Form + WhatsApp Button</li>
+<li>1 Month of Free Tweaks</li>
 </ul>
-<p style="text-align:center;margin-top:20px;font-weight:600">If this sounds like your business, we need to build you a new website.</p>
+<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald)">Book a Call with Alvirno</a>
 </div>
-</section>
+<p style="text-align:center;margin-top:20px;color:var(--muted)">Need eCommerce? Ask about Shopify Website Design.</p>
+</div></section>
 
-<!-- 3. WHAT YOU GET -->
-<section class="section" style="background:var(--card)">
-<div class="container">
-<h2 class="section-title">Professional Website Design Services</h2>
+<section class="section"><div class="container">
+<h2 class="section-title">Why Businesses in SA Choose Us</h2>
 <div class="grid">
-<div class="card"><h3>📱 Mobile-First Design</h3><p>Over 70% of SA searches happen on mobile. Your website will look perfect on phones, tablets and desktop.</p></div>
-<div class="card"><h3>⚡ Fast & SEO Ready</h3><p>We build with clean code and proper structure so Google can find and rank your website faster.</p></div>
-<div class="card"><h3>🎯 Built to Convert</h3><p>WhatsApp buttons, contact forms, and clear CTAs that turn website visitors into paying customers.</p></div>
-<div class="card"><h3>🇿🇦 Built for SA Market</h3><p>We understand load-shedding, data costs, and local search. Your site is optimized for South Africa.</p></div>
+<div class="card"><h3>🇿🇦 We Understand SA</h3><p>Load-shedding, data costs, local search. We build sites that work for South Africans.</p></div>
+<div class="card"><h3>🎯 ROI Focused</h3><p>We don't do pretty for pretty sake. Every section is designed to get you a lead or sale.</p></div>
+<div class="card"><h3>👨‍💼 Work Directly With Alvirno</h3><p>No account managers. You deal with the founder. 4+ years experience.</p></div>
 </div>
-</div>
-</section>
+</div></section>
 
-<!-- 4. TYPES OF WEBSITES -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Types of Websites We Design</h2>
-<div class="grid">
-<div class="card"><h3>Business Website Design</h3><p>5-10 page websites to showcase your services, get leads, and build trust. Perfect for consultants, lawyers, doctors, and local businesses in South Africa.</p></div>
-<div class="card"><h3>eCommerce Website Design</h3><p>Shopify and WooCommerce stores built to sell products online. Payment integration, product pages, and conversion optimization included.</p></div>
-<div class="card"><h3>WordPress Website Design</h3><p>Easy to manage WordPress websites. You can update content yourself. Fast, secure, and SEO optimized for Google.</p></div>
-<div class="card"><h3>Landing Page Design</h3><p>Single page websites for Google Ads and Facebook Ads. Built to get 1 action: phone calls, leads, or sales.</p></div>
-</div>
-</div>
-</section>
+<section class="section" style="background:var(--card)"><div class="container" style="text-align:center">
+<h2 class="section-title">Ready to Get More Leads?</h2>
+<p style="max-width:600px;margin:0 auto 30px">Let's build you a website that works 24/7 to bring in customers.</p>
+<a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">WhatsApp Alvirno Now</a>
+</div></section>
 
-<!-- 5. PRICE CALCULATOR -->
-<section class="section" style="background:var(--card)" id="calculator">
-<div class="container calc-wrapper">
-<h2 class="section-title">Website Design Cost Calculator</h2>
-<p style="text-align:center;margin-bottom:30px">Based on R2,400 per page. R12,000 for 5 pages. See your price instantly.</p>
-<div class="calc-box">
-<label for="pages"><b>How many pages do you need?</b></label>
-<input type="range" id="pages" min="1" max="10" value="5">
-<div style="display:flex;justify-content:space-between;font-size:.9rem;color:var(--muted)"><span>1 Page</span><span>10 Pages</span></div>
-<div class="calc-price">R<span id="price">12,000</span></div>
-<p style="text-align:center;font-size:.9rem;color:var(--muted)">Once-off payment • Includes SEO + Mobile Responsive + WhatsApp Button</p>
-<a href="https://wa.me/27690151081" target="_blank" class="btn" style="width:100%;margin-top:20px">Get Exact Quote on WhatsApp</a>
-</div>
-</div>
-</section>
-
-<!-- 6. PRICING TABLE -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Transparent Website Design Pricing South Africa</h2>
-<table class="pricing-table">
-<tr><th>Website Type</th><th>Starting Price</th><th>Includes</th><th>Delivery</th></tr>
-<tr><td>1-3 Page Website</td><td>From R7,200</td><td>Mobile, SEO Setup, Contact Form</td><td>5 Days</td></tr>
-<tr><td>5-Page Business Website</td><td>From R12,000</td><td>Everything above + WhatsApp + Blog</td><td>7 Days</td></tr>
-<tr><td>WordPress Website</td><td>From R15,000</td><td>CMS, Training, 10 Pages</td><td>10 Days</td></tr>
-<tr><td>eCommerce Website</td><td>From R25,000</td><td>Shopify/Woo, 20 Products, Payments</td><td>14 Days</td></tr>
-</table>
-<p><b>Note:</b> Once-off payment. No monthly fees. You own your domain, hosting, and website code.</p>
-</div>
-</section>
-
-<!-- 7. PROCESS -->
-<section class="section" style="background:var(--card)">
-<div class="container">
-<h2 class="section-title">Our Simple 4-Step Process</h2>
-<div class="process-step"><div class="process-num">1</div><div><h3>Discovery Call</h3><p>We learn about your business, target customers, and goals. 15 minutes on WhatsApp or call.</p></div></div>
-<div class="process-step"><div class="process-num">2</div><div><h3>Design Mockups</h3><p>We send you 2 design options in 3 days. You pick and we revise until it's perfect.</p></div></div>
-<div class="process-step"><div class="process-num">3</div><div><h3>Development</h3><p>We build, test on all devices, and optimize for speed. 7 days total from start to finish.</p></div></div>
-<div class="process-step"><div class="process-num">4</div><div><h3>Launch + Handover</h3><p>We launch your website and train you. You own domain, hosting, and all code.</p></div></div>
-</div>
-</section>
-
-<!-- 8. LOCATIONS -->
-<section class="section">
-<div class="container">
-<h2 class="section-title">Website Designers Across South Africa</h2>
-<p style="text-align:center;margin-bottom:30px">We work with businesses in all major cities. Remote delivery nationwide.</p>
-<div class="location-grid">
-<a href="#">Website Design Johannesburg</a>
-<a href="#">Website Design Cape Town</a>
-<a href="#">Website Design Durban</a>
-<a href="#">Website Design Pretoria</a>
-<a href="#">Website Design Port Elizabeth</a>
-<a href="#">Website Design Bloemfontein</a>
-</div>
-</div>
-</section>
-
-<!-- 9. FAQ -->
-<section class="section" style="background:var(--card)">
-<div class="container">
-<h2 class="section-title">Frequently Asked Questions</h2>
-<div class="faq-item"><h3>How much does a website cost in South Africa?</h3><p>A professional 5-page business website starts at R12,000 once-off. eCommerce sites start at R25,000. Use the calculator above to get a price based on pages.</p></div>
-<div class="faq-item"><h3>How long does it take to build a website?</h3><p>7 days for a standard business website. WordPress sites take 10 days. eCommerce sites take 14 days.</p></div>
-<div class="faq-item"><h3>Do you do WordPress website design?</h3><p>Yes. We build custom WordPress websites that are easy for you to update and fully SEO optimized for Google.</p></div>
-<div class="faq-item"><h3>Will my website be mobile friendly?</h3><p>100%. All our websites are mobile-first. Over 70% of traffic in SA is mobile so we design for phones first.</p></div>
-<div class="faq-item"><h3>Do you offer website hosting and domain?</h3><p>We can set it up for you, but we always put it in your name so you have full ownership and control.</p></div>
-</div>
-</section>
-
-<!-- 10. FINAL CTA -->
-<section class="section">
-<div class="container" style="text-align:center">
-<h2 class="section-title">Ready for a Website That Brings Leads?</h2>
-<p style="margin-bottom:30px">Chat with Alvirno directly and get a free quote in 10 minutes.</p>
-<a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Chat On WhatsApp: 069 015 1081</a>
-</div>
-</section>
-
-<footer><div class="container"><p>© 2026 AJ ROIse. Website Design South Africa | Web Designers</p></div></footer>
+<a href="https://wa.me/27690151081" target="_blank" class="floating-wa">💬</a>
+<footer><div class="container"><p>© 2026 AJ ROIse. Website Design South Africa</p></div></footer>
 
 <script>
-const slider = document.getElementById('pages');
-const priceOutput = document.getElementById('price');
-const pricePerPage = 2400; // R12000 / 5 pages
-
-slider.oninput = function() {
-  const pages = this.value;
-  const total = pages * pricePerPage;
-  priceOutput.innerText = total.toLocaleString('en-ZA');
-}
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');const body = document.documentElement;const savedTheme = localStorage.getItem('theme') || 'light';body.setAttribute('data-theme', savedTheme);themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';themeToggle.onclick = () => {const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';body.setAttribute('data-theme', newTheme);localStorage.setItem('theme', newTheme);themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';}
 </script>
 </body>
 </html>
