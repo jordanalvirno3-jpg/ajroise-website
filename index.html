@@ -3,8 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AJ ROIse | Digital Marketing That Actually Delivers ROI</title>
-<meta name="description" content="AJ ROIse helps SA small businesses and eCommerce grow. Founded by Alvirno Jordan, 4 years marketing experience.">
+
+<!-- PRIMARY SEO -->
+<title>Digital Marketing Agency South Africa | SEO, Google Ads, Web Design | AJ ROIse</title>
+<meta name="description" content="AJ ROIse is a results-driven digital marketing agency in South Africa. We help SA businesses grow with SEO, Google Ads, Meta Ads, Website Design & Amazon/Shopify eCommerce. Founded by Alvirno Jordan. Get a free strategy call.">
+<meta name="keywords" content="digital marketing agency south africa, seo services south africa, google ads management, website design south africa, facebook ads, amazon marketplace management, shopify ecommerce, content marketing, alvirno jordan">
+<meta name="author" content="Alvirno Jordan">
+<meta name="publisher" content="AJ ROIse Digital Marketing Agency">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="language" content="English">
+
+<!-- CANONICAL + GEO -->
+<link rel="canonical" href="https://ajroise.co.za/">
+<meta name="geo.region" content="ZA">
+<meta name="geo.placename" content="South Africa">
+
+<!-- OPEN GRAPH / FACEBOOK -->
+<meta property="og:title" content="AJ ROIse | Digital Marketing Agency South Africa That Delivers ROI">
+<meta property="og:description" content="SEO, Google Ads, Web Design & eCommerce for SA businesses. 4+ Years Experience. Founded by Alvirno Jordan. Book a free call.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ajroise.co.za/">
+<meta property="og:image" content="https://ajroise.co.za/Founder Image.png">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AJ ROIse | Digital Marketing Agency South Africa">
+<meta name="twitter:description" content="SEO, Google Ads, Web Design & eCommerce for SA businesses. ROI Focused.">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--emerald:#16A34A; --charcoal:#111827; --cyan:#06B6D4; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px;}
@@ -58,7 +83,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .logo-text{font-family:Poppins,sans-serif;font-size:1.9rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--emerald)}
 .logo-tagline{font-size:.65rem;color:var(--muted)}
-.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
 .nav-actions{display:flex;align-items:center;gap:12px}
 .theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text);padding:8px;display:grid;place-items:center}
@@ -69,13 +94,27 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .mobile-menu.active{display:flex}
 .mobile-menu a{text-decoration:none;color:var(--text);font-weight:600;padding:14px 16px;border-radius:12px;background:var(--bg);border:1px solid rgba(0,0,0,.05)}
 .mobile-menu a:active{background:var(--emerald);color:#fff}
+
+/* DESKTOP DROPDOWN */
+.dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;top:120%;left:0;background:var(--card);min-width:280px;border-radius:14px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.08);z-index:999;opacity:0;transform:translateY(10px);transition:.3s;}
+[data-theme="dark"] .dropdown-content{border:1px solid rgba(255,255,255,.08)}
+.dropdown:hover .dropdown-content{display:block;opacity:1;transform:translateY(0);}
+.dropdown-content a{display:block;padding:10px 14px;font-size:.9rem;border-radius:10px;font-weight:500;color:var(--text);transition:.2s;}
+.dropdown-content a:hover{background:var(--emerald);color:#fff}
+
+/* MOBILE SUBMENU - FIXED v3 STACKED */
+.mobile-submenu{display:none;padding:8px;margin-top:-4px;}
+.mobile-submenu a{display:block;width:100%;font-weight:500;font-size:.9rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:8px;padding:14px 16px;text-align:left;}
+[data-theme="light"] .mobile-submenu a{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.08)}
+.mobile-submenu a:hover{background:var(--emerald);color:#fff;border-color:var(--emerald)}
+
 @media(max-width:768px){.nav-links{display:none}.burger{display:flex}}
 .hero{padding:100px 0;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;text-align:center}
 .hero h1{font-size:2.8rem;margin-bottom:16px;line-height:1.2}
 .trust-badges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:30px;opacity:.95}
 .trust-badge{background:rgba(255,255,255,.15);padding:10px 18px;border-radius:50px;font-size:.9rem;font-weight:500}
 
-/* PREMIUM FOUNDER SECTION */
 .founder-section{background:#0A0A0A;color:#fff;padding:100px 0;position:relative;overflow:hidden}
 .founder-section::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%, rgba(22,163,74,.15) 0%, transparent 50%)}
 .founder-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
@@ -88,7 +127,6 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .founder-info p{margin-bottom:16px;color:rgba(255,255,255,.8)}
 .founder-creds{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
 .cred-badge{background:rgba(22,163,74,.15);border:1px solid rgba(22,163,74,.3);color:var(--emerald);padding:8px 14px;border-radius:50px;font-size:.85rem;font-weight:600}
-/* CENTERED STATS FIX */
 .founder-stats{display:flex;gap:30px;margin-top:30px;justify-content:center;flex-wrap:wrap}
 .stat{text-align:center;min-width:140px}
 .stat .num{font-size:2.8rem;color:var(--emerald);font-weight:800;line-height:1}
@@ -96,7 +134,6 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 @media(max-width:500px){.founder-stats{gap:20px}.stat .num{font-size:2.2rem}}
 @media(max-width:900px){.founder-wrap{grid-template-columns:1fr;text-align:center}}
 
-/* PREMIUM ABOUT SECTION WITH MISSION/VISION */
 .about-section{background:linear-gradient(135deg, #0B0F19 0%, #111827 100%);color:#fff;padding:100px 0;position:relative}
 .about-mv{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0}
 .mv-card{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);padding:30px;border-radius:20px;border:1px solid rgba(22,163,74,.2)}
@@ -116,6 +153,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.08)}
 .service-icon{font-size:2.5rem;margin-bottom:12px}
 .service-card h3{color:var(--emerald);margin-bottom:10px}
+.service-card .btn{margin-top:14px;padding:10px 20px;font-size:.9rem;min-height:auto}
 .pricing-card{position:relative}
 .pricing-badge{position:absolute;top:-12px;right:20px;background:var(--cyan);color:#fff;padding:6px 12px;border-radius:20px;font-size:.8rem;font-weight:600}
 .pricing-card .price{font-size:2.5rem;color:var(--emerald);margin:16px 0}
@@ -136,45 +174,82 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 </head>
 <body>
 
-<nav><div class="container"><div class="logo-wrap"><a href="#" class="logo-text">AJ <span>ROIse</span></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div><ul class="nav-links"><li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#industries">Industries</a></li><li><a href="#about">About</a></li><li><a href="#founder">Founder</a></li><li><a href="#why-us">Why AJ ROIse </a></li><li><a href="#contact">Contact</a></li></ul><div class="nav-actions"><button class="theme-toggle" id="themeToggle">🌙</button><button class="burger" id="burger"><span></span><span></span><span></span></button></div></div><div class="mobile-menu" id="mobileMenu"><a href="#services" onclick="closeMenu()">Services</a><a href="#pricing" onclick="closeMenu()">Pricing</a><a href="#industries" onclick="closeMenu()">Industries</a><a href="#about" onclick="closeMenu()">About</a><a href="#founder" onclick="closeMenu()">Founder</a><a href="#why-us" onclick="closeMenu()">Why AJ ROIse</a><a href="#contact" onclick="closeMenu()">Contact</a></div></nav>
+<nav><div class="container"><div class="logo-wrap"><a href="#" class="logo-text">AJ <span>ROIse</span></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
+<ul class="nav-links">
+<li class="dropdown"><a href="#services">Services ▾</a>
+  <div class="dropdown-content">
+    <a href="/services/website-design.html">Website Design South Africa</a>
+    <a href="/services/seo.html">SEO Services South Africa</a>
+    <a href="/services/google-ads.html">Google Ads Management</a>
+    <a href="/services/meta-ads.html">Facebook & Instagram Ads</a>
+    <a href="/services/content-marketing.html">Content Marketing Services</a>
+    <a href="/services/amazon-marketplace.html">Amazon Marketplace Management</a>
+    <a href="/services/shopify-ecommerce.html">Shopify eCommerce Website</a>
+  </div>
+</li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="/blog.html">Blog</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#founder">Founder</a></li>
+<li><a href="#why-us">Why AJ ROIse</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="nav-actions"><button class="theme-toggle" id="themeToggle">🌙</button><button class="burger" id="burger"><span></span><span></span><span></span></button></div></div>
 
-<section class="hero"><div class="container"><h1>Grow Your Business With Marketing That Actually Delivers</h1><p>4 Years Experience Helping SA Businesses Scale Online. ROI First, Always.</p><div class="trust-badges"><div class="trust-badge">✓ 4+ Years Experience</div><div class="trust-badge">✓ ROI Focused</div><div class="trust-badge">✓ SA Focused</div><div class="trust-badge">✓ No Lock-in Contracts</div></div><div class="hero-ctas"><a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Book Call With Alvirno</a><a href="#pricing" class="btn btn-white">View Pricing</a></div></div></section>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#services" id="mobileServicesToggle">Services ▾</a>
+  <div class="mobile-submenu" id="servicesSubMenu">
+    <a href="/services/website-design.html" onclick="closeMenu()">💻 Website Design SA</a>
+    <a href="/services/seo.html" onclick="closeMenu()">📈 SEO Services SA</a>
+    <a href="/services/google-ads.html" onclick="closeMenu()">🎯 Google Ads</a>
+    <a href="/services/meta-ads.html" onclick="closeMenu()">📱 Facebook & Instagram Ads</a>
+    <a href="/services/content-marketing.html" onclick="closeMenu()">✍️ Content Marketing</a>
+    <a href="/services/amazon-marketplace.html" onclick="closeMenu()">🛒 Amazon Marketplace</a>
+    <a href="/services/shopify-ecommerce.html" onclick="closeMenu()">🛍️ Shopify eCommerce</a>
+  </div>
+<a href="#pricing" onclick="closeMenu()">Pricing</a>
+<a href="/blog.html" onclick="closeMenu()">Digital Marketing Blog</a>
+<a href="#industries" onclick="closeMenu()">Industries</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#founder" onclick="closeMenu()">Founder</a>
+<a href="#why-us" onclick="closeMenu()">Why AJ ROIse</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+<a href="https://wa.me/27690151081" target="_blank" onclick="closeMenu()" class="btn btn-whatsapp" style="margin-top:10px;width:100%">Book Call With Alvirno</a>
+</div></nav>
 
-<section id="services" class="section"><div class="container"><h2 class="section-title">Services That Drive Real Growth</h2><div class="grid"><div class="card service-card fade-in"><div class="service-icon">💻</div><h3>Website Design</h3><p>Once-off build. Fast, mobile-first websites built to convert visitors into customers.</p></div><div class="card service-card fade-in"><div class="service-icon">📈</div><h3>SEO & Local Ranking</h3><p>Monthly growth. Get found when customers search "near me" on Google.</p></div><div class="card service-card fade-in"><div class="service-icon">🎯</div><h3>Google & Meta Ads</h3><p>Monthly management. Pay for clicks that turn into leads and sales.</p></div><div class="card service-card fade-in"><div class="service-icon">✍️</div><h3>Content Marketing</h3><p>Monthly blog posts that rank and position you as the expert in SA.</p></div><div class="card service-card fade-in"><div class="service-icon">🛒</div><h3>Amazon Marketplace</h3><p>Monthly management + setup. Product listings and ads that actually sell.</p></div><div class="card service-card fade-in"><div class="service-icon">🛍️</div><h3>Shopify & eCommerce</h3><p>Monthly growth. Turn your online store into a sales machine.</p></div></div></div></section>
+<section class="hero"><div class="container"><h1>Digital Marketing Agency South Africa That Actually Delivers ROI</h1><p>4 Years Experience Helping SA Businesses Scale Online. SEO, Google Ads, Web Design & eCommerce.</p><div class="trust-badges"><div class="trust-badge">✓ 4+ Years Experience</div><div class="trust-badge">✓ ROI Focused</div><div class="trust-badge">✓ SA Focused</div><div class="trust-badge">✓ No Lock-in Contracts</div></div><div class="hero-ctas"><a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Book Call With Alvirno</a><a href="#pricing" class="btn btn-white">View Pricing</a></div></div></section>
 
-<section id="pricing" class="section" style="background:var(--card)"><div class="container"><h2 class="section-title">Simple, Transparent Pricing</h2><p style="text-align:center;color:var(--muted);margin-bottom:40px">Pay once for setup. Grow monthly with us. All prices ex VAT. No contracts.</p><div class="tabs"><button class="tab-btn active" onclick="openTab('packages')">Growth Packages</button><button class="tab-btn" onclick="openTab('breakdown')">Full Price List</button><button class="tab-btn" onclick="openTab('calculator')">Build Your Quote</button></div>
-<div id="packages" class="tab-content active"><h3 class="section-subtitle">Monthly Growth Packages</h3><div class="grid"><div class="card pricing-card fade-in"><h3>Starter</h3><div class="price">R5,500/mo</div><ul class="pricing-includes"><li>Choose 1 Monthly Service</li><li>Google Business Profile Setup</li><li>Monthly Report + 1 Call</li><li>Email & WhatsApp Support</li></ul><a href="#contact" class="btn">Get Started</a></div><div class="card pricing-card fade-in"><div class="pricing-badge">Most Popular</div><h3>Growth</h3><div class="price">R12,500/mo</div><ul class="pricing-includes"><li>Choose 3 Monthly Services</li><li>4 SEO Blog Posts / Month</li><li>Ads Management up to R15k ad spend</li><li>Bi-Weekly Reports + Strategy Call</li></ul><a href="#contact" class="btn">Get Started</a></div><div class="card pricing-card fade-in"><h3>Dominate</h3><div class="price">R22,500/mo</div><ul class="pricing-includes"><li>All 5 Monthly Services</li><li>Dedicated Account Manager</li><li>8 SEO Blog Posts / Month</li><li>Weekly Reports + Strategy Calls</li><li>Priority Support</li></ul><a href="#contact" class="btn">Get Started</a></div></div></div>
-<div id="breakdown" class="tab-content"><h3 class="section-subtitle">ONCE-OFF SERVICES</h3><div class="card" style="margin-bottom:30px"><div class="service-row"><div class="name">Website Design<br><span style="font-size:.85rem;font-weight:400;color:var(--muted)">5-Page Business Website, Mobile-First, SEO Ready</span></div><div class="service-price-col"><div class="price">From R12,000</div><div class="service-note">Once-off</div></div></div><div class="service-row"><div class="name">Amazon Store Setup<br><span style="font-size:.85rem;font-weight:400;color:var(--muted)">Account setup, 10 product listings, SEO</span></div><div class="service-price-col"><div class="price">R6,500</div><div class="service-note">Once-off</div></div></div></div><h3 class="section-subtitle">MONTHLY SERVICES</h3><div class="card"><div class="service-row"><div class="name">SEO & Local Ranking</div><div class="service-price-col"><div class="price">From R4,500/mo</div></div></div><div class="service-row"><div class="name">Google Ads Management</div><div class="service-price-col"><div class="price">From R3,500/mo</div><div class="service-note">+ ad spend</div></div></div><div class="service-row"><div class="name">Meta Ads Management</div><div class="service-price-col"><div class="price">From R3,500/mo</div><div class="service-note">+ ad spend</div></div></div><div class="service-row"><div class="name">Content Marketing - 4 Blog Posts</div><div class="service-price-col"><div class="price">R5,000/mo</div></div></div><div class="service-row"><div class="name">Amazon Marketplace Management</div><div class="service-price-col"><div class="price">From R5,500/mo</div><div class="service-note">For 1 Marketplace</div></div></div><div class="service-row"><div class="name">Shopify & eCommerce Management</div><div class="service-price-col"><div class="price">From R6,000/mo</div></div></div></div></div>
-<div id="calculator" class="tab-content"><h3 class="section-subtitle">Calculate Your Monthly Investment</h3><div class="card"><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="4500" data-service="SEO & Local Ranking"> SEO & Local Ranking</label><div class="calc-price-col"><div class="price-tag">R4,500</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="3500" data-service="Google / Amazon Ads Management"> Google / Amazon Ads Management</label><div class="calc-price-col"><div class="price-tag">R3,500</div><div class="calc-note">+ ad spend</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="3500" data-service="Meta Ads Management"> Meta Ads Management</label><div class="calc-price-col"><div class="price-tag">R3,500</div><div class="calc-note">+ ad spend</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="5000" data-service="Content Marketing - 4 Posts"> Content Marketing - 4 Posts</label><div class="calc-price-col"><div class="price-tag">R5,000</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="5500" data-service="Amazon Marketplace Management"> Amazon Marketplace Management</label><div class="calc-price-col"><div class="price-tag">R5,500</div><div class="calc-note">For 1 Marketplace</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="6000" data-service="Shopify & eCommerce Management"> Shopify & eCommerce Management</label><div class="calc-price-col"><div class="price-tag">R6,000</div></div></div><div class="calc-total"><div>Estimated Monthly Total</div><div class="total-num" id="totalPrice">R0</div><p style="font-size:.9rem;margin-top:8px">*Once-off fees like Website Design are quoted separately. Ad spend not included.</p><a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald);margin-top:16px" id="calcWhatsAppBtn">Get This Quote</a></div></div></div></div></section>
-
-<section id="industries" class="section"><div class="container"><h2 class="section-title">Industries We Help Grow</h2><div class="grid"><div class="card fade-in">✂️ Barbers & Salons</div><div class="card fade-in">👨‍⚕️ Doctors & Dentists</div><div class="card fade-in">⚖️ Attorneys & Legal</div><div class="card fade-in">🔨 Contractors & Trades</div><div class="card fade-in">🍽️ Restaurants</div><div class="card fade-in">💪 Gyms & Fitness</div><div class="card fade-in">🛒 eCommerce & Online Stores</div><div class="card fade-in">📦 Amazon & Shopify Sellers</div></div></div></section>
-
-<section id="about" class="section about-section"><div class="container"><h2 class="section-title" style="color:#fff">About AJ ROIse</h2><p style="text-align:center;color:rgba(255,255,255,.7);max-width:700px;margin:0 auto 20px">Built for South African businesses who are tired of paying for fluff. We deliver measurable growth.</p>
-
-<div class="about-mv">
-<div class="mv-card fade-in"><h3>🎯 Our Mission</h3><p>To help small businesses and eCommerce sellers in South Africa grow and gain visibility online without wasting money on marketing that doesn’t work. We focus on measurable results and transparent communication.</p></div>
-<div class="mv-card fade-in"><h3>🚀 Our Vision</h3><p>Become the go-to growth partner for SA businesses by 2028 by delivering consistent ROI and building long-term partnerships that scale revenue.</p></div>
-</div>
-
-<div class="about-grid">
-<div class="about-card fade-in"><div class="icon">💡</div><h3>ROI First Philosophy</h3><p>If it doesn't drive revenue, we don't do it. Every strategy is tracked, tested, and optimized for profit.</p></div>
-<div class="about-card fade-in"><div class="icon">🇿🇦</div><h3>Built for SA</h3><p>We understand the local market. From load-shedding to "near me" searches, we build what actually works here.</p></div>
-<div class="about-card fade-in"><div class="icon">⚡</div><h3>Build First, Then Grow</h3><p>We fix your foundation with once-off setup, then scale with monthly marketing. Most agencies skip step 1.</p></div>
-<div class="about-card fade-in"><div class="icon">📊</div><h3>Radical Transparency</h3><p>Weekly reports. Clear numbers. No jargon. You see exactly where every rand goes and what it brings back.</p></div>
-<div class="about-card fade-in"><div class="icon">🤝</div><h3>No Lock-ins</h3><p>Stay because you see results. Month-to-month. Cancel anytime. Your growth is the only contract we need.</p></div>
-<div class="about-card fade-in"><div class="icon">🚀</div><h3>eCommerce Specialists</h3><p>Amazon & Shopify are our playground. We scale products internationally and turn stores into revenue machines.</p></div>
+<section id="services" class="section"><div class="container"><h2 class="section-title">Digital Marketing Services South Africa</h2><div class="grid">
+<div class="card service-card fade-in"><div class="service-icon">💻</div><h3>Website Design South Africa</h3><p>Once-off build. Fast, mobile-first websites built to convert visitors into customers.</p><a href="/services/website-design.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">📈</div><h3>SEO Services South Africa</h3><p>Monthly growth. Get found when customers search "near me" on Google.</p><a href="/services/seo.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">🎯</div><h3>Google Ads Management</h3><p>Monthly management. Pay for clicks that turn into leads and sales.</p><a href="/services/google-ads.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">📱</div><h3>Facebook Instagram Ads</h3><p>Meta ads that sell. Target customers in SA on Facebook & Instagram.</p><a href="/services/meta-ads.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">✍️</div><h3>Content Marketing Services</h3><p>Monthly blog posts that rank and position you as the expert in SA.</p><a href="/services/content-marketing.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">🛒</div><h3>Amazon Marketplace Management</h3><p>Monthly management + setup. Product listings and ads that actually sell.</p><a href="/services/amazon-marketplace.html" class="btn btn-outline">Learn More</a></div>
+<div class="card service-card fade-in"><div class="service-icon">🛍️</div><h3>Shopify eCommerce Website</h3><p>Monthly growth. Turn your online store into a sales machine.</p><a href="/services/shopify-ecommerce.html" class="btn btn-outline">Learn More</a></div>
 </div></div></section>
+<section id="pricing" class="section" style="background:var(--card)"><div class="container"><h2 class="section-title">Simple, Transparent Pricing South Africa</h2><p style="text-align:center;color:var(--muted);margin-bottom:40px">Pay once for setup. Grow monthly with us. All prices ex VAT. No contracts.</p><div class="tabs"><button class="tab-btn active" onclick="openTab('packages')">Growth Packages</button><button class="tab-btn" onclick="openTab('breakdown')">Full Price List</button><button class="tab-btn" onclick="openTab('calculator')">Build Your Quote</button></div>
+<div id="packages" class="tab-content active"><h3 class="section-subtitle">Monthly Growth Packages</h3><div class="grid"><div class="card pricing-card fade-in"><h3>Starter</h3><div class="price">R5,500/mo</div><ul class="pricing-includes"><li>Choose 1 Monthly Service</li><li>Google Business Profile Setup</li><li>Monthly Report + 1 Call</li><li>Email & WhatsApp Support</li></ul><a href="#contact" class="btn">Get Started</a></div><div class="card pricing-card fade-in"><div class="pricing-badge">Most Popular</div><h3>Growth</h3><div class="price">R12,500/mo</div><ul class="pricing-includes"><li>Choose 3 Monthly Services</li><li>4 SEO Blog Posts / Month</li><li>Ads Management up to R15k ad spend</li><li>Bi-Weekly Reports + Strategy Call</li></ul><a href="#contact" class="btn">Get Started</a></div><div class="card pricing-card fade-in"><h3>Dominate</h3><div class="price">R22,500/mo</div><ul class="pricing-includes"><li>All 5 Monthly Services</li><li>Dedicated Account Manager</li><li>8 SEO Blog Posts / Month</li><li>Weekly Reports + Strategy Calls</li><li>Priority Support</li></ul><a href="#contact" class="btn">Get Started</a></div></div></div>
+<div id="breakdown" class="tab-content"><h3 class="section-subtitle">ONCE-OFF SERVICES</h3><div class="card" style="margin-bottom:30px"><div class="service-row"><div class="name">Website Design South Africa<br><span style="font-size:.85rem;font-weight:400;color:var(--muted)">5-Page Business Website, Mobile-First, SEO Ready</span></div><div class="service-price-col"><div class="price">From R12,000</div><div class="service-note">Once-off</div></div></div><div class="service-row"><div class="name">Amazon Store Setup<br><span style="font-size:.85rem;font-weight:400;color:var(--muted)">Account setup, 10 product listings, SEO</span></div><div class="service-price-col"><div class="price">R6,500</div><div class="service-note">Once-off</div></div></div></div><h3 class="section-subtitle">MONTHLY SERVICES</h3><div class="card"><div class="service-row"><div class="name">SEO Services South Africa</div><div class="service-price-col"><div class="price">From R4,500/mo</div></div></div><div class="service-row"><div class="name">Google Ads Management</div><div class="service-price-col"><div class="price">From R3,500/mo</div><div class="service-note">+ ad spend</div></div></div><div class="service-row"><div class="name">Facebook Instagram Ads</div><div class="service-price-col"><div class="price">From R3,500/mo</div><div class="service-note">+ ad spend</div></div></div><div class="service-row"><div class="name">Content Marketing - 4 Blog Posts</div><div class="service-price-col"><div class="price">R5,000/mo</div></div></div><div class="service-row"><div class="name">Amazon Marketplace Management</div><div class="service-price-col"><div class="price">From R5,500/mo</div><div class="service-note">For 1 Marketplace</div></div></div><div class="service-row"><div class="name">Shopify eCommerce Management</div><div class="service-price-col"><div class="price">From R6,000/mo</div></div></div></div></div>
+<div id="calculator" class="tab-content"><h3 class="section-subtitle">Calculate Your Monthly Investment</h3><div class="card"><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="4500" data-service="SEO Services South Africa"> SEO Services South Africa</label><div class="calc-price-col"><div class="price-tag">R4,500</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="3500" data-service="Google Ads Management"> Google Ads Management</label><div class="calc-price-col"><div class="price-tag">R3,500</div><div class="calc-note">+ ad spend</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="3500" data-service="Facebook Instagram Ads"> Facebook Instagram Ads</label><div class="calc-price-col"><div class="price-tag">R3,500</div><div class="calc-note">+ ad spend</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="5000" data-service="Content Marketing - 4 Posts"> Content Marketing - 4 Posts</label><div class="calc-price-col"><div class="price-tag">R5,000</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="5500" data-service="Amazon Marketplace Management"> Amazon Marketplace Management</label><div class="calc-price-col"><div class="price-tag">R5,500</div><div class="calc-note">For 1 Marketplace</div></div></div><div class="calc-item"><label><input type="checkbox" class="calc-check" data-price="6000" data-service="Shopify eCommerce Management"> Shopify eCommerce Management</label><div class="calc-price-col"><div class="price-tag">R6,000</div></div></div><div class="calc-total"><div>Estimated Monthly Total</div><div class="total-num" id="totalPrice">R0</div><p style="font-size:.9rem;margin-top:8px">*Once-off fees like Website Design are quoted separately. Ad spend not included.</p><a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald);margin-top:16px" id="calcWhatsAppBtn">Get This Quote</a></div></div></div></div></section>
 
-<section id="founder" class="section founder-section"><div class="container"><h2 class="section-title" style="color:#fff">Meet The Founder</h2><div class="founder-wrap fade-in"><div class="founder-img"><div class="founder-glow"></div><img src="Founder Image.png" alt="Alvirno Jordan - Founder of AJ ROIse"></div><div class="founder-info"><h3>Alvirno Jordan</h3><div class="founder-title">CEO & Digital Marketing Strategist</div><div class="founder-quote">"I started AJ ROIse because I was tired of seeing business owners pay monthly for nothing. We focus on one thing: ROI. More leads, more sales, more revenue."</div><p>With <strong>4 years of extensive experience in Digital Marketing</strong>, I've helped businesses cut through the noise and actually make money online.</p><p>I specialize in <strong>managing and scaling multiple international Amazon Marketplaces</strong> and <strong>Shopify eCommerce stores</strong>, turning products into 7-figure brands.</p><div class="founder-creds"><span class="cred-badge">Digital Marketing</span><span class="cred-badge">Google Ads</span><span class="cred-badge">Amazon Ads</span><span class="cred-badge">SEMRush</span><span class="cred-badge">Ahrefs</span><span class="cred-badge">HR & Training</span></div><div class="founder-stats"><div class="stat"><div class="num">4+</div><div class="label">Years Experience</div></div><div class="stat"><div class="num">R2M+</div><div class="label">Ad Spend Managed</div></div></div><a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp" style="margin-top:24px">Chat With Alvirno Directly</a></div></div></div></section>
+<section id="industries" class="section"><div class="container"><h2 class="section-title">Industries We Help Grow in South Africa</h2><div class="grid"><div class="card fade-in">✂️ Barbers & Salons</div><div class="card fade-in">👨‍⚕️ Doctors & Dentists</div><div class="card fade-in">⚖️ Attorneys & Legal</div><div class="card fade-in">🔨 Contractors & Trades</div><div class="card fade-in">🍽️ Restaurants</div><div class="card fade-in">💪 Gyms & Fitness</div><div class="card fade-in">🛒 eCommerce & Online Stores</div><div class="card fade-in">📦 Amazon & Shopify Sellers</div></div></div></section>
 
-<section id="why-us" class="section" style="background:var(--card)"><div class="container"><h2 class="section-title">Why AJ ROIse?</h2><p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 20px">Not all marketing agencies are built the same. Here's why SA business owners choose us to grow their revenue.</p><div class="why-grid"><div class="why-item fade-in"><h3>🎯 ROI First, Always</h3><p>We don't care about likes and impressions. We track leads, sales, and revenue. If it doesn't make you money, we don't do it.</p></div><div class="why-item fade-in"><h3>🇿🇦 Built for SA Businesses</h3><p>I understand the South African market. From load-shedding to local search, we build strategies that work for businesses here.</p></div><div class="why-item fade-in"><h3>📊 Transparent Reporting</h3><p>No jargon. No hiding. You get weekly/bi-weekly reports showing exactly what we did and what results it drove.</p></div><div class="why-item fade-in"><h3>🤝 No Lock-in Contracts</h3><p>Stay because you see results, not because you're trapped. Month-to-month. Cancel anytime.</p></div><div class="why-item fade-in"><h3>⚡ Build First, Then Grow</h3><p>We fix your foundation with once-off work, then scale with monthly marketing. Most agencies skip step 1.</p></div><div class="why-item fade-in"><h3>👨‍💼 Direct Access to Alvirno</h3><p>You're not dealing with account managers. You WhatsApp me directly. 069 015 1081. Real person, real answers.</p></div></div></div></section>
+<section id="about" class="section about-section"><div class="container"><h2 class="section-title" style="color:#fff">About AJ ROIse Digital Marketing Agency</h2><p style="text-align:center;color:rgba(255,255,255,.7);max-width:700px;margin:0 auto 20px">Built for South African businesses who are tired of paying for fluff. We deliver measurable growth.</p>
+<div class="about-mv"><div class="mv-card fade-in"><h3>🎯 Our Mission</h3><p>To help small businesses and eCommerce sellers in South Africa grow and gain visibility online without wasting money on marketing that doesn’t work. We focus on measurable results and transparent communication.</p></div><div class="mv-card fade-in"><h3>🚀 Our Vision</h3><p>Become the go-to growth partner for SA businesses by 2028 by delivering consistent ROI and building long-term partnerships that scale revenue.</p></div></div>
+<div class="about-grid"><div class="about-card fade-in"><div class="icon">💡</div><h3>ROI First Philosophy</h3><p>If it doesn't drive revenue, we don't do it. Every strategy is tracked, tested, and optimized for profit.</p></div><div class="about-card fade-in"><div class="icon">🇿🇦</div><h3>Built for South Africa</h3><p>We understand the local market. From load-shedding to "near me" searches, we build what actually works here.</p></div><div class="about-card fade-in"><div class="icon">⚡</div><h3>Build First, Then Grow</h3><p>We fix your foundation with once-off setup, then scale with monthly marketing. Most agencies skip step 1.</p></div><div class="about-card fade-in"><div class="icon">📊</div><h3>Radical Transparency</h3><p>Weekly reports. Clear numbers. No jargon. You see exactly where every rand goes and what it brings back.</p></div><div class="about-card fade-in"><div class="icon">🤝</div><h3>No Lock-ins</h3><p>Stay because you see results. Month-to-month. Cancel anytime. Your growth is the only contract we need.</p></div><div class="about-card fade-in"><div class="icon">🚀</div><h3>eCommerce Specialists</h3><p>Amazon & Shopify are our playground. We scale products internationally and turn stores into revenue machines.</p></div></div></div></section>
+
+<section id="founder" class="section founder-section"><div class="container"><h2 class="section-title" style="color:#fff">Meet The Founder</h2><div class="founder-wrap fade-in"><div class="founder-img"><div class="founder-glow"></div><img src="Founder Image.png" alt="Alvirno Jordan - Founder of AJ ROIse Digital Marketing Agency South Africa"></div><div class="founder-info"><h3>Alvirno Jordan</h3><div class="founder-title">CEO & Digital Marketing Strategist</div><div class="founder-quote">"I started AJ ROIse because I was tired of seeing business owners pay monthly for nothing. We focus on one thing: ROI. More leads, more sales, more revenue."</div><p>With <strong>4 years of extensive experience in Digital Marketing</strong>, I've helped businesses cut through the noise and actually make money online.</p><p>I specialize in <strong>managing and scaling multiple international Amazon Marketplaces</strong> and <strong>Shopify eCommerce stores</strong>, turning products into 7-figure brands.</p><div class="founder-creds"><span class="cred-badge">Digital Marketing</span><span class="cred-badge">Google Ads</span><span class="cred-badge">Amazon Ads</span><span class="cred-badge">SEMRush</span><span class="cred-badge">Ahrefs</span><span class="cred-badge">HR & Training</span></div><div class="founder-stats"><div class="stat"><div class="num">4+</div><div class="label">Years Experience</div></div><div class="stat"><div class="num">R2M+</div><div class="label">Ad Spend Managed</div></div></div><a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp" style="margin-top:24px">Chat With Alvirno Directly</a></div></div></div></section>
+
+<section id="why-us" class="section" style="background:var(--card)"><div class="container"><h2 class="section-title">Why Choose AJ ROIse in South Africa?</h2><p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 20px">Not all marketing agencies are built the same. Here's why SA business owners choose us to grow their revenue.</p><div class="why-grid"><div class="why-item fade-in"><h3>🎯 ROI First, Always</h3><p>We don't care about likes and impressions. We track leads, sales, and revenue. If it doesn't make you money, we don't do it.</p></div><div class="why-item fade-in"><h3>🇿🇦 Built for SA Businesses</h3><p>I understand the South African market. From load-shedding to local search, we build strategies that work for businesses here.</p></div><div class="why-item fade-in"><h3>📊 Transparent Reporting</h3><p>No jargon. No hiding. You get weekly/bi-weekly reports showing exactly what we did and what results it drove.</p></div><div class="why-item fade-in"><h3>🤝 No Lock-in Contracts</h3><p>Stay because you see results, not because you're trapped. Month-to-month. Cancel anytime.</p></div><div class="why-item fade-in"><h3>⚡ Build First, Then Grow</h3><p>We fix your foundation with once-off work, then scale with monthly marketing. Most agencies skip step 1.</p></div><div class="why-item fade-in"><h3>👨‍💼 Direct Access to Alvirno</h3><p>You're not dealing with account managers. You WhatsApp me directly. 069 015 1081. Real person, real answers.</p></div></div></div></section>
 
 <section id="contact" class="section" style="background:var(--card)"><div class="container"><h2 class="section-title">Let's Grow Your Business</h2><div class="contact"><p style="text-align:center;margin-bottom:20px">Ready to get more customers? Fill this form and I'll email you back within 24hrs.</p>
 <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnjekrbg" method="POST">
 <input type="hidden" name="_subject" value="🔥 New Lead from AJ ROIse Website!">
 <div class="form-row"><div class="form-group"><label>Name *</label><input type="text" name="name" required></div><div class="form-group"><label>Surname *</label><input type="text" name="surname" required></div></div>
 <div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>
-<div class="form-group"><label>Service Required *</label><select name="service" required><option value="">Select a service</option><option>Website Design</option><option>SEO & Local Ranking</option><option>Google Ads Management</option><option>Meta Ads Management</option><option>Content Marketing</option><option>Amazon Marketplace</option><option>Shopify & eCommerce</option><option>Growth Package</option></select></div>
+<div class="form-group"><label>Service Required *</label><select name="service" required><option value="">Select a service</option><option>Website Design South Africa</option><option>SEO Services South Africa</option><option>Google Ads Management</option><option>Facebook Instagram Ads</option><option>Content Marketing Services</option><option>Amazon Marketplace Management</option><option>Shopify eCommerce Website</option><option>Growth Package</option></select></div>
 <div class="form-group"><label>Your Goal *</label><textarea name="goal" rows="4" placeholder="E.g: Get 20 more leads per month, Sell more products online..." required></textarea></div>
 <button type="submit" class="btn" style="width:100%">Send Message</button>
 </form>
@@ -182,16 +257,33 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 <p style="text-align:center;margin-top:20px;color:var(--muted)">Or WhatsApp me directly: <a href="https://wa.me/27690151081" target="_blank" style="color:var(--emerald);font-weight:600">069 015 1081</a></p></div></div></section>
 
 <a href="https://wa.me/27690151081" target="_blank" class="floating-wa">💬</a>
-<footer><div class="container"><p>© 2026 AJ ROIse. Founded by Alvirno Jordan. All rights reserved.</p></div></footer>
+<footer><div class="container"><p>© 2026 AJ ROIse Digital Marketing Agency South Africa. Founded by Alvirno Jordan. All rights reserved.</p>
+<p style="margin-top:10px;font-size:.9rem">
+<a href="/services/website-design.html" style="color:var(--muted);margin:0 8px">Website Design SA</a> |
+<a href="/services/seo.html" style="color:var(--muted);margin:0 8px">SEO Services SA</a> |
+<a href="/services/google-ads.html" style="color:var(--muted);margin:0 8px">Google Ads</a> |
+<a href="/blog.html" style="color:var(--muted);margin:0 8px">Digital Marketing Blog</a>
+</p></div></footer>
 
 <script>
 function openTab(tabName){document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));document.getElementById(tabName).classList.add('active');event.target.classList.add('active');}
 const checks = document.querySelectorAll('.calc-check');const totalEl = document.getElementById('totalPrice');const waBtn = document.getElementById('calcWhatsAppBtn');
 checks.forEach(check => {check.addEventListener('change', updateTotal);});
 function updateTotal(){let total = 0;let selectedServices = [];checks.forEach(check => {if(check.checked){total += parseInt(check.getAttribute('data-price'));selectedServices.push(check.getAttribute('data-service'));}});totalEl.textContent = 'R' + total.toLocaleString();let message = "Hi Alvirno, I built a package on your website:\n\n";if(selectedServices.length > 0){message += "Selected Services:\n- " + selectedServices.join("\n- ") + "\n\n";}message += "Estimated Monthly Total: R" + total.toLocaleString() + "\n\nPlease send me next steps.";waBtn.href = "https://wa.me/27690151081?text=" + encodeURIComponent(message);}
+
+// THEME TOGGLE
 const themeToggle = document.getElementById('themeToggle');const body = document.documentElement;const savedTheme = localStorage.getItem('theme') || 'light';body.setAttribute('data-theme', savedTheme);themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';themeToggle.onclick = () => {const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';body.setAttribute('data-theme', newTheme);localStorage.setItem('theme', newTheme);themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';}
-const burger = document.getElementById('burger');const mobileMenu = document.getElementById('mobileMenu');burger.onclick = () => mobileMenu.classList.toggle('active');function closeMenu(){mobileMenu.classList.remove('active')}
+
+// BURGER + MOBILE SERVICES TOGGLE
+const burger = document.getElementById('burger');const mobileMenu = document.getElementById('mobileMenu');const servicesToggle = document.getElementById('mobileServicesToggle');const servicesSubMenu = document.getElementById('servicesSubMenu');
+burger.onclick = () => mobileMenu.classList.toggle('active');
+servicesToggle.onclick = (e) => {e.preventDefault(); const isOpen = servicesSubMenu.style.display === 'block'; servicesSubMenu.style.display = isOpen ? 'none' : 'block'; servicesToggle.innerHTML = isOpen ? 'Services ▾' : 'Services ▴';}
+function closeMenu(){mobileMenu.classList.remove('active'); servicesSubMenu.style.display = 'none'; servicesToggle.innerHTML = 'Services ▾';}
+
+// FADE IN ANIMATION
 const observer = new IntersectionObserver((entries) => {entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); }});},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// CONTACT FORM
 const form = document.getElementById('contactForm');const successMsg = document.getElementById('successMessage');form.addEventListener('submit', async (e) => {e.preventDefault();const data = new FormData(form);const response = await fetch(form.action, {method: form.method,body: data,headers: { 'Accept': 'application/json' }});if (response.ok) {form.style.display = 'none';successMsg.style.display = 'block';form.reset();document.getElementById('contact').scrollIntoView({behavior: 'smooth'});} else {alert('Oops! Something went wrong. Please try again or WhatsApp me on 069 015 1081');}});
 </script>
 </body>
