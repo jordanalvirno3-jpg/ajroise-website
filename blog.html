@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | AJ ROIse Digital Marketing Agency South Africa</title>
+<meta name="description" content="SEO, Google Ads, E-commerce, Web Design and Social Media guides for South African businesses. Get leads and grow revenue with AJ ROIse.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--emerald:#16A34A; --charcoal:#111827; --cyber:#0EA5E9; --bg:#F9FAFB; --text:#111827; --muted:#6B7280;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* HEADER - GLASS EFFECT */
+header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid rgba(0,0,0,.05);transition:.3s}
+body.dark header{background:rgba(17,24,39,.85);border-bottom:1px solid rgba(255,255,255,.08)}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative} /* ADDED position:relative */
+
+/* LOGO */
+.logo-text{font-family:Poppins;font-weight:800;font-size:30px;color:var(--charcoal);text-decoration:none;display:flex;gap:8px;transition:.3s;letter-spacing:-.5px}
+.logo-text:hover{transform:scale(1.03)}
+body.dark .logo-text{color:#fff}
+.logo-text span{color:var(--emerald)}
+
+/* DESKTOP MENU - PILL STYLE */
+.nav-center{display:flex;gap:8px;list-style:none;align-items:center;background:#F3F4F6;padding:6px;border-radius:12px}
+.nav-center li a{color:#374151;text-decoration:none;font-weight:600;font-size:15px;transition:.3s;padding:10px 18px;border-radius:8px;display:block}
+.nav-center li a:hover{background:#fff;color:var(--emerald)}
+.nav-center li a.active{background:#fff;color:var(--emerald);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+/* DARK MODE MENU FIX */
+body.dark .nav-center{background:#1F2937;border:1px solid #374151}
+body.dark .nav-center li a{color:#D1D5DB}
+body.dark .nav-center li a:hover{background:#374151;color:#fff}
+body.dark .nav-center li a.active{background:var(--emerald);color:#fff;box-shadow:0 2px 8px rgba(22,163,74,.3)}
+
+.nav-right{display:flex;align-items:center;gap:14px}
+.btn-cta{background:linear-gradient(135deg,var(--emerald) 0%, #10B981 100%);color:#fff;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block;font-size:14px;transition:.3s;box-shadow:0 4px 14px rgba(22,163,74,.35)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(22,163,74,.45)}
+.theme-toggle{background:#F3F4F6;border:none;width:44px;height:44px;border-radius:10px;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:.3s}
+.theme-toggle:hover{background:#E5E7EB;transform:rotate(20deg)}
+body.dark .theme-toggle{background:#1F2937;color:#fff}
+
+/* HAMBURGER */
+.hamburger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--text);z-index:1001}
+body.dark .hamburger{color:#fff}
+
+/* MOBILE MENU - FLOATING FIX */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  gap:4px;
+  background:#fff;
+  padding:12px;
+  border-radius:14px;
+  position:absolute; /* KEY: FLOATS */
+  top:70px; /* drops below header */
+  right:20px; /* right corner */
+  width:240px;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  border:1px solid #E5E7EB;
+  animation:slideDown .3s ease;
+  z-index:999;
+}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mobile-menu a{color:var(--text);text-decoration:none;font-weight:600;font-size:16px;padding:12px 16px;border-radius:10px;transition:.3s}
+.mobile-menu a:hover{background:#F3F4F6;color:var(--emerald)}
+.mobile-menu.show{display:flex}
+
+body.dark .mobile-menu{background:#1F2937;border:1px solid #374151;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+body.dark .mobile-menu a{color:#D1D5DB}
+body.dark .mobile-menu a:hover{background:#374151;color:#fff}
+
+/* HERO + FILTERS */
+.hero-blog{padding:90px 0;text-align:center;background:linear-gradient(135deg, var(--emerald) 0%, var(--cyber) 100%);color:#fff}
+.hero-blog h1{font-family:Poppins;font-size:52px;margin-bottom:16px;letter-spacing:-1px}
+.hero-blog p{font-size:19px;opacity:.95;max-width:600px;margin:0 auto}
+.filter-tabs{display:flex;justify-content:center;gap:10px;margin:50px 0 40px;flex-wrap:wrap}
+.tab-btn{background:#fff;border:2px solid #E5E7EB;color:var(--text);padding:12px 22px;border-radius:10px;font-weight:600;cursor:pointer;transition:.3s;font-family:Inter;font-size:14px}
+.tab-btn.active,.tab-btn:hover{background:var(--emerald);color:#fff;border-color:var(--emerald);transform:translateY(-2px)}
+
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;padding-bottom:80px}
+.blog-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);transition:.3s;display:none;border:1px solid #F3F4F6}
+.blog-card.show{display:block;animation:fadeIn .4s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.blog-card img{width:100%;height:210px;object-fit:cover}
+.blog-tag{display:inline-block;background:linear-gradient(135deg,var(--emerald) 0%, #10B981 100%);color:#fff;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;margin-bottom:14px}
+.blog-content{padding:24px}
+.blog-content h3{font-family:Poppins;font-size:20px;margin-bottom:12px;line-height:1.4}
+.blog-content p{color:var(--muted);font-size:15px;margin-bottom:18px;line-height:1.6}
+.btn{background:var(--emerald);color:#fff;padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block;font-size:14px;transition:.3s}
+.btn:hover{background:#15803D;transform:translateX(3px)}
+
+/* FOOTER */
+footer{background:var(--charcoal);color:#fff;padding:60px 0;text-align:center}
+
+/* DARK MODE GENERAL */
+body.dark{background:#111827;color:#E5E7EB}
+body.dark .blog-card{background:#1F2937;border-color:#374151}
+body.dark .tab-btn{background:#1F2937;border-color:#374151;color:#D1D5DB}
+body.dark .tab-btn.active{background:var(--emerald);color:#fff;border-color:var(--emerald)}
+body.dark .blog-content p{color:#9CA3AF}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+  .nav-center{display:none}
+  .hamburger{display:block}
+  .btn-cta{padding:10px 18px;font-size:13px}
+  .theme-toggle{width:40px;height:40px}
+  .hero-blog h1{font-size:38px}
+  .container{padding:0 20px}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="/" class="logo-text">AJ <span>ROIse</span></a>
+
+      <ul class="nav-center">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/blog.html" class="active">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <a href="/contact.html" class="btn-cta">Get Free Quote</a>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+
+      <!-- MOVED INSIDE NAV SO IT FLOATS -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-blog">
+  <div class="container">
+    <h1>AJ ROIse Blog</h1>
+    <p>SEO, Ads & Web Design Guides to Grow Your South African Business</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-filter="all">All Posts</button>
+      <button class="tab-btn" data-filter="seo">SEO & GEO</button>
+      <button class="tab-btn" data-filter="ppc">Google Ads & PPC</button>
+      <button class="tab-btn" data-filter="ecommerce">E-commerce</button>
+      <button class="tab-btn" data-filter="web">Web Design & CRO</button>
+      <button class="tab-btn" data-filter="social">Social & Content</button>
+      <button class="tab-btn" data-filter="case">Case Studies</button>
+    </div>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div>
+</section>
+
+<script>
+fetch('/posts.json')
+.then(res => res.json())
+.then(posts => {
+  const grid = document.getElementById('blogGrid');
+  posts.forEach(post => {
+    grid.innerHTML += `
+      <div class="blog-card show" data-category="${post.category}">
+        <img src="${post.img}" alt="${post.title}">
+        <div class="blog-content">
+          <span class="blog-tag">${post.categoryName}</span>
+          <h3>${post.title}</h3>
+          <p>${post.desc}</p>
+          <a href="${post.link}" class="btn">Read More →</a>
+        </div>
+      </div>
+    `;
+  });
+  filterPosts('all'); 
+})
+.catch(err => {
+  document.getElementById('blogGrid').innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Error loading posts. Check that posts.json is uploaded.</p>';
+});
+
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+if(localStorage.getItem('theme') === 'dark'){
+  body.classList.add('dark');
+  themeToggle.textContent = '☀️';
+}
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  if(body.classList.contains('dark')){
+    localStorage.setItem('theme', 'dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    localStorage.setItem('theme', 'light');
+    themeToggle.textContent = '🌙';
+  }
+});
+
+const tabButtons = document.querySelectorAll('.tab-btn');
+function filterPosts(category) {
+  const cards = document.querySelectorAll('.blog-card');
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  cards.forEach(card => {
+    if(category === 'all' || card.dataset.category === category){
+      card.classList.add('show');
+    } else {
+      card.classList.remove('show');
+    }
+  });
+}
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => filterPosts(btn.dataset.filter));
+});
+
+// HAMBURGER MENU TOGGLE - CLOSES WHEN CLICK LINK
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+  hamburger.textContent = mobileMenu.classList.contains('show') ? '✕' : '☰';
+});
+// Close menu when clicking a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('show');
+    hamburger.textContent = '☰';
+  });
+});
+</script>
+
+<footer>
+  <div class="container">
+    <p style="font-family:Poppins;font-size:24px;margin-bottom:12px;">AJ <span style="color:var(--emerald)">ROIse</span></p>
+    <p style="opacity:.7">© 2026 AJ ROIse Digital. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
