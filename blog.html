@@ -170,7 +170,7 @@ body.dark .blog-content p{color:#9CA3AF}
 </section>
 
 <script>
-// 1. LOAD POSTS FROM JSON - FIXED FOR VERCEL
+// 1. LOAD POSTS FROM JSON
 fetch('./posts.json')
 .then(res => {
   if(!res.ok) throw new Error('posts.json not found');
@@ -178,7 +178,7 @@ fetch('./posts.json')
 })
 .then(posts => {
   const grid = document.getElementById('blogGrid');
-  grid.innerHTML = ''; // clear error message
+  grid.innerHTML = ''; 
   posts.forEach(post => {
     grid.innerHTML += `
       <div class="blog-card show" data-category="${post.category}">
@@ -192,7 +192,9 @@ fetch('./posts.json')
       </div>
     `;
   });
-  filterPosts('all'); 
+  // Load all posts on page load
+  const activeBtn = document.querySelector('.tab-btn.active');
+  filterPosts('all', activeBtn); 
 })
 .catch(err => {
   document.getElementById('blogGrid').innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Error loading posts. ' + err.message + '</p>';
@@ -217,12 +219,12 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
-// 3. FILTER FUNCTION
+// 3. FILTER FUNCTION - FIXED
 const tabButtons = document.querySelectorAll('.tab-btn');
-function filterPosts(category) {
+function filterPosts(category, clickedBtn) {
   const cards = document.querySelectorAll('.blog-card');
   tabButtons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  if(clickedBtn) clickedBtn.classList.add('active');
   cards.forEach(card => {
     if(category === 'all' || card.dataset.category === category){
       card.classList.add('show');
@@ -232,7 +234,7 @@ function filterPosts(category) {
   });
 }
 tabButtons.forEach(btn => {
-  btn.addEventListener('click', (e) => filterPosts(btn.dataset.filter));
+  btn.addEventListener('click', (e) => filterPosts(btn.dataset.filter, e.currentTarget));
 });
 
 // 4. HAMBURGER MENU TOGGLE
