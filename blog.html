@@ -17,7 +17,7 @@ body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);transit
 header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid rgba(0,0,0,.05);transition:.3s}
 body.dark header{background:rgba(17,24,39,.85);border-bottom:1px solid rgba(255,255,255,.08)}
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative} /* ADDED position:relative */
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative}
 
 /* LOGO */
 .logo-text{font-family:Poppins;font-weight:800;font-size:30px;color:var(--charcoal);text-decoration:none;display:flex;gap:8px;transition:.3s;letter-spacing:-.5px}
@@ -48,7 +48,7 @@ body.dark .theme-toggle{background:#1F2937;color:#fff}
 .hamburger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--text);z-index:1001}
 body.dark .hamburger{color:#fff}
 
-/* MOBILE MENU - FLOATING FIX */
+/* MOBILE MENU - FLOATING */
 .mobile-menu{
   display:none;
   flex-direction:column;
@@ -56,9 +56,9 @@ body.dark .hamburger{color:#fff}
   background:#fff;
   padding:12px;
   border-radius:14px;
-  position:absolute; /* KEY: FLOATS */
-  top:70px; /* drops below header */
-  right:20px; /* right corner */
+  position:absolute;
+  top:70px;
+  right:20px;
   width:240px;
   box-shadow:0 20px 40px rgba(0,0,0,.15);
   border:1px solid #E5E7EB;
@@ -114,6 +114,7 @@ body.dark .blog-content p{color:#9CA3AF}
   .theme-toggle{width:40px;height:40px}
   .hero-blog h1{font-size:38px}
   .container{padding:0 20px}
+}
 </style>
 </head>
 <body>
@@ -135,7 +136,6 @@ body.dark .blog-content p{color:#9CA3AF}
         <button class="hamburger" id="hamburger">☰</button>
       </div>
 
-      <!-- MOVED INSIDE NAV SO IT FLOATS -->
       <div class="mobile-menu" id="mobileMenu">
         <a href="/">Home</a>
         <a href="/services.html">Services</a>
@@ -170,10 +170,15 @@ body.dark .blog-content p{color:#9CA3AF}
 </section>
 
 <script>
-fetch('/posts.json')
-.then(res => res.json())
+// 1. LOAD POSTS FROM JSON - FIXED FOR VERCEL
+fetch('./posts.json')
+.then(res => {
+  if(!res.ok) throw new Error('posts.json not found');
+  return res.json();
+})
 .then(posts => {
   const grid = document.getElementById('blogGrid');
+  grid.innerHTML = ''; // clear error message
   posts.forEach(post => {
     grid.innerHTML += `
       <div class="blog-card show" data-category="${post.category}">
@@ -190,9 +195,11 @@ fetch('/posts.json')
   filterPosts('all'); 
 })
 .catch(err => {
-  document.getElementById('blogGrid').innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Error loading posts. Check that posts.json is uploaded.</p>';
+  document.getElementById('blogGrid').innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Error loading posts. ' + err.message + '</p>';
+  console.error('Error loading posts:', err);
 });
 
+// 2. THEME TOGGLE
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 if(localStorage.getItem('theme') === 'dark'){
@@ -210,6 +217,7 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+// 3. FILTER FUNCTION
 const tabButtons = document.querySelectorAll('.tab-btn');
 function filterPosts(category) {
   const cards = document.querySelectorAll('.blog-card');
@@ -227,14 +235,13 @@ tabButtons.forEach(btn => {
   btn.addEventListener('click', (e) => filterPosts(btn.dataset.filter));
 });
 
-// HAMBURGER MENU TOGGLE - CLOSES WHEN CLICK LINK
+// 4. HAMBURGER MENU TOGGLE
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
   hamburger.textContent = mobileMenu.classList.contains('show') ? '✕' : '☰';
 });
-// Close menu when clicking a link
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('show');
