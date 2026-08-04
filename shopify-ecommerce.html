@@ -7,6 +7,7 @@
 <meta name="description" content="Shopify Experts South Africa. Full Shopify store setup from R6,000 + management from R4,500/mo. 7-day launch. Meta Ads, SEO, Design included. Free audit.">
 <link rel="canonical" href="https://ajroise.co.za/shopify-ecommerce">
 <meta name="keywords" content="shopify south africa, shopify experts, shopify store setup, shopify developer, ecommerce website south africa">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -19,7 +20,7 @@
   "offers": {"@type": "Offer", "price": "6000", "priceCurrency": "ZAR", "availability": "https://schema.org/InStock"},
   "hasPart": [
     {"@type": "FAQPage", "mainEntity": [
-      {"@type": "Question", "name": "How much does a Shopify store cost in South Africa?", "acceptedAnswer": {"@type": "Answer", "text": "Our Shopify setup starts at R6,000 one-time. Monthly management starts at R4,500/mo."}},
+      {"@type": "Question", "name": "How much does a Shopify store cost in South Africa?", "acceptedAnswer": {"@type": "Answer", "text": "Setup is R6,000 one-time. Monthly plans start at R4,500/mo for management and R9,500/mo for ads included."}},
       {"@type": "Question", "name": "How long does it take to build a Shopify store?", "acceptedAnswer": {"@type": "Answer", "text": "Most stores launch in 7-14 days."}}
     ]}
   ]
@@ -27,31 +28,59 @@
 </script>
 
 <style>
-:root{--shopify:#96BF48; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px; --border:rgba(0,0,0,.08);}
-[data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; --border:rgba(255,255,255,.08);}
+:root{
+  --shopify:#96BF48;
+  --green:#10B981;
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6B7280;
+  --card:#F9FAFB;
+  --radius:16px;
+  --border:rgba(0,0,0,.08);
+}
+[data-theme="dark"]{
+  --bg:#0B0F19;
+  --text:#F9FAFB;
+  --muted:#9CA3AF;
+  --card:#111827;
+  --border:rgba(255,255,255,.08);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;transition:.3s;padding-top:80px}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2;word-wrap:break-word}
-.btn{background:var(--shopify);color:#111;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;text-align:center}
+.btn{background:var(--shopify);color:#111;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;text-align:center;font-size:.95rem}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(150,191,72,.3)}
 .btn-whatsapp{background:#25D366;color:#fff}
-.btn-back{background:transparent;color:var(--shopify);border:2px solid var(--shopify);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back{background:transparent;color:var(--shopify);border:2px solid var(--shopify);padding:12px 20px;font-size:.9rem;font-weight:700}
 .btn-back:hover{background:var(--shopify);color:#111}
-header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
-.logo-text span{color:var(--shopify)}
+
+/* HEADER - FIXED */
+header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
+.logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none;flex-shrink:0}
+.logo-text span{color:var(--green)}
+
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
+.theme-toggle:hover{background:var(--card);border-color:var(--shopify)}
+
 .hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#96BF48 0%,#2D2D2D 100%);color:#fff}
 .hero h1{font-size:3rem;margin-bottom:16px}
 .section{padding:80px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .card{background:var(--card);padding:30px;border-radius:var(--radius);border:1px solid var(--border)}
 .card h3{color:var(--shopify);margin-bottom:12px;font-size:1.3rem}
+
+/* NEW PRICING */
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:40px}
-.pricing-card{background:var(--card);padding:40px;border-radius:20px;border:2px solid var(--border);text-align:center;position:relative}
+.pricing-card{background:var(--card);padding:40px;border-radius:20px;border:2px solid var(--border);text-align:center;position:relative;transition:.3s}
+.pricing-card:hover{transform:translateY(-4px)}
 .pricing-card.featured{border-color:var(--shopify);transform:scale(1.05)}
-.pricing-price{font-size:3rem;font-weight:800;color:var(--shopify);margin:16px 0}
+.pricing-card.featured:hover{transform:scale(1.05) translateY(-4px)}
+.pricing-price{font-size:2.2rem;font-weight:800;color:var(--shopify);margin:8px 0}
+.pricing-monthly{font-size:1.8rem;font-weight:800;color:var(--shopify);margin-top:8px}
+
 .strategy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:40px}
 .strategy-step{background:var(--card);padding:30px;border-radius:18px;border:1px solid var(--border);position:relative}
 .strategy-number{position:absolute;top:-15px;left:25px;background:var(--shopify);color:#111;font-weight:800;font-size:1.2rem;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -65,6 +94,22 @@ ul li{margin-bottom:8px}
 .internal-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
 .internal-links a{color:var(--shopify);text-decoration:none;font-weight:700}
 .internal-links a:hover{text-decoration:underline}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  html, body{overflow-x:hidden; width:100%}
+  body{padding-top:140px}
+
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+.logo-text{text-align:center;font-size:1.6rem}
+.nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+.btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+.theme-toggle{width:100%}
+
+.hero h1{font-size:2.2rem}
+.pricing-card.featured{transform:scale(1)}
+.pricing-card.featured:hover{transform:translateY(-4px)}
+}
 </style>
 </head>
 <body>
@@ -73,8 +118,9 @@ ul li{margin-bottom:8px}
 <div class="container">
   <nav>
     <a href="/" class="logo-text">AJ <span>ROIse</span></a>
-    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-      <a href="/" class="btn btn-back">← Back to Home</a>
+    <div class="nav-buttons">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <a href="/#services" class="btn btn-back">← Back to Services</a>
       <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Store Audit</a>
     </div>
   </nav>
@@ -98,7 +144,7 @@ ul li{margin-bottom:8px}
       <div class="card"><h3>🛒 1. Shopify Store Setup SA</h3><p>Theme setup, payments, shipping, taxes, and domain. Launch-ready in 7 days for South African businesses.</p></div>
       <div class="card"><h3>🎨 2. Conversion-Focused Design</h3><p>Mobile-first Shopify design that increases sales. Product pages optimized to convert.</p></div>
       <div class="card"><h3>📦 3. Product + App Optimization</h3><p>Product uploads, collections, and best Shopify apps for SA payments like PayFast and Paystack.</p></div>
-      <div class="card"><h3>📈 4. Marketing + Growth</h3><p><a href="/meta-ads" style="color:var(--shopify)">Meta Ads</a>, <a href="/google-ads" style="color:var(--shopify)">Google Ads</a>, <a href="/seo-services" style="color:var(--shopify)">SEO</a>, and email flows to get sales from day 1.</p></div>
+      <div class="card"><h3>📈 4. Marketing + Growth</h3><p><a href="/meta-ads" style="color:var(--shopify)">Meta Ads</a>, <a href="/google-ads" style="color:var(--shopify)">Google Ads</a>, <a href="/seo" style="color:var(--shopify)">SEO</a>, and email flows to get sales from day 1.</p></div>
     </div>
   </div>
 </section>
@@ -106,50 +152,63 @@ ul li{margin-bottom:8px}
 <section class="section" id="pricing" style="background:var(--card)">
   <div class="container">
     <h2 style="text-align:center;font-size:2.2rem;margin-bottom:12px">Shopify Pricing South Africa</h2>
-    <p style="text-align:center;color:var(--muted);margin-bottom:30px">One-time setup + monthly management packages</p>
+    <p style="text-align:center;color:var(--muted);margin-bottom:30px">One setup fee. Pick your monthly plan. Cancel anytime.</p>
     
     <div class="pricing-grid">
       <div class="pricing-card">
-        <h3>Starter Store Setup</h3>
+        <h3>Launch</h3>
         <div class="pricing-price">R6,000</div>
-        <p>One-time setup</p>
+        <p style="color:var(--muted);font-size:.9rem">One-time setup</p>
+        <p class="pricing-monthly">R0<span style="font-size:1rem">/mo</span></p>
         <ul style="text-align:left;margin-top:20px">
-          <li>Shopify theme setup + customization</li>
+          <li>Custom Shopify theme setup</li>
           <li>Up to 20 products uploaded</li>
-          <li>Payments + shipping setup for SA</li>
+          <li>PayFast + Shipping + Tax setup for SA</li>
+          <li>Mobile optimization + Speed setup</li>
           <li>Basic SEO + Google Analytics</li>
+          <li>7-day launch guarantee</li>
         </ul>
-        <a href="https://wa.me/27690151081" class="btn" style="margin-top:20px;width:100%">Get Started</a>
+        <a href="https://wa.me/27690151081" class="btn" style="margin-top:20px;width:100%">Get Store Built</a>
       </div>
 
       <div class="pricing-card featured">
         <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--shopify);color:#111;padding:6px 16px;border-radius:20px;font-size:.8rem;font-weight:800">MOST POPULAR</span>
-        <h3>Growth Package</h3>
-        <div class="pricing-price">R4,500<span style="font-size:1rem">/mo</span></div>
-        <p>Monthly management</p>
+        <h3>Grow</h3>
+        <div class="pricing-price">R6,000</div>
+        <p style="color:var(--muted);font-size:.9rem">One-time setup</p>
+        <p class="pricing-monthly">R4,500<span style="font-size:1rem">/mo</span></p>
         <ul style="text-align:left;margin-top:20px">
-          <li>Everything in Starter</li>
+          <li>Everything in Launch</li>
           <li>Weekly product adds + updates</li>
-          <li>App management + optimization</li>
-          <li>Monthly reports + support</li>
+          <li>Shopify app management + optimization</li>
+          <li>Email flows: Welcome + Abandoned Cart</li>
+          <li>Monthly performance report</li>
+          <li>Priority WhatsApp support</li>
         </ul>
         <a href="https://wa.me/27690151081" class="btn" style="margin-top:20px;width:100%">Start Growing</a>
       </div>
 
       <div class="pricing-card">
-        <h3>Scale Package</h3>
-        <div class="pricing-price">R12,000<span style="font-size:1rem">/mo</span></div>
-        <p>Full marketing + management</p>
+        <h3>Scale</h3>
+        <div class="pricing-price">R6,000</div>
+        <p style="color:var(--muted);font-size:.9rem">One-time setup</p>
+        <p class="pricing-monthly">R9,500<span style="font-size:1rem">/mo</span></p>
         <ul style="text-align:left;margin-top:20px">
-          <li>Everything in Growth</li>
-          <li>Meta + Google Ads management</li>
-          <li>SEO + Content marketing</li>
-          <li>CRO and A/B testing</li>
-          <li>Priority WhatsApp support</li>
+          <li>Everything in Grow</li>
+          <li><a href="/meta-ads" style="color:var(--shopify);font-weight:700">Meta Ads Management</a> up to R10k ad spend</li>
+          <li><a href="/google-ads" style="color:var(--shopify);font-weight:700">Google Ads Management</a> up to R10k ad spend</li>
+          <li>SEO + 2 blog posts per month</li>
+          <li>CRO testing + Conversion optimization</li>
+          <li>Weekly strategy calls</li>
         </ul>
         <a href="https://wa.me/27690151081" class="btn" style="margin-top:20px;width:100%">Scale Now</a>
       </div>
     </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:20px">
+      * Ad spend paid directly to Meta + Google. <br>
+      * 30-day cancelation on monthly plans.
+    </p>
   </div>
 </section>
 
@@ -187,7 +246,7 @@ ul li{margin-bottom:8px}
     <div style="max-width:800px;margin:0 auto">
       <div class="card faq-item">
         <h3>How much does a Shopify store cost in South Africa?</h3>
-        <p>Our Shopify setup starts at <strong>R6,000</strong> one-time. Monthly management starts at <strong>R4,500/mo</strong>. This includes design, product uploads, payment setup, and basic SEO.</p>
+        <p>Setup is <strong>R6,000</strong> one-time. Monthly management starts at <strong>R4,500/mo</strong>. Our Scale plan with ads included is <strong>R9,500/mo</strong>.</p>
       </div>
       <div class="card faq-item">
         <h3>How long does it take to build a Shopify store?</h3>
@@ -195,7 +254,7 @@ ul li{margin-bottom:8px}
       </div>
       <div class="card faq-item">
         <h3>Do you also run ads for Shopify stores?</h3>
-        <p>Yes. Our Scale Package includes <a href="/meta-ads" style="color:var(--shopify)">Meta Ads</a> and <a href="/google-ads" style="color:var(--shopify)">Google Ads</a> management to drive traffic and sales from day 1.</p>
+        <p>Yes. Our Scale Package includes <a href="/meta-ads" style="color:var(--shopify)">Meta Ads</a> and <a href="/google-ads" style="color:var(--shopify)">Google Ads</a> management up to R10k ad spend each.</p>
       </div>
       <div class="card faq-item">
         <h3>Shopify vs WooCommerce: Which is better for SA?</h3>
@@ -210,8 +269,8 @@ ul li{margin-bottom:8px}
     <div class="internal-links">
       <span>Related Services:</span>
       <a href="/meta-ads">Meta Ads</a> | 
-      <a href="/seo-services">SEO Services</a> | 
-      <a href="/web-design">Web Design</a>
+      <a href="/seo">SEO Services</a> | 
+      <a href="/website-design">Web Design</a>
     </div>
   </div>
 </section>
@@ -221,6 +280,28 @@ ul li{margin-bottom:8px}
     <p>© 2026 AJ ROIse | Shopify Experts South Africa | <a href="/" style="color:var(--shopify)">Back to Home</a></p>
   </div>
 </footer>
+
+<script>
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
+}
+</script>
 
 </body>
 </html>
