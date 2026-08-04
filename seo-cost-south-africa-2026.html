@@ -45,13 +45,13 @@ p{margin-bottom:22px}
 .lead{font-size:20px;color:var(--muted);line-height:1.7}
 
 /* FEATURED IMAGE FIX */
-.featured-img{border-radius:16px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.featured-img{border-radius:16px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.05);width:100%}
 
-/* AUTHOR BOX */
+/* AUTHOR BOX - ZOOMED FACE */
 .author-box{display:flex;gap:16px;align-items:center;background:var(--card);padding:20px;border-radius:12px;margin:32px 0;border:1px solid var(--border)}
-.author-box img{width:64px;height:64px;aspect-ratio:1/1;border-radius:50%;object-fit:cover;object-position: 50% 25%;margin:0;flex-shrink:0}
+.author-box img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position: 50% 30%;transform:scale(1.1);margin:0;flex-shrink:0}
 
-/* PREMIUM TOC - PERFECT ALIGNMENT */
+/* PREMIUM TOC */
 .toc{background:linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);border:1px solid var(--border);padding:32px;border-radius:18px;margin:40px 0;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
 .toc-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .toc-icon{font-size:28px}
@@ -80,7 +80,6 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
 
 <header>
   <div class="nav">
-    <!-- FIX 1: ADDED SPACE BETWEEN AJ AND ROIse -->
     <a href="/" class="logo">AJ <span>ROIse</span></a>
     <div class="nav-right">
       <a href="/blog.html" class="btn-back">← Back to Blogs</a>
@@ -94,20 +93,20 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
   <p class="lead">What is SEO? How much do SEO services cost in South Africa? How long does it take to rank? And what is GEO? This guide covers everything a South African business owner needs to know about SEO in 2026, including real costs, strategies, and how to choose the right <a href="/services.html">SEO company in South Africa</a>.</p>
   
   <div class="author-box">
-    <img src="/seo-image-author.png" alt="Alvirno Jordan SEO Expert South Africa">
+    <img src="/mnt/data/wa_image_8069103168966471491" alt="Alvirno Jordan SEO Expert South Africa">
     <div>
       <strong>By Alvirno Jordan</strong><br>
       <span style="color:var(--muted);font-size:14px">SEO Strategist | Digital Marketing Expert South Africa | Updated: August 4, 2026</span>
     </div>
   </div>
 
-  <!-- FIX 2: ADDED CLASS + MARGIN SO IMAGE SHOWS -->
-  <img src="https://images.unsplash.com/photo-1557838923-2983c796d821?q=80&w=1600&auto=format&fit=crop" 
-       alt="SEO Cost South Africa 2026 Complete Guide" 
+  <!-- YOUR IMAGE FROM VERCEL ROOT -->
+  <img src="/seo-cost-image-2.jpg" 
+       alt="SEO Cost South Africa 2026 Money Budget Investment Marketing Spend Pricing" 
        class="featured-img"
        loading="lazy">
 
-  <!-- PREMIUM TOC WITH PERFECT ALIGNMENT -->
+  <!-- PREMIUM TOC -->
   <div class="toc">
     <div class="toc-header">
       <span class="toc-icon">📚</span>
