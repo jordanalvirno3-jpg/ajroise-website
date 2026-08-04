@@ -10,60 +10,63 @@
 
 <style>
 :root{
-  --emerald:#16A34A; 
-  --purple:#8B5CF6; 
-  --fb-blue:#1877F2; 
-  --ig-purple:#9C27B0; 
-  --bg:#ffffff; 
+  --emerald:#16A34A;
+  --purple:#8B5CF6;
+  --fb-blue:#1877F2;
+  --ig-purple:#9C27B0;
+  --bg:#ffffff;
   --card:#F9FAFB;
-  --text:#111827; 
-  --muted:#6B7280; 
+  --text:#111827;
+  --muted:#6B7280;
   --border:rgba(0,0,0,.08);
 }
 [data-theme="dark"]{
-  --bg:#0B0F19; 
+  --bg:#0B0F19;
   --card:#111827;
-  --text:#F9FAFB; 
-  --muted:#9CA3AF; 
+  --text:#F9FAFB;
+  --muted:#9CA3AF;
   --border:rgba(255,255,255,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2}
-.btn{background:var(--emerald);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap}
+.btn{background:var(--emerald);color:#fff;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;font-size:.95rem}
 .btn:hover{transform:translateY(-2px)}
-.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:12px 20px;font-size:.9rem;font-weight:700}
 .btn-back:hover{background:var(--purple);color:#fff}
 
 /* HEADER + THEME TOGGLE */
 header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.nav-buttons{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
 .logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--emerald)}
 
-.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s}
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
 .theme-toggle:hover{background:var(--card);border-color:var(--emerald)}
 
+/* MOBILE FIX */
 @media(max-width:768px){
-  nav{flex-direction:column;align-items:stretch}
-  .nav-buttons{width:100%;justify-content:space-between}
-  .btn-back,.btn{flex:1}
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+ .logo-text{text-align:center;font-size:1.6rem}
+ .nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+ .btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+ .theme-toggle{width:100%}
 }
 
-/* HERO */
-.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,var(--fb-blue) 0%,var(--ig-purple) 100%);color:#fff}
-.hero h1{font-size:3rem;margin-bottom:16px}
+.hero{padding:80px 0;text-align:center;background:linear-gradient(135deg,var(--fb-blue) 0%,var(--ig-purple) 100%);color:#fff}
+.hero h1{font-size:2.8rem;margin-bottom:16px}
+@media(max-width:768px){.hero{padding:60px 0}.hero h1{font-size:2.2rem}}
 .section{padding:80px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .card{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border);transition:.3s}
 .card h3{color:var(--emerald);margin-bottom:12px}
 .badge{display:inline-block;background:rgba(22,163,74,.12);color:var(--emerald);padding:6px 12px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:12px}
-[data-theme="dark"] .badge{background:rgba(22,163,74,.15)}
+[data-theme="dark"].badge{background:rgba(22,163,74,.15)}
 
-.stat-box{background:linear-gradient(135deg,var(--emerald),var(--ig-purple));color:#fff;padding:50px 40px;border-radius:24px;text-align:center;margin:50px 0}
-.stat-num{font-size:3.5rem;font-weight:800;font-family:Poppins;line-height:1}
+.stat-box{background:linear-gradient(135deg,var(--emerald),var(--ig-purple));color:#fff;padding:40px 30px;border-radius:24px;text-align:center;margin:40px 0}
+.stat-num{font-size:3rem;font-weight:800;font-family:Poppins;line-height:1}
 
 .process{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:40px}
 .step{text-align:center;padding:10px}
@@ -75,8 +78,8 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .pricing-card.featured{border-color:var(--emerald);box-shadow:0 20px 50px rgba(22,163,74,.15)}
 .pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--emerald);color:#fff;padding:8px 18px;border-radius:20px;font-size:.85rem;font-weight:700}
 .pricing-card h3{font-size:1.4rem;margin-bottom:8px;color:var(--emerald)}
-.pricing-card .price{font-size:3rem;color:var(--text);margin:20px 0 6px;font-weight:800}
-.pricing-card .price span{font-size:1rem;font-weight:500;color:var(--muted)}
+.pricing-card.price{font-size:3rem;color:var(--text);margin:20px 0 6px;font-weight:800}
+.pricing-card.price span{font-size:1rem;font-weight:500;color:var(--muted)}
 .note{font-size:.9rem;color:var(--muted);margin-bottom:24px}
 .pricing-includes{list-style:none;text-align:left;margin:24px 0 30px}
 .pricing-includes li{margin-bottom:12px;display:flex;align-items:center}
@@ -86,7 +89,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq-card h3{color:var(--emerald);font-size:1.1rem;margin-bottom:8px}
 
 .cta-section{background:linear-gradient(135deg,var(--emerald),#059669);color:#fff;padding:80px 0;text-align:center;border-radius:24px;margin:0 20px}
-.cta-section .btn{background:#fff;color:var(--emerald);font-size:1.1rem;padding:18px 36px}
+.cta-section.btn{background:#fff;color:var(--emerald);font-size:1.1rem;padding:18px 36px}
 
 footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px solid var(--border);color:var(--muted)}
 </style>
@@ -123,7 +126,7 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
 
     <h2 style="text-align:center;font-size:2.2rem;margin-bottom:20px">Everything You Need To Grow</h2>
     <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 40px">Organic + Paid. We do both so you build trust AND get sales this month.</p>
-    
+
     <div class="grid">
       <div class="card"><span class="badge">Organic</span><h3>🎨 Pro Page Setup</h3><p>Bio, highlights, branding, links. Your page looks legit in 48 hours.</p></div>
       <div class="card"><span class="badge">Organic</span><h3>📅 Content That Converts</h3><p>3-5 posts per week. Reels, carousels, stories. Written for SA audiences.</p></div>
@@ -151,7 +154,7 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
   <div class="container">
     <h2 style="text-align:center;font-size:2.2rem;margin-bottom:20px">Simple, Transparent Pricing</h2>
     <p style="text-align:center;color:var(--muted);margin-bottom:40px">All prices ex VAT. No contracts. You pay ad spend directly to Meta.</p>
-    
+
     <div class="pricing-grid">
       <div class="pricing-card">
         <h3>Facebook Instagram Ads</h3>
@@ -215,21 +218,20 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-// Load saved theme
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 updateThemeIcon(savedTheme);
 
 themeToggle.addEventListener('click', () => {
   const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
   updateThemeIcon(newTheme);
 });
 
 function updateThemeIcon(theme) {
-  themeToggle.innerText = theme === 'dark' ? '☀️' : '🌙';
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
 }
 </script>
 
