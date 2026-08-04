@@ -7,7 +7,6 @@
 <meta name="description" content="Professional Website Design South Africa from R2,400 per page. 5 Pages = R12,000 once-off. WordPress, eCommerce, Mobile, SEO. Serving Johannesburg, Cape Town, Durban, Pretoria. Get instant quote.">
 <meta name="keywords" content="website design south africa, web design johannesburg, website developers cape town, wordpress website sa, ecommerce website design, how much does a website cost, affordable web design">
 
-<!-- FAQ SCHEMA FOR GOOGLE -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -15,54 +14,64 @@
   "mainEntity": [{
     "@type": "Question",
     "name": "How much does a website cost in South Africa?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "A professional website costs R2,400 per page in South Africa. A 5 page business website is R12,000 once-off with no monthly fees."
-    }
+    "acceptedAnswer": {"@type": "Answer", "text": "A professional website costs R2,400 per page in South Africa. A 5 page business website is R12,000 once-off with no monthly fees."}
   },{
     "@type": "Question",
     "name": "How long does it take to build a website?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Standard delivery is 14 days. We offer 7-Day rush delivery for an additional R3,000."
-    }
+    "acceptedAnswer": {"@type": "Answer", "text": "Standard delivery is 14 days. We offer 7-Day rush delivery for an additional R3,000."}
   },{
     "@type": "Question",
     "name": "Do you offer WordPress websites?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. All our websites are built on WordPress so you can easily update content yourself after we hand it over."
-    }
+    "acceptedAnswer": {"@type": "Answer", "text": "Yes. All our websites are built on WordPress so you can easily update content yourself after we hand it over."}
   },{
     "@type": "Question",
     "name": "Is SEO included in the website price?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. SEO foundation including speed optimization, mobile friendly design, and proper structure is included in every website at no extra cost."
-    }
+    "acceptedAnswer": {"@type": "Answer", "text": "Yes. SEO foundation including speed optimization, mobile friendly design, and proper structure is included in every website at no extra cost."}
   }]
 }
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--emerald:#16A34A; --emerald-dark:#15803d; --cyan:#06B6D4; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:20px; --border:rgba(0,0,0,.08);}
-[data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; --border:rgba(255,255,255,.08);}
+:root{
+  --emerald:#16A34A;
+  --emerald-dark:#15803d;
+  --cyan:#06B6D4;
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6B7280;
+  --card:#F9FAFB;
+  --radius:20px;
+  --border:rgba(0,0,0,.08);
+}
+[data-theme="dark"]{
+  --bg:#0B0F19;
+  --text:#F9FAFB;
+  --muted:#9CA3AF;
+  --card:#111827;
+  --border:rgba(255,255,255,.08);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s;padding-top:80px}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
-.btn{background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;padding:18px 36px;border-radius:16px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;font-size:1.05rem;box-shadow:0 8px 20px rgba(22,163,74,.3)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(22,163,74,.4)}
-.btn-whatsapp{background:#25D366;box-shadow:0 8px 20px rgba(37,211,102,.3)}
-.btn-back{background:transparent;color:var(--text);border:2px solid rgba(255,255,255,.3);box-shadow:none}
-.btn-back:hover{background:rgba(255,255,255,.1)}
-nav{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:blur(20px);z-index:100;border-bottom:1px solid var(--border)}
-[data-theme="dark"] nav{background:rgba(11,15,25,.8)}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding:16px 20px}
-.logo-text{font-family:Poppins,sans-serif;font-size:2rem;font-weight:800;color:var(--text);text-decoration:none}
+
+/* HEADER - SAME AS ALL PAGES */
+header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo-text{font-family:Poppins,sans-serif;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none;flex-shrink:0}
 .logo-text span{color:var(--emerald)}
-.theme-toggle{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
+
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
+.theme-toggle:hover{background:var(--card);border-color:var(--emerald)}
+
+.btn{background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;font-size:.95rem;box-shadow:0 8px 20px rgba(22,163,74,.3);white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-whatsapp{background:#25D366}
+.btn-back{background:transparent;color:var(--emerald);border:2px solid var(--emerald);padding:12px 20px;font-size:.9rem;box-shadow:none}
+.btn-back:hover{background:var(--emerald);color:#fff}
+
 .hero{padding:120px 0;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);animation:pulse 4s ease-in-out infinite;z-index:1}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
@@ -77,7 +86,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
 .card .icon{font-size:3rem;margin-bottom:16px}
 
-/* PREMIUM CALCULATOR */
+/* CALCULATOR */
 .layout-2col{display:grid;grid-template-columns:1fr 450px;gap:50px;align-items:start}
 @media(max-width:900px){.layout-2col{grid-template-columns:1fr}}
 .calc-sidebar{position:sticky;top:120px}
@@ -103,16 +112,40 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .page-count{font-size:1.1rem;font-weight:600}
 .faq-item{margin-bottom:16px}
 .floating-wa{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;width:65px;height:65px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;z-index:999;box-shadow:0 10px 25px rgba(37,211,102,.4)}
-footer{padding:50px 0;text-align:center;color:var(--muted)}
+footer{padding:50px 0;text-align:center;color:var(--muted);background:var(--card);border-top:1px solid var(--border)}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  html, body{overflow-x:hidden; width:100%}
+  body{padding-top:140px}
+
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+  .logo-text{text-align:center;font-size:1.6rem}
+  .nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+  .btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+  .theme-toggle{width:100%}
+
+  .hero h1{font-size:2.2rem}
+  .calc-sidebar{position:static}
+}
 </style>
 </head>
 <body>
 
-<nav><div class="container"><a href="/index.html" class="logo-text">AJ <span>ROIse</span></a>
-<button class="theme-toggle" id="themeToggle">🌙</button></div></nav>
+<header>
+<div class="container">
+  <nav>
+    <a href="/" class="logo-text">AJ <span>ROIse</span></a>
+    <div class="nav-buttons">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <a href="/#services" class="btn btn-back">← Back to Services</a>
+      <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Quote</a>
+    </div>
+  </nav>
+</div>
+</header>
 
 <section class="hero"><div class="container">
-<a href="/index.html" class="btn btn-back" style="margin-bottom:25px; position:relative; z-index:10">← Back to Home</a>
 <h1>Website Design South Africa</h1>
 <p class="hero-sub">Use the slider to get your instant quote. R2,400 per page. 5 Pages = R12,000. No monthly fees.</p>
 </div></section>
@@ -243,22 +276,10 @@ function updateTotal(){
   pageLabelEl.textContent = `${pages} Page${pages > 1 ? 's' : ''}`;
   basePriceEl.textContent = `R${basePrice.toLocaleString()}`;
 
-  if(document.getElementById('logo').checked){
-    total += 1500;
-    addons.push("Logo +R1,500");
-  }
-  if(document.getElementById('ecom').checked){
-    total += 5000;
-    addons.push("eCommerce +R5,000");
-  }
-  if(document.getElementById('blog').checked){
-    total += 2500;
-    addons.push("Blog +R2,500");
-  }
-  if(document.getElementById('rush').checked){
-    total += 3000;
-    addons.push("Rush +R3,000");
-  }
+  if(document.getElementById('logo').checked){ total += 1500; addons.push("Logo +R1,500"); }
+  if(document.getElementById('ecom').checked){ total += 5000; addons.push("eCommerce +R5,000"); }
+  if(document.getElementById('blog').checked){ total += 2500; addons.push("Blog +R2,500"); }
+  if(document.getElementById('rush').checked){ total += 3000; addons.push("Rush +R3,000"); }
 
   totalEl.textContent = 'R' + total.toLocaleString();
   pageTextEl.textContent = `${pages} Page Website`;
@@ -274,7 +295,23 @@ checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
 updateTotal();
 
 // THEME TOGGLE
-const themeToggle = document.getElementById('themeToggle');const body = document.documentElement;const savedTheme = localStorage.getItem('theme') || 'light';body.setAttribute('data-theme', savedTheme);themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';themeToggle.onclick = () => {const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';body.setAttribute('data-theme', newTheme);localStorage.setItem('theme', newTheme);themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';}
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
+}
 </script>
 </body>
 </html>
