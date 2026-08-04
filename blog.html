@@ -88,7 +88,6 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
   .filters{gap:8px}
   .filter-btn{padding:10px 16px;font-size:14px}
   .btn-quote{padding:9px 14px;font-size:13px}
-}
 </style>
 </head>
 <body>
@@ -137,6 +136,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
 
   <div class="blog-grid" id="blogGrid">
     
+    <!-- 1. REAL POST - SEO -->
     <div class="blog-card" data-category="seo">
       <div class="blog-img">
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop" 
@@ -151,7 +151,71 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
       </div>
     </div>
 
-    <!-- Other cards here... -->
+    <!-- 2. PLACEHOLDER - SEO -->
+    <div class="blog-card coming-soon" data-category="seo">
+      <div class="blog-img">SEO & GEO</div>
+      <div class="blog-content">
+        <span class="category-tag">SEO & GEO</span>
+        <h3>GEO: How to Get Recommended by ChatGPT & Google AI</h3>
+        <p>Coming Soon: Learn how to optimize for AI search engines in South Africa.</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- 3. PLACEHOLDER - ADS -->
+    <div class="blog-card coming-soon" data-category="ads">
+      <div class="blog-img">Google Ads & PPC</div>
+      <div class="blog-content">
+        <span class="category-tag">Google Ads & PPC</span>
+        <h3>Google Ads Cost Per Click South Africa 2026</h3>
+        <p>Coming Soon: What you should pay for clicks in every industry in SA.</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- 4. PLACEHOLDER - ECOM -->
+    <div class="blog-card coming-soon" data-category="ecom">
+      <div class="blog-img">E-commerce</div>
+      <div class="blog-content">
+        <span class="category-tag">E-commerce</span>
+        <h3>Shopify vs WooCommerce for SA Stores</h3>
+        <p>Coming Soon: Which platform is best for South African e-commerce?</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- 5. PLACEHOLDER - WEB -->
+    <div class="blog-card coming-soon" data-category="web">
+      <div class="blog-img">Web Design & CRO</div>
+      <div class="blog-content">
+        <span class="category-tag">Web Design & CRO</span>
+        <h3>How to Design a Website That Converts in 2026</h3>
+        <p>Coming Soon: Web design principles that get you leads in South Africa.</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- 6. PLACEHOLDER - SOCIAL -->
+    <div class="blog-card coming-soon" data-category="social">
+      <div class="blog-img">Social & Content</div>
+      <div class="blog-content">
+        <span class="category-tag">Social & Content</span>
+        <h3>TikTok Marketing for South African Businesses</h3>
+        <p>Coming Soon: How to go viral and get customers on TikTok SA.</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- 7. PLACEHOLDER - CASE STUDY -->
+    <div class="blog-card coming-soon" data-category="case">
+      <div class="blog-img">Case Studies</div>
+      <div class="blog-content">
+        <span class="category-tag">Case Studies</span>
+        <h3>How We Got a Client 312% More Leads in 90 Days</h3>
+        <p>Coming Soon: Real results from a real AJ ROIse client in Johannesburg.</p>
+        <span class="btn-coming">Coming Soon</span>
+      </div>
+    </div>
 
   </div>
 </div>
@@ -161,11 +225,13 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
 </footer>
 
 <script>
+// THEME TOGGLE
 const toggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 toggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
 toggle.addEventListener('click', () => {
   const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', newTheme);
@@ -173,28 +239,36 @@ toggle.addEventListener('click', () => {
   toggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 });
 
+// FLOATING MOBILE MENU
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const menuOverlay = document.getElementById('menuOverlay');
+
 menuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
   menuOverlay.classList.toggle('active');
 });
+
 menuOverlay.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
   menuOverlay.classList.remove('active');
 });
 
+// CATEGORY FILTER
 const filterBtns = document.querySelectorAll('.filter-btn');
 const blogCards = document.querySelectorAll('.blog-card');
+
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.getAttribute('data-filter');
     blogCards.forEach(card => {
-      if(filter === 'all'){card.classList.remove('hidden');} 
-      else {card.getAttribute('data-category') === filter ? card.classList.remove('hidden') : card.classList.add('hidden');}
+      if(filter === 'all'){
+        card.classList.remove('hidden');
+      } else {
+        card.getAttribute('data-category') === filter ? card.classList.remove('hidden') : card.classList.add('hidden');
+      }
     });
   });
 });
