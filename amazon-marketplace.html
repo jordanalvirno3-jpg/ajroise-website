@@ -7,6 +7,7 @@
 <meta name="description" content="Amazon Seller Services South Africa. Amazon FBA Setup, Listing Optimization + Amazon PPC Management from R5,500 per marketplace. Scale to 7 marketplaces. Free audit.">
 <meta name="keywords" content="amazon seller services south africa, amazon fba management, amazon ppc management, amazon ads agency, amazon listing optimization, amazon account management, sell on amazon sa, amazon consultant">
 <link rel="canonical" href="https://ajroise.co.za/amazon-marketplace">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -26,24 +27,42 @@
 </script>
 
 <style>
-:root{--amazon:#FF9900; --emerald:#16A34A; --bg:#ffffff; --text:#111827; --muted:#6B7280; --card:#F9FAFB; --radius:16px; --border:rgba(0,0,0,.08);}
-[data-theme="dark"]{ --bg:#0B0F19; --text:#F9FAFB; --muted:#9CA3AF; --card:#111827; --border:rgba(255,255,255,.08);}
+:root{
+  --amazon:#FF9900;
+  --emerald:#10B981;
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6B7280;
+  --card:#F9FAFB;
+  --radius:16px;
+  --border:rgba(0,0,0,.08);
+}
+[data-theme="dark"]{
+  --bg:#0B0F19;
+  --text:#F9FAFB;
+  --muted:#9CA3AF;
+  --card:#111827;
+  --border:rgba(255,255,255,.08);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;transition:.3s;padding-top:80px}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2;word-wrap:break-word}
-.btn{background:var(--amazon);color:#111;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;text-align:center}
+.btn{background:var(--amazon);color:#111;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;text-align:center;font-size:.95rem}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,153,0,.3)}
 .btn-whatsapp{background:#25D366;color:#fff}
-.btn-back{background:transparent;color:var(--amazon);border:2px solid var(--amazon);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back{background:transparent;color:var(--amazon);border:2px solid var(--amazon);padding:12px 20px;font-size:.9rem;font-weight:700}
 .btn-back:hover{background:var(--amazon);color:#111}
 
-/* FIXED HEADER - MATCHES ALL OTHER PAGES */
-header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
+/* HEADER - FIXED + SAME AS ALL PAGES */
+header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.nav-buttons{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
 .logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none;flex-shrink:0}
-.logo-text span{color:var(--emerald)}
+.logo-text span{color:var(--emerald)} /* STAYS GREEN */
+
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
+.theme-toggle:hover{background:var(--card);border-color:var(--amazon)}
 
 .hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#FF9900 0%,#232F3E 100%);color:#fff}
 .hero h1{font-size:3rem;margin-bottom:16px}
@@ -71,7 +90,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .strategy-cta{text-align:center;margin-top:40px;padding:30px;background:linear-gradient(135deg,rgba(255,153,0,.1),rgba(35,47,62,.05));border-radius:18px;border:1px dashed var(--amazon)}
 .calculator{background:var(--card);padding:40px;border-radius:20px;border:2px solid var(--amazon);margin-bottom:30px;display:flex;flex-direction:column;height:100%}
 .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
-.calc-row{display:flex;justify-content:space-between;align-items:center;padding:16px;margin-bottom:12px;background:#fff;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:.2s;min-height:58px}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:16px;margin-bottom:12px;background:var(--bg);border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:.2s;min-height:58px}
 .calc-row:hover{border-color:var(--amazon)}
 .calc-row.active{border-color:var(--amazon);background:rgba(255,153,0,.1)}
 .calc-total{font-size:2.5rem;color:var(--amazon);font-weight:800;text-align:center;margin-top:auto}
@@ -91,12 +110,18 @@ ul li{margin-bottom:8px}
 .faq-card h3{color:var(--amazon);font-size:1.2rem;margin-bottom:10px}
 .faq-card p{color:var(--muted);line-height:1.6}
 
-/* MOBILE FIX - ONLY HEADER CHANGED */
+/* MOBILE FIX */
 @media(max-width:768px){
-  nav{flex-direction:column;align-items:stretch}
-.nav-buttons{width:100%;justify-content:space-between}
-.btn-back,.btn-whatsapp{flex:1}
- .calc-grid{grid-template-columns:1fr}
+  html, body{overflow-x:hidden; width:100%}
+  body{padding-top:140px}
+
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+.logo-text{text-align:center;font-size:1.6rem}
+.nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+.btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+.theme-toggle{width:100%}
+
+.calc-grid{grid-template-columns:1fr}
 .hero h1{font-size:2.2rem}
 .ppc-header h2{font-size:2rem}
 .ppc-section{padding:60px 20px}
@@ -110,7 +135,8 @@ ul li{margin-bottom:8px}
   <nav>
     <a href="/" class="logo-text">AJ <span>ROIse</span></a>
     <div class="nav-buttons">
-      <a href="/" class="btn btn-back">← Back to Home</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <a href="/#services" class="btn btn-back">← Back to Services</a>
       <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Amazon Audit</a>
     </div>
   </nav>
@@ -305,8 +331,8 @@ ul li{margin-bottom:8px}
       <span>Related Services:</span>
       <a href="/shopify-ecommerce">Shopify Ecommerce</a> |
       <a href="/meta-ads">Meta Ads</a> |
-      <a href="/seo-services">SEO Services</a> |
-      <a href="/web-design">Web Design</a>
+      <a href="/seo">SEO Services</a> |
+      <a href="/website-design">Web Design</a>
     </div>
   </div>
 </section>
@@ -348,6 +374,26 @@ function selectPPC(count, el) {
 function updateGrandTotal() {
   const total = managementPrice + ppcPrice;
   document.getElementById('grandTotal').innerText = `R${total.toLocaleString()}/month`;
+}
+
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
 }
 </script>
 
