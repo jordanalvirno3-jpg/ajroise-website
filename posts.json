@@ -1,50 +1,42 @@
 [
   {
     "title": "5 SEO Mistakes Killing Your SA Business in 2026",
-    "desc": "How to rank on Google AND get cited in ChatGPT and AI Overviews.",
-    "img": "https://images.unsplash.com/photo-1557838923-2983c796d821?w=400&h=200&fit=crop",
+    "desc": "Stop losing leads. Fix these SEO errors and get cited by Google AI and ChatGPT in South Africa.",
+    "img": "https://images.unsplash.com/photo-1557838923-2983c796d821?q=80&w=1600&auto=format&fit=crop",
     "category": "seo",
     "categoryName": "SEO & GEO",
     "link": "/blog-seo-mistakes-sa.html"
   },
   {
-    "title": "Google Ads Cost Per Click in South Africa 2026",
-    "desc": "What you should pay for leads in Durban, JHB, and Cape Town.",
-    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop",
+    "title": "Google Ads for South Africa: R5k Budget Breakdown",
+    "desc": "Where to spend R5,000 on Google Ads to get the most leads in JHB, CPT, DBN in 2026.",
+    "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
     "category": "ppc",
     "categoryName": "Google Ads & PPC",
-    "link": "/blog-ads-cpc-sa.html"
+    "link": "/blog-google-ads-budget-sa.html"
   },
   {
-    "title": "Shopify SEO: Rank Your Online Store on Google SA",
-    "desc": "Product page + category structure that drives sales.",
-    "img": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=400&h=200&fit=crop",
+    "title": "Shopify vs WooCommerce: Best for SA E-commerce Stores?",
+    "desc": "We compare costs, payment gateways like PayFast, and delivery for South African online stores.",
+    "img": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1600&auto=format&fit=crop",
     "category": "ecommerce",
     "categoryName": "E-commerce",
-    "link": "/blog-shopify-seo.html"
+    "link": "/blog-shopify-vs-woocommerce-sa.html"
   },
   {
-    "title": "Website Must Load Under 3 Seconds on SA Mobile",
-    "desc": "7 fixes to stop losing 70% of mobile traffic.",
-    "img": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=400&h=200&fit=crop",
+    "title": "How to Design Websites That Convert in South Africa",
+    "desc": "CRO tips for SA businesses: Load speed, trust signals, and mobile-first design that gets sales.",
+    "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
     "category": "web",
     "categoryName": "Web Design & CRO",
-    "link": "/blog-website-speed-sa.html"
+    "link": "/blog-web-design-convert-sa.html"
   },
   {
-    "title": "How to Get Clients from Instagram Reels in SA",
-    "desc": "Short-form video is the fastest growing format in 2026.",
-    "img": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&h=200&fit=crop",
+    "title": "Instagram Reels Strategy: Get SA Clients in 30 Days",
+    "desc": "The exact short-form video formula we use to get leads for SA brands on Instagram and TikTok.",
+    "img": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1600&auto=format&fit=crop",
     "category": "social",
     "categoryName": "Social & Content",
-    "link": "/blog-instagram-reels.html"
-  },
-  {
-    "title": "How We Got a Durban Gym 147 Leads in 30 Days",
-    "desc": "Real SEO + Google Ads strategy. Real revenue results.",
-    "img": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=200&fit=crop",
-    "category": "case",
-    "categoryName": "Case Studies",
-    "link": "/blog-case-study-gym.html"
+    "link": "/blog-instagram-reels-sa.html"
   }
 ]
