@@ -4,67 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Facebook & Instagram Ads South Africa | R3,500/mo | AJ ROIse</title>
-<meta name="description" content="AJ ROIse runs Facebook & Instagram Ads in South Africa that get leads and sales. From R3,500/mo. Page management, content, ads + reporting. Free audit. Johannesburg, Cape Town, Durban.">
+<meta name="description" content="AJ ROIse runs Facebook & Instagram Ads in South Africa that get leads and sales. From R3,500/mo. Page management, content, ads + reporting. Free audit.">
 <link rel="canonical" href="https://ajroise.co.za/meta-ads">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --emerald:#16A34A; 
+  --purple:#8B5CF6; 
   --fb-blue:#1877F2; 
   --ig-purple:#9C27B0; 
   --bg:#ffffff; 
+  --card:#F9FAFB;
   --text:#111827; 
   --muted:#6B7280; 
-  --card:#F9FAFB; 
-  --radius:16px; 
   --border:rgba(0,0,0,.08);
 }
+[data-theme="dark"]{
+  --bg:#0B0F19; 
+  --card:#111827;
+  --text:#F9FAFB; 
+  --muted:#9CA3AF; 
+  --border:rgba(255,255,255,.08);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;scroll-behavior:smooth}
-.container{max-width:1150px;margin:0 auto;padding:0 20px}
-h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2}
+.btn{background:var(--emerald);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back:hover{background:var(--purple);color:#fff}
 
-.btn{background:var(--emerald);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;font-size:1rem}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(22,163,74,.35)} 
-.btn-whatsapp{background:#25D366}
-.btn-whatsapp:hover{box-shadow:0 10px 25px rgba(37,211,102,.35)}
-.btn-back{background:transparent;color:var(--emerald);border:2px solid var(--emerald);padding:10px 18px;font-size:.9rem}
-.btn-back:hover{background:var(--emerald);color:#fff}
-
-/* HEADER */
-nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;gap:12px}
-.logo-wrap{display:flex;flex-direction:column;align-items:flex-start;flex-shrink:0}
-.logo-text{font-family:Poppins,sans-serif;font-size:1.7rem;font-weight:800;color:var(--text);text-decoration:none;line-height:1}
+/* HEADER + THEME TOGGLE */
+header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.nav-buttons{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--emerald)}
-.logo-tagline{font-size:.65rem;color:var(--muted);line-height:1.2}
-.header-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s}
+.theme-toggle:hover{background:var(--card);border-color:var(--emerald)}
 
 @media(max-width:768px){
-  nav .container{padding:12px 16px}
-  .logo-text{font-size:1.5rem}
-  .btn{padding:11px 16px;font-size:.85rem}
-  .btn-back{padding:9px 14px}
+  nav{flex-direction:column;align-items:stretch}
+  .nav-buttons{width:100%;justify-content:space-between}
+  .btn-back,.btn{flex:1}
 }
 
 /* HERO */
-.hero{padding:120px 0;background:linear-gradient(135deg,var(--fb-blue) 0%,var(--ig-purple) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff10" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom/cover no-repeat}
-.hero h1{font-size:3rem;margin-bottom:18px;line-height:1.2;position:relative}
-.hero p{font-size:1.1rem;max-width:700px;margin:0 auto 28px;opacity:.95;position:relative}
-.hero-cta{background:#fff;color:var(--emerald);padding:18px 36px;font-size:1.05rem}
-
-/* SECTIONS */
-.section{padding:90px 0}
-.section-title{text-align:center;font-size:2.4rem;margin-bottom:16px}
-.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
-.card{background:var(--card);padding:32px;border-radius:var(--radius);transition:.3s;border:1px solid var(--border)}
-.card:hover{transform:translateY(-6px);box-shadow:0 15px 40px rgba(0,0,0,.08)}
-.card h3{color:var(--emerald);margin-bottom:12px;font-size:1.3rem}
-.badge{display:inline-block;background:rgba(22,163,74,.12);color:var(--emerald);padding:7px 14px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:12px}
+.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,var(--fb-blue) 0%,var(--ig-purple) 100%);color:#fff}
+.hero h1{font-size:3rem;margin-bottom:16px}
+.section{padding:80px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border);transition:.3s}
+.card h3{color:var(--emerald);margin-bottom:12px}
+.badge{display:inline-block;background:rgba(22,163,74,.12);color:var(--emerald);padding:6px 12px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:12px}
+[data-theme="dark"] .badge{background:rgba(22,163,74,.15)}
 
 .stat-box{background:linear-gradient(135deg,var(--emerald),var(--ig-purple));color:#fff;padding:50px 40px;border-radius:24px;text-align:center;margin:50px 0}
 .stat-num{font-size:3.5rem;font-weight:800;font-family:Poppins;line-height:1}
@@ -73,9 +69,8 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .step{text-align:center;padding:10px}
 .step-num{background:var(--emerald);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 16px;font-family:Poppins;font-size:1.3rem}
 
-/* PRICING - ENGAGING */
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin-top:40px}
-.pricing-card{position:relative;text-align:center;background:#fff;border:2px solid var(--border);padding:40px 30px;border-radius:20px;transition:.3s}
+.pricing-card{position:relative;text-align:center;background:var(--bg);border:2px solid var(--border);padding:40px 30px;border-radius:20px;transition:.3s}
 .pricing-card:hover{border-color:var(--emerald);transform:translateY(-8px)}
 .pricing-card.featured{border-color:var(--emerald);box-shadow:0 20px 50px rgba(22,163,74,.15)}
 .pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--emerald);color:#fff;padding:8px 18px;border-radius:20px;font-size:.85rem;font-weight:700}
@@ -88,34 +83,34 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .pricing-includes li:before{content:"✓";color:#fff;background:var(--emerald);font-weight:700;margin-right:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem}
 
 .faq-card{background:var(--card);padding:24px 28px;border-radius:14px;margin-bottom:16px;border-left:4px solid var(--emerald)}
-.faq-card h3{font-size:1.1rem;margin-bottom:8px}
+.faq-card h3{color:var(--emerald);font-size:1.1rem;margin-bottom:8px}
 
 .cta-section{background:linear-gradient(135deg,var(--emerald),#059669);color:#fff;padding:80px 0;text-align:center;border-radius:24px;margin:0 20px}
 .cta-section .btn{background:#fff;color:var(--emerald);font-size:1.1rem;padding:18px 36px}
 
-footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card);border-top:1px solid var(--border);margin-top:60px}
+footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px solid var(--border);color:var(--muted)}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="container">
-    <div class="logo-wrap">
-      <a href="/" class="logo-text">AJ <span>ROIse</span></a>
-      <div class="logo-tagline">Founded by Alvirno Jordan</div>
-    </div>
-    <div class="header-cta">
+<header>
+<div class="container">
+  <nav>
+    <a href="/" class="logo-text">AJ <span>ROIse</span></a>
+    <div class="nav-buttons">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <a href="/#services" class="btn btn-back">← Back to Services</a>
-      <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Audit</a>
+      <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I%20want%20a%20free%20Meta%20Audit%20for%20Facebook%20%26%20Instagram" target="_blank" class="btn">Free Meta Audit</a>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
+</header>
 
 <section class="hero">
   <div class="container">
+    <span class="badge" style="background:rgba(255,255,255,.2);color:#fff">Meta Ads Agency South Africa</span>
     <h1>Facebook & Instagram Ads That Actually Sell</h1>
     <p>We manage your pages and run Meta Ads for South African businesses. More followers, more leads, more sales. No fluff, just results.</p>
-    <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I%20want%20a%20free%20Facebook%20%26%20Instagram%20audit" target="_blank" class="btn hero-cta">Get Your Free Audit Today</a>
   </div>
 </section>
 
@@ -126,50 +121,26 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
       <p style="font-size:1.1rem;margin-top:8px">South Africans scroll Facebook & Instagram daily. Let's make sure they see YOU.</p>
     </div>
 
-    <h2 class="section-title">Everything You Need To Grow</h2>
-    <p class="section-sub">Organic + Paid. We do both so you build trust AND get sales this month.</p>
+    <h2 style="text-align:center;font-size:2.2rem;margin-bottom:20px">Everything You Need To Grow</h2>
+    <p style="text-align:center;color:var(--muted);max-width:700px;margin:0 auto 40px">Organic + Paid. We do both so you build trust AND get sales this month.</p>
     
     <div class="grid">
-      <div class="card">
-        <span class="badge">Organic</span>
-        <h3>🎨 Pro Page Setup</h3>
-        <p>Bio, highlights, branding, links. Your page looks legit in 48 hours and builds instant trust.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Organic</span>
-        <h3>📅 Content That Converts</h3>
-        <p>3-5 posts per week. Reels, carousels, stories. Written for SA audiences and designed to get saves + shares.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Organic</span>
-        <h3>💬 Community Management</h3>
-        <p>We reply to DMs and comments. We engage and grow real followers, not bots.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Paid</span>
-        <h3>🎯 Lead Generation Ads</h3>
-        <p>We target by city, interest, and behavior. Get leads at the lowest cost possible in SA.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Paid</span>
-        <h3>🛒 Sales + Retargeting</h3>
-        <p>Show ads to people who visited your site. Dynamic product ads for eCommerce. Scale what works.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Both</span>
-        <h3>📊 Clear Reporting</h3>
-        <p>No jargon. Weekly updates + monthly report. We show you exactly what we spent and what you made.</p>
-      </div>
+      <div class="card"><span class="badge">Organic</span><h3>🎨 Pro Page Setup</h3><p>Bio, highlights, branding, links. Your page looks legit in 48 hours.</p></div>
+      <div class="card"><span class="badge">Organic</span><h3>📅 Content That Converts</h3><p>3-5 posts per week. Reels, carousels, stories. Written for SA audiences.</p></div>
+      <div class="card"><span class="badge">Organic</span><h3>💬 Community Management</h3><p>We reply to DMs and comments. We grow real followers, not bots.</p></div>
+      <div class="card"><span class="badge">Paid</span><h3>🎯 Lead Generation Ads</h3><p>We target by city, interest, and behavior. Get leads at the lowest cost.</p></div>
+      <div class="card"><span class="badge">Paid</span><h3>🛒 Sales + Retargeting</h3><p>Show ads to people who visited your site. Scale what works.</p></div>
+      <div class="card"><span class="badge">Both</span><h3>📊 Clear Reporting</h3><p>Weekly updates + monthly report. We show you exactly what you made.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section" style="background:var(--card)">
   <div class="container">
-    <h2 class="section-title">How We Get You Results In 4 Steps</h2>
+    <h2 style="text-align:center;font-size:2.2rem;margin-bottom:20px">How We Get You Results In 4 Steps</h2>
     <div class="process">
       <div class="step"><div class="step-num">1</div><h3>Free Audit</h3><p>15 min WhatsApp call. We find what's broken on your page + ads.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Strategy</h3><p>Content + Ads plan built for SA and your goals. You approve it.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Strategy</h3><p>Content + Ads plan built for SA and your goals.</p></div>
       <div class="step"><div class="step-num">3</div><h3>Launch</h3><p>Page goes live, first 10 posts, first ads running in week 1.</p></div>
       <div class="step"><div class="step-num">4</div><h3>Scale</h3><p>We test, optimize, and double down. You get leads every month.</p></div>
     </div>
@@ -178,8 +149,8 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
 
 <section id="pricing" class="section">
   <div class="container">
-    <h2 class="section-title">Simple, Transparent Pricing</h2>
-    <p class="section-sub">All prices ex VAT. No contracts. You pay ad spend directly to Meta.</p>
+    <h2 style="text-align:center;font-size:2.2rem;margin-bottom:20px">Simple, Transparent Pricing</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:40px">All prices ex VAT. No contracts. You pay ad spend directly to Meta.</p>
     
     <div class="pricing-grid">
       <div class="pricing-card">
@@ -187,12 +158,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
         <div class="price">R3,500<span>/mo</span></div>
         <div class="note">+ ad spend</div>
         <ul class="pricing-includes">
-          <li>Up to R15,000 ad spend</li>
-          <li>2 Campaigns + 4 Ad Sets</li>
-          <li>Audience Research</li>
-          <li>3 Ad Creatives / Month</li>
-          <li>Lead Ads + Retargeting</li>
-          <li>Bi-Weekly Optimization</li>
+          <li>Up to R15,000 ad spend</li><li>2 Campaigns + 4 Ad Sets</li><li>3 Ad Creatives / Month</li><li>Lead Ads + Retargeting</li>
         </ul>
         <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I'm%20interested%20in%20Facebook%20%26%20Instagram%20Ads%20from%20R3500%2Fmo" target="_blank" class="btn">Get Started</a>
       </div>
@@ -203,11 +169,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
         <div class="price">R12,500<span>/mo</span></div>
         <div class="note">Includes Meta Ads + 2 More Services</div>
         <ul class="pricing-includes">
-          <li>Facebook Instagram Ads</li>
-          <li>Choose 2: SEO, Google Ads, Content, eCommerce</li>
-          <li>4 SEO Blog Posts / Month</li>
-          <li>Bi-Weekly Reports</li>
-          <li>Strategy Call Every 2 Weeks</li>
+          <li>Facebook Instagram Ads</li><li>Choose 2: SEO, Google Ads, Content, eCommerce</li><li>4 SEO Blog Posts / Month</li><li>Bi-Weekly Reports</li>
         </ul>
         <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I'm%20interested%20in%20the%20Growth%20Package%20R12500%2Fmo" target="_blank" class="btn">Get Started</a>
       </div>
@@ -217,11 +179,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
         <div class="price">R22,500<span>/mo</span></div>
         <div class="note">All 5 Services Included</div>
         <ul class="pricing-includes">
-          <li>Facebook Instagram Ads</li>
-          <li>SEO + Google Ads + Content + eCommerce</li>
-          <li>Dedicated Account Manager</li>
-          <li>8 SEO Blog Posts / Month</li>
-          <li>Weekly Reports + Calls</li>
+          <li>Facebook Instagram Ads</li><li>SEO + Google Ads + Content + eCommerce</li><li>Dedicated Account Manager</li><li>8 SEO Blog Posts / Month</li>
         </ul>
         <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I'm%20interested%20in%20the%20Dominate%20Package%20R22500%2Fmo" target="_blank" class="btn">Get Started</a>
       </div>
@@ -231,19 +189,9 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
 
 <section class="section" style="background:var(--card)">
   <div class="container" style="max-width:850px">
-    <h2 class="section-title">FAQ: Facebook & Instagram Ads SA</h2>
-    <div class="faq-card">
-      <h3>How much should I spend on ads per month?</h3>
-      <p>We recommend starting with R5,000 ad spend + R3,500 management fee. This gives Meta enough data to get you cheap leads. We can scale up once we see what works.</p>
-    </div>
-    <div class="faq-card">
-      <h3>Do you do content and ads together?</h3>
-      <p>Yes. Ads without content = expensive leads. We post 3-5 times per week and boost the best posts with ads to build trust and drive sales.</p>
-    </div>
-    <div class="faq-card">
-      <h3>How fast will I see results?</h3>
-      <p>Leads can come in week 1. But the real growth happens in month 2-3 once we optimize. We’ll send you weekly updates so you see progress.</p>
-    </div>
+    <h2 style="text-align:center;font-size:2.2rem;margin-bottom:30px">FAQ: Facebook & Instagram Ads SA</h2>
+    <div class="faq-card"><h3>How much should I spend on ads per month?</h3><p>We recommend starting with R5,000 ad spend + R3,500 management fee. This gives Meta enough data to get you cheap leads.</p></div>
+    <div class="faq-card"><h3>Do you do content and ads together?</h3><p>Yes. Ads without content = expensive leads. We post 3-5 times per week and boost the best posts.</p></div>
   </div>
 </section>
 
@@ -251,7 +199,6 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
   <div class="container">
     <div class="cta-section">
       <h2 style="font-size:2.2rem;margin-bottom:16px">Ready To Get Leads From Facebook & Instagram?</h2>
-      <p style="font-size:1.1rem;margin-bottom:28px;opacity:.95">Your next customer is scrolling right now. Let's get your ads live this week.</p>
       <a href="https://wa.me/27690151081?text=Hi%20Alvirno,%20I%20want%20to%20start%20with%20Facebook%20%26%20Instagram%20Ads" target="_blank" class="btn">WhatsApp Me Now</a>
     </div>
   </div>
@@ -259,9 +206,32 @@ footer{padding:40px 0;text-align:center;color:var(--muted);background:var(--card
 
 <footer>
   <div class="container">
-    <p>© 2026 AJ ROIse | <a href="/#services" style="color:var(--emerald);text-decoration:none;font-weight:600">Back to Services</a></p>
+    <p>© 2026 AJ ROIse | <a href="/#services" style="color:var(--emerald)">Back to Services</a></p>
   </div>
 </footer>
+
+<script>
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark' ? '☀️' : '🌙';
+}
+</script>
 
 </body>
 </html>
