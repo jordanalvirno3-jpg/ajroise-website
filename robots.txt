@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Tell Google where your sitemap is
 Sitemap: https://ajroise.co.za/sitemap.xml
