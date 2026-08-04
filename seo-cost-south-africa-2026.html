@@ -26,10 +26,10 @@ html, body{overflow-x:hidden;max-width:100%;scroll-behavior:smooth}
 body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.85;font-size:18px;transition:background .3s,color .3s;padding-top:80px}
 a{color:var(--emerald);text-decoration:none;font-weight:600}
 a:hover{text-decoration:underline}
-img{max-width:100%;height:auto}
+img{max-width:100%;height:auto;display:block}
 header{position:fixed;top:0;left:0;width:100%;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,0.03)}
 .nav{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:Poppins;font-size:22px;font-weight:800;color:var(--charcoal)}
+.logo{font-family:Poppins;font-size:22px;font-weight:800;color:var(--charcoal);letter-spacing:-0.5px}
 .logo span{color:var(--emerald)}
 .nav-right{display:flex;gap:16px;align-items:center}
 .btn-back{background:var(--card);border:1px solid var(--border);padding:9px 16px;border-radius:10px;font-size:14px;font-weight:600;color:var(--text)}
@@ -43,6 +43,9 @@ h3{font-size:22px;margin-top:32px}
 h4{font-size:18px;margin-top:24px}
 p{margin-bottom:22px}
 .lead{font-size:20px;color:var(--muted);line-height:1.7}
+
+/* FEATURED IMAGE FIX */
+.featured-img{border-radius:16px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
 
 /* AUTHOR BOX */
 .author-box{display:flex;gap:16px;align-items:center;background:var(--card);padding:20px;border-radius:12px;margin:32px 0;border:1px solid var(--border)}
@@ -77,7 +80,8 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
 
 <header>
   <div class="nav">
-    <a href="/" class="logo">AJ<span>ROIse</span></a>
+    <!-- FIX 1: ADDED SPACE BETWEEN AJ AND ROIse -->
+    <a href="/" class="logo">AJ <span>ROIse</span></a>
     <div class="nav-right">
       <a href="/blog.html" class="btn-back">← Back to Blogs</a>
       <button class="theme-toggle" id="themeToggle">🌙</button>
@@ -87,7 +91,7 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
 
 <div class="container">
   <h1>How Much Does SEO Cost in South Africa 2026? Complete Guide</h1>
-  <p class="lead">What is SEO? How much do SEO services cost in South Africa? How long does it take to rank? And what is GEO? This guide covers everything a South African business owner needs to know about SEO in 2026, including costs, strategies, and how to choose an <a href="/services.html">SEO company in South Africa</a>.</p>
+  <p class="lead">What is SEO? How much do SEO services cost in South Africa? How long does it take to rank? And what is GEO? This guide covers everything a South African business owner needs to know about SEO in 2026, including real costs, strategies, and how to choose the right <a href="/services.html">SEO company in South Africa</a>.</p>
   
   <div class="author-box">
     <img src="/seo-image-author.png" alt="Alvirno Jordan SEO Expert South Africa">
@@ -97,7 +101,11 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
     </div>
   </div>
 
-  <img src="https://images.unsplash.com/photo-1557838923-2983c796d821?q=80&w=1600&auto=format&fit=crop" alt="SEO Cost South Africa 2026 Complete Guide">
+  <!-- FIX 2: ADDED CLASS + MARGIN SO IMAGE SHOWS -->
+  <img src="https://images.unsplash.com/photo-1557838923-2983c796d821?q=80&w=1600&auto=format&fit=crop" 
+       alt="SEO Cost South Africa 2026 Complete Guide" 
+       class="featured-img"
+       loading="lazy">
 
   <!-- PREMIUM TOC WITH PERFECT ALIGNMENT -->
   <div class="toc">
@@ -105,169 +113,251 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;co
       <span class="toc-icon">📚</span>
       <h3>Complete Guide Overview</h3>
     </div>
-    <a href="#what-is-seo"><span class="toc-number">01</span> What is SEO? A Deep Dive for 2026</a>
-    <a href="#how-seo-works"><span class="toc-number">02</span> How Does SEO Work: Google’s Ranking System Explained</a>
-    <a href="#seo-vs-geo"><span class="toc-number">03</span> SEO vs GEO: The 2026 Shift You Can’t Ignore</a>
-    <a href="#why-seo-sa"><span class="toc-number">04</span> Why SEO is Critical for South African Businesses</a>
-    <a href="#seo-cost-sa"><span class="toc-number">05</span> SEO Pricing in South Africa: What to Expect in 2026</a>
-    <a href="#seo-process"><span class="toc-number">06</span> The 6-Step SEO Process That Actually Works</a>
-    <a href="#technical-seo"><span class="toc-number">07</span> Technical SEO Explained for SA Websites</a>
-    <a href="#content-seo"><span class="toc-number">08</span> Content Strategy: What to Write to Rank</a>
-    <a href="#local-seo-sa"><span class="toc-number">09</span> Local SEO: Dominate Johannesburg, Cape Town, Durban</a>
-    <a href="#timeline"><span class="toc-number">10</span> How Long Does SEO Take in South Africa?</a>
-    <a href="#seo-vs-ads"><span class="toc-number">11</span> SEO vs Google Ads: Which is Better?</a>
-    <a href="#choosing-agency"><span class="toc-number">12</span> How to Choose an SEO Agency in South Africa</a>
-    <a href="#faq"><span class="toc-number">13</span> FAQs About SEO Services South Africa</a>
+    <a href="#what-is-seo"><span class="toc-number">01</span> What is SEO? Why It Matters in 2026</a>
+    <a href="#benefits-seo"><span class="toc-number">02</span> 7 Key Benefits of SEO for SA Businesses</a>
+    <a href="#seo-cost-pain"><span class="toc-number">03</span> The #1 Pain: Confusing SEO Costs in South Africa</a>
+    <a href="#seo-pricing-2026"><span class="toc-number">04</span> Real SEO Pricing in South Africa 2026: From R750</a>
+    <a href="#what-affects-cost"><span class="toc-number">05</span> What Affects SEO Cost: 5 Factors Explained</a>
+    <a href="#seo-vs-geo"><span class="toc-number">06</span> SEO vs GEO: The 2026 Shift You Must Know</a>
+    <a href="#timeline"><span class="toc-number">07</span> How Long Does SEO Take to Work in SA?</a>
+    <a href="#seo-vs-ads"><span class="toc-number">08</span> SEO vs Google Ads: Best Strategy for SA</a>
+    <a href="#choosing-agency"><span class="toc-number">09</span> How to Choose an SEO Agency in South Africa</a>
+    <a href="#red-flags"><span class="toc-number">10</span> 7 Red Flags to Avoid When Hiring</a>
+    <a href="#faq"><span class="toc-number">11</span> FAQs: SEO Cost South Africa</a>
   </div>
 
-  <h2 id="what-is-seo">1. What is SEO? A Deep Dive for 2026</h2>
+  <h2 id="what-is-seo">1. What is SEO? Why It Matters in 2026</h2>
   <p><span class="highlight">SEO stands for Search Engine Optimization.</span></p>
-  <p>It is the practice of increasing both the quality and quantity of website traffic, and exposure to your brand, through non-paid search engine results. In South Africa, this primarily means Google, which holds over 95% of the search market.</p>
-  <p>But SEO in 2026 is not just about "keywords". It’s about 3 things: Relevance, Authority, and Experience. When someone searches "SEO services South Africa" or "SEO agency Johannesburg", Google scans billions of pages and decides which 10 results to show. SEO is how you influence that decision.</p>
+  <p>In simple terms, SEO is the process of making your website more visible when people in South Africa search for products or services like yours on Google. If someone in Durban searches "best plumber near me" or someone in Johannesburg searches "SEO services South Africa", SEO is what decides whether your business shows up on page 1 or page 10.</p>
+  <p>But SEO in 2026 is not what it was 5 years ago. It’s no longer about stuffing keywords or buying 1000 backlinks. Modern SEO in South Africa is about 3 things: <strong>Helpfulness, Authority, and Experience</strong>.</p>
+  <p>Google’s job is to give the best answer to a search. Your job with SEO is to prove to Google that your website is the best answer for people in South Africa.</p>
 
   <div class="quote">
-  <strong>Fact:</strong> According to <a href="https://www.statista.com/statistics/266249/advertising-revenue-of-google/" target="_blank" rel="noopener">Statista</a>, Google processes 8.5 billion searches per day. In South Africa alone, millions of "buying intent" searches happen every month.
+  <strong>Fact:</strong> According to <a href="https://gs.statcounter.com/search-engine-market-share/all/south-africa" target="_blank" rel="noopener">StatCounter</a>, Google holds over 95% of the search engine market in South Africa. That means if you’re not on Google, you’re invisible to 19 out of 20 potential customers.
   </div>
 
-  <h3>The 4 Pillars of Modern SEO in South Africa</h3>
+  <p>Think of Google like the biggest shopping mall in South Africa. SEO is how you get your shop in the main entrance instead of hidden in the basement. And in 2026, there’s a new entrance: AI.</p>
+
+  <h3>The 4 Pillars of SEO in 2026</h3>
+  <p>To rank in South Africa today, you need all 4 pillars working together:</p>
   <div class="grid-2">
-    <div class="card"><h4>1. Technical SEO</h4>The foundation. Site speed, mobile-first design, security with HTTPS, fixing crawl errors. If Google can’t access your site, nothing else matters. This is critical in SA where mobile data is expensive.</div>
-    <div class="card"><h4>2. On-Page SEO</h4>Optimizing individual pages. This includes title tags, headings, internal linking, and using keywords like "SEO company Cape Town" naturally in content that helps the reader.</div>
-    <div class="card"><h4>3. Off-Page SEO</h4>Building authority through backlinks. When a site like <a href="https://businesstech.co.za" target="_blank" rel="noopener">BusinessTech</a> or <a href="https://www.iol.co.za" target="_blank" rel="noopener">IOL</a> links to you, Google sees you as trustworthy.</div>
-    <div class="card"><h4>4. GEO - Generative Engine Optimization</h4>The new pillar. Optimizing for AI tools like <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>, <a href="https://gemini.google.com" target="_blank" rel="noopener">Google Gemini</a>, and <a href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity</a> to recommend your business.</div>
+    <div class="card"><h4>1. Technical SEO</h4>The foundation. This is site speed, mobile-friendliness, security, and making sure Google can crawl your site. With load shedding and expensive mobile data in SA, a fast site is non-negotiable. If your site takes 8 seconds to load, 70% of people will leave.</div>
+    <div class="card"><h4>2. On-Page SEO</h4>Optimizing the content on your pages. This means writing for humans first, using keywords like "SEO company Cape Town" naturally, adding proper headings, and answering the questions people actually ask.</div>
+    <div class="card"><h4>3. Off-Page SEO</h4>Building your authority. This is mostly done through backlinks. When a trusted SA website like <a href="https://businesstech.co.za" target="_blank" rel="noopener">BusinessTech</a> or <a href="https://www.iol.co.za" target="_blank" rel="noopener">IOL</a> links to you, Google sees you as credible.</div>
+    <div class="card"><h4>4. GEO - Generative Engine Optimization</h4>The new pillar for 2026. This is optimizing for AI tools like <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a> and Google AI Overviews. Instead of just ranking on Google, GEO gets ChatGPT to recommend your business when someone asks "top SEO agencies in South Africa".</div>
   </div>
 
-  <h2 id="how-seo-works">2. How Does SEO Work: Google’s Ranking System Explained</h2>
-  <p>Google uses over 200 ranking factors. But they all fall into 3 buckets. Understanding this is key to doing SEO right in South Africa.</p>
-  <h3>Step 1: Crawling</h3>
-  <p>Googlebot visits your website and follows links. If your site is slow or has broken pages, Googlebot may not crawl everything. For South African sites, hosting location matters. A server in Johannesburg will load faster for local users than one in the US.</p>
-  <h3>Step 2: Indexing</h3>
-  <p>After crawling, Google stores your pages in its "index". Think of it as Google’s library. If your page isn’t indexed, it can’t rank. You can check indexing using <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a>.</p>
-  <h3>Step 3: Ranking</h3>
-  <p>This is where the magic happens. When someone searches, Google pulls from its index and ranks pages based on Content Quality, Links, User Experience, and E-E-A-T: Experience, Expertise, Authority, Trust.</p>
-
-  <h2 id="seo-vs-geo">3. SEO vs GEO: The 2026 Shift You Can’t Ignore</h2>
-  <p>This is the biggest change to search in 10 years. And most <a href="/services.html">SEO agencies in South Africa</a> haven’t adapted yet.</p>
-  <h3>What is Traditional SEO?</h3>
-  <p>Goal: Rank on page 1 of Google. Example: User searches "digital marketing Johannesburg" → Sees 10 blue links → Clicks your website.</p>
-  <h3>What is GEO? Generative Engine Optimization</h3>
-  <p>Goal: Get recommended by AI. Example: User asks <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>: "What are the top SEO companies in South Africa for e-commerce?" → ChatGPT answers with business names.</p>
-  <div class="tip">
-    <strong>How to do GEO:</strong> Add FAQ schema to your site, get mentioned on podcasts and news, build brand authority, and answer questions directly. All our <a href="/services.html">SEO packages at AJ ROIse</a> now include GEO.
-  </div>
-
-  <h2 id="why-seo-sa">4. Why SEO is Critical for South African Businesses</h2>
-  <p>South Africa’s digital landscape is unique. Here’s why you can’t ignore SEO:</p>
-  <h3>1. The Cost of Paid Ads is Rising</h3>
-  <p>A click for "insurance quote South Africa" can cost R150+. "Attorney Johannesburg" can be R200+. SEO traffic has no cost per click. Once you rank, the traffic is free.</p>
-  <h3>2. South Africans Research Before Buying</h3>
-  <p>Over 80% of South Africans research online before making a purchase, according to <a href="https://www.wearewearesocial.com" target="_blank" rel="noopener">We Are Social</a>. If you’re not on page 1, you’re not in the conversation.</p>
-  <h3>3. Local Search is Massive</h3>
-  <p>"Near me" searches have grown 200% in SA. People search "plumber near me", "coffee shop Cape Town". <a href="#local-seo-sa">Local SEO</a> is the fastest way to get customers through the door.</p>
-
-  <h2 id="seo-cost-sa">5. SEO Pricing in South Africa: What to Expect in 2026</h2>
-  <p>Professional SEO in South Africa is an investment that pays for itself. At <a href="/services.html">AJ ROIse Digital</a>, we have flexible packages to fit any business size.</p>
+  <h2 id="benefits-seo">2. 7 Key Benefits of SEO for South African Businesses</h2>
+  <p>Before we talk about cost, let’s talk about value. Why should a South African business invest in SEO in 2026?</p>
   
-  <div class="card" style="border:2px solid var(--emerald);text-align:center;padding:32px">
-    <h3 style="margin-top:0;color:var(--emerald)">SEO Starter</h3>
+  <h3>1. Consistent, Free Traffic</h3>
+  <p>Unlike <a href="/services.html">Google Ads</a> where you pay R50-R200 per click, SEO traffic is free. Once you rank for "accountant Johannesburg", you can get 200 clicks per month without paying for each one. Over 12 months, that’s 2400 free visits.</p>
+
+  <h3>2. Builds Trust and Credibility</h3>
+  <p>South Africans trust Google. If you’re on page 1, people assume you’re a legitimate business. 75% of users never scroll past page 1. Being there puts you ahead of 90% of your competitors.</p>
+
+  <h3>3. Targets High-Intent Customers</h3>
+  <p>Someone searching "buy iPhone 15 Cape Town" is ready to buy. SEO puts you in front of people actively looking for what you sell. This is why SEO leads convert 3x better than social media leads.</p>
+
+  <h3>4. Long-Term Asset</h3>
+  <p>Ads stop the second you stop paying. A blog post that ranks #1 can bring you leads for 2-3 years. It’s like buying property vs renting. SEO is an asset that compounds over time.</p>
+
+  <h3>5. Beats Your Competition</h3>
+  <p>Most small businesses in SA are not doing SEO properly. If you start now in 2026, you can dominate your niche in Johannesburg, Pretoria, Durban, or nationally before they catch up.</p>
+
+  <h3>6. Works 24/7 Even During Load Shedding</h3>
+  <p>Your website doesn’t sleep. While you’re closed, people are searching at 11pm. SEO ensures they find you, not your competitor.</p>
+
+  <h3>7. Prepares You for AI Search</h3>
+  <p>With GEO, your business can be recommended by ChatGPT and Google AI. This is brand new in 2026 and most SA businesses have no idea about it. Early adopters will win big.</p>
+
+  <h2 id="seo-cost-pain">3. The #1 Pain: Confusing SEO Costs in South Africa</h2>
+  <p>Let’s address the elephant in the room. If you’ve googled "SEO cost South Africa", you’re probably more confused now than before.</p>
+  <p>One website says R500 per month. Another says R50,000. Fiverr freelancers offer R300. Big agencies quote R30,000. Who is telling the truth?</p>
+  <p>The reason for this massive price range comes down to 3 problems in the South African market:</p>
+  
+  <h3>Problem 1: The R500 "SEO" Trap</h3>
+  <p>At R500-R2000 per month, agencies cannot afford to do real work. What you get is automated reports, copied content, and spammy backlinks from foreign websites. This might work for 2 months, then Google penalizes your site and you disappear. It costs more to recover than to do it right the first time.</p>
+
+  <h3>Problem 2: Overpriced Agencies</h3>
+  <p>Some big Johannesburg agencies charge R25,000-R40,000 because they have big offices and big salaries. But they often use the same tactics as mid-tier agencies. You’re paying for their rent, not better results.</p>
+
+  <h3>Problem 3: No Transparency</h3>
+  <p>Most agencies won’t tell you exactly what they do each month. "We do SEO" is not a strategy. You deserve to know: how many blog posts, how many links, what technical fixes.</p>
+
+  <div class="tip">
+    <strong>The Truth:</strong> Real SEO in South Africa in 2026 costs between R750 and R35,000 per month depending on your goals. Anything less than R750 and you’re wasting money. Anything more and you should be getting national or e-commerce results.
+  </div>
+
+  <h2 id="seo-pricing-2026">4. Real SEO Pricing in South Africa 2026: From R750 Per Month</h2>
+  <p>After working with 100+ South African businesses, here is what SEO actually costs in 2026. These are real prices based on real work, not guesses.</p>
+
+  <div class="card" style="border:2px solid var(--emerald);text-align:center;padding:32px;margin:32px 0">
+    <h3 style="margin-top:0;color:var(--emerald)">SEO Starter Package</h3>
     <p style="font-size:36px;font-weight:800;margin:16px 0">From <span style="color:var(--emerald)">R750</span> / month</p>
-    <p>Perfect for small businesses and startups looking to build their online presence and start ranking on Google.</p>
+    <p>Perfect for small businesses, startups, and local service providers in South Africa who want to start ranking on Google and build their online presence.</p>
     <a href="/services.html" class="btn-cta" style="margin-top:20px">View All Packages</a>
   </div>
 
-  <p style="margin-top:24px"><strong>What affects pricing?</strong> 1. Competition in your industry 2. Current state of your website 3. Your business goals and timeline. Every strategy is custom. <a href="/contact.html">Get a free quote here</a>.</p>
-  <p>Avoid agencies offering "R150 SEO". At that price you get AI-generated content and spam links that will hurt you long-term. Read <a href="https://developers.google.com/search/docs/fundamentals/spam-policies" target="_blank" rel="noopener">Google’s spam policies</a> to understand why.</p>
-
-  <h2 id="seo-process">6. The 6-Step SEO Process That Actually Works</h2>
-  <p>This is the exact framework used by top SEO companies in South Africa.</p>
-  <h3>Step 1: Technical SEO Audit</h3>
-  <p>We scan your entire website using tools like Screaming Frog and PageSpeed Insights. We fix issues like slow loading, broken links, and mobile problems. Site speed is critical in SA.</p>
-  <h3>Step 2: Keyword Research with South African Intent</h3>
-  <p>We don’t target "SEO". We target "SEO services for lawyers Johannesburg". We use tools to find keywords with buying intent and low competition in SA.</p>
-  <h3>Step 3: Content Creation and Optimization</h3>
-  <p>We write guides that answer questions better than anyone else. Example: "How much does a website cost in South Africa 2026". Content must be original, helpful, and mention SA context like VAT, ZAR, and local laws.</p>
-  <h3>Step 4: Authority and Link Building</h3>
-  <p>We get your business featured on SA websites, news outlets, and directories. One link from <a href="https://www.moneyweb.co.za" target="_blank" rel="noopener">Moneyweb</a> is worth more than 50 low-quality links.</p>
-  <h3>Step 5: GEO and AI Optimization</h3>
-  <p>We add FAQ schema, optimize for "People Also Ask", and build your brand mentions so AI tools know who you are.</p>
-  <h3>Step 6: Tracking and Reporting</h3>
-  <p>We track rankings, traffic, and most importantly: leads and phone calls. You get a monthly report showing ROI.</p>
-
-  <h2 id="technical-seo">7. Technical SEO Explained for SA Websites</h2>
-  <h4>Core Web Vitals</h4>
-  <p>Google measures how fast your site loads. In South Africa, aim for under 2.5 seconds. Compress images, use a CDN, and avoid heavy themes.</p>
-  <h4>Mobile-First Indexing</h4>
-  <p>Google ranks the mobile version of your site first. Over 70% of SA traffic is mobile. Test your site with <a href="https://search.google.com/test/mobile-friendly" target="_blank" rel="noopener">Google’s Mobile Friendly Test</a>.</p>
-  <h4>Site Structure and Internal Linking</h4>
-  <p>Link your blog posts to your service pages. Example: Link from this blog to <a href="/services.html">our SEO services page</a>. This helps Google understand what’s important.</p>
-
-  <h2 id="content-seo">8. Content Strategy: What to Write to Rank in South Africa</h2>
-  <p>Content is still king. But not just any content. You need "10x content" - content that is 10 times better than what’s currently ranking.</p>
-  <h3>Types of Content That Rank in SA</h3>
-  <ol>
-    <li><strong>How-To Guides:</strong> "How to start an LLC in South Africa"</li>
-    <li><strong>Comparison Posts:</strong> "SEO vs Google Ads: Which is better for SA businesses"</li>
-    <li><strong>Cost Guides:</strong> "Website design cost South Africa 2026"</li>
-    <li><strong>Location Pages:</strong> "/seo-services-pretoria" with local info</li>
-  </ol>
-
-  <h2 id="local-seo-sa">9. Local SEO: Dominate Johannesburg, Cape Town, Durban</h2>
-  <p>If you serve customers in a specific city, Local SEO will get you results fastest.</p>
-  <h3>The 2026 Local SEO Checklist for South Africa</h3>
-  <ol>
-    <li><strong>Google Business Profile:</strong> Claim, verify, and optimize. Add services, photos, and your trading hours. Post weekly.</li>
-    <li><strong>Get Reviews:</strong> Ask customers to leave Google reviews. Reply to every review. Reviews with "SEO company" in them help you rank.</li>
-    <li><strong>Location Pages:</strong> Create a dedicated page for each city: <a href="/services.html">SEO Services Johannesburg</a>, SEO Services Cape Town.</li>
-    <li><strong>NAP Citations:</strong> Your Name, Address, Phone must be identical across <a href="https://www.yellowpages.co.za" target="_blank" rel="noopener">Yellow Pages</a>, Cylex, and Hotfrog.</li>
-    <li><strong>Local Content:</strong> Write about local events, news, and topics relevant to your city.</li>
-  </ol>
-
-  <h2 id="timeline">10. How Long Does SEO Take in South Africa?</h2>
-  <p>The #1 question we get. Here’s the honest timeline:</p>
+  <h3>What Do You Get For R750 Per Month?</h3>
+  <p>Our Starter package is designed for South African businesses who are new to SEO. It’s not a "set and forget" package. It’s the foundation.</p>
   <ul>
-    <li><strong>Months 1-3:</strong> Technical fixes, keyword research, first content. Small ranking improvements.</li>
-    <li><strong>Months 4-6:</strong> Content starts ranking. Traffic increases 30-100%. First leads come in.</li>
-    <li><strong>Months 6-9:</strong> Major growth. You start competing for high-value keywords.</li>
-    <li><strong>Months 9-12:</strong> SEO becomes your primary lead source.</li>
+    <li><strong>Technical SEO Audit + Fixes:</strong> We fix 10 critical issues on your site each month. Site speed, mobile errors, broken links.</li>
+    <li><strong>Google Business Profile Optimization:</strong> Critical for local SEO. We optimize your profile so you show up in "near me" searches in your city.</li>
+    <li><strong>5 Target Keywords:</strong> We research and target 5 keywords with buying intent in your niche and city. Example: "hair salon Sandton".</li>
+    <li><strong>1 SEO Blog Post Per Month:</strong> 1200 words of helpful content that answers customer questions and ranks on Google.</li>
+    <li><strong>5 Local Citations:</strong> We list your business on SA directories like <a href="https://www.yellowpages.co.za" target="_blank" rel="noopener">Yellow Pages</a> and Cylex with correct NAP details.</li>
+    <li><strong>Monthly Report:</strong> Rankings, traffic, and work done. Full transparency.</li>
+    <li><strong>GEO Setup:</strong> Basic FAQ schema and content structure so AI tools can understand your business.</li>
   </ul>
-  <p><strong>GEO Timeline:</strong> Because AI search is new, we’ve seen businesses get mentioned in ChatGPT within 30-60 days if structured correctly.</p>
+  <p><strong>Best for:</strong> Plumbers, electricians, salons, gyms, consultants, restaurants. Timeline to results: 3-4 months.</p>
 
-  <h2 id="seo-vs-ads">11. SEO vs Google Ads: Which is Better for SA Businesses?</h2>
+  <h3>Growth Package: R2,500 - R8,000 Per Month</h3>
+  <p>For businesses in competitive cities like Johannesburg, Cape Town, and Durban who want consistent leads.</p>
+  <ul>
+    <li>Everything in Starter, plus:</li>
+    <li><strong>15-25 Keywords</strong></li>
+    <li><strong>3-4 Blog Posts Per Month</strong></li>
+    <li><strong>Link Building:</strong> 3-5 high quality SA backlinks per month</li>
+    <li><strong>Advanced GEO:</strong> Full AI optimization to get recommended by ChatGPT</li>
+    <li><strong>Conversion Rate Optimization:</strong> We improve your pages to turn traffic into leads</li>
+  </ul>
+  <p><strong>Timeline to results:</strong> 4-6 months for consistent monthly leads.</p>
+
+  <h3>Enterprise Package: R15,000 - R35,000+ Per Month</h3>
+  <p>For e-commerce stores, national brands, and franchises competing across South Africa.</p>
+  <ul>
+    <li>Everything in Growth, plus:</li>
+    <li><strong>50+ Keywords</strong></li>
+    <li><strong>8+ Content Pieces Per Month</strong></li>
+    <li><strong>Technical SEO for Large Sites</strong></li>
+    <li><strong>PR and Authority Link Building</strong></li>
+    <li><strong>Full E-commerce SEO</strong></li>
+  </ul>
+  <p><strong>Timeline to results:</strong> 6-12 months to dominate nationally.</p>
+
+  <h2 id="what-affects-cost">5. What Affects SEO Cost: 5 Factors Explained</h2>
+  <p>Why does one business pay R750 and another pay R20,000? It comes down to these 5 factors:</p>
+
+  <h3>1. Industry Competition</h3>
+  <p>This is the biggest factor. Ranking for "car insurance South Africa" costs 10x more than "pet groomer Pietermaritzburg". High competition industries: Law, finance, insurance, medical, e-commerce. Low competition: Local trades, niche B2B.</p>
+
+  <h3>2. Location Targeting</h3>
+  <p>Local SEO for 1 city is cheaper. National SEO across all 9 provinces costs more because we need 9x more content and links. "SEO Johannesburg" is easier than "SEO South Africa".</p>
+
+  <h3>3. Current State of Your Website</h3>
+  <p>If your site is new, we start from zero. If your site is slow or has Google penalties, we first need to do damage control. A clean, fast WordPress site will cost less than a broken custom site.</p>
+
+  <h3>4. Your Goals and Timeline</h3>
+  <p>Want 5 leads per month? R750-R2000 works. Want 100 leads per month and to beat Takealot? That’s R20,000+. Also, if you need results in 30 days, we recommend adding Google Ads while SEO builds.</p>
+
+  <h3>5. GEO and AI Requirements</h3>
+  <p>In 2026, every package includes GEO. But if you want to dominate AI search, we add more authority content and brand mentions. This adds about 20% to cost but gets you in front of ChatGPT users.</p>
+
+  <h2 id="seo-vs-geo">6. SEO vs GEO: The 2026 Shift You Must Know</h2>
+  <p>This is the most important section of this guide. If you ignore this, your SEO investment in 2026 will be outdated in 12 months.</p>
+
+  <h3>What is Traditional SEO?</h3>
+  <p>User searches "digital marketing agency South Africa" → Google shows 10 blue links → They click your website. This is what we’ve done for 20 years.</p>
+
+  <h3>What is GEO? Generative Engine Optimization</h3>
+  <p>User asks <a href="https://chatgpt.com" target="_blank" rel="noopener">ChatGPT</a>: "What are the best digital marketing agencies in South Africa for small businesses?" → ChatGPT answers with 3 business names and why. No clicks needed.</p>
+  <p>According to <a href="https://www.semrush.com/blog/ai-search-statistics/" target="_blank" rel="noopener">SEMRush</a>, 30% of searches in 2026 now start in AI tools. South Africans are using ChatGPT to find services.</p>
+
+  <h3>How Do You Do GEO in South Africa?</h3>
+  <ol>
+    <li><strong>Answer Questions Directly:</strong> Add FAQ sections to every page. "How much does SEO cost in Durban?"</li>
+    <li><strong>Use Schema Markup:</strong> Tell Google and AI exactly what your page is about.</li>
+    <li><strong>Build Brand Mentions:</strong> Get mentioned on podcasts, news, and <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>. AI trusts brands that are mentioned everywhere.</li>
+    <li><strong>Create Authority Content:</strong> 2000+ word guides that are better than anyone else’s.</li>
+  </ol>
+  <p>The good news: All our <a href="/services.html">SEO packages at AJ ROIse</a> now include GEO. You don’t pay extra. We’re building for 2026, not 2020.</p>
+
+  <h2 id="timeline">7. How Long Does SEO Take to Work in South Africa?</h2>
+  <p>This is the question every business owner asks. Here is the honest, no-BS timeline for South African businesses:</p>
+  
+  <ul>
+    <li><strong>Months 1-3: Foundation Phase</strong> Technical fixes, keyword research, first 3 blog posts. You may see small ranking movements but no leads yet. This is normal.</li>
+    <li><strong>Months 4-6: Traction Phase</strong> 10-20 keywords hit page 2. Organic traffic up 50-150%. First 3-10 leads come in from Google. For local businesses, Google Business Profile starts ranking.</li>
+    <li><strong>Months 6-9: Growth Phase</strong> Keywords hit page 1. Traffic doubles. Leads become consistent. You start to see ROI.</li>
+    <li><strong>Months 9-12: Domination Phase</strong> SEO becomes your #1 lead source. Cost per lead drops to almost zero. You own your niche.</li>
+  </ul>
+
+  <div class="quote">
+    <strong>Important:</strong> Anyone promising "page 1 in 30 days" is using black-hat tactics that will get your site banned. Real SEO takes 6 months to show serious results in South Africa.
+  </div>
+
+  <p><strong>GEO Timeline:</strong> Because AI search is new, we’ve seen businesses get mentioned in ChatGPT within 30-60 days if we structure content correctly with FAQs and authority signals.</p>
+
+  <h2 id="seo-vs-ads">8. SEO vs Google Ads: Which is Better for SA Businesses?</h2>
+  <p>You don’t have to choose one. But you should know the difference.</p>
+  
   <table>
     <tr><th></th><th>SEO</th><th>Google Ads</th></tr>
-    <tr><td>Speed</td><td>3-9 months</td><td>Instant</td></tr>
+    <tr><td>Speed</td><td>3-9 months</td><td>Instant - 7 days</td></tr>
     <tr><td>Cost</td><td>From R750 / month</td><td>R50 - R200 per click</td></tr>
     <tr><td>Longevity</td><td>Lasts for years</td><td>Stops when you stop paying</td></tr>
-    <tr><td>Trust</td><td>High</td><td>Medium</td></tr>
+    <tr><td>Trust</td><td>High - Users trust organic</td><td>Medium - Users know it’s an ad</td></tr>
+    <tr><td>Best For</td><td>Long-term growth</td><td>Immediate leads, promotions</td></tr>
   </table>
-  <p><strong>Our Recommendation:</strong> Run Google Ads for immediate leads while building SEO for long-term growth. After 9 months, you can reduce ad spend.</p>
 
-  <h2 id="choosing-agency">12. How to Choose an SEO Agency in South Africa</h2>
-  <h3>Red Flags</h3>
-  <p>1. Guarantees of "#1 ranking" 2. No reporting 3. Prices that seem too good to be true 4. They won’t explain what they do</p>
-  <h3>Green Flags</h3>
-  <p>1. Transparent pricing 2. They talk about SEO AND GEO 3. They ask about your business goals 4. Monthly reporting on leads</p>
+  <p><strong>Our Recommendation for South African Businesses:</strong> Run Google Ads for the first 3 months to get immediate leads. At the same time, build SEO. After 6-9 months, reduce ad spend as organic traffic takes over. This is the strategy that gets the best ROI.</p>
+
+  <h2 id="choosing-agency">9. How to Choose an SEO Agency in South Africa</h2>
+  <p>With so many agencies, how do you pick the right one? Here’s what to look for:</p>
+
+  <h3>What a Good SA SEO Agency Will Do:</h3>
+  <ul>
+    <li>Give you transparent pricing like "From R750/month"</li>
+    <li>Explain exactly what they do each month</li>
+    <li>Talk about both SEO and GEO in 2026</li>
+    <li>Ask about your business goals, not just keywords</li>
+    <li>Send monthly reports with rankings, traffic, and leads</li>
+    <li>Have South African case studies and examples</li>
+  </ul>
+
+  <h2 id="red-flags">10. 7 Red Flags to Avoid When Hiring an SEO Company in SA</h2>
+  <ol>
+    <li><strong>Guaranteed #1 Ranking:</strong> No one can guarantee this. Google forbids it.</li>
+    <li><strong>R300-R1000/month packages:</strong> At that price you get spam. It will hurt you long term.</li>
+    <li><strong>No Monthly Reporting:</strong> If they don’t show you work done, they did nothing.</li>
+    <li><strong>12-Month Lock-in Contracts:</strong> Good agencies work month-to-month. Results keep you.</li>
+    <li><strong>They Don’t Mention GEO:</strong> If they aren’t talking about AI in 2026, they’re behind.</li>
+    <li><strong>They Own Your Website:</strong> You must own your domain, hosting, and Google Business Profile.</li>
+    <li><strong>No South African Examples:</strong> SA search is different. Ask for local results.</li>
+  </ol>
 
   <div class="cta-box">
-    <h3 style="color:#fff;margin-top:0">Ready to Grow with SEO in South Africa?</h3>
-    <p>At AJ ROIse Digital, we build SEO + GEO strategies that get South African businesses found on Google and AI. Packages start from R750/month.</p>
+    <h3 style="color:#fff;margin-top:0">Ready to Rank in South Africa in 2026?</h3>
+    <p>At AJ ROIse Digital, we build SEO + GEO strategies that get South African businesses found on Google and AI. Our packages start from just R750/month with no lock-in contracts.</p>
     <a href="/contact.html" class="btn-cta">Get Your Free SEO Audit</a>
   </div>
 
-  <h2 id="faq">13. Frequently Asked Questions: SEO Services South Africa</h2>
+  <h2 id="faq">11. Frequently Asked Questions: SEO Cost South Africa</h2>
+  
   <h3>What is SEO in simple terms?</h3>
-  <p>SEO is how you get your website to appear higher on Google when people in South Africa search for your products or services.</p>
-  <h3>How much does SEO cost in South Africa?</h3>
-  <p>SEO packages start from R750 per month. The exact cost depends on your industry, competition, and goals. <a href="/services.html">View all packages here</a>.</p>
+  <p>SEO is how you get your website to appear higher on Google when people in South Africa search for your products or services. It’s free traffic from people who are already looking for you.</p>
+
+  <h3>How much does SEO cost in South Africa 2026?</h3>
+  <p>SEO packages in South Africa start from <span class="highlight">R750 per month</span>. The exact cost depends on your industry competition, location, and goals. <a href="/services.html">View all our SEO packages here</a>.</p>
+
   <h3>What is GEO and do I need it?</h3>
-  <p>GEO is optimizing for AI like ChatGPT. Yes, every business needs it in 2026. It’s included in all our packages.</p>
-  <h3>How long does SEO take to work?</h3>
-  <p>3-6 months for initial results. 9-12 months for major results. GEO can work in 30-60 days.</p>
-  <h3>Do you offer SEO services in Johannesburg and Cape Town?</h3>
-  <p>Yes. We provide <a href="/services.html">SEO services across all of South Africa</a> including Johannesburg, Cape Town, Durban, and Pretoria.</p>
+  <p>GEO is Generative Engine Optimization. It’s optimizing your business to be recommended by AI tools like ChatGPT and Google AI. Yes, every business needs it in 2026. It’s included in all our packages.</p>
+
+  <h3>How long does SEO take to work in South Africa?</h3>
+  <p>Expect 3-6 months for initial results and 9-12 months for major results. GEO can start working in 30-60 days. SEO is a long-term investment.</p>
+
+  <h3>Do you offer SEO services in Johannesburg, Cape Town and Durban?</h3>
+  <p>Yes. We provide <a href="/services.html">SEO services across all of South Africa</a> including Johannesburg, Cape Town, Durban, Pretoria, and smaller towns.</p>
+
+  <h3>Is R750 per month enough for SEO?</h3>
+  <p>Yes, for small local businesses. Our Starter package at R750/month gives you the foundation to start ranking locally. As you grow, you can upgrade to our Growth package.</p>
+
+  <h3>What’s the difference between cheap SEO and professional SEO?</h3>
+  <p>Cheap SEO uses spam links and AI content that will get you penalized. Professional SEO uses real strategy, real content, and real outreach. It costs more but it works and it lasts.</p>
 
   <hr style="margin:48px 0;border-color:var(--border)">
-  <p><strong>Related Articles:</strong> <a href="/blog.html">Read All Marketing Guides</a> | <a href="/services.html">View SEO Service Packages</a> | <a href="/about.html">About Alvirno Jordan</a></p>
+  <p><strong>Related Articles:</strong> <a href="/blog.html">Read All Marketing Guides</a> | <a href="/services.html">View SEO Service Packages</a> | <a href="/contact.html">Contact AJ ROIse Digital</a></p>
 </div>
 
 <footer>
