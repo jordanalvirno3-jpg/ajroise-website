@@ -6,40 +6,57 @@
 <title>Content Marketing Services South Africa | SEO Blog Writing | AJ ROIse</title>
 <meta name="description" content="Content Marketing Services South Africa. SEO blog writing, articles + website content from R1,250 per blog. Rank on Google, get leads. Johannesburg, Cape Town, Durban.">
 <link rel="canonical" href="https://ajroise.co.za/content-marketing">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --purple:#8B5CF6; --green:#10B981; --bg:#0B0F19; --card:#111827; 
-  --text:#F9FAFB; --muted:#9CA3AF; --border:rgba(255,255,255,.08);
+  --purple:#8B5CF6; 
+  --green:#10B981; 
+  --bg:#0B0F19; 
+  --card:#111827; 
+  --text:#F9FAFB; 
+  --muted:#9CA3AF; 
+  --border:rgba(255,255,255,.08);
+}
+[data-theme="light"]{
+  --bg:#FFFFFF; 
+  --card:#F9FAFB; 
+  --text:#111827; 
+  --muted:#6B7280; 
+  --border:rgba(0,0,0,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s;padding-top:80px}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2}
-.btn{background:var(--purple);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap}
+.btn{background:var(--purple);color:#fff;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;font-size:.95rem}
 .btn:hover{transform:translateY(-2px)}
 .btn-whatsapp{background:var(--green)}
-.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:12px 20px;font-size:.9rem;font-weight:700}
 .btn-back:hover{background:var(--purple);color:#fff}
 
-header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
+/* HEADER - FIXED */
+header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.nav-buttons{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
 .logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
-.logo-text span{color:var(--green)}
+.logo-text span{color:var(--green)} /* STAYS GREEN */
 
-.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#8B5CF6 0%,#EC4899 100%)}
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
+.theme-toggle:hover{background:var(--card);border-color:var(--purple)}
+
+.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#8B5CF6 0%,#EC4899 100%);color:#fff}
 .hero h1{font-size:3rem;margin-bottom:16px}
 .section{padding:80px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .card{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border)}
 .card h3{color:var(--purple);margin-bottom:12px}
 
-.calc-wrapper{background:var(--card);padding:40px;border-radius:20px;border:1px solid var(--border);margin:40px 0}
+.calc-wrapper{background:var(--card);padding:40px;border-radius:20px;border:1px solid var(--border);margin:40px 0;overflow:hidden}
 .calc-title{text-align:center;font-size:1.8rem;margin-bottom:8px}
 .calc-subtitle{text-align:center;color:var(--muted);margin-bottom:30px}
 .calc-row{display:flex;justify-content:space-between;margin-bottom:20px}
-.calc-slider{width:100%;height:8px;background:#1F2937;border-radius:10px;outline:none;-webkit-appearance:none;margin:20px 0}
+.calc-slider{width:100%;height:8px;background:var(--border);border-radius:10px;outline:none;-webkit-appearance:none;margin:20px 0}
 .calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--green);cursor:pointer;box-shadow:0 0 10px rgba(16,185,129,.5)}
 .calc-result{background:rgba(16,185,129,.1);padding:30px;border-radius:16px;text-align:center;margin:20px 0;border:1px solid rgba(16,185,129,.2)}
 .calc-result-number{font-size:4rem;color:var(--green);font-weight:800;line-height:1}
@@ -69,10 +86,17 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
 
 footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px solid var(--border);color:var(--muted)}
 
+/* MOBILE FIX */
 @media(max-width:768px){
-  nav{flex-direction:column;align-items:stretch}
-.nav-buttons{width:100%;justify-content:space-between}
-.btn-back,.btn-whatsapp{flex:1}
+  html, body{overflow-x:hidden; width:100%}
+  body{padding-top:140px}
+  
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+.logo-text{text-align:center;font-size:1.6rem}
+.nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+.btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+.theme-toggle{width:100%}
+
 .hero h1{font-size:2.2rem}
 .calc-wrapper{padding:24px}
 .calc-result-number{font-size:3rem}
@@ -85,7 +109,8 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
   <nav>
     <a href="/" class="logo-text">AJ <span>ROIse</span></a>
     <div class="nav-buttons">
-      <a href="/" class="btn btn-back">← Back to Home</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <a href="/#services" class="btn btn-back">← Back to Services</a>
       <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Strategy Call</a>
     </div>
   </nav>
@@ -227,6 +252,26 @@ function updatePrice() {
 slider.addEventListener('input', updatePrice);
 backlinks.addEventListener('change', updatePrice);
 updatePrice();
+
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'dark'; // default dark for this page
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
+}
 </script>
 
 </body>
