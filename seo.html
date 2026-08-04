@@ -6,49 +6,83 @@
 <title>SEO Services South Africa | SEO Agency Johannesburg, Cape Town, Durban | AJ ROIse</title>
 <meta name="description" content="SEO Services South Africa. Pay per page: Blog SEO R750, Product SEO R1,200. Local SEO, Technical SEO, eCommerce SEO. SEO Agency Johannesburg, Cape Town, Durban. Free Audit.">
 <link rel="canonical" href="https://ajroise.co.za/seo">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --purple:#8B5CF6; --green:#10B981; --bg:#0B0F19; --card:#111827;
-  --text:#F9FAFB; --muted:#9CA3AF; --border:rgba(255,255,255,.08);
+  --purple:#8B5CF6;
+  --green:#10B981;
+  --bg:#ffffff;
+  --card:#F9FAFB;
+  --text:#111827;
+  --muted:#6B7280;
+  --border:rgba(0,0,0,.08);
+}
+[data-theme="dark"]{
+  --bg:#0B0F19;
+  --card:#111827;
+  --text:#F9FAFB;
+  --muted:#9CA3AF;
+  --border:rgba(255,255,255,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700;line-height:1.2}
-.btn{background:var(--purple);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap}
+.btn{background:var(--purple);color:#fff;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;font-size:.95rem}
 .btn:hover{transform:translateY(-2px)}
 .btn-whatsapp{background:var(--green)}
-.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:10px 20px;font-size:.9rem;font-weight:700}
+.btn-back{background:transparent;color:var(--purple);border:2px solid var(--purple);padding:12px 20px;font-size:.9rem;font-weight:700}
 .btn-back:hover{background:var(--purple);color:#fff}
 
+/* HEADER - SAME AS META */
 header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:99}
 nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.nav-buttons{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
 .logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
 .logo-text span{color:var(--green)}
+.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
+.theme-toggle:hover{background:var(--card);border-color:var(--purple)}
 
-.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#8B5CF6 0%,#10B981 100%)}
+@media(max-width:768px){
+  nav{flex-direction:column;align-items:stretch;gap:12px}
+.logo-text{text-align:center;font-size:1.6rem}
+.nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
+.btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
+.theme-toggle{width:100%}
+.hero{padding:60px 0}
+.hero h1{font-size:2.2rem}
+}
+
+.hero{padding:100px 0;text-align:center;background:linear-gradient(135deg,#8B5CF6 0%,#10B981 100%);color:#fff}
 .hero h1{font-size:3rem;margin-bottom:16px}
 .section{padding:80px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .card{background:var(--card);padding:30px;border-radius:16px;border:1px solid var(--border)}
 .card h3{color:var(--purple);margin-bottom:12px}
 
-.calc-wrapper{background:var(--card);padding:40px;border-radius:20px;border:1px solid var(--border);margin:40px 0}
+/* CALCULATOR - FIXED FOR MOBILE */
+.calc-wrapper{background:var(--card);padding:40px;border-radius:20px;border:1px solid var(--border);margin:40px 0;overflow:hidden}
 .calc-title{text-align:center;font-size:1.8rem;margin-bottom:8px}
 .calc-subtitle{text-align:center;color:var(--muted);margin-bottom:30px}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:30px}
-.calc-item-card{background:#0B0F19;padding:24px;border-radius:16px;border:1px solid var(--border);text-align:center}
+.calc-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:24px;margin-bottom:30px}
+.calc-item-card{background:var(--bg);padding:24px;border-radius:16px;border:1px solid var(--border);text-align:center;width:100%;box-sizing:border-box}
 .calc-item-card h4{color:var(--purple);margin-bottom:8px;font-size:1.2rem}
 .calc-item-card p{color:var(--muted);font-size:.9rem;margin-bottom:12px}
 .calc-item-price{font-size:2rem;color:var(--green);font-weight:800;min-height:40px}
 .qty-row{display:flex;justify-content:center;align-items:center;margin-top:16px;gap:20px}
-.qty-btn{background:var(--purple);color:#fff;border:none;width:40px;height:40px;border-radius:10px;font-size:1.5rem;font-weight:800;cursor:pointer;transition:.2s}
+.qty-btn{background:var(--purple);color:#fff;border:none;width:40px;height:40px;border-radius:10px;font-size:1.5rem;font-weight:800;cursor:pointer;transition:.2s;flex-shrink:0}
 .qty-btn:hover{background:#7C3AED}
-.qty-number{font-size:1.5rem;font-weight:800;min-width:30px}
+.qty-number{font-size:1.5rem;font-weight:800;min-width:30px;text-align:center}
+
+@media(max-width:768px){
+ .calc-wrapper{padding:24px 16px;margin:30px 0}
+ .calc-grid{grid-template-columns: 1fr!important; gap:16px;} /* FORCE STACK */
+ .calc-item-card{padding:20px}
+}
 
 .calc-result{background:rgba(16,185,129,.1);padding:30px;border-radius:16px;margin:20px 0;border:1px solid rgba(16,185,129,.2)}
+[data-theme="dark"].calc-result{background:rgba(16,185,129,.15)}
 .result-line{display:flex;justify-content:space-between;margin-bottom:12px;font-size:1rem}
 .result-total{border-top:1px solid var(--border);padding-top:16px;margin-top:16px;display:flex;justify-content:space-between}
 .result-total span:first-child{font-weight:800;font-size:1.2rem}
@@ -81,15 +115,6 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .hero.intext-link:hover{color:var(--green)}
 
 footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px solid var(--border);color:var(--muted)}
-
-@media(max-width:768px){
-  nav{flex-direction:column;align-items:stretch}
-.nav-buttons{width:100%;justify-content:space-between}
-.btn-back,.btn-whatsapp{flex:1}
-.hero h1{font-size:2.2rem}
-.calc-wrapper{padding:24px}
-.calc-grid{grid-template-columns:1fr}
-.result-total span:last-child{font-size:2rem}
 </style>
 </head>
 <body>
@@ -99,7 +124,8 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
   <nav>
     <a href="/" class="logo-text">AJ <span>ROIse</span></a>
     <div class="nav-buttons">
-      <a href="/" class="btn btn-back">← Back to Home</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <a href="/#services" class="btn btn-back">← Back to Services</a>
       <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free SEO Audit</a>
     </div>
   </nav>
@@ -180,7 +206,7 @@ footer{padding:40px 0;text-align:center;background:var(--card);border-top:1px so
       </div>
 
       <div style="text-align:center;margin-top:30px">
-        <a href="https://wa.me/27690151081" target="_blank" class="btn">Get This Quote on WhatsApp</a>
+        <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Get This Quote on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -306,6 +332,26 @@ function updatePageSEO() {
 document.getElementById('siteAudit').addEventListener('change', updatePageSEO);
 document.getElementById('techOptimization').addEventListener('change', updatePageSEO);
 updatePageSEO();
+
+// THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
+}
 </script>
 
 </body>
