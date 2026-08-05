@@ -72,6 +72,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
  .page-title{font-size:34px}
  .blog-grid{grid-template-columns:1fr}
  .container{padding:32px 20px}
+}
 </style>
 </head>
 <body>
@@ -80,7 +81,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
   <div class="nav">
     <a href="/" class="logo">AJ <span>ROIse</span></a>
     
-    <!-- DESKTOP NAV - ANCHOR LINKS TO HOME -->
+    <!-- DESKTOP NAV -->
     <div class="nav-center">
       <a href="/" class="nav-link">Home</a>
       <a href="/#services" class="nav-link">Services</a>
@@ -98,7 +99,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
 
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
 
-<!-- MOBILE MENU - ANCHOR LINKS TO HOME -->
+<!-- MOBILE MENU - FIXED ANCHORS -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/">Home</a>
   <a href="/#services">Services</a>
@@ -122,9 +123,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
     <button class="filter-btn" data-filter="case">Case Studies</button>
   </div>
 
-  <div class="blog-grid" id="blogGrid">
-    <!-- Posts will be loaded from posts.json -->
-  </div>
+  <div class="blog-grid" id="blogGrid"></div>
 </div>
 
 <footer>
@@ -158,10 +157,18 @@ menuOverlay.addEventListener('click', () => {
   menuOverlay.classList.remove('active');
 });
 
-// LOAD POSTS FROM posts.json
+// CLOSE MENU WHEN LINK CLICKED
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+  });
+});
+
+// LOAD POSTS
 async function loadPosts() {
   try {
-    const res = await fetch('/posts.json');
+    const res = await fetch('/posts.json?v=1');
     const posts = await res.json();
     const blogGrid = document.getElementById('blogGrid');
     
