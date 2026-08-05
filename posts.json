@@ -10,7 +10,7 @@
   {
     "title": "GEO South Africa 2026: Get Cited in ChatGPT & AI Overviews",
     "desc": "GEO is the new SEO. Learn what Generative Engine Optimization is, how GEO vs SEO works, and how SA businesses can get cited by ChatGPT, Gemini & Google AI Overviews.",
-    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop", 
+    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
     "category": "geo",
     "categoryName": "SEO & GEO",
     "link": "/geo-services-south-africa.html"
@@ -42,4 +42,17 @@
   {
     "title": "How to Design Websites That Convert in South Africa",
     "desc": "CRO tips for SA businesses: Load speed, trust signals, and mobile-first design that gets sales.",
-   
+    "img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
+    "category": "web",
+    "categoryName": "Web Design & CRO",
+    "link": "/blog-web-design-convert-sa.html"
+  },
+  {
+    "title": "Instagram Reels Strategy: Get SA Clients in 30 Days",
+    "desc": "The exact short-form video formula we use to get leads for SA brands on Instagram and TikTok.",
+    "img": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=1600&auto=format&fit=crop",
+    "category": "social",
+    "categoryName": "Social & Content",
+    "link": "/blog-instagram-reels-sa.html"
+  }
+]
