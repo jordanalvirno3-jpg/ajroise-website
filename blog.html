@@ -64,6 +64,7 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
  .blog-grid{grid-template-columns:repeat(2, 1fr)}
  .container{padding:40px 24px}
  .nav{padding:16px 20px}
+}
 @media(max-width:768px){
  .nav-center{display:none}
  .menu-btn{display:block}
@@ -71,7 +72,6 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
  .page-title{font-size:34px}
  .blog-grid{grid-template-columns:1fr}
  .container{padding:32px 20px}
-}
 </style>
 </head>
 <body>
@@ -80,16 +80,16 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
   <div class="nav">
     <a href="/" class="logo">AJ <span>ROIse</span></a>
     
-    <!-- DESKTOP NAV - FIXED LINKS -->
+    <!-- DESKTOP NAV - WITH .HTML -->
     <div class="nav-center">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/services" class="nav-link">Services</a>
-      <a href="/blog" class="nav-link active">Blog</a>
-      <a href="/contact" class="nav-link">Contact</a>
+      <a href="/index.html" class="nav-link">Home</a>
+      <a href="/services.html" class="nav-link">Services</a>
+      <a href="/blog.html" class="nav-link active">Blog</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
     </div>
     
     <div class="nav-right">
-      <a href="/contact" class="btn-quote">Get Free Quote</a>
+      <a href="/contact.html" class="btn-quote">Get Free Quote</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
     </div>
@@ -98,12 +98,12 @@ footer{border-top:1px solid var(--border);padding:50px 24px;text-align:center;co
 
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
 
-<!-- MOBILE MENU - FIXED LINKS -->
+<!-- MOBILE MENU - WITH .HTML -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/">Home</a>
-  <a href="/services">Services</a>
-  <a href="/blog">Blog</a>
-  <a href="/contact">Contact</a>
+  <a href="/index.html">Home</a>
+  <a href="/services.html">Services</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/contact.html">Contact</a>
 </div>
 
 <div class="container">
