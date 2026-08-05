@@ -1,5 +1,13 @@
 [
   {
+    "title": "How Much Does SEO Cost in South Africa 2026",
+    "desc": "The definitive guide to SEO pricing in SA. Learn costs, timelines, SEO vs GEO, and how to choose the right agency.",
+    "img": "/blog-seo-main-image.jpg",
+    "category": "seo",
+    "categoryName": "SEO & GEO",
+    "link": "/seo-cost-south-africa-2026.html"
+  },
+  {
     "title": "5 SEO Mistakes Killing Your SA Business in 2026",
     "desc": "Stop losing leads. Fix these SEO errors and get cited by Google AI and ChatGPT in South Africa.",
     "img": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1600&auto=format&fit=crop",
@@ -11,7 +19,7 @@
     "title": "Google Ads for South Africa: R5k Budget Breakdown",
     "desc": "Where to spend R5,000 on Google Ads to get the most leads in JHB, CPT, DBN in 2026.",
     "img": "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop",
-    "category": "ppc",
+    "category": "ads",
     "categoryName": "Google Ads & PPC",
     "link": "/blog-google-ads-budget-sa.html"
   },
@@ -19,7 +27,7 @@
     "title": "Shopify vs WooCommerce: Best for SA E-commerce Stores?",
     "desc": "We compare costs, payment gateways like PayFast, and delivery for South African online stores.",
     "img": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1600&auto=format&fit=crop",
-    "category": "ecommerce",
+    "category": "ecom",
     "categoryName": "E-commerce",
     "link": "/blog-shopify-vs-woocommerce-sa.html"
   },
