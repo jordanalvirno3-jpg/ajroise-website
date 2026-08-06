@@ -9,7 +9,7 @@
 <meta name="author" content="Alvirno Jordan">
 <link rel="canonical" href="https://ajroise.co.za/">
 
-<!-- FAVICON - FIXED FOR DARK MODE -->
+<!-- FAVICON -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link class="favicon" rel="shortcut icon" href="/favicon.ico" />
@@ -17,7 +17,6 @@
 <meta name="theme-color" content="#16A34A">
 <meta name="apple-mobile-web-app-title" content="AJ ROIse" />
 <link rel="manifest" href="/site.webmanifest" />
-<!-- END FAVICON -->
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -63,22 +62,24 @@ h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus{outline:none;border-color:var(--emerald)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
+
 nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
 [data-theme="dark"] nav{background:rgba(11,15,25,.95)}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;min-height:100px}
-.logo-wrap{display:flex;align-items:center}
-.logo-img-link{display:inline-block;text-decoration:none;line-height:0;background:none !important;box-shadow:none !important;padding:0 !important} /* NO BORDER */
-.header-logo{height:95px !important;width:auto !important;max-width:260px !important;display:block;object-fit:contain}
-@media(max-width:768px){
-  nav .container{min-height:80px;padding:10px 16px}
-  .header-logo{height:75px !important;max-width:200px !important} /* BIGGER ON MOBILE */
-}
+nav .container{display:flex;justify-content:flex-end;align-items:center;padding:12px 20px;min-height:90px} /* LOGO RIGHT */
+.logo-wrap{display:flex;align-items:center;gap:12px;margin-left:auto} /* PUSH TO RIGHT */
+.logo-img-link{display:inline-block;text-decoration:none;line-height:0;background:none !important;box-shadow:none !important;padding:0 !important}
+.header-logo{height:75px !important;width:auto !important;max-width:200px !important;display:block;object-fit:contain} /* NICE SIZE BOTH */
+.logo-tagline{font-size:.8rem;color:var(--muted);font-weight:600;white-space:nowrap} /* SMALL VISIBLE TAGLINE */
 
-.logo-tagline{display:none} /* REMOVED */
+@media(max-width:768px){
+  nav .container{min-height:75px;padding:10px 16px}
+  .header-logo{height:65px !important;max-width:170px !important} /* SLIGHTLY SMALLER MOBILE */
+  .logo-tagline{display:none} /* HIDE ON MOBILE */
+}
 
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
-.nav-actions{display:flex;align-items:center;gap:12px}
+.nav-actions{display:flex;align-items:center;gap:12px;margin-left:24px} /* SPACE FROM LOGO */
 .theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text);padding:8px;display:grid;place-items:center}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{width:25px;height:3px;background:var(--text);transition:.3s;border-radius:2px}
@@ -115,7 +116,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center;pad
 .founder-stats{display:flex;gap:30px;margin-top:30px;justify-content:center;text-align:center}
 .stat{text-align:center}
 .stat .num{font-size:2.8rem;color:var(--emerald);font-weight:800}
-.stat .label{font-size:.9rem;color:rgba(255,255,.6)}
+.stat .label{font-size:.9rem;color:rgba(255,255,255,.6)}
 @media(max-width:900px){.founder-wrap{grid-template-columns:1fr;text-align:center}.founder-stats{gap:40px}}
 .about-section{background:linear-gradient(135deg, #0B0F19 0%, #111827 100%);color:#fff;padding:100px 0}
 .about-mv{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0}
@@ -154,7 +155,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 </head>
 <body>
 
-<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=3" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a></div>
+<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=4" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
 <ul class="nav-links">
 <li class="dropdown"><a href="#services">Services ▾</a>
   <div class="dropdown-content">
