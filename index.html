@@ -62,17 +62,17 @@ h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
 
-/* LOGO FAR RIGHT NAV */
+/* LOGO FAR LEFT NAV */
 nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
 [data-theme="dark"] nav{background:rgba(11,15,25,.95)}
-nav .container{display:flex;justify-content:flex-start;align-items:center;padding:10px 20px;min-height:90px;flex-direction:row-reverse} /* REVERSE */
+nav .container{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;min-height:90px} /* NORMAL */
 
-.logo-wrap{display:flex;align-items:center;gap:12px;margin-left:20px;flex-shrink:0} /* ON RIGHT */
+.logo-wrap{display:flex;align-items:center;gap:12px;flex-shrink:0; margin-left:0} /* FAR LEFT */
 .logo-img-link{display:block;line-height:0;margin:0;padding:0}
 .header-logo{height:70px !important;width:auto !important;max-width:180px !important;display:block}
 .logo-tagline{font-size:.7rem;color:var(--muted);font-weight:500;letter-spacing:.3px}
 
-.nav-links{display:flex;gap:22px;list-style:none;align-items:center;margin-right:auto} /* PUSH LEFT */
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
 .nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text);padding:8px;display:grid;place-items:center}
@@ -94,8 +94,7 @@ nav .container{display:flex;justify-content:flex-start;align-items:center;paddin
 .mobile-submenu a:hover{background:var(--emerald);color:#fff;border-color:var(--emerald)}
 
 @media(max-width:768px){
-  nav .container{flex-direction:row} /* NORMAL ON MOBILE */
-  .logo-wrap{margin-left:auto; margin-right:0} /* LOGO FAR RIGHT ON MOBILE */
+  nav .container{min-height:75px;padding:10px 12px}
   .header-logo{height:60px !important;max-width:160px !important}
   .logo-tagline{display:none}
   .nav-links{display:none}
@@ -158,6 +157,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 <body>
 
 <nav><div class="container">
+<div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=11" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
 <ul class="nav-links">
 <li class="dropdown"><a href="#services">Services ▾</a>
   <div class="dropdown-content">
@@ -179,7 +179,6 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 <li><a href="#contact">Contact</a></li>
 </ul>
 <div class="nav-actions"><button class="theme-toggle" id="themeToggle">🌙</button><button class="burger" id="burger"><span></span><span></span><span></span></button></div>
-<div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=10" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
