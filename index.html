@@ -65,19 +65,19 @@ h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}}
 nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
 [data-theme="dark"] nav{background:rgba(11,15,25,.95)}
-nav .container{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;min-height:90px} /* TALLER NAV */
-.logo-wrap{display:flex;flex-direction:row;align-items:center;gap:10px} /* TAGLINE NEXT TO LOGO */
-.logo-img-link{display:block;text-decoration:none;line-height:0}
-.header-logo{height:90px !important;width:auto !important;max-width:240px !important;display:block;object-fit:contain} /* FORCED 90PX */
+nav .container{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;min-height:100px} /* TALLER FOR BIG LOGO */
+.logo-wrap{display:flex;flex-direction:row;align-items:center;gap:12px} /* TAGLINE NEXT TO LOGO */
+.logo-img-link{background:#fff;padding:10px 16px;border-radius:14px;display:inline-block;box-shadow:0 4px 12px rgba(0,0,0,.08);text-decoration:none;line-height:0} /* WHITE PILL OPTION 1 */
+[data-theme="dark"] .logo-img-link{background:#111827;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.header-logo{height:95px !important;width:auto !important;max-width:260px !important;display:block;object-fit:contain} /* BIGGER: 95PX */
 @media(max-width:768px){
-  nav .container{min-height:75px}
-  .header-logo{height:70px !important;max-width:200px !important}
+  nav .container{min-height:80px}
+  .header-logo{height:75px !important;max-width:210px !important}
   .logo-tagline{display:none} /* HIDE ON MOBILE */
+  .logo-img-link{padding:8px 12px}
 }
 
-[data-theme="dark"] .header-logo{filter: brightness(1.4) contrast(1.3) !important;} 
-[data-theme="light"] .header-logo{filter: brightness(1) contrast(1.4) !important;}
-.logo-tagline{font-size:.8rem;color:var(--text);opacity:.9;font-weight:600;white-space:nowrap} /* NEXT TO LOGO */
+.logo-tagline{font-size:.8rem;color:var(--text);opacity:.9;font-weight:600;white-space:nowrap} 
 
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
