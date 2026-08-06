@@ -9,7 +9,6 @@
 <meta name="author" content="Alvirno Jordan">
 <link rel="canonical" href="https://ajroise.co.za/">
 
-<!-- FAVICON -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link class="favicon" rel="shortcut icon" href="/favicon.ico" />
@@ -65,21 +64,21 @@ h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
 
 nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:100;border-bottom:1px solid var(--border)}
 [data-theme="dark"] nav{background:rgba(11,15,25,.95)}
-nav .container{display:flex;justify-content:flex-end;align-items:center;padding:12px 20px;min-height:90px} /* LOGO RIGHT */
-.logo-wrap{display:flex;align-items:center;gap:12px;margin-left:auto} /* PUSH TO RIGHT */
+nav .container{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;min-height:90px} /* SPACE BETWEEN */
+.logo-wrap{display:flex;align-items:center;gap:12px} /* LOGO FAR LEFT */
 .logo-img-link{display:inline-block;text-decoration:none;line-height:0;background:none !important;box-shadow:none !important;padding:0 !important}
-.header-logo{height:75px !important;width:auto !important;max-width:200px !important;display:block;object-fit:contain} /* NICE SIZE BOTH */
-.logo-tagline{font-size:.8rem;color:var(--muted);font-weight:600;white-space:nowrap} /* SMALL VISIBLE TAGLINE */
+.header-logo{height:75px !important;width:auto !important;max-width:200px !important;display:block;object-fit:contain}
+.logo-tagline{font-size:.75rem;color:var(--muted);font-weight:600;white-space:nowrap;opacity:.9} /* SMALLER TAGLINE */
 
 @media(max-width:768px){
   nav .container{min-height:75px;padding:10px 16px}
-  .header-logo{height:65px !important;max-width:170px !important} /* SLIGHTLY SMALLER MOBILE */
+  .header-logo{height:65px !important;max-width:170px !important}
   .logo-tagline{display:none} /* HIDE ON MOBILE */
 }
 
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
-.nav-actions{display:flex;align-items:center;gap:12px;margin-left:24px} /* SPACE FROM LOGO */
+.nav-actions{display:flex;align-items:center;gap:12px}
 .theme-toggle{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text);padding:8px;display:grid;place-items:center}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{width:25px;height:3px;background:var(--text);transition:.3s;border-radius:2px}
@@ -155,7 +154,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 </head>
 <body>
 
-<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=4" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
+<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png?v=5" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
 <ul class="nav-links">
 <li class="dropdown"><a href="#services">Services ▾</a>
   <div class="dropdown-content">
