@@ -9,11 +9,12 @@
 <meta name="author" content="Alvirno Jordan">
 <link rel="canonical" href="https://ajroise.co.za/">
 
-<!-- FAVICON - ADDED -->
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<!-- FAVICON - FIXED FOR DARK MODE -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link class="favicon" rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#16A34A">
 <meta name="apple-mobile-web-app-title" content="AJ ROIse" />
 <link rel="manifest" href="/site.webmanifest" />
 <!-- END FAVICON -->
@@ -67,9 +68,10 @@ nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(
 nav .container{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
 .logo-wrap{display:flex;flex-direction:column;align-items:flex-start}
 .logo-img-link{display:block;text-decoration:none}
-.header-logo{height:45px;width:auto;display:block;filter: brightness(0) invert(1);} 
-[data-theme="light"] .header-logo{filter: brightness(0);} 
-.logo-tagline{font-size:.65rem;color:var(--muted);margin-top:2px}
+.header-logo{height:50px;width:auto;display:block;object-fit:contain} 
+[data-theme="dark"] .header-logo{filter: brightness(1.2);} /* makes gold pop on dark */
+[data-theme="light"] .header-logo{filter: brightness(0.9) contrast(1.1);} /* makes green darker on white */
+.logo-tagline{font-size:.65rem;color:var(--muted);margin-top:4px}
 .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;color:var(--text);font-weight:500}
 .nav-actions{display:flex;align-items:center;gap:12px}
@@ -147,7 +149,7 @@ footer{padding:40px 0;text-align:center;color:var(--muted)}
 </head>
 <body>
 
-<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo.png" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
+<nav><div class="container"><div class="logo-wrap"><a href="/" class="logo-img-link"><img src="/Latest-Logo-remove.png" alt="AJ ROIse Digital Marketing Agency South Africa" class="header-logo"></a><div class="logo-tagline">Founded by Alvirno Jordan</div></div>
 <ul class="nav-links">
 <li class="dropdown"><a href="#services">Services ▾</a>
   <div class="dropdown-content">
