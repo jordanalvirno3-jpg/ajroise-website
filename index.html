@@ -13,7 +13,6 @@
   html{scroll-behavior:smooth}
   body{font-family:'Outfit',sans-serif;overflow-x:hidden;transition:background .3s,color .3s}
   
-  /* DARK MODE DEFAULT */
   :root{
     --bg:#0A0A0A;
     --bg2:#121212;
@@ -25,33 +24,27 @@
     --green:linear-gradient(135deg, #00F260 0%, #00D46B 100%);
   }
   
-  /* LIGHT MODE */
   body.light{
     --bg:#FFFFFF;
     --bg2:#F8F9FA;
     --text:#0A0A0A;
     --text2:#444;
     --glass:rgba(255,255,255,0.95);
-    --border:rgba(0,180,80,0.25);
-    --green-solid:#00A850;
-    --green:linear-gradient(135deg, #00A850 0%, #008F40 100%);
+    --border:rgba(22,163,74,0.25);
+    --green-solid:#16A34A;
+    --green:linear-gradient(135deg, #16A34A 0%, #15803D 100%);
   }
   
   body{background:var(--bg);color:var(--text)}
   .container{max-width:1300px;margin:0 auto;padding:0 24px}
   
-  /* FLOATING ROI BADGE */
   .float-roi{position:fixed;bottom:110px;right:30px;background:var(--green);color:#000;padding:14px 20px;border-radius:50px;font-weight:900;z-index:998;box-shadow:0 10px 30px rgba(0,242,96,0.4);transform:translateY(100px);opacity:0;transition:.6s;pointer-events:none;text-decoration:none}
   .float-roi.show{transform:translateY(0);opacity:1;animation:bounce 2s infinite}
   @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
   
-  /* HEADER */
   header{position:fixed;top:0;width:100%;background:var(--glass);backdrop-filter:blur(30px);z-index:100;border-bottom:1px solid var(--border);transition:.3s}
   nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative}
-  
-  /* FLAT TEXT LOGO */
   .logo{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-1px;background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
-  
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:var(--text);text-decoration:none;font-weight:600;transition:.3s;position:relative;font-size:.95rem}
   .nav-links a:after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--green-solid);transition:.3s}
@@ -71,75 +64,66 @@
   .mobile-nav a{color:var(--text);text-decoration:none;font-weight:600;padding:12px 16px;border-radius:12px;transition:.3s}
   .mobile-nav a:hover{background:rgba(0,242,96,0.1)}
   
-  /* HERO */
-  .hero{padding:160px 20px 0;position:relative;background:radial-gradient(circle at 50% 20%, rgba(0,242,96,0.1) 0%, transparent 60%);text-align:center}
-  .hero-forex{width:100px;height:100px;margin:0 auto 20px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;animation:float 3s ease-in-out infinite;box-shadow:0 0 40px rgba(0,242,96,0.4);padding:12px}
+  .hero{padding:160px 20px 80px;position:relative;background:radial-gradient(circle at 50% 20%, rgba(0,242,96,0.1) 0%, transparent 60%);text-align:center;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+  .hero-forex{width:100px;height:100px;margin:0 auto 20px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;animation:float 3s ease-in-out infinite;box-shadow:0 0 40px rgba(0,242,96,0.4);font-size:3rem}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-  .forex-bars{display:flex;align-items:flex-end;gap:4px;height:60px}
-  .forex-bar{width:8px;background:#000;border-radius:2px;animation:forexUp 2s ease-in-out infinite}
-  .forex-bar:nth-child(1){height:20px;animation-delay:0s}
-  .forex-bar:nth-child(2){height:30px;animation-delay:.2s}
-  .forex-bar:nth-child(3){height:45px;animation-delay:.4s}
-  .forex-bar:nth-child(4){height:55px;animation-delay:.6s}
-  .forex-bar:nth-child(5){height:60px;animation-delay:.8s}
-  @keyframes forexUp{0%,100%{transform:scaleY(0.8);opacity:0.6}50%{transform:scaleY(1);opacity:1}}
   .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:900;line-height:1.05;margin-bottom:20px;background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
   .hero p{color:var(--text2);font-size:1.2rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6}
   
-  .ticker{overflow:hidden;white-space:nowrap;background:var(--glass);backdrop-filter:blur(20px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;margin-top:60px;transition:.3s}
+  .ticker{position:absolute;bottom:0;left:0;width:100%;overflow:hidden;white-space:nowrap;background:var(--glass);backdrop-filter:blur(20px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;transition:.3s;z-index:2}
   .ticker-track{display:inline-block;animation:scroll 30s linear infinite}
   .ticker span{background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:900;margin:0 40px;font-size:1.1rem;letter-spacing:1px}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   
-  section{padding:80px 20px;position:relative}
-  .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;flex-wrap:wrap;gap:20px}
-  h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .sub{color:var(--text2);text-align:center;margin-bottom:40px;font-size:1.1rem}
+  /* FIXED SECTION SPACING + CENTERING */
+  section{padding:120px 20px;position:relative}
+  .section-header{text-align:center;margin-bottom:60px}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
+  .sub{color:var(--text2);text-align:center;font-size:1.1rem;max-width:700px;margin:0 auto}
   
   .btn-gold{background:var(--green);color:#000;padding:16px 36px;border-radius:50px;text-decoration:none;font-weight:800;display:inline-block;transition:.4s;margin:8px;box-shadow:0 10px 30px rgba(0,242,96,0.3)}
   .btn-gold:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 20px 40px rgba(0,242,96,0.4)}
   .btn-outline{border:2px solid var(--border);background:var(--glass);backdrop-filter:blur(10px);color:var(--text);padding:16px 36px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;margin:8px;transition:.4s}
   .btn-outline:hover{border-color:var(--green-solid);box-shadow:0 0 30px rgba(0,242,96,0.2)}
   
-  /* ALL 8 SERVICES */
-  .services-grid-compact{display:grid;grid-template-columns:repeat(2, 1fr);gap:16px;margin-top:40px}
+  .services-grid-compact{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;margin-top:50px;max-width:1200px;margin-left:auto;margin-right:auto}
   @media(min-width:968px){.services-grid-compact{grid-template-columns:repeat(4, 1fr);gap:24px}}
-  .service-card-compact{display:block;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:24px 18px;text-decoration:none;transition:.4s;position:relative;text-align:center}
+  .service-card-compact{display:block;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:28px 20px;text-decoration:none;transition:.4s;position:relative;text-align:center}
   .service-card-compact:hover{border-color:var(--green-solid);transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,242,96,0.25)}
   .service-card-compact.featured{border:2px solid var(--green-solid);box-shadow:0 0 30px rgba(0,242,96,0.3)}
   .service-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--green);color:#000;padding:5px 12px;border-radius:50px;font-size:.65rem;font-weight:900;white-space:nowrap}
-  .service-icon-compact{width:36px;height:36px;margin:0 auto 12px;display:block;stroke:var(--green-solid);stroke-width:2;fill:none}
-  .service-card-compact h3{font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:6px;line-height:1.2}
-  .service-price{color:var(--green-solid);font-weight:800;font-size:.85rem}
+  .service-icon-compact{width:40px;height:40px;margin:0 auto 14px;display:block;stroke:var(--green-solid);stroke-width:2;fill:none}
+  .service-card-compact h3{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:8px;line-height:1.2}
+  .service-price{color:var(--green-solid);font-weight:800;font-size:.9rem}
   
   .industries-ticker-wrap{overflow:hidden;width:100%;padding:20px 0;mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent)}
-  .industries-ticker-track{display:flex;gap:16px;animation:industriesScroll 30s linear infinite;width:max-content}
+  .industries-ticker-track{display:flex;gap:20px;animation:industriesScroll 30s linear infinite;width:max-content}
   .industries-ticker-wrap:hover .industries-ticker-track{animation-play-state: paused}
-  .industry-card{min-width:260px;max-width:260px;background:linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:18px 16px;text-decoration:none;color:var(--text);transition:.4s;position:relative;flex-shrink:0}
+  .industry-card{min-width:280px;max-width:280px;background:linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:20px 18px;text-decoration:none;color:var(--text);transition:.4s;position:relative;flex-shrink:0}
   .industry-card:hover{border-color:var(--green-solid);transform:translateY(-6px) scale(1.02);box-shadow:0 0 0 1px var(--green-solid), 0 20px 40px rgba(0,242,96,0.15)}
-  .industry-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-  .industry-icon{font-size:2.2rem;line-height:1;filter:drop-shadow(0 0 12px rgba(0,242,96,0.3))}
-  .result-pill{background:rgba(0,242,96,0.12);color:var(--green-solid);padding:5px 10px;border-radius:50px;font-size:.7rem;font-weight:800;border:1px solid rgba(0,242,96,0.25);white-space:nowrap}
-  .industry-card h4{color:var(--text);margin-bottom:5px;font-size:1.1rem;font-weight:800}
-  .industry-card p{color:var(--text2);font-size:.85rem;line-height:1.5}
+  .industry-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .industry-icon{font-size:2.4rem;line-height:1;filter:drop-shadow(0 0 12px rgba(0,242,96,0.3))}
+  .result-pill{background:rgba(0,242,96,0.12);color:var(--green-solid);padding:6px 12px;border-radius:50px;font-size:.75rem;font-weight:800;border:1px solid rgba(0,242,96,0.25);white-space:nowrap}
+  .industry-card h4{color:var(--text);margin-bottom:6px;font-size:1.15rem;font-weight:800}
+  .industry-card p{color:var(--text2);font-size:.9rem;line-height:1.5}
   @keyframes industriesScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   
-  .search-wrap{background:var(--glass);backdrop-filter:blur(30px);border:2px solid var(--border);border-radius:20px;padding:10px;transition:.3s}
-  .search-row{display:flex;gap:10px;flex-direction:column}
+  .search-wrap{background:var(--glass);backdrop-filter:blur(30px);border:2px solid var(--border);border-radius:20px;padding:12px;transition:.3s;max-width:900px;margin:0 auto}
+  .search-row{display:flex;gap:12px;flex-direction:column}
   @media(min-width:768px){.search-row{flex-direction:row}}
   #goalSearch{width:100%;background:rgba(0,0,0,0.05);border:1px solid var(--border);color:var(--text);padding:18px 20px;border-radius:14px;font-size:1rem;outline:none;transition:.3s}
   body.light #goalSearch{background:rgba(0,0,0,0.03)}
   #goalSearch::placeholder{color:var(--text2)}
   #goalSearch:focus{border-color:var(--green-solid);box-shadow:0 0 20px rgba(0,242,96,0.2)}
-  .service-chip{display:inline-block;background:var(--glass);border:1px solid var(--border);padding:8px 14px;border-radius:30px;margin:5px;text-decoration:none;color:var(--text);font-size:.85rem;font-weight:600}
-  .sug-item{padding:12px 18px;cursor:pointer;color:var(--text);border-bottom:1px solid var(--border)}
+  .service-chip{display:inline-block;background:var(--glass);border:1px solid var(--border);padding:10px 16px;border-radius:30px;margin:6px;text-decoration:none;color:var(--text);font-size:.9rem;font-weight:600}
+  .sug-item{padding:14px 20px;cursor:pointer;color:var(--text);border-bottom:1px solid var(--border)}
   .sug-item:hover{background:rgba(0,242,96,0.1)}
   
   @media(max-width:968px){
     .nav-links{display:none}
     .burger{display:flex}
-    .section-header{flex-direction:column;align-items:flex-start}
-    .industry-card{min-width:240px;max-width:240px}
+    section{padding:80px 20px}
+    .industry-card{min-width:260px;max-width:260px}
   }
 </style>
 </head>
@@ -161,6 +145,7 @@
         <a href="#industries">Industries</a>
         <a href="blog.html">Blog</a>
         <a href="#strategy">Strategy</a>
+        <a href="#free-audit">Free Audit</a>
         <a href="#contact">Contact</a>
         <a href="https://wa.me/27690151081" target="_blank" class="nav-cta">Get Elite Audit</a>
       </div>
@@ -174,6 +159,7 @@
         <a href="#industries" onclick="toggleMenu()">Industries</a>
         <a href="blog.html" onclick="toggleMenu()">Blog</a>
         <a href="#strategy" onclick="toggleMenu()">Strategy</a>
+        <a href="#free-audit" onclick="toggleMenu()">Free Audit</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
         <a href="#" onclick="toggleTheme();toggleMenu()">🌓 Toggle Theme</a>
         <a href="https://wa.me/27690151081" target="_blank" class="nav-cta" style="text-align:center;margin-top:10px" onclick="toggleMenu()">Get Elite Audit</a>
@@ -184,18 +170,21 @@
 
 <section class="hero">
   <div class="container">
-    <div class="hero-forex"><div class="forex-bars"><div class="forex-bar"></div><div class="forex-bar"></div><div class="forex-bar"></div><div class="forex-bar"></div><div class="forex-bar"></div></div></div>
+    <div class="hero-forex">📈</div>
     <h1>Elite Growth<br>For Ambitious Brands</h1>
     <p>Google Ads, Meta Ads, SEO, Shopify, Amazon. We don't do vanity metrics. We build revenue engines that scale.</p>
     <a href="#analyzer" class="btn-gold">Analyse My Business →</a>
-    <a href="https://wa.me/27690151081" target="_blank" class="btn-outline">Get Free Audit</a>
+    <a href="#free-audit" class="btn-outline">Get Free Audit</a>
   </div>
   <div class="ticker"><div class="ticker-track"><span>GOOGLE ADS</span><span>•</span><span>META ADS</span><span>•</span><span>SEO</span><span>•</span><span>SHOPIFY</span><span>•</span><span>AMAZON</span><span>•</span><span>CONVERSION</span><span>•</span><span>GOOGLE ADS</span><span>•</span><span>META ADS</span><span>•</span><span>SEO</span><span>•</span><span>SHOPIFY</span><span>•</span><span>AMAZON</span><span>•</span><span>CONVERSION</span><span>•</span></div></div>
 </section>
 
 <section id="services">
   <div class="container">
-    <div class="section-header"><div><h2>Elite Services</h2><p class="sub" style="text-align:left;margin:0">Full stack growth engineered for scale</p></div></div>
+    <div class="section-header">
+      <h2>Elite Services</h2>
+      <p class="sub">Full stack growth engineered for scale. No gaps, no excuses.</p>
+    </div>
     <div class="services-grid-compact">
       <a href="google-ads.html" class="service-card-compact"><svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.19 0 2.34-.21 3.41-.6M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg><h3>Google Ads Mastery</h3><div class="service-price">From R8,500/mo</div></a>
       <a href="meta-ads.html" class="service-card-compact featured"><span class="service-badge">CLIENT FAVORITE</span><svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg><h3>Meta Ads Scale</h3><div class="service-price">From R7,500/mo</div></a>
@@ -210,8 +199,11 @@
 </section>
 
 <section id="analyzer" style="background:var(--bg2)">
-  <div class="container" style="max-width:900px">
-    <div class="section-header"><div><h2>Analyse What You Need</h2><p class="sub" style="text-align:left;margin:0">Type your goal. Get an instant growth stack recommendation.</p></div></div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Analyse What You Need</h2>
+      <p class="sub">Type your goal. Get an instant growth stack recommendation.</p>
+    </div>
     <div class="search-wrap" style="position:relative">
       <div class="search-row">
         <input type="text" id="goalSearch" placeholder="e.g. 'I want more customers', 'launch new store', 'rank on google'..." onkeyup="if(event.key==='Enter') analyzeGoal()" oninput="showSuggestions()">
@@ -219,7 +211,7 @@
       </div>
       <div id="suggestions" style="display:none;position:absolute;left:0;right:0;margin-top:10px;background:var(--glass);backdrop-filter:blur(30px);border:1px solid var(--border);border-radius:14px;z-index:10;text-align:left"></div>
     </div>
-    <div id="resultCard" style="display:none;margin-top:30px;background:var(--glass);backdrop-filter:blur(30px);border:2px solid var(--green-solid);border-radius:20px;padding:32px;text-align:left">
+    <div id="resultCard" style="display:none;margin-top:40px;background:var(--glass);backdrop-filter:blur(30px);border:2px solid var(--green-solid);border-radius:20px;padding:36px;text-align:left;max-width:900px;margin-left:auto;margin-right:auto">
       <div style="background:var(--green);color:#000;padding:8px 16px;border-radius:50px;display:inline-block;font-weight:900;margin-bottom:14px;font-size:.8rem" id="resultTag">RECOMMENDED STACK</div>
       <h3 style="font-size:clamp(1.5rem,3.5vw,1.8rem);margin-bottom:14px" id="resultTitle"></h3>
       <p style="color:var(--text2);margin-bottom:20px;line-height:1.7" id="resultDesc"></p>
@@ -233,7 +225,12 @@
 </section>
 
 <section id="industries">
-  <div class="container"><div class="section-header"><div><h2>Industries We Dominate</h2><p class="sub" style="text-align:left;margin:0">We know your numbers. Proven results in your niche.</p></div></div></div>
+  <div class="container">
+    <div class="section-header">
+      <h2>Industries We Dominate</h2>
+      <p class="sub">We know your numbers. Proven results in your niche.</p>
+    </div>
+  </div>
   <div class="industries-ticker-wrap">
     <div class="industries-ticker-track">
       <a href="ecommerce-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🛍️</div><span class="result-pill">3.8x ROAS</span></div><h4>Ecommerce</h4><p>Shopify, WooCommerce, Amazon FBA</p></a>
@@ -244,56 +241,41 @@
       <a href="restaurant-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🍽️</div><span class="result-pill">200+ Orders</span></div><h4>Restaurants</h4><p>Food, Catering, Delivery Brands</p></a>
       <a href="ecommerce-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🛍️</div><span class="result-pill">3.8x ROAS</span></div><h4>Ecommerce</h4><p>Shopify, WooCommerce, Amazon FBA</p></a>
       <a href="healthcare-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🏥</div><span class="result-pill">42 Leads/mo</span></div><h4>Healthcare</h4><p>Doctors, Dentists, Private Clinics</p></a>
+      <a href="legal-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">⚖️</div><span class="result-pill">R120 CPL</span></div><h4>Legal</h4><p>Law Firms, Attorneys, Consultants</p></a>
+      <a href="real-estate-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🏠</div><span class="result-pill">67 Sales</span></div><h4>Real Estate</h4><p>Agents, Developers, Property Mgmt</p></a>
+      <a href="home-services-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🔧</div><span class="result-pill">#1 Local</span></div><h4>Home Services</h4><p>Plumbers, Electricians, Contractors</p></a>
+      <a href="restaurant-marketing.html" class="industry-card"><div class="industry-top"><div class="industry-icon">🍽️</div><span class="result-pill">200+ Orders</span></div><h4>Restaurants</h4><p>Food, Catering, Delivery Brands</p></a>
     </div>
   </div>
 </section>
-<!-- 5. STRATEGY -->
 <section id="strategy" style="background:var(--bg2)">
   <div class="container">
     <div class="section-header">
-      <div>
-        <h2>Our Strategy</h2>
-        <p class="sub" style="text-align:left;margin:0">Audit. Build. Scale.</p>
-      </div>
+      <h2>Our Strategy</h2>
+      <p class="sub">Audit. Build. Scale. The 3-step system to 3x your revenue.</p>
     </div>
     <div class="services-grid-compact">
-      <div class="service-card-compact">
-        <svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <h3>Audit</h3>
-        <div class="service-price">Find Leaks</div>
-      </div>
-      <div class="service-card-compact">
-        <svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M12 20h9M12 4h9M4 9h16M4 15h16"/></svg>
-        <h3>Build</h3>
-        <div class="service-price">Engineer Stack</div>
-      </div>
-      <div class="service-card-compact">
-        <svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        <h3>Scale</h3>
-        <div class="service-price">Double Down</div>
-      </div>
+      <div class="service-card-compact"><svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg><h3>Audit</h3><div class="service-price">Find Leaks</div></div>
+      <div class="service-card-compact"><svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M12 20h9M12 4h9M4 9h16M4 15h16"/></svg><h3>Build</h3><div class="service-price">Engineer Stack</div></div>
+      <div class="service-card-compact"><svg class="service-icon-compact" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg><h3>Scale</h3><div class="service-price">Double Down</div></div>
     </div>
   </div>
 </section>
 
-<!-- 6. WHY ELITE BRANDS -->
 <section>
   <div class="container">
     <div class="section-header">
-      <div>
-        <h2>Why Elite Brands Choose Us</h2>
-        <p class="sub" style="text-align:left;margin:0">No fluff. Just ROI.</p>
-      </div>
+      <h2>Why Elite Brands Choose Us</h2>
+      <p class="sub">No fluff. Just ROI and transparent reporting.</p>
     </div>
   </div>
   <div style="overflow:hidden;width:100%;padding:20px 0;mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)">
-    <div style="display:flex;gap:22px;animation:whyScroll 20s linear infinite;width:max-content">
+    <div style="display:flex;gap:24px;animation:whyScroll 20s linear infinite;width:max-content">
       <div class="why-card"><div class="why-icon">💰</div><h3>ROI First</h3><p>Every R1 must return R3+. We report weekly.</p></div>
       <div class="why-card"><div class="why-icon">🎯</div><h3>Full Stack</h3><p>Website + Ads + SEO. No gaps, no excuses.</p></div>
       <div class="why-card"><div class="why-icon">📊</div><h3>Transparent</h3><p>Live dashboards. You see every cent.</p></div>
       <div class="why-card"><div class="why-icon">⚡</div><h3>Speed</h3><p>14 days to first results. No waiting.</p></div>
       <div class="why-card"><div class="why-icon">🔒</div><h3>No Contracts</h3><p>Month to month. We earn you.</p></div>
-      <!-- DUPLICATE -->
       <div class="why-card"><div class="why-icon">💰</div><h3>ROI First</h3><p>Every R1 must return R3+. We report weekly.</p></div>
       <div class="why-card"><div class="why-icon">🎯</div><h3>Full Stack</h3><p>Website + Ads + SEO. No gaps, no excuses.</p></div>
       <div class="why-card"><div class="why-icon">📊</div><h3>Transparent</h3><p>Live dashboards. You see every cent.</p></div>
@@ -304,14 +286,11 @@
   <style>@keyframes whyScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
 </section>
 
-<!-- 7. FOUNDER -->
 <section id="founder" style="background:var(--bg2)">
   <div class="container">
     <div class="section-header">
-      <div>
-        <h2>Meet The Founder</h2>
-        <p class="sub" style="text-align:left;margin:0">The brain behind the ROI</p>
-      </div>
+      <h2>Meet The Founder</h2>
+      <p class="sub">The brain behind the ROI</p>
     </div>
     <div class="founder-wrap">
       <img src="Founder Image.png" alt="AJ ROIse Founder" class="founder-img">
@@ -333,14 +312,11 @@
   </div>
 </section>
 
-<!-- 8. FAQ -->
 <section>
   <div class="container" style="max-width:900px">
     <div class="section-header">
-      <div>
-        <h2>FAQ</h2>
-        <p class="sub" style="text-align:left;margin:0">Straight answers. No BS.</p>
-      </div>
+      <h2>FAQ</h2>
+      <p class="sub">Straight answers. No BS.</p>
     </div>
     <div style="margin-top:30px">
       <div class="faq-item">
@@ -371,12 +347,48 @@
   </div>
 </section>
 
+<!-- NEW BEACHSIM STYLE FREE AUDIT SECTION -->
+<section id="free-audit" style="background:linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div style="display:flex;gap:60px;align-items:center;flex-wrap:wrap;justify-content:center">
+      <!-- LEFT: TEXT + CTA -->
+      <div style="flex:1;min-width:320px;max-width:600px">
+        <div style="background:var(--green);color:#000;padding:8px 16px;border-radius:50px;display:inline-block;font-weight:900;margin-bottom:20px;font-size:.8rem">100% FREE • NO OBLIGATION</div>
+        <h2 style="font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1;margin-bottom:20px">Get Your <span style="background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Elite Audit</span> Today</h2>
+        <p style="color:var(--text2);font-size:1.1rem;line-height:1.7;margin-bottom:30px">I'll personally record a 5min Loom video showing you exactly 3 growth leaks in your business + how to fix them. Zero cost.</p>
+        
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:30px">
+          <div style="display:flex;align-items:center;gap:12px"><span style="background:var(--green);color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem">✓</span><span style="color:var(--text);font-weight:600">Website + Ads + SEO audit</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="background:var(--green);color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem">✓</span><span style="color:var(--text);font-weight:600">3 Actionable growth opportunities</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="background:var(--green);color:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem">✓</span><span style="color:var(--text);font-weight:600">Delivered in 24 hours</span></div>
+        </div>
+
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <a href="https://wa.me/27690151081?text=Hi%20AJ%20I%20want%20my%20free%20audit" target="_blank" class="btn-gold">Claim Free Audit →</a>
+          <a href="#contact" class="btn-outline">Fill Form Below</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: QR + MOCKUP -->
+      <div style="flex:1;min-width:280px;max-width:400px;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <div style="background:var(--glass);backdrop-filter:blur(20px);border:2px solid var(--border);border-radius:24px;padding:24px;text-align:center">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=16A34A&bgcolor=FFFFFF&data=https://wa.me/27690151081?text=Hi%20AJ%20I%20want%20my%20free%20audit" alt="WhatsApp QR" style="width:200px;height:200px;border-radius:16px;margin-bottom:12px">
+          <p style="color:var(--text2);font-size:.9rem">Scan to WhatsApp me</p>
+        </div>
+        <div style="background:var(--green);color:#000;padding:16px 24px;border-radius:16px;font-weight:900;text-align:center;box-shadow:0 0 30px rgba(0,242,96,0.3)">
+          📈 Avg 3.2x ROAS for clients
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 9. CONTACT - PREMIUM FORM -->
-<section id="contact" style="background:var(--bg2)">
+<section id="contact">
   <div class="container" style="max-width:650px">
-    <div style="text-align:left;margin-bottom:40px">
-      <h2 style="font-size:clamp(2.2rem,6vw,3rem);margin-bottom:12px">Get Your <span style="background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Elite Audit</span></h2>
-      <p style="color:var(--text2);font-size:1.05rem;line-height:1.6">Personalized 5min Loom with 3 growth opportunities</p>
+    <div style="text-align:center;margin-bottom:40px">
+      <h2 style="font-size:clamp(2.2rem,6vw,3rem);margin-bottom:12px">Ready To <span style="background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Scale?</span></h2>
+      <p style="color:var(--text2);font-size:1.05rem;line-height:1.6">Or fill the form and I'll send your audit</p>
     </div>
     
     <form action="https://formspree.io/f/xqkrqjzq" method="POST" style="display:flex;flex-direction:column;gap:16px">
@@ -451,27 +463,27 @@ document.addEventListener('click',(e)=>{if(!e.target.closest('#goalSearch')&&!e.
 </script>
 
 <style>
-.why-card{min-width:300px;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:26px;transition:.3s}
+.why-card{min-width:300px;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:28px;transition:.3s;text-align:center}
 .why-card:hover{border-color:var(--green-solid);transform:scale(1.03);box-shadow:0 20px 40px rgba(0,242,96,0.2)}
-.why-icon{font-size:2.8rem;margin-bottom:12px;filter:drop-shadow(0 0 10px rgba(0,242,96,0.4))}
-.why-card h3{color:var(--text);font-size:1.2rem;margin-bottom:8px}
-.why-card p{color:var(--text2);font-size:.9rem;line-height:1.6}
+.why-icon{font-size:3rem;margin-bottom:14px;filter:drop-shadow(0 0 10px rgba(0,242,96,0.4))}
+.why-card h3{color:var(--text);font-size:1.2rem;margin-bottom:10px}
+.why-card p{color:var(--text2);font-size:.95rem;line-height:1.6}
 
-.founder-wrap{display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:center}
-.founder-img{width:260px;height:260px;border-radius:24px;object-fit:cover;border:3px solid var(--green-solid);box-shadow:0 20px 50px rgba(0,242,96,0.3)}
+.founder-wrap{display:flex;gap:50px;align-items:center;flex-wrap:wrap;justify-content:center;max-width:1200px;margin:0 auto}
+.founder-img{width:280px;height:280px;border-radius:24px;object-fit:cover;border:3px solid var(--green-solid);box-shadow:0 20px 50px rgba(0,242,96,0.3)}
 .founder-info{max-width:600px}
-.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
-.cert-badge{background:linear-gradient(135deg, rgba(0,242,96,0.1) 0%, rgba(0,212,107,0.05) 100%);border:1px solid var(--border);padding:14px 16px;border-radius:14px;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:10px;transition:.3s;color:var(--text)}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.cert-badge{background:linear-gradient(135deg, rgba(0,242,96,0.1) 0%, rgba(0,212,107,0.05) 100%);border:1px solid var(--border);padding:14px 16px;border-radius:14px;font-size:.9rem;font-weight:700;display:flex;align-items:center;gap:10px;transition:.3s;color:var(--text)}
 .cert-badge:hover{border-color:var(--green-solid);box-shadow:0 0 20px rgba(0,242,96,0.25);transform:translateY(-2px)}
 .cert-icon{font-size:1.4rem}
 
 .faq-item{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;margin-bottom:14px;overflow:hidden;transition:.3s}
 .faq-item:hover{border-color:var(--green-solid)}
-.faq-question{padding:20px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700;font-size:1.1rem;color:var(--text)}
+.faq-question{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700;font-size:1.1rem;color:var(--text)}
 .faq-icon{transition:.3s;font-size:1.4rem;color:var(--green-solid)}
 .faq-item.active .faq-icon{transform:rotate(180deg)}
 .faq-answer{max-height:0;overflow:hidden;transition:.4s ease}
-.faq-answer-content{padding:0 24px 20px;color:var(--text2);line-height:1.7}
+.faq-answer-content{padding:0 26px 22px;color:var(--text2);line-height:1.7}
 
 /* PREMIUM FORM INPUTS */
 #contact input, #contact textarea{
