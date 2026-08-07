@@ -6,6 +6,7 @@
 <title>AJ ROIse - Elite Growth Marketing Agency South Africa</title>
 <meta name="description" content="Elite Google Ads, Meta Ads, SEO, Shopify, Amazon agency in South Africa. ROI focused growth marketing.">
 <link rel="icon" href="favicon.ico">
+<link rel="manifest" href="site.webmanifest">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
@@ -47,7 +48,10 @@
   /* HEADER */
   header{position:fixed;top:0;width:100%;background:var(--glass);backdrop-filter:blur(30px);z-index:100;border-bottom:1px solid var(--border);transition:.3s}
   nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative}
-  .logo img{height:42px;filter:drop-shadow(0 0 10px rgba(0,242,96,0.3))}
+  
+  /* FLAT TEXT LOGO */
+  .logo{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-1px;background:var(--green);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+  
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:var(--text);text-decoration:none;font-weight:600;transition:.3s;position:relative;font-size:.95rem}
   .nav-links a:after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--green-solid);transition:.3s}
@@ -150,11 +154,12 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo"><img src="Latest-Logo.png" alt="AJ ROIse"></div>
+      <a href="/" class="logo">AJ ROIse</a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#analyzer">Analyzer</a>
         <a href="#industries">Industries</a>
+        <a href="blog.html">Blog</a>
         <a href="#strategy">Strategy</a>
         <a href="#contact">Contact</a>
         <a href="https://wa.me/27690151081" target="_blank" class="nav-cta">Get Elite Audit</a>
@@ -167,6 +172,7 @@
         <a href="#services" onclick="toggleMenu()">Services</a>
         <a href="#analyzer" onclick="toggleMenu()">Analyzer</a>
         <a href="#industries" onclick="toggleMenu()">Industries</a>
+        <a href="blog.html" onclick="toggleMenu()">Blog</a>
         <a href="#strategy" onclick="toggleMenu()">Strategy</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
         <a href="#" onclick="toggleTheme();toggleMenu()">🌓 Toggle Theme</a>
