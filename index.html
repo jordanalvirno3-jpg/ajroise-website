@@ -5,101 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AJ ROIse - Elite Growth Marketing Agency South Africa</title>
 <meta name="description" content="Elite Google Ads, Meta Ads, SEO, Shopify, Amazon agency in South Africa. ROI focused growth marketing.">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Outfit',sans-serif;overflow-x:hidden;background:#010101;color:#F8F8F8}
+  body{font-family:'Outfit',sans-serif;overflow-x:hidden;background:#000;color:#F8F8F8}
   
+  /* DARK ONLY VARIABLES */
   :root{
-    --bg:#010101;
+    --bg:#000;
     --bg2:#0A0A0A;
-    --gold:#E8C766;
+    --header-bg:#0A0A0A;
+    --ticker-bg:#0A0A0A;
+    --text:#F8F8F8;
+    --sub:#A8A8A8;
     --glass:rgba(10,10,10,0.85);
-    --border:rgba(232,198,102,0.18);
+    --border:rgba(232,198,102,0.2);
+    --gold:#E8C766;
+    --gold-light:#F4E4BC;
+    --shadow:0 8px 30px rgba(232,198,102,0.1);
   }
   
   .container{max-width:1400px;margin:0 auto;padding:0 24px}
   
-  .float-roi{position:fixed;bottom:100px;right:20px;background:linear-gradient(135deg,#F4E4BC 0%,#E8C766 100%);color:#000;padding:16px 24px;border-radius:100px;font-weight:900;z-index:998;box-shadow:0 15px 50px rgba(232,198,102,0.4);text-decoration:none}
-  
   .whatsapp-float{position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,#25D366,#128C7E);width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;box-shadow:0 10px 40px rgba(37,211,102,0.5)}
   
-  header{position:fixed;top:0;width:100%;background:var(--glass);backdrop-filter:blur(30px);z-index:100;border-bottom:1px solid var(--border)}
+  /* HEADER */
+  header{position:fixed;top:0;width:100%;background:var(--header-bg);backdrop-filter:blur(30px);z-index:100;border-bottom:2px solid var(--gold)}
   nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-  .logo{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:800;background:linear-gradient(135deg,#F4E4BC 0%,#E8C766 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
-  .header-right{display:flex;gap:15px;align-items:center}
-  .theme-toggle-btn{background:var(--glass);border:1px solid var(--border);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.3rem}
-  .burger{display:flex;flex-direction:column;gap:6px;cursor:pointer}
-  .burger span{width:26px;height:2px;background:var(--gold);border-radius:2px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:800;background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:var(--text);text-decoration:none;font-weight:600;transition:.3s}
+  .nav-links a:hover{color:var(--gold)}
   
-  /* PREMIUM TICKER UNDER HEADER */
+  /* SERVICES DROPDOWN */
+  .dropdown{position:relative}
+  .dropdown-content{display:none;position:absolute;top:40px;left:0;background:var(--bg2);border:2px solid var(--border);border-radius:4px;padding:16px;min-width:240px;box-shadow:var(--shadow);z-index:101}
+  .dropdown:hover .dropdown-content{display:block}
+  .dropdown-content a{display:block;padding:10px 12px;border-radius:4px;font-weight:500}
+  .dropdown-content a:hover{background:rgba(232,198,102,0.08)}
+  
+  .header-right{display:flex;gap:15px;align-items:center}
+  .burger{display:flex;flex-direction:column;gap:6px;cursor:pointer}
+  .burger span{width:26px;height:2px;background:var(--gold);border-radius:2px;transition:.3s}
+  @media(min-width:901px){.burger{display:none}}
+  
+  /* MOBILE MENU */
+  .mobile-menu{position:fixed;top:0;right:-100%;width:80%;max-width:400px;height:100vh;background:var(--bg2);z-index:101;border-left:2px solid var(--border);transition:.4s;padding:100px 30px;overflow-y:auto}
+  .mobile-menu.active{right:0}
+  .mobile-menu a{display:block;color:var(--text);text-decoration:none;font-size:1.1rem;font-weight:600;padding:14px 0;border-bottom:1px solid var(--border)}
+  .mobile-dropdown{padding-left:16px}
+  
+  /* GOLD TICKER WITH LOGOS - CENTERED */
   .top-ticker{
     position:fixed;
     top:72px;
     left:0;
     width:100%;
-    background:linear-gradient(90deg, rgba(10,10,10,0.98) 0%, rgba(15,15,15,0.98) 50%, rgba(10,10,10,0.98) 100%);
+    background:var(--ticker-bg);
     backdrop-filter:blur(20px);
-    border-top:1px solid rgba(232,198,102,0.15);
-    border-bottom:1px solid rgba(232,198,102,0.15);
-    padding:16px 0;
+    border-top:2px solid var(--gold);
+    border-bottom:2px solid var(--gold);
+    padding:18px 0;
     z-index:99;
     overflow:hidden;
-    box-shadow:0 4px 30px rgba(0,0,0,0.5);
   }
   .top-ticker-track{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     white-space:nowrap;
-    animation:scroll 45s linear infinite;
+    animation:scroll 40s linear infinite;
     gap:50px;
   }
   .top-ticker-item{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     gap:12px;
     font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
+    font-weight:900;
     font-size:0.95rem;
-    letter-spacing:2px;
-    color:#E8C766;
+    letter-spacing:3px;
+    color:var(--gold);
     text-transform:uppercase;
-    text-shadow:0 0 10px rgba(232,198,102,0.3);
   }
-  .top-ticker-dot{
-    width:6px;
-    height:6px;
-    background:#E8C766;
-    border-radius:50%;
-    box-shadow:0 0 10px #E8C766;
-  }
+  .top-ticker-item svg{width:20px;height:20px;flex-shrink:0}
+  .top-ticker-dot{width:10px;height:10px;background:var(--gold);border-radius:50%}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   
-  /* PUSH HERO DOWN FOR HEADER + TICKER */
-  .hero{padding:220px 20px 80px;position:relative;text-align:center;min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 50% 20%, rgba(232,198,102,0.08) 0%, transparent 60%)}
-  .hero-forex{width:110px;height:110px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,#F4E4BC 0%,#E8C766 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(232,198,102,0.4);font-size:3rem}
-  .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,8vw,5rem);font-weight:800;line-height:1.05;margin-bottom:20px;color:#E8C766}
-  .hero p{color:#A8A8A8;font-size:1.1rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6}
+  .hero{padding:180px 20px 60px;text-align:center;min-height:90vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 50% 20%, rgba(232,198,102,0.08) 0%, transparent 60%)}
+  .hero-forex{width:110px;height:110px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(232,198,102,0.3);font-size:3rem;border:3px solid var(--gold-light)}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,5rem);font-weight:800;line-height:1.05;margin-bottom:20px;color:var(--text);letter-spacing:-1px}
+  .hero p{color:var(--sub);font-size:1.15rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7;font-style:italic}
   
-  .btn-gold{background:linear-gradient(135deg,#F4E4BC 0%,#E8C766 100%);color:#000;padding:18px 40px;border-radius:100px;text-decoration:none;font-weight:900;display:inline-block;margin:8px;box-shadow:0 10px 40px rgba(232,198,102,0.3);border:none;cursor:pointer}
-  .btn-outline{border:2px solid var(--border);background:var(--glass);color:#F8F8F8;padding:18px 40px;border-radius:100px;text-decoration:none;font-weight:700;display:inline-block;margin:8px;cursor:pointer}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 100%);color:#000;padding:18px 40px;border-radius:8px;text-decoration:none;font-weight:900;display:inline-block;margin:8px;box-shadow:0 10px 40px rgba(232,198,102,0.25);border:none;cursor:pointer;transition:.3s;letter-spacing:0.5px;text-transform:uppercase;font-size:0.9rem}
+  .btn-gold:hover{transform:translateY(-3px)}
+  .btn-outline{border:2px solid var(--gold);background:transparent;color:var(--gold);padding:18px 40px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block;margin:8px;cursor:pointer;transition:.3s;letter-spacing:0.5px;text-transform:uppercase;font-size:0.9rem}
+  .btn-outline:hover{background:var(--gold);color:#000}
   
-  section{padding:120px 20px;scroll-margin-top:150px}
-  h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;color:#E8C766;margin-bottom:18px;text-align:center}
-  .sub{color:#A8A8A8;text-align:center;font-size:1.15rem;max-width:750px;margin:0 auto 50px}
+  section{padding:80px 20px;scroll-margin-top:120px;background:var(--bg)}
+  h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;color:var(--text);margin-bottom:18px;text-align:center;letter-spacing:-1px}
+  .sub{color:var(--sub);text-align:center;font-size:1.15rem;max-width:750px;margin:0 auto 50px;font-style:italic}
   
-  .services-grid-compact{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;margin-top:50px}
-  @media(min-width:968px){.services-grid-compact{grid-template-columns:repeat(4, 1fr)}}
-  .service-card-compact{display:block;background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:28px 20px;text-decoration:none;text-align:center;transition:.4s}
-  .service-card-compact:hover{border-color:var(--gold);transform:translateY(-6px)}
-  .service-card-compact h3{font-size:1.1rem;font-weight:800;color:#F8F8F8;margin-bottom:8px}
-  .service-price{color:var(--gold);font-weight:800;font-size:.9rem}
+  /* PREMIUM SERVICES */
+  .services-grid-elite{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin-top:60px}
+  .service-card-elite{display:block;background:linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);border-radius:28px;border:2px solid var(--border);padding:40px 32px;text-decoration:none;position:relative;overflow:hidden;transition:.5s;box-shadow:var(--shadow)}
+  .service-card-elite:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 60px rgba(232,198,102,0.18)}
+  .service-icon{font-size:3rem;margin-bottom:20px}
+  .service-card-elite h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:12px}
+  .service-card-elite p{color:var(--sub);font-size:.95rem;line-height:1.7;margin-bottom:20px}
+  .service-price{color:var(--gold);font-weight:900;font-size:1rem;letter-spacing:0.5px}
 </style>
 </head>
 <body>
 
-<a href="https://wa.me/27690151081?text=Hi%20AJ%20ROIse%20I%20want%203.2x%20ROAS" target="_blank" class="float-roi">💰 3.2x Avg ROAS</a>
 <a href="https://wa.me/27690151081" target="_blank" class="whatsapp-float">
   <svg viewBox="0 0 24 24" style="width:35px;height:35px;fill:#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg>
 </a>
@@ -107,34 +127,71 @@
 <header>
   <div class="container">
     <nav>
-      <a href="/" class="logo">AJ ROIse</a>
+      <a href="#hero" class="logo">AJ ROIse</a>
+      <div class="nav-links">
+        <div class="dropdown">
+          <a href="#services">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="google-ads.html">📢 Google Ads</a>
+            <a href="meta-ads.html">📱 Meta Ads</a>
+            <a href="seo.html">🔍 SEO</a>
+            <a href="shopify-ecommerce.html">🛒 Shopify</a>
+            <a href="amazon-marketplace.html">📦 Amazon</a>
+            <a href="website-design.html">🎨 Website Design</a>
+            <a href="content-marketing.html">✍️ Content</a>
+            <a href="conversion-rate-optimization.html">📊 CRO</a>
+          </div>
+        </div>
+        <a href="#analyzer">Analyzer</a>
+        <a href="#contact">Contact</a>
+      </div>
       <div class="header-right">
-        <div class="theme-toggle-btn">☀️</div>
-        <div class="burger"><span></span><span></span></div>
+        <div class="burger" id="burger"><span></span><span></span></div>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- PREMIUM MOVING BANNER -->
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div style="font-weight:800;color:var(--gold);padding:14px 0;font-family:'Playfair Display',serif">Services</div>
+  <div class="mobile-dropdown">
+    <a href="google-ads.html">📢 Google Ads</a>
+    <a href="meta-ads.html">📱 Meta Ads</a>
+    <a href="seo.html">🔍 SEO</a>
+    <a href="shopify-ecommerce.html">🛒 Shopify</a>
+    <a href="amazon-marketplace.html">📦 Amazon</a>
+    <a href="website-design.html">🎨 Website Design</a>
+    <a href="content-marketing.html">✍️ Content</a>
+    <a href="conversion-rate-optimization.html">📊 CRO</a>
+  </div>
+  <a href="#analyzer">Analyzer</a>
+  <a href="#industries">Industries</a>
+  <a href="#strategy">Strategy</a>
+  <a href="#proof">Results</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- GOLD TICKER WITH MODERN LOGOS -->
 <div class="top-ticker">
   <div class="top-ticker-track">
-    <div class="top-ticker-item">GOOGLE ADS</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">META ADS</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">SEO</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">SHOPIFY</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">AMAZON</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">CRO</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">GOOGLE ADS</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">META ADS</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">SEO</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">SHOPIFY</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">AMAZON</div><div class="top-ticker-dot"></div>
-    <div class="top-ticker-item">CRO</div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032s2.701-6.032 6.033-6.032c1.498 0 2.866.549 3.921 1.453l2.814-2.814C17.503 2.988 15.139 2 12.545 2 7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.425 9.426-11.748l-9.426-.013z" fill="var(--gold)"/></svg><span>GOOGLE ADS</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><span>META ADS</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span>SEO</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12.3 22.4C8.2 22.4 5.1 21.1 3.2 19.3L5.5 14c1.3 1.2 3.3 2.5 6.3 2.5 2.5 0 4.1-1 4.1-2.5 0-1.4-1.1-2.3-3.8-3.2-3.8-1.2-6.2-2.8-6.2-5.6 0-3.1 2.6-5.4 6.9-5.4 2.3 0 4 .4 5.5 1.1l-1.9 4.4c-1-.4-2.5-.9-4.2-.9-2.4 0-3.7 1.1-3.7 2.3 0 1.3 1.5 2.1 4.1 3.2 3.9 1.3 5.9 3 5.9 5.7 0 3.1-2.7 5.8-7.2 5.8z"/></svg><span>SHOPIFY</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M.045 18.02c.069-.176.074-.083.176-.023 2.95 1.32 5.99 2.32 9.08 2.99 1.62.46 3.19.6 4.78.46 1.42-.12 2.79-.4 4.17-1.05 1.32-.64 2.59-1.47 3.6-2.59.9-1 1.5-2.2 1.92-3.47.42-1.26.5-2.6.25-3.9-.23-1.3-.7-2.5-1.4-3.6-.8-1.2-1.8-2.2-2.9-3-.9-.7-1.9-1.3-2.9-1.7-1-.4-2.1-.6-3.2-.8-1.2-.1-2.3-.1-3.5 0-1.1.1-2.2.4-3.3.8-.9.4-1.8.9-2.6 1.5-1.1.9-2 1.9-2.7 3.1-.7 1.1-1.2 2.3-1.5 3.6-.3 1.3-.3 2.6 0 3.9.3 1.2.8 2.3 1.5 3.3.7 1 1.6 1.9 2.6 2.7 1 .8 2.1 1.5 3.3 2 .9.4 1.8.7 2.7.9 1 .2 2 .3 3 .3 1.3 0 2.5-.2 3.7-.6 1.1-.4 2.1-1 3-1.8.8-.8 1.4-1.8 1.8-2.9.1-.2.2-.5.3-.7.1-.2.1-.4.2-.6.1-.2.1-.3.1-.5z"/></svg><span>AMAZON</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><span>CRO</span></div><div class="top-ticker-dot"></div>
+    <!-- DUPLICATE -->
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972-3.332 0-6.033-2.701-6.033-6.032s2.701-6.032 6.033-6.032c1.498 0 2.866.549 3.921 1.453l2.814-2.814C17.503 2.988 15.139 2 12.545 2 7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.425 9.426-11.748l-9.426-.013z" fill="var(--gold)"/></svg><span>GOOGLE ADS</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><span>META ADS</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span>SEO</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12.3 22.4C8.2 22.4 5.1 21.1 3.2 19.3L5.5 14c1.3 1.2 3.3 2.5 6.3 2.5 2.5 0 4.1-1 4.1-2.5 0-1.4-1.1-2.3-3.8-3.2-3.8-1.2-6.2-2.8-6.2-5.6 0-3.1 2.6-5.4 6.9-5.4 2.3 0 4 .4 5.5 1.1l-1.9 4.4c-1-.4-2.5-.9-4.2-.9-2.4 0-3.7 1.1-3.7 2.3 0 1.3 1.5 2.1 4.1 3.2 3.9 1.3 5.9 3 5.9 5.7 0 3.1-2.7 5.8-7.2 5.8z"/></svg><span>SHOPIFY</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)"><path d="M.045 18.02c.069-.176.074-.083.176-.023 2.95 1.32 5.99 2.32 9.08 2.99 1.62.46 3.19.6 4.78.46 1.42-.12 2.79-.4 4.17-1.05 1.32-.64 2.59-1.47 3.6-2.59.9-1 1.5-2.2 1.92-3.47.42-1.26.5-2.6.25-3.9-.23-1.3-.7-2.5-1.4-3.6-.8-1.2-1.8-2.2-2.9-3-.9-.7-1.9-1.3-2.9-1.7-1-.4-2.1-.6-3.2-.8-1.2-.1-2.3-.1-3.5 0-1.1.1-2.2.4-3.3.8-.9.4-1.8.9-2.6 1.5-1.1.9-2 1.9-2.7 3.1-.7 1.1-1.2 2.3-1.5 3.6-.3 1.3-.3 2.6 0 3.9.3 1.2.8 2.3 1.5 3.3.7 1 1.6 1.9 2.6 2.7 1 .8 2.1 1.5 3.3 2 .9.4 1.8.7 2.7.9 1 .2 2 .3 3 .3 1.3 0 2.5-.2 3.7-.6 1.1-.4 2.1-1 3-1.8.8-.8 1.4-1.8 1.8-2.9.1-.2.2-.5.3-.7.1-.2.1-.4.2-.6.1-.2.1-.3.1-.5z"/></svg><span>AMAZON</span></div><div class="top-ticker-dot"></div>
+    <div class="top-ticker-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg><span>CRO</span></div><div class="top-ticker-dot"></div>
   </div>
 </div>
 
-<section class="hero">
+<section class="hero" id="hero">
   <div class="container">
     <div class="hero-forex">📈</div>
     <h1>Elite Growth<br>For Ambitious Brands</h1>
@@ -150,68 +207,47 @@
   <div class="container">
     <h2>Elite Services</h2>
     <p class="sub">Full stack growth engineered for scale. No gaps, no excuses.</p>
-    <div class="services-grid-compact">
-      <a href="google-ads.html" class="service-card-compact"><h3>Google Ads Mastery</h3><div class="service-price">From R8,500/mo</div></a>
-      <a href="meta-ads.html" class="service-card-compact"><h3>Meta Ads Scale</h3><div class="service-price">From R7,500/mo</div></a>
-      <a href="seo.html" class="service-card-compact"><h3>SEO Dominance</h3><div class="service-price">From R10,000/mo</div></a>
-      <a href="shopify-ecommerce.html" class="service-card-compact"><h3>Shopify Scale</h3><div class="service-price">From R15,000</div></a>
-      <a href="amazon-marketplace.html" class="service-card-compact"><h3>Amazon Growth</h3><div class="service-price">From R12,000/mo</div></a>
-      <a href="website-design.html" class="service-card-compact"><h3>Website Design</h3><div class="service-price">From R8,000</div></a>
-      <a href="content-marketing.html" class="service-card-compact"><h3>Content Marketing</h3><div class="service-price">From R6,500/mo</div></a>
-      <a href="conversion-rate-optimization.html" class="service-card-compact"><h3>CRO & Analytics</h3><div class="service-price">From R9,000/mo</div></a>
-    </div>
-  </div>
-</section>
-
-<!-- TRUSTED BY LOGOS -->
-<section style="background:#0A0A0A;border-top:1px solid rgba(232,198,102,0.18);border-bottom:1px solid rgba(232,198,102,0.18);padding:120px 20px">
-  <div class="container">
-    <h2>Trusted By Leading Brands</h2>
-    <p class="sub">Proud to power growth for South Africa's top travel brands</p>
-    <div style="display:flex;justify-content:center;align-items:center;gap:80px;flex-wrap:wrap;margin-top:50px;filter:grayscale(100%) brightness(0.7);transition:.5s">
-      
-      <!-- beachSIM Logo -->
-      <div style="height:50px;display:flex;align-items:center;opacity:0.7;transition:.4s">
-        <img src="https://beachsim.com/cdn/shop/files/beachSIM_Logo_Horizontal_-_White.png" alt="beachSIM" style="height:100%;width:auto;object-fit:contain">
-      </div>
-      
-      <!-- travSIM Logo -->
-      <div style="height:50px;display:flex;align-items:center;opacity:0.7;transition:.4s">
-        <img src="https://travsim.com/cdn/shop/files/travSIM_Logo_Horizontal_-_White.png" alt="travSIM" style="height:100%;width:auto;object-fit:contain">
-      </div>
-
+    <div class="services-grid-elite">
+      <a href="google-ads.html" class="service-card-elite"><div class="service-icon">📢</div><h3>Google Ads Mastery</h3><p>High-intent search campaigns that print money. 4.1x avg ROAS.</p><div class="service-price">From R8,500/mo</div></a>
+      <a href="meta-ads.html" class="service-card-elite"><div class="service-icon">📱</div><h3>Meta Ads Scale</h3><p>Creative + targeting that converts cold traffic into buyers.</p><div class="service-price">From R7,500/mo</div></a>
+      <a href="seo.html" class="service-card-elite"><div class="service-icon">🔍</div><h3>SEO Dominance</h3><p>Rank #1 and own your market. Technical, content, backlinks.</p><div class="service-price">From R10,000/mo</div></a>
+      <a href="shopify-ecommerce.html" class="service-card-elite"><div class="service-icon">🛒</div><h3>Shopify Scale</h3><p>Stores built to convert. CRO, apps, email flows included.</p><div class="service-price">From R15,000</div></a>
+      <a href="amazon-marketplace.html" class="service-card-elite"><div class="service-icon">📦</div><h3>Amazon Growth</h3><p>PPC + SEO + Listing optimization to dominate page 1.</p><div class="service-price">From R12,000/mo</div></a>
+      <a href="website-design.html" class="service-card-elite"><div class="service-icon">🎨</div><h3>Website Design</h3><p>Conversion focused design that looks elite and sells.</p><div class="service-price">From R8,000</div></a>
+      <a href="content-marketing.html" class="service-card-elite"><div class="service-icon">✍️</div><h3>Content Marketing</h3><p>Authority content that ranks and drives leads for years.</p><div class="service-price">From R6,500/mo</div></a>
+      <a href="conversion-rate-optimization.html" class="service-card-elite"><div class="service-icon">📊</div><h3>CRO & Analytics</h3><p>Fix leaks. 2x conversions without spending more on ads.</p><div class="service-price">From R9,000/mo</div></a>
     </div>
   </div>
 </section>
 <style>
-  .search-wrap{background:var(--glass);border:2px solid var(--border);border-radius:24px;padding:16px;max-width:1000px;margin:0 auto}
+  .search-wrap{background:var(--glass);border:2px solid var(--border);border-radius:4px;padding:16px;max-width:1000px;margin:0 auto;backdrop-filter:blur(20px)}
   .search-row{display:flex;gap:16px;flex-direction:column}
   @media(min-width:768px){.search-row{flex-direction:row}}
-  #goalSearch{width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border);color:#F8F8F8;padding:20px 24px;border-radius:16px;font-size:1.05rem;font-family:'Outfit',sans-serif}
-  #goalSearch::placeholder{color:#A8A8A8}
-  .service-chip{display:inline-block;background:var(--glass);border:1px solid var(--border);padding:12px 18px;border-radius:100px;margin:6px;text-decoration:none;color:#F8F8F8;font-weight:600}
+  #goalSearch{width:100%;background:var(--bg2);border:2px solid var(--border);color:var(--text);padding:20px 24px;border-radius:4px;font-size:1.05rem;font-family:'Outfit',sans-serif}
+  #goalSearch::placeholder{color:var(--sub)}
+  .service-chip{display:inline-block;background:var(--glass);border:2px solid var(--border);padding:12px 18px;border-radius:4px;margin:6px;text-decoration:none;color:var(--text);font-weight:700;backdrop-filter:blur(10px)}
   
-  .industry-card{min-width:300px;background:linear-gradient(180deg, #0A0A0A 0%, #010101 100%);border:1px solid var(--border);border-radius:24px;padding:24px;text-decoration:none;color:#F8F8F8;display:block}
+  .industry-card{min-width:300px;background:var(--bg2);border:2px solid var(--border);border-radius:4px;padding:24px;text-decoration:none;color:var(--text);display:block;transition:.4s;box-shadow:var(--shadow)}
+  .industry-card:hover{border-color:var(--gold);transform:translateY(-6px)}
   .industry-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
   .industry-icon{font-size:2.6rem}
-  .result-pill{background:rgba(232,198,102,0.1);color:var(--gold);padding:8px 14px;border-radius:100px;font-size:.75rem;font-weight:800}
+  .result-pill{background:var(--gold);color:#000;padding:8px 14px;border-radius:4px;font-size:.75rem;font-weight:900;letter-spacing:0.5px}
   
-  .strategy-card{background:var(--glass);border:1px solid var(--border);border-radius:28px;padding:40px 32px;position:relative}
-  .strategy-number{position:absolute;top:24px;right:24px;font-size:3.5rem;font-weight:900;color:var(--gold);opacity:0.08}
-  .strategy-time{background:rgba(232,198,102,0.1);color:var(--gold);padding:10px 16px;border-radius:100px;font-size:.8rem;font-weight:800;display:inline-block}
+  .strategy-card{background:var(--glass);border:2px solid var(--border);border-radius:4px;padding:40px 32px;position:relative;transition:.4s;backdrop-filter:blur(20px)}
+  .strategy-card:hover{border-color:var(--gold);transform:translateY(-8px)}
+  .strategy-number{position:absolute;top:24px;right:24px;font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:var(--gold);opacity:0.15}
+  .strategy-time{background:var(--gold);color:#000;padding:10px 16px;border-radius:4px;font-size:.8rem;font-weight:900;display:inline-block;letter-spacing:0.5px}
   
-  .why-card{min-width:320px;background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:center}
-  .why-icon{font-size:3.2rem;margin-bottom:16px}
+  .proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+  .proof-card{background:var(--bg2);border:2px solid var(--border);border-radius:4px;padding:40px 30px;text-align:center;transition:.4s;box-shadow:var(--shadow)}
+  .proof-card:hover{border-color:var(--gold);transform:translateY(-6px)}
+  .proof-number{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--gold)}
   
-  .founder-img{width:260px;height:260px;border-radius:28px;object-fit:cover;border:3px solid var(--gold)}
-  
-  .cert-badge-elite{background:var(--glass);border:1px solid var(--border);border-radius:20px;padding:20px 22px;display:flex;align-items:center;gap:16px}
-  .cert-icon-wrap{width:54px;height:54px;background:rgba(232,198,102,0.1);border-radius:16px;display:flex;align-items:center;justify-content:center}
-  
-  #contact input, #contact textarea{width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border);color:#F8F8F8;padding:20px 24px;border-radius:16px;font-size:1.05rem;font-family:'Outfit',sans-serif}
+  #contact input, #contact textarea{width:100%;background:var(--bg2);border:2px solid var(--border);color:var(--text);padding:20px 24px;border-radius:4px;font-size:1.05rem;font-family:'Outfit',sans-serif}
+  #contact input:focus, #contact textarea:focus{outline:none;border-color:var(--gold)}
 </style>
 
-<section id="analyzer" style="background:#0A0A0A">
+<section id="analyzer" style="background:var(--bg2)">
   <div class="container">
     <h2>Analyse What You Need</h2>
     <p class="sub">Type your goal. Get an instant growth stack recommendation.</p>
@@ -221,10 +257,10 @@
         <button type="button" onclick="analyzeGoal()" class="btn-gold">Analyze →</button>
       </div>
     </div>
-    <div id="resultCard" style="display:none;margin-top:60px;background:var(--glass);border:2px solid var(--gold);border-radius:24px;padding:40px;max-width:1000px;margin:60px auto 0">
-      <div style="background:var(--gold);color:#000;padding:10px 18px;border-radius:100px;display:inline-block;font-weight:900;margin-bottom:18px">RECOMMENDED STACK</div>
-      <h3 style="font-size:1.8rem;margin-bottom:16px;color:#F8F8F8" id="resultTitle"></h3>
-      <p style="color:#A8A8A8;margin-bottom:25px" id="resultDesc"></p>
+    <div id="resultCard" style="display:none;margin-top:60px;background:var(--glass);border:3px solid var(--gold);border-radius:4px;padding:40px;max-width:1000px;margin:60px auto 0;backdrop-filter:blur(20px)">
+      <div style="background:var(--gold);color:#000;padding:10px 18px;border-radius:4px;display:inline-block;font-weight:900;margin-bottom:18px;letter-spacing:1px">RECOMMENDED STACK</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:16px;color:var(--text)" id="resultTitle"></h3>
+      <p style="color:var(--sub);margin-bottom:25px" id="resultDesc"></p>
       <div style="margin-bottom:30px;display:flex;flex-wrap:wrap" id="resultServices"></div>
       <div style="display:flex;gap:14px">
         <a id="resultCTA" href="https://wa.me/27690151081" target="_blank" class="btn-gold">Get This Stack →</a>
@@ -240,38 +276,77 @@
     <p class="sub">We know your numbers. Proven results in your niche.</p>
   </div>
   <div style="overflow:hidden;width:100%;padding:30px 0">
-    <div style="display:flex;gap:24px;animation:industriesScroll 40s linear infinite;width:max-content">
-      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🛍️</div><span class="result-pill">3.8x ROAS</span></div><h4 style="color:#F8F8F8">Ecommerce</h4><p style="color:#A8A8A8">Shopify, WooCommerce</p></a>
-      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏥</div><span class="result-pill">42 Leads/mo</span></div><h4 style="color:#F8F8F8">Healthcare</h4><p style="color:#A8A8A8">Doctors, Clinics</p></a>
-      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">⚖️</div><span class="result-pill">R120 CPL</span></div><h4 style="color:#F8F8F8">Legal</h4><p style="color:#A8A8A8">Law Firms</p></a>
+    <div style="display:flex;gap:24px;animation:industriesScroll 25s linear infinite;width:max-content">
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🛍️</div><span class="result-pill">3.8x ROAS</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Ecommerce</h4><p style="color:var(--sub)">Shopify, WooCommerce</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏥</div><span class="result-pill">42 Leads/mo</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Healthcare</h4><p style="color:var(--sub)">Doctors, Clinics</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">⚖️</div><span class="result-pill">R120 CPL</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Legal</h4><p style="color:var(--sub)">Law Firms</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏡</div><span class="result-pill">28% CTR</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Real Estate</h4><p style="color:var(--sub)">Agents, Developers</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏋️</div><span class="result-pill">5.2x ROAS</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Fitness</h4><p style="color:var(--sub)">Gyms, Coaches</p></a>
+      <!-- DUPLICATE FOR SEAMLESS -->
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🛍️</div><span class="result-pill">3.8x ROAS</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Ecommerce</h4><p style="color:var(--sub)">Shopify, WooCommerce</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏥</div><span class="result-pill">42 Leads/mo</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Healthcare</h4><p style="color:var(--sub)">Doctors, Clinics</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">⚖️</div><span class="result-pill">R120 CPL</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Legal</h4><p style="color:var(--sub)">Law Firms</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏡</div><span class="result-pill">28% CTR</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Real Estate</h4><p style="color:var(--sub)">Agents, Developers</p></a>
+      <a href="#" class="industry-card"><div class="industry-top"><div class="industry-icon">🏋️</div><span class="result-pill">5.2x ROAS</span></div><h4 style="color:var(--text);font-family:'Playfair Display',serif">Fitness</h4><p style="color:var(--sub)">Gyms, Coaches</p></a>
     </div>
   </div>
   <style>@keyframes industriesScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
 </section>
 
-<section id="strategy" style="background:#0A0A0A">
+<section id="strategy" style="background:var(--bg2)">
   <div class="container">
     <h2>Our 3-Step Growth System</h2>
     <p class="sub">Audit. Build. Scale.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:35px;margin-top:60px">
-      <div class="strategy-card"><div class="strategy-number">01</div><div style="font-size:3.5rem;margin-bottom:18px">🔍</div><h3 style="font-size:1.5rem;font-weight:800;color:#F8F8F8;margin-bottom:14px">Deep Audit</h3><p style="color:#A8A8A8;line-height:1.8;margin-bottom:20px">We find every leak in your funnel.</p><div class="strategy-time">Week 1</div></div>
-      <div class="strategy-card"><div class="strategy-number">02</div><div style="font-size:3.5rem;margin-bottom:18px">⚡</div><h3 style="font-size:1.5rem;font-weight:800;color:#F8F8F8;margin-bottom:14px">Engineer Stack</h3><p style="color:#A8A8A8;line-height:1.8;margin-bottom:20px">We build your growth engine.</p><div class="strategy-time">Weeks 2-3</div></div>
-      <div class="strategy-card"><div class="strategy-number">03</div><div style="font-size:3.5rem;margin-bottom:18px">📈</div><h3 style="font-size:1.5rem;font-weight:800;color:#F8F8F8;margin-bottom:14px">Scale & Dominate</h3><p style="color:#A8A8A8;line-height:1.8;margin-bottom:20px">We double down on what works.</p><div class="strategy-time">Ongoing</div></div>
+      <div class="strategy-card"><div class="strategy-number">01</div><div style="font-size:3.5rem;margin-bottom:18px">🔍</div><h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:14px">Deep Audit</h3><p style="color:var(--sub);line-height:1.8;margin-bottom:20px">We find every leak in your funnel, ads, and SEO.</p><div class="strategy-time">Week 1</div></div>
+      <div class="strategy-card"><div class="strategy-number">02</div><div style="font-size:3.5rem;margin-bottom:18px">⚡</div><h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:14px">Engineer Stack</h3><p style="color:var(--sub);line-height:1.8;margin-bottom:20px">We build your growth engine with proven channels.</p><div class="strategy-time">Weeks 2-3</div></div>
+      <div class="strategy-card"><div class="strategy-number">03</div><div style="font-size:3.5rem;margin-bottom:18px">📈</div><h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:14px">Scale & Dominate</h3><p style="color:var(--sub);line-height:1.8;margin-bottom:20px">We double down on what works and cut what doesn't.</p><div class="strategy-time">Ongoing</div></div>
     </div>
   </div>
 </section>
 
-<section id="free-audit" style="background:linear-gradient(135deg, #0A0A0A 0%, #010101 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<!-- TRUSTED BY LEADING COMPANIES -->
+<section style="background:var(--bg2);border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);padding:80px 20px">
+  <div class="container">
+    <h2>Trusted By Leading Companies</h2>
+    <p class="sub">Proud to power growth for South Africa's top travel brands</p>
+    <div style="display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;margin-top:50px">
+      <div style="height:45px;display:flex;align-items:center;gap:10px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--text)">beachSIM</span>
+      </div>
+      <div style="height:45px;display:flex;align-items:center;gap:10px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <span style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--text)">travSIM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF SECTION -->
+<section id="proof">
+  <div class="container">
+    <h2>Results That Speak</h2>
+    <p class="sub">Real numbers. Real growth. No fluff.</p>
+    <div class="proof-grid">
+      <div class="proof-card"><div class="proof-number">3.2x</div><p style="color:var(--sub)">Average ROAS</p></div>
+      <div class="proof-card"><div class="proof-number">R42M+</div><p style="color:var(--sub)">Revenue Generated</p></div>
+      <div class="proof-card"><div class="proof-number">89%</div><p style="color:var(--sub)">Client Retention</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="free-audit" style="background:var(--bg2);border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)">
   <div class="container">
     <div style="display:flex;gap:60px;align-items:center;flex-wrap:wrap;justify-content:center">
       <div style="flex:1;min-width:320px">
-        <div style="background:var(--gold);color:#000;padding:8px 16px;border-radius:100px;display:inline-block;font-weight:900;margin-bottom:20px">100% FREE • NO OBLIGATION</div>
+        <div style="background:var(--gold);color:#000;padding:8px 16px;border-radius:4px;display:inline-block;font-weight:900;margin-bottom:20px;letter-spacing:1px">100% FREE • NO OBLIGATION</div>
         <h2>Get Your <span style="color:var(--gold)">Elite Audit</span> Today</h2>
-        <p style="color:#A8A8A8;font-size:1.1rem;line-height:1.7;margin:20px 0">I'll personally record a 5min Loom video showing you exactly 3 growth leaks.</p>
+        <p style="color:var(--sub);font-size:1.1rem;line-height:1.7;margin:20px 0">I'll personally record a 5min Loom video showing you exactly 3 growth leaks.</p>
         <a href="https://wa.me/27690151081" target="_blank" class="btn-gold">Claim Free Audit →</a>
       </div>
       <div style="text-align:center">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=E8C766&bgcolor=FFFFFF&data=https://wa.me/27690151081" style="width:200px;height:200px;border-radius:16px">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=E8C766&bgcolor=0A0A0A&data=https://wa.me/27690151081" style="width:200px;height:200px;border-radius:4px;border:2px solid var(--gold)">
       </div>
     </div>
   </div>
@@ -290,11 +365,29 @@
   </div>
 </section>
 
-<footer style="padding:40px 20px;text-align:center;border-top:1px solid var(--border);color:#A8A8A8">
+<footer style="padding:40px 20px;text-align:center;border-top:2px solid var(--border);color:var(--sub)">
   © 2026 AJ ROIse. Elite Growth Marketing. 
 </footer>
 
 <script>
+// BURGER MENU
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.onclick = () => {mobileMenu.classList.toggle('active')}
+
+// CLOSE MENU ON LINK CLICK
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.onclick = () => {mobileMenu.classList.remove('active')}
+})
+
+// FIXED CTAs - ALL SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+    });
+});
+
 function analyzeGoal(){
   document.getElementById('resultTitle').innerText="🎯 Lead Generation Stack";
   document.getElementById('resultDesc').innerText="Get found and convert clicks into customers.";
