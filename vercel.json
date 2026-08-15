@@ -23,6 +23,11 @@
       ],
       "destination": "https://ajroise.co.za/$1",
       "permanent": true
+    },
+    {
+      "source": "/:path*.html",
+      "destination": "https://ajroise.co.za/:path*",
+      "permanent": true
     }
   ],
   "headers": [
