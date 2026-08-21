@@ -1,403 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Ads Management South Africa | PPC Agency Johannesburg Cape Town Durban | AJ ROIse</title>
-<meta name="description" content="Google Ads Management South Africa. Get leads in 7 days. R3,500/month. Google Ads Agency Johannesburg, Cape Town, Durban. PPC Management, Google Ads Cost, ROI Calculator.">
-<link rel="canonical" href="https://ajroise.co.za/google-ads">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Ads Management South Africa | AJ ROIse</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --orange:#F97316;
-  --green:#10B981;
-  --bg:#FFFFFF;
-  --card:#F9FAFB;
-  --text:#111827;
-  --muted:#6B7280;
-  --border:rgba(0,0,0,.08);
-}
-[data-theme="dark"]{
-  --bg:#0B0F19;
-  --card:#111827;
-  --text:#F9FAFB;
-  --muted:#9CA3AF;
-  --border:rgba(255,255,255,.08);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s;padding-top:80px}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Poppins,sans-serif;font-weight:800;letter-spacing:-0.5px;line-height:1.3;margin-bottom:16px}
-p{margin-bottom:16px}
-.btn{background:var(--orange);color:#fff;padding:14px 24px;border-radius:12px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;white-space:nowrap;font-size:.95rem}
-.btn:hover{background:#EA580C;transform:translateY(-2px)}
-.btn-whatsapp{background:var(--green)}
-.btn-back{background:transparent;color:var(--orange);border:2px solid var(--orange);padding:12px 20px;font-size:.9rem;font-weight:700}
-.btn-back:hover{background:var(--orange);color:#fff}
-
-/* HEADER - FIXED */
-header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo-text{font-family:Poppins;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none}
-.logo-text span{color:var(--green)} /* CHANGED BACK TO GREEN */
-.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
-
-.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
-.theme-toggle:hover{background:var(--card);border-color:var(--orange)}
-
-.hero{padding:80px 0;background:var(--card);border-bottom:1px solid var(--border)}
-.hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center}
-.hero h1{font-size:2.8rem;line-height:1.1;margin-bottom:16px}
-.hero h1 span{color:var(--orange)}
-.hero p{color:var(--muted);margin-bottom:20px;font-size:1.1rem}
-.hero-badge{display:inline-block;background:rgba(249,115,22,.1);color:var(--orange);padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;margin-bottom:12px;border:1px solid rgba(249,115,22,.2)}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero-img{background:linear-gradient(135deg,#F97316,#FB923C);border-radius:20px;padding:30px;color:#fff;text-align:center;font-weight:800}
-
-.section{padding:60px 0}
-.section-title{text-align:center;font-size:2rem;margin-bottom:12px}
-.section-sub{text-align:center;color:var(--muted);margin-bottom:40px}
-
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.service-card{background:var(--card);padding:24px;border-radius:16px;border:1px solid var(--border);transition:.3s}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.service-icon{font-size:2rem;margin-bottom:12px}
-.service-card h3{color:var(--orange);font-size:1.15rem;margin-bottom:8px}
-
-.strategy-wrap{background:var(--card);padding:60px 0}
-.step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
-.step-card{background:var(--bg);padding:24px;border-radius:14px;border:1px solid var(--border);position:relative}
-.step-num{position:absolute;top:-12px;left:18px;background:var(--orange);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
-
-.pricing{background:var(--card);padding:60px 0;text-align:center}
-.price-box{background:var(--bg);padding:35px;border-radius:18px;border:2px solid var(--orange);max-width:480px;margin:0 auto}
-.price{font-size:3.2rem;color:var(--orange);font-weight:800}
-
-/* CALCULATOR */
-.calc-section{padding:80px 0}
-.calc-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:0 auto}
-.calc-inputs{background:var(--card);padding:28px;border-radius:16px;border:1px solid var(--border)}
-.calc-results{background:var(--card);padding:28px;border-radius:16px;border:2px solid var(--green)}
-.calc-title{font-size:1.4rem;margin-bottom:8px}
-.calc-subtitle{color:var(--muted);font-size:.9rem;margin-bottom:20px}
-.toggle{display:flex;gap:8px;margin-bottom:20px}
-.toggle button{flex:1;padding:10px;border:2px solid var(--border);background:var(--bg);color:var(--text);border-radius:10px;font-weight:700;cursor:pointer;font-size:.9rem}
-.toggle button.active{background:var(--orange);color:#fff;border-color:var(--orange)}
-.input-group{margin-bottom:18px}
-.input-group label{display:flex;align-items:center;gap:6px;font-weight:700;font-size:.9rem;margin-bottom:6px}
-.input-group input{width:100%;padding:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);border-radius:10px;font-weight:600;font-size:1rem}
-.input-group small{color:var(--muted);font-size:.8rem;display:block;margin-top:4px}
-
-.tooltip{position:relative;display:inline-block}
-.tooltip-icon{width:16px;height:16px;border-radius:50%;background:var(--muted);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:800}
-.tooltiptext{visibility:hidden;width:220px;background:#111827;color:#fff;text-align:center;border-radius:6px;padding:8px;font-size:.8rem;position:absolute;z-index:10;bottom:125%;left:50%;margin-left:-110px;opacity:0;transition:opacity 0.3s}
-.tooltiptext.show{visibility:visible;opacity:1}
-
-.result-header{text-align:center;margin-bottom:20px}
-.result-header h3{color:var(--orange);margin-bottom:4px}
-
-.kpi-card{background:rgba(249,115,22,.1);border:2px solid var(--orange);padding:20px;border-radius:14px;margin-bottom:20px;text-align:center}
-.kpi-label{font-size:.9rem;color:var(--muted);margin-bottom:6px;font-weight:600}
-.kpi-value{font-size:2rem;font-weight:800;color:var(--orange)}
-.kpi-sub{font-size:.8rem;color:var(--muted)}
-
-.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
-.metric{background:var(--card);padding:14px;border-radius:10px;text-align:center}
-.metric-label{font-size:.8rem;color:var(--muted)}
-.metric-value{font-size:1.1rem;font-weight:800}
-.cost-breakdown{border-top:1px solid var(--border);padding-top:12px;margin-top:12px}
-.cost-row{display:flex;justify-content:space-between;margin-bottom:6px;font-size:.9rem}
-.profit-box{background:rgba(16,185,129,.1);padding:18px;border-radius:12px;margin-top:12px;text-align:center;border:2px solid var(--green)}
-.profit-label{font-size:.85rem;color:var(--muted)}
-.profit-value{font-size:1.8rem;font-weight:800;color:var(--green)}
-.profit-sub{font-size:.8rem;color:var(--muted)}
-
-.disclaimer{background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.2);border-radius:10px;padding:14px;margin-top:16px;font-size:.8rem;color:var(--text)}
-
-.keywords{background:var(--card);padding:40px 0;text-align:center}
-.keyword-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.tag{background:rgba(249,115,22,.1);color:var(--orange);padding:7px 14px;border-radius:20px;font-weight:700;font-size:.85rem;border:1px solid rgba(249,115,22,.2)}
-
-.intext-link{color:var(--orange);text-decoration:underline;font-weight:700}
-footer{padding:30px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:.9rem}
-
-/* MOBILE FIX - NO HORIZONTAL SCROLL + STACK EVERYTHING */
-@media(max-width:768px){
-  html, body{overflow-x:hidden; width:100%}
-  body{padding-top:140px}
-
-  /* HEADER */
-  nav{flex-direction:column;align-items:stretch;gap:12px}
-.logo-text{text-align:center;font-size:1.6rem}
-.nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
-.btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
-.theme-toggle{width:100%}
-
-  /* HERO - STOP THE SIDE SCROLL */
-.hero-grid{grid-template-columns:1fr!important}
-.hero-img{order:-1; margin-bottom:20px}
-
-  /* CALCULATOR - FORCE STACK */
-.calc-wrapper{grid-template-columns:1fr!important; gap:20px}
-.calc-inputs,.calc-results{width:100%; box-sizing:border-box}
-}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--bg:#070707;--bg2:#0E0E0E;--card:#161616;--card2:#1A1A1A;--border:rgba(255,255,255,0.08);--green:#10B981;--text:#F5F5F5;--text2:#8A8A8A}
+[data-theme="light"]{--bg:#FFFEFB;--bg2:#F5F2EB;--card:#FFFFFF;--card2:#FFFFFF;--border:#E8E2D6;--text:#111111;--text2:#6B7280}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+.container{max-width:780px;margin:0 auto;padding:0 20px;width:100%}
+.container-wide{max-width:1060px;margin:0 auto;padding:0 20px;width:100%}
+.btn{border-radius:100px;padding:14px 24px;font-weight:800;font-size:.88rem;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:.2s;white-space:nowrap;cursor:pointer}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(16,185,129,.3)}
+.btn-ghost{background:var(--card2);border:1px solid var(--border);color:var(--text2)}
+header{position:fixed;top:0;width:100%;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:100}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:1.55rem;color:var(--text);text-decoration:none}.logo span{color:var(--green)}
+.right{display:flex;gap:12px;align-items:center}
+.theme-toggle{width:42px;height:42px;border-radius:100px;border:1px solid var(--border);background:var(--card2);display:grid;place-items:center;cursor:pointer}
+.burger{width:42px;height:42px;border-radius:100px;border:1px solid var(--border);background:var(--card2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer}
+.burger span{width:18px;height:2px;background:var(--text);border-radius:2px;transition:.2s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:62px;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--border);z-index:99;transform:translateX(100%);transition:.3s;padding:24px 20px}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{display:block;padding:16px 18px;border-radius:14px;background:var(--card2);border:1px solid var(--border);margin-bottom:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1rem}
+.mobile-menu a.green{background:var(--green);color:#fff;border-color:var(--green)}
+.sub-bar{margin-top:62px;background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:62px;z-index:90}
+.sub-bar-inner{display:flex;align-items:center;gap:14px}
+.back-pill{background:var(--card2);border:1px solid var(--border);padding:10px 16px;border-radius:100px;font-weight:700;font-size:.84rem;color:var(--text2);text-decoration:none}
+.breadcrumb{font-size:.84rem;color:var(--text2)}.breadcrumb b{color:var(--text)}
+.hero-centred{text-align:center;padding:28px 0 32px;min-height:calc(100dvh - 124px);display:flex;flex-direction:column;justify-content:center;align-items:center}
+.badge{display:inline-flex;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.22);color:var(--green);padding:8px 14px;border-radius:100px;font-weight:900;font-size:.66rem;letter-spacing:.8px}
+.hero-centred h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,7vw,3.4rem);line-height:.98;letter-spacing:-0.03em;font-weight:800;margin-top:18px;max-width:620px}
+.hero-centred h1 span{color:var(--green)}
+.hero-centred p.sub{color:var(--text2);font-size:1.02rem;line-height:1.6;margin:14px auto 0;max-width:520px}
+.ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.visual{margin-top:28px;background:var(--card2);border:1px solid var(--border);border-radius:22px;padding:12px;width:100%;max-width:720px;box-shadow:0 20px 50px rgba(0,0,0,.35);text-align:left}
+.gbar{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:9px 12px}
+.search{flex:1;font-weight:700;font-size:.8rem;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search b{color:var(--text)}
+.ad{margin-top:12px;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:12px}
+.atitle{font-weight:800;font-size:.88rem;color:var(--text);line-height:1.3}
+.aurl{font-size:.66rem;color:var(--green);margin-top:2px}
+.adesc{font-size:.74rem;color:var(--text2);margin-top:6px;line-height:1.5}
+.aext{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.aext span{font-size:.62rem;background:var(--card2);border:1px solid var(--border);padding:4px 8px;border-radius:100px;color:var(--text2)}
+.sec{padding:72px 0 56px;border-top:1px solid var(--border);text-align:center;background:var(--bg)}
+.sec h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,6vw,2.8rem);font-weight:800;line-height:.98;letter-spacing:-0.03em;max-width:640px;margin:0 auto}
+.sec h2 span{color:var(--green)}
+.sec p.subsec{color:var(--text2);font-size:.98rem;line-height:1.6;margin:12px auto 0;max-width:520px}
+.cards{margin-top:28px;display:grid;gap:16px;text-align:left}
+.card-process{background:var(--card2);border:1px solid var(--border);border-radius:22px;padding:22px;position:relative}
+.num{font-family:'Space Grotesk',sans-serif;font-size:2.6rem;font-weight:800;color:var(--green);line-height:1}
+.day-badge{position:absolute;top:16px;right:16px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.22);color:var(--green);padding:6px 12px;border-radius:100px;font-weight:900;font-size:.68rem}
+.card-process b.title{font-family:'Space Grotesk',sans-serif;display:block;margin-top:16px;font-size:1.25rem;font-weight:800}
+.card-process p.desc{color:var(--text2);font-size:.92rem;line-height:1.6;margin-top:12px}
+.price-wrap{display:grid;gap:14px;max-width:700px;margin:28px auto 0;text-align:left}
+@media(min-width:700px){.price-wrap{grid-template-columns:1fr 1fr}}
+.price-card{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:20px;text-align:center;position:relative}
+.price-card.best{border:2px solid var(--green)}
+.badge-price{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:4px 12px;border-radius:100px;font-size:.6rem;font-weight:900;white-space:nowrap}
+.price{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:800;margin:10px 0}
+.calc{display:grid;gap:14px;max-width:900px;margin:28px auto 0;text-align:left}
+@media(min-width:860px){.calc{grid-template-columns:1fr 1fr}}
+.calc-card{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:20px}
+.calc-card.best{border:2px solid var(--green);background:linear-gradient(180deg,rgba(16,185,129,.06),var(--card2))}
+.calc-badge{display:inline-flex;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--green);padding:4px 10px;border-radius:100px;font-size:.6rem;font-weight:900}
+.select{display:flex;gap:6px;background:var(--bg);border:1px solid var(--border);border-radius:100px;padding:5px;margin:14px 0}
+.select button{flex:1;padding:11px;border-radius:100px;border:none;background:transparent;color:var(--text2);font-weight:800;font-size:.82rem;cursor:pointer}
+.select button.active{background:var(--text);color:var(--bg)}[data-theme="light"].select button.active{background:#111;color:#fff}
+.input label{font-weight:700;font-size:.76rem;color:var(--text2);margin-bottom:6px;display:block}
+.input input{width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-weight:600;outline:none;margin-bottom:12px;font-family:'Outfit',sans-serif;font-size:.9rem}
+.input input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(16,185,129,.1)}
+.kpi{text-align:center;padding:16px;background:var(--bg);border:1px solid var(--border);border-radius:16px}
+.kpi-val{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:800;color:var(--green);margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.met{background:var(--bg);border:1px solid var(--border);padding:12px;border-radius:14px;text-align:center}
+.profit{background:linear-gradient(135deg,#10B981,#059669);border-radius:16px;padding:14px;text-align:center;color:#fff;margin-top:14px}
+.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.82rem;gap:10px}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;z-index:200;display:flex;align-items:center;gap:10px}
+.wa-pill{background:var(--card2);border:1px solid var(--border);padding:8px 14px;border-radius:100px;display:flex;align-items:center;gap:8px;font-weight:700;font-size:.84rem;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.dot{width:10px;height:10px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.wa-btn{width:56px;height:56px;background:var(--green);border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 28px rgba(16,185,129,.45)}
+.wa-btn svg{width:28px;height:28px;fill:#fff}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <a href="/" class="logo-text">AJ <span>ROIse</span></a>
-      <div class="nav-buttons">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <a href="/#services" class="btn btn-back">← Back to Services</a>
-        <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Google Ads Audit</a>
-      </div>
-    </nav>
-  </div>
-</header>
+<header><div class="container-wide"><nav>
+<a href="/" class="logo">AJ <span>ROIse</span></a>
+<div class="right"><button class="theme-toggle" id="themeToggle">🌙</button><button class="burger" id="burgerBtn"><span></span><span></span><span></span></button></div>
+</nav></div></header>
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-badge">Get Leads in 7 Days</div>
-        <h1>Google Ads Management That <span>Gets You Customers</span></h1>
-        <p>Stop wasting money on clicks. We run PPC campaigns for SA businesses in Johannesburg, Cape Town, Durban that actually turn into sales. From R1,000 ad spend.</p>
-        <div class="hero-cta">
-          <a href="#roi-calculator" class="btn">Calculate Your ROI</a>
-          <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Book Free Audit</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <div style="font-size:.9rem;opacity:.9">Average Client Result</div>
-        <div style="font-size:2.5rem">3.2x ROAS</div>
-        <div style="font-size:.9rem;margin-top:8px">Within First 30 Days</div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="mobile-menu" id="mobileMenu"><a href="/">Home</a><a href="/#services">Services</a><a href="/website-design.html">Website Design</a><a href="/google-ads.html">Google Ads</a><a href="https://wa.me/27690151081" target="_blank" class="green">WhatsApp Me →</a></div>
 
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Google Ads PPC Services That Print Money</h2>
-    <p class="section-sub">Full management for <a href="/shopify-ecommerce" class="intext-link">eCommerce</a> and service businesses across South Africa</p>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🎯</div><h3>Google Search Ads</h3><p>Show up #1 when people search "plumber near me". High buyer intent traffic. Faster than <a href="/seo" class="intext-link">SEO</a>.</p></div>
-      <div class="service-card"><div class="service-icon">🛒</div><h3>Google Shopping Ads</h3><p>Show your products with price + image. Perfect for <a href="/amazon-marketplace" class="intext-link">Amazon</a> sellers and Shopify stores.</p></div>
-      <div class="service-card"><div class="service-icon">⚡</div><h3>Daily PPC Optimization</h3><p>We kill wasted keywords and scale winners every day. Lower your Google Ads cost per lead weekly.</p></div>
-      <div class="service-card"><div class="service-icon">🔍</div><h3>PPC Keyword Research</h3><p>Find money keywords competitors miss. We target "hire" and "buy" terms, not "how to".</p></div>
-      <div class="service-card"><div class="service-icon">📊</div><h3>Conversion Tracking</h3><p>Track calls, forms, sales. Know exactly which keyword made you R5,000. Plus <a href="/website-design" class="intext-link">landing page</a> CRO tips.</p></div>
-      <div class="service-card"><div class="service-icon">📈</div><h3>Monthly ROI Reports</h3><p>1 page: Spend, Leads, Cost, Revenue, Profit. No fluff. Run with <a href="/meta-ads" class="intext-link">Facebook Ads</a> for max reach.</p></div>
-    </div>
-  </div>
-</section>
+<div class="sub-bar"><div class="container-wide"><div class="sub-bar-inner"><a href="/#services" class="back-pill">← Back to Services</a><div class="breadcrumb">Services / <b>Google Ads</b></div></div></div></div>
 
-<section class="strategy-wrap">
-  <div class="container">
-    <h2 class="section-title">Our 4-Step Google Ads Profit System</h2>
-    <div class="step-grid">
-      <div class="step-card"><div class="step-num">1</div><h3>Intent Keyword Research</h3><p>Find "money keywords" with buyer intent. Check Google Ads cost in SA.</p></div>
-      <div class="step-card"><div class="step-num">2</div><h3>Ad + Landing Page</h3><p>High CTR ads that match your page. Free audit to boost conversion rate.</p></div>
-      <div class="step-card"><div class="step-num">3</div><h3>Daily PPC Management</h3><p>Kill losers. Scale winners. Add negatives. Lower CPC every week.</p></div>
-      <div class="step-card"><div class="step-num">4</div><h3>ROI Tracking</h3><p>Track every lead to a keyword. Report shows exact Google Ads ROI.</p></div>
-    </div>
-  </div>
-</section>
+<div class="container hero-centred">
+<div class="badge">GOOGLE ADS • JOHANNESBURG • LEADS IN 7 DAYS</div>
+<h1>From search to <span>sale in 7 days</span></h1>
+<p class="sub">Simple process — no jargon, no wasted clicks. You own the account.</p>
+<div class="ctas"><a href="https://wa.me/27690151081?text=Google%20PPC%20Setup%20R800" target="_blank" class="btn btn-green">Get Instant Quote →</a><a href="#how" class="btn btn-ghost">See My Work</a></div>
+<div class="visual"><div class="gbar"><div style="display:flex;gap:5px"><i style="width:8px;height:8px;border-radius:50%;background:#FF5F57;display:block"></i><i style="width:8px;height:8px;border-radius:50%;background:#FFBD2E;display:block"></i><i style="width:8px;height:8px;border-radius:50%;background:#28CA42;display:block"></i></div><div class="search">🔍 <b>plumber near me</b> — Johannesburg</div></div><div class="ad"><div class="atitle">24/7 Emergency Plumber Johannesburg — Same Day Fix</div><div class="aurl">Sponsored • ajroise.co.za • Open now</div><div class="adesc">WhatsApp for a quick quote. Same-day service in Johannesburg. You own the leads.</div><div class="aext"><span>📞 Call Now</span><span>💬 WhatsApp</span><span>📍 Johannesburg</span></div></div></div>
+</div>
 
-<section class="pricing">
-  <div class="container">
-    <div class="price-box">
-      <h2>Google Ads Management Pricing</h2>
-      <div class="price">R3,500<small style="font-size:1rem;color:var(--muted)">/mo</small></div>
-      <p style="color:var(--muted);margin:10px 0">+ Ad Spend from R1,000/month</p>
-      <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Get PPC Quote</a>
-    </div>
-  </div>
-</section>
+<div class="container sec" id="how"><h2>From audit to <span>leads in 7 days</span></h2><p class="subsec">Simple process — no meetings, no jargon.</p><div class="cards"><div class="card-process"><div class="day-badge">DAY 1-2</div><div class="num">01</div><b class="title">Audit & Keywords</b><p class="desc">You send website, services, budget on WhatsApp. I audit your account, find money keywords — built around buying intent, not a template. You approve plan.</p></div><div class="card-process"><div class="day-badge">DAY 3-5</div><div class="num">02</div><b class="title">Build & Launch</b><p class="desc">Search + Shopping setup, ad copy, tracking, negatives. Mobile-first, conversion tracking, call tracking. You get a live preview link to review on your phone.</p></div><div class="card-process"><div class="day-badge">DAY 6-7</div><div class="num">03</div><b class="title">Scale & Own</b><p class="desc">Daily checks to cut wasted spend and focus on what works. Move to your account, hand over all logins + files. You own 100%. 7-day support included.</p></div></div></div>
 
-<section class="calc-section" id="roi-calculator">
-  <div class="container">
-    <h2 class="section-title">Google Ads ROI Calculator</h2>
-    <p class="section-sub">See the customers + revenue target we will hit for you</p>
+<div class="container-wide sec"><h2>Simple pricing</h2><p class="subsec">Once-off = I build it. Monthly = I manage it. Cancel anytime.</p><div class="price-wrap"><div class="price-card"><div style="font-size:.62rem;font-weight:900;color:var(--text2)">ONCE-OFF • SETUP</div><h3 style="margin-top:6px">Google PPC Setup</h3><div class="price">R800 <span style="font-size:.72rem;color:var(--text2)">once</span></div><p style="color:var(--text2);font-size:.82rem">Search + Shopping + tracking</p><a href="https://wa.me/27690151081?text=Setup%20R800" target="_blank" class="btn" style="background:var(--bg);border:1px solid var(--border);color:var(--text);width:100%;margin-top:14px">Setup → R800</a></div><div class="price-card best"><div class="badge-price">MOST POPULAR</div><div style="font-size:.62rem;font-weight:900;color:var(--green);margin-top:6px">MONTHLY • MANAGEMENT</div><h3>Google PPC Management</h3><div class="price">R1,000 <span style="font-size:.72rem;color:var(--text2)">/mo</span></div><p style="color:var(--text2);font-size:.82rem">Daily checks, weekly report</p><a href="https://wa.me/27690151081?text=Monthly%20R1000" target="_blank" class="btn btn-green" style="width:100%;margin-top:14px">Run My Ads → R1,000/mo</a></div></div></div>
 
-    <div class="calc-wrapper">
-      <div class="calc-inputs">
-        <h3 class="calc-title">Enter Your Numbers</h3>
-        <p class="calc-subtitle">We work backwards from your goal</p>
+<div class="container-wide sec" id="roi-calculator">
+<h2>See your return <span>before we spend R1</span></h2>
+<p class="subsec">Real Google Ads math — Budget ÷ CPC × CVR × AOV = Revenue.</p>
+<div class="calc">
+<div class="calc-card">
+<div class="calc-badge">INPUTS • 30 SECONDS</div>
+<h3 style="font-family:'Space Grotesk';font-weight:800;margin-top:12px;text-align:center">Enter your numbers</h3>
+<div class="select"><button class="active" id="btn-service" onclick="setType('service')">Services</button><button id="btn-product" onclick="setType('product')">eCommerce</button></div>
+<div class="input"><label>Monthly Ad Budget R</label><input type="number" id="budget" placeholder="e.g. 5000" min="1" step="1"></div>
+<div class="input"><label>Average Sale Value R</label><input type="number" id="aov" placeholder="e.g. 2500" min="1" step="1"></div>
+<div class="input"><label>Estimated CPC R</label><input type="number" id="cpc" placeholder="e.g. 15" min="0.1" step="0.1"></div>
+<div class="input"><label>Conversion Rate %</label><input type="number" id="cvr" placeholder="e.g. 3" min="0.1" max="100" step="0.1"></div>
+</div>
+<div class="calc-card best">
+<div class="calc-badge">YOUR TARGET • LIVE</div>
+<div class="kpi"><div style="font-size:.68rem;font-weight:900;color:var(--text2)">Monthly Revenue Estimate</div><div class="kpi-val" id="targetRevenue">-</div><div style="font-size:.74rem;color:var(--text2)" id="kpi-sub">Clicks × CVR × AOV</div></div>
+<div class="grid2"><div class="met"><div style="font-size:.64rem;color:var(--text2)">Customers</div><div id="targetCustomers" style="font-weight:800;margin-top:4px">-</div></div><div class="met"><div style="font-size:.64rem;color:var(--text2)">Clicks</div><div id="clicks" style="font-weight:800;margin-top:4px">-</div></div><div class="met"><div style="font-size:.64rem;color:var(--text2)">CPL</div><div id="cpl" style="font-weight:800;margin-top:4px">-</div></div><div class="met"><div style="font-size:.64rem;color:var(--text2)">ROAS</div><div id="roas" style="font-weight:800;margin-top:4px">-</div></div></div>
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:14px;margin-top:14px"><div class="row"><span style="color:var(--text2)">Ad Spend</span><b id="adSpend">-</b></div><div class="row"><span style="color:var(--text2)">Setup Once-off</span><b>R800</b></div><div class="row"><span style="color:var(--text2)">Management /mo</span><b>R1,000</b></div><div class="row" style="font-weight:800;border-top:2px solid var(--border);margin-top:6px;padding-top:10px"><span>Total Month 1</span><b id="totalCost">-</b></div></div>
+<div class="profit"><div style="font-size:.7rem;font-weight:800">EST. PROFIT FROM ADS • MONTH 1</div><div style="font-family:'Space Grotesk';font-size:1.6rem;font-weight:800;margin-top:4px" id="profit">-</div><div style="font-size:.68rem;margin-top:4px;opacity:.9">Revenue - Ad Spend (your fee not deducted)</div></div>
+<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:#059669;width:100%;margin-top:14px;font-weight:900">Get Plan on WhatsApp →</a>
+</div>
+</div>
+</div>
 
-        <div class="toggle">
-          <button class="active" onclick="setType('service')">Services</button>
-          <button onclick="setType('product')">eCommerce</button>
-        </div>
-
-        <div class="input-group">
-          <label>Monthly Ad Budget R</label>
-          <input type="number" id="budget" placeholder="5000" min="1000">
-        </div>
-        <div class="input-group">
-          <label>Average Sale Value R</label>
-          <input type="number" id="aov" placeholder="2500">
-          <small>What 1 customer is worth to you</small>
-        </div>
-        <div class="input-group">
-          <label>Average Cost Per Click R</label>
-          <input type="number" id="cpc" placeholder="35">
-          <small>Services: R25-R60 | eCommerce: R8-R18</small>
-        </div>
-        <div class="input-group">
-          <label>
-            Website Conversion Rate %
-            <span class="tooltip">
-              <span class="tooltip-icon" onclick="toggleTooltip(event)">i</span>
-              <span class="tooltiptext" id="cvrTooltip">% of clicks that become a customer. SA average: 2% - 5%</span>
-            </span>
-          </label>
-          <input type="number" id="cvr" placeholder="4" step="0.1">
-        </div>
-      </div>
-
-      <div class="calc-results">
-        <div class="result-header">
-          <h3>Your AJ ROIse Target</h3>
-          <p style="color:var(--muted);font-size:.85rem">What we commit to achieve for you</p>
-        </div>
-
-        <div class="kpi-card">
-          <div class="kpi-label">Monthly Revenue Target</div>
-          <div class="kpi-value" id="targetRevenue">-</div>
-          <div class="kpi-sub">Based on your budget + our 5x/4x system</div>
-        </div>
-
-        <div class="metric-grid">
-          <div class="metric"><div class="metric-label">Target Customers</div><div class="metric-value" id="targetCustomers">-</div></div>
-          <div class="metric"><div class="metric-label">Est. Clicks Needed</div><div class="metric-value" id="clicks">-</div></div>
-          <div class="metric"><div class="metric-label">Target CPL</div><div class="metric-value" id="cpl">-</div></div>
-          <div class="metric"><div class="metric-label">Target ROAS</div><div class="metric-value" id="roas">-</div></div>
-          <div class="metric"><div class="metric-label">Target ACOS</div><div class="metric-value" id="acos">-</div></div>
-        </div>
-
-        <div class="cost-breakdown">
-          <div class="cost-row"><span>Google Ad Spend</span><span id="adSpend">-</span></div>
-          <div class="cost-row"><span>AJ ROIse Fee</span><span>R3,500</span></div>
-          <div class="cost-row" style="font-weight:800"><span>Total Investment</span><span id="totalCost">-</span></div>
-        </div>
-
-        <div class="profit-box">
-          <div class="profit-label">Your Est. Net Profit</div>
-          <div class="profit-value" id="profit">-</div>
-          <div class="profit-sub">Target Revenue - All Costs</div>
-        </div>
-
-        <div class="disclaimer">
-          <strong>Disclaimer:</strong> Results shown are target projections based on AJ ROIse optimization goals. Actual results depend on your industry, competition, and market conditions. This calculator is for estimation purposes only.
-        </div>
-
-        <div style="text-align:center;margin-top:16px">
-          <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Get My Growth Plan</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="keywords">
-  <div class="container">
-    <h2 style="font-size:1.4rem;margin-bottom:12px">Google Ads Agency South Africa</h2>
-    <div class="keyword-tags">
-      <span class="tag">Google Ads Johannesburg</span><span class="tag">PPC Cape Town</span>
-      <span class="tag">Google Ads Durban</span><span class="tag">Google Ads Cost SA</span>
-      <span class="tag">PPC Management Fee</span><span class="tag">Google Search Ads</span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>© 2026 AJ ROIse | <a href="/" class="intext-link">Home</a> | <a href="/seo" class="intext-link">SEO</a> | <a href="/google-ads" class="intext-link">Google Ads PPC</a></p>
-  </div>
-</footer>
+<div class="whatsapp-float"><div class="wa-pill"><span class="dot"></span> AJ ROIse on WhatsApp</div><a href="https://wa.me/27690151081" target="_blank" class="wa-btn"><svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.85 9.85 0 0 0 12.04 2C6.53 2 2.04 6.5 2.04 12c0 1.76.46 3.48 1.33 4.99L2 22l5.18-1.36a9.84 9.84 0 0 0 4.86 1.31h.01c5.5 0 9.99-4.49 9.99-10 0-2.67-1.04-5.18-2.99-7.04zM12.05 20.15a8.14 8.14 0 0 1-4.15-1.14l-.3-.18-3.07.81.82-2.99-.19-.31A8.17 8.17 0 0 1 3.9 12c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.34 8.14z"/></svg></a></div>
 
 <script>
-function toggleTooltip(e){
-  e.stopPropagation();
-  document.getElementById('cvrTooltip').classList.toggle('show');
-}
-document.addEventListener('click', function(){
-  document.getElementById('cvrTooltip').classList.remove('show');
-});
+const htmlEl=document.documentElement,tBtn=document.getElementById('themeToggle');
+function applyTheme(th){htmlEl.setAttribute('data-theme',th);localStorage.setItem('aj-theme-v2',th);if(tBtn) tBtn.textContent=th==='light'?'☀️':'🌙';}
+applyTheme(localStorage.getItem('aj-theme-v2')||'dark');
+if(tBtn) tBtn.onclick=()=>applyTheme(htmlEl.getAttribute('data-theme')==='dark'?'light':'dark');
+const burgerBtn=document.getElementById('burgerBtn'),mobileMenu=document.getElementById('mobileMenu');
+burgerBtn.onclick=()=>{burgerBtn.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';}
+mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>{burgerBtn.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';});
 
-let calcType = 'service';
-const benchmarks = {service:{cpc:35,cvr:4,targetMult:5},product:{cpc:12,cvr:2.2,targetMult:4}};
-
-function setType(type){
-  calcType = type;
-  document.querySelectorAll('.toggle button').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-  document.getElementById('cpc').placeholder = benchmarks[type].cpc;
-  document.getElementById('cvr').placeholder = benchmarks[type].cvr;
+let calcType='service';
+const bench={
+  service:{cpc:15,cvr:3, label:'Services avg: R15 CPC, 3% CVR'},
+  product:{cpc:8,cvr:1.8, label:'eComm avg: R8 CPC, 1.8% CVR'}
+};
+function setType(t){
+  calcType=t;
+  document.getElementById('btn-service').classList.toggle('active',t==='service');
+  document.getElementById('btn-product').classList.toggle('active',t==='product');
+  document.getElementById('kpi-sub').innerText=bench[t].label;
   runCalc();
 }
-
+function fmt(n){
+  if(isNaN(n) ||!isFinite(n) || n<0) n=0;
+  if(n>=1000000) return 'R'+(n/1000000).toFixed(1)+'M';
+  if(n>=1000) return 'R'+Math.round(n).toLocaleString();
+  return 'R'+n.toFixed(2);
+}
+function fmtNum(n){
+  if(isNaN(n) ||!isFinite(n) || n<0) n=0;
+  if(n>=1000) return Math.round(n).toLocaleString();
+  if(n<1) return n.toFixed(2);
+  return n.toFixed(1);
+}
 function runCalc(){
-  const budget = parseFloat(document.getElementById('budget').value) || 0;
-  const aov = parseFloat(document.getElementById('aov').value) || 0;
-  const cpc = parseFloat(document.getElementById('cpc').value) || 0;
-  const cvr = parseFloat(document.getElementById('cvr').value) || 0;
-  const managementFee = 3500;
-  const targetMult = benchmarks[calcType].targetMult;
+  const b=parseFloat(document.getElementById('budget').value);
+  const aov=parseFloat(document.getElementById('aov').value);
+  const cpcRaw=parseFloat(document.getElementById('cpc').value);
+  const cvrRaw=parseFloat(document.getElementById('cvr').value);
 
-  if(budget >= 1000 && aov > 0 && cpc > 0 && cvr > 0){
-    const targetRevenue = budget * targetMult;
-    const targetCustomers = targetRevenue / aov;
-    const clicksNeeded = targetCustomers / (cvr / 100);
-    const cpl = targetCustomers > 0? budget / targetCustomers : 0;
-    const totalCost = budget + managementFee;
-    const profit = targetRevenue - totalCost;
-    const roas = budget > 0? targetRevenue / budget : 0;
-    const acos = targetRevenue > 0? (budget / targetRevenue) * 100 : 0;
+  const budget=isNaN(b)?0:b;
+  const sale=isNaN(aov)?0:aov;
+  const cpc=isNaN(cpcRaw) || cpcRaw<=0? bench[calcType].cpc : cpcRaw;
+  const cvr=isNaN(cvrRaw) || cvrRaw<=0? bench[calcType].cvr : cvrRaw;
 
-    document.getElementById('targetRevenue').innerText = 'R' + Math.round(targetRevenue).toLocaleString();
-    document.getElementById('targetCustomers').innerText = Math.round(targetCustomers).toLocaleString();
-    document.getElementById('clicks').innerText = Math.round(clicksNeeded).toLocaleString();
-    document.getElementById('cpl').innerText = 'R' + Math.round(cpl).toLocaleString();
-    document.getElementById('adSpend').innerText = 'R' + budget.toLocaleString();
-    document.getElementById('totalCost').innerText = 'R' + totalCost.toLocaleString();
-    document.getElementById('profit').innerText = 'R' + Math.round(profit).toLocaleString();
-    document.getElementById('roas').innerText = roas.toFixed(1) + 'x';
-    document.getElementById('acos').innerText = acos.toFixed(0) + '%';
+  if(budget>0 && sale>0){
+    const clicks = budget / cpc;
+    const customers = clicks * (cvr/100);
+    const revenue = customers * sale;
+    const cpl = customers>0? budget / customers : 0;
+    const roas = budget>0? revenue / budget : 0;
+    const total = budget + 800 + 1000;
+    // FIXED: DO NOT DEDUCT YOUR FEE — PROFIT = REVENUE - AD SPEND ONLY
+    const profitFromAds = revenue - budget;
+
+    document.getElementById('targetRevenue').innerText=fmt(revenue);
+    document.getElementById('targetCustomers').innerText=fmtNum(customers);
+    document.getElementById('clicks').innerText=fmtNum(clicks);
+    document.getElementById('cpl').innerText=customers>0?fmt(cpl):'-';
+    document.getElementById('adSpend').innerText='R'+budget.toLocaleString();
+    document.getElementById('totalCost').innerText='R'+total.toLocaleString();
+    document.getElementById('profit').innerText=fmt(profitFromAds);
+    document.getElementById('roas').innerText=roas.toFixed(2)+'x';
   } else {
-    document.getElementById('targetRevenue').innerText = '-';
-    ['targetCustomers','clicks','cpl','adSpend','totalCost','profit','roas','acos'].forEach(id => document.getElementById(id).innerText = '-');
+    ['targetRevenue','targetCustomers','clicks','cpl','adSpend','totalCost','profit','roas'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el) el.innerText='-';
+    });
   }
 }
-
-['budget','aov','cpc','cvr'].forEach(id => {
-  document.getElementById(id).addEventListener('input', runCalc);
+['budget','aov','cpc','cvr'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el){
+    el.addEventListener('input',runCalc);
+    el.addEventListener('change',runCalc);
+    el.addEventListener('keyup',runCalc);
+  }
 });
-
-// THEME TOGGLE - SAME AS SEO/META
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
-}
+setType('service');
 </script>
-
 </body>
 </html>
