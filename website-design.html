@@ -26,10 +26,13 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0
 [data-theme="light"] .back-bar{background:rgba(255,254,251,.88)}
 .back-bar-inner{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--text2);text-decoration:none;border:1px solid var(--border);background:var(--card2);padding:8px 14px;border-radius:100px}
+.back-link:hover{color:var(--text);border-color:var(--text2)}
 .back-crumb{font-size:.78rem;color:var(--text2)}.back-crumb b{color:var(--text)}
 .hero{position:relative;background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;display:flex;align-items:center}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 600px at 8% 0%, rgba(16,185,129,.18), transparent 60%), radial-gradient(800px 600px at 95% 15%, rgba(16,185,129,.06), transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);background-size:48px 48px;opacity:.18;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 70%, transparent 110%);pointer-events:none}
 .hero-wrap{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:580px 1fr;align-items:center;gap:56px;padding:88px 20px;min-height:820px}
+.hero-left{max-width:560px}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.20);padding:8px 16px;border-radius:100px;font-size:.65rem;font-weight:800;letter-spacing:.9px;color:var(--green);margin-bottom:22px}
 .badge i{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 10px var(--green);display:inline-block}
 .hero h1{font-size:clamp(2.9rem,4.6vw,4.9rem);line-height:.90;margin-bottom:20px;letter-spacing:-2px}
@@ -37,7 +40,8 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0
 .hero-sub{color:var(--text2);font-size:1.12rem;max-width:500px;line-height:1.6;margin-bottom:30px}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn{padding:16px 26px;border-radius:100px;text-decoration:none;font-weight:800;display:inline-flex;justify-content:center;align-items:center;gap:8px;border:none;cursor:pointer;font-size:.92rem;transition:.2s}
-.btn-green{background:var(--green);color:#fff;box-shadow:0 18px 40px rgba(16,185,129,.35)}.btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--text);backdrop-filter:blur(10px)}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 18px 40px rgba(16,185,129,.35)}.btn-green:hover{transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--text);backdrop-filter:blur(10px)}
 [data-theme="light"] .btn-ghost{background:#fff}
 .hero-proof{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:20px;border-top:1px solid var(--border)}
 .avatars{display:flex}.av{width:34px;height:34px;border-radius:50%;border:2px solid var(--bg2);background:var(--card2);display:grid;place-items:center;font-size:.72rem;font-weight:800;margin-left:-8px}.av:first-child{margin-left:0}.av.green{background:var(--green);color:#fff}
@@ -86,7 +90,9 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0
 .features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
 @media(max-width:600px){.features{grid-template-columns:1fr}}
 .fe{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}.fe .ic{width:38px;height:38px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.15);border-radius:10px;display:grid;place-items:center;margin-bottom:10px}.fe h3{font-size:.95rem}.fe p{color:var(--text2);font-size:.82rem;margin-top:4px;line-height:1.5}
-.work-card{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:10px;overflow:hidden;transition:.2s;display:block;text-decoration:none;color:inherit;cursor:pointer}.work-card:hover{transform:translateY(-2px);border-color:rgba(16,185,129,.35)}
+.work-link{display:block;text-decoration:none;color:inherit}
+.work-card{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:10px;overflow:hidden;transition:.2s}
+.work-card:hover{transform:translateY(-2px);border-color:rgba(16,185,129,.25)}
 .work-preview{height:180px;background:#fff;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden}
 .work-info{padding:14px 8px 6px}.work-info b{font-size:.96rem;display:block}.work-info span{font-size:.8rem;color:var(--text2);margin-top:2px;display:block}
 .calc{position:sticky;top:86px}.calc-box{background:var(--card2);border:1px solid var(--border);border-radius:22px;padding:20px}
@@ -120,7 +126,7 @@ footer{padding:32px 0;text-align:center;color:var(--text2);font-size:.78rem;bord
 <div class="hero-proof"><div class="avatars"><div class="av">AJ</div><div class="av green">✓</div><div class="av">5★</div></div><div class="hero-proof-text"><b>Built for SA brands</b> • 7-day delivery • You own it</div></div>
 </div>
 <div class="hero-visual"><div class="glow"></div><div class="browser-wrap"><div class="back-card"></div>
-<div class="browser"><div class="browser-top"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div><span style="font-size:.62rem;color:var(--text2);font-weight:700">yourbusiness.co.za • 98/100</span></div>
+<div class="browser"><div class="browser-top"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div><span style="font-size:.62rem;color:var(--text2);font-weight:700;letter-spacing:.4px">yourbusiness.co.za • 98/100</span></div>
 <div class="browser-body"><div class="bb-top"><div class="bb-logo"></div><div class="bb-links"><span></span><span></span><span></span><span></span></div></div><div class="bb-main"><div class="bb-pill">● 7-day build • You own 100%</div><div class="bb-h">Websites that<br><span>bring customers</span></div><div class="bb-p">Fast, mobile-first. Leads go straight to WhatsApp.</div><div class="bb-btns"><span class="bb-btn black">Get Quote →</span><span class="bb-btn outline">Work</span></div><div class="bb-cards"><div class="bb-card"><b>1.2s</b><span>Load time</span></div><div class="bb-card"><b>100%</b><span>Owned</span></div></div></div></div></div>
 <div class="float float1"><span class="f-icon">⚡</span> 98 PageSpeed</div><div class="float float2"><span class="f-icon">↗</span> +243% leads</div>
 </div></div></div></section>
@@ -145,25 +151,14 @@ footer{padding:32px 0;text-align:center;color:var(--text2);font-size:.78rem;bord
 </div></section>
 
 <section class="section" id="work" style="background:var(--bg2);border-top:1px solid var(--border)"><div class="container">
-<div class="section-head"><div class="badge"><i></i> RECENT WORK • LIVE DEMOS</div><h2>Built for <span style="color:var(--green)">their business</span></h2><p>Every site custom-designed around their brand — not templates. Click to view live.</p></div>
-
+<div class="section-head"><div class="badge"><i></i> RECENT WORK • TAP TO VIEW</div><h2>Built for <span style="color:var(--green)">their business</span></h2><p>Every site custom-designed around their brand — not templates. Click to view live.</p></div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;max-width:1100px;margin:0 auto">
 
-<!-- CONSULTING - CLICKABLE NOW -->
-<a href="consulting-website-example.html" class="work-card">
-<div class="work-preview" style="background:linear-gradient(135deg,#f8fafc,#eef2f7)"><div style="width:84px;height:84px;background:#0f172a;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center;line-height:1.1">SANDTON<br>CO</div></div>
-<div class="work-info"><b>Consulting — Sandton</b><span>Professional • Minimal • Corporate authority</span><span style="display:inline-block;margin-top:8px;background:var(--green);color:#fff;padding:5px 10px;border-radius:100px;font-size:.68rem;font-weight:800">View Live Demo →</span></div>
-</a>
+<a href="./consulting-website-example.html" class="work-link"><div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#f8fafc,#eef2f7)"><div style="width:84px;height:84px;background:#0f172a;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center;line-height:1.1">SANDTON<br>CO</div></div><div class="work-info"><b>Consulting — Sandton</b><span>Professional • Minimal • Corporate authority</span><span style="display:inline-block;margin-top:8px;background:#10B981;color:#fff;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:800">View Live Demo →</span></div></div></a>
 
-<a href="barber-johannesburg-website.html" class="work-card">
-<div class="work-preview" style="background:linear-gradient(135deg,#fefce8,#fef9c3)"><div style="width:84px;height:84px;background:#111;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center">BARBER<br>LAB</div></div>
-<div class="work-info"><b>Barber — Johannesburg</b><span>Bold • Street culture • Premium feel</span><span style="display:inline-block;margin-top:8px;background:#111;color:#fff;padding:5px 10px;border-radius:100px;font-size:.68rem;font-weight:800">View Live Demo →</span></div>
-</a>
+<a href="./barber-johannesburg-website.html" class="work-link"><div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#fefce8,#fef9c3)"><div style="width:84px;height:84px;background:#111;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center">BARBER<br>LAB</div></div><div class="work-info"><b>Barber — Johannesburg</b><span>Bold • Street culture • Premium feel</span><span style="display:inline-block;margin-top:8px;background:#111;color:#fff;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:800">View Live Demo →</span></div></div></a>
 
-<a href="catering-company-website.html" class="work-card">
-<div class="work-preview" style="background:linear-gradient(135deg,#fff7ed,#ffedd5)"><div style="width:84px;height:84px;background:#fff;border:1px solid #eee;border-radius:16px;display:grid;place-items:center;color:#111;font-weight:800;font-size:.7rem">CATER<br>CO</div></div>
-<div class="work-info"><b>Catering — Johannesburg</b><span>Warm • Handcrafted • Editorial layout</span><span style="display:inline-block;margin-top:8px;background:#1c1917;color:#fff;padding:5px 10px;border-radius:100px;font-size:.68rem;font-weight:800">View Live Demo →</span></div>
-</a>
+<a href="./catering-company-website.html" class="work-link"><div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><div style="width:84px;height:84px;background:#fff;border:1px solid #eee;border-radius:16px;display:grid;place-items:center;color:#111;font-weight:800;font-size:.7rem">BLOOM</div></div><div class="work-info"><b>Catering — Johannesburg</b><span>Warm • Handcrafted • Editorial layout</span><span style="display:inline-block;margin-top:8px;background:#111;color:#fff;padding:5px 12px;border-radius:100px;font-size:.72rem;font-weight:800">View Live Demo →</span></div></div></a>
 
 </div></div></section>
 
@@ -221,7 +216,8 @@ const slider=document.getElementById('pageSlider');
 function upd(){const p=parseInt(slider.value);const base=getPrice(p);const save=p*1200-base;let tot=base;if(logo.checked)tot+=800;if(copy.checked)tot+=600;if(blog.checked)tot+=500;if(booking.checked)tot+=700;if(rush.checked)tot+=800;pageNum.textContent=p;pageLabel.textContent=p+' Page'+(p>1?'s':'');basePrice.textContent=save>0?`R${base.toLocaleString()} (Save R${save.toLocaleString()})`:`R${base.toLocaleString()}`;totalPrice.textContent='R'+tot.toLocaleString();saveText.textContent=save>0?`Save R${save.toLocaleString()}`:'R1,200/page';calcWhatsAppBtn.href='https://wa.me/27690151081?text='+encodeURIComponent(`Hi Alvirno, Website Design ${p} pages total R${tot}`)}
 slider.addEventListener('input',upd);document.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change',upd));upd();
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
-  const item=q.parentElement;const isOpen=item.classList.contains('open');
+  const item=q.parentElement;
+  const isOpen=item.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
   if(!isOpen) item.classList.add('open');
 }));
