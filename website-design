@@ -23,6 +23,14 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0
 .mobile-nav{display:none;position:fixed;top:64px;left:10px;right:10px;background:var(--card2);border:1px solid var(--border);border-radius:18px;padding:16px;z-index:99}.mobile-nav.active{display:flex;flex-direction:column;gap:4px}.mobile-nav a{padding:11px;color:var(--text);text-decoration:none;font-weight:600}
 @media(max-width:900px){.nav-links{display:none}.burger{display:flex}}
 
+/* BACK TO SERVICES */
+.back-bar{position:sticky;top:72px;z-index:90;background:rgba(7,7,7,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+[data-theme="light"] .back-bar{background:rgba(255,254,251,.88)}
+.back-bar-inner{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--text2);text-decoration:none;border:1px solid var(--border);background:var(--card2);padding:8px 14px;border-radius:100px}
+.back-link:hover{color:var(--text);border-color:var(--text2)}
+.back-crumb{font-size:.78rem;color:var(--text2)}.back-crumb b{color:var(--text)}
+
 /* DESKTOP HERO NICER */
 .hero{position:relative;background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;display:flex;align-items:center}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 600px at 8% 0%, rgba(16,185,129,.18), transparent 60%), radial-gradient(800px 600px at 95% 15%, rgba(16,185,129,.06), transparent 60%);pointer-events:none}
@@ -109,7 +117,16 @@ footer{padding:32px 0;text-align:center;color:var(--text2);font-size:.78rem;bord
 <a href="/" class="logo">AJ <span>ROIse</span></a>
 <div class="nav-right"><div class="nav-links"><a href="#process">Process</a><a href="#work">Work</a><a href="#calc">Pricing</a><a href="https://wa.me/27690151081" class="nav-cta">Chat</a></div><button class="theme-toggle" id="themeToggle">🌙</button><div class="burger" id="burgerBtn"><span></span><span></span><span></span></div></div>
 </nav></div></header>
-<div class="mobile-nav" id="mobileNav"><a href="/website-design">Website Design</a><a href="#process">Process</a><a href="#work">Work</a><a href="#calc">Pricing</a><a href="https://wa.me/27690151081" style="background:var(--text);color:var(--bg);border-radius:100px;text-align:center;margin-top:8px;font-weight:800">WhatsApp Me</a></div>
+
+<!-- BACK TO SERVICES TAB -->
+<div class="back-bar">
+  <div class="back-bar-inner">
+    <a href="/#services" class="back-link">← Back to Services</a>
+    <span class="back-crumb">Services / <b>Website Design</b></span>
+  </div>
+</div>
+
+<div class="mobile-nav" id="mobileNav"><a href="/#services">← Back to Services</a><a href="/website-design">Website Design</a><a href="#process">Process</a><a href="#work">Work</a><a href="#calc">Pricing</a><a href="https://wa.me/27690151081" style="background:var(--text);color:var(--bg);border-radius:100px;text-align:center;margin-top:8px;font-weight:800">WhatsApp Me</a></div>
 
 <section class="hero"><div class="hero-wrap">
 <div class="hero-left">
@@ -206,7 +223,7 @@ footer{padding:32px 0;text-align:center;color:var(--text2);font-size:.78rem;bord
 <section class="cta"><div class="container" style="max-width:760px">
 <h2 style="font-size:clamp(1.9rem,4vw,2.7rem)">Ready to own your site in 7 days?</h2>
 <p style="color:var(--text2);margin-top:10px;font-size:1.02rem">Send business name on WhatsApp, I send demo in 24h.</p>
-<div style="display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap"><a href="https://wa.me/27690151081?text=Hi%20Alvirno%20-%20Website%20Design" class="btn btn-green">Chat on WhatsApp →</a><a href="#calc" class="btn btn-ghost">Calculate Price</a></div>
+<div style="display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap"><a href="https://wa.me/27690151081?text=Hi Alvirno - Website Design" class="btn btn-green">Chat on WhatsApp →</a><a href="#calc" class="btn btn-ghost">Calculate Price</a></div>
 </div></section>
 
 <div id="waFloat"><div class="wa-lab"><span style="width:8px;height:8px;background:#25D366;border-radius:50%;box-shadow:0 0 8px #25D366;display:inline-block"></span> AJ ROIse on WhatsApp</div><a href="https://wa.me/27690151081" target="_blank" class="wa-btn"><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg></a></div>
