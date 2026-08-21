@@ -1,317 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Design South Africa | R2,400 Per Page | JHB, CPT, DBN | AJ ROIse</title>
-<meta name="description" content="Professional Website Design South Africa from R2,400 per page. 5 Pages = R12,000 once-off. WordPress, eCommerce, Mobile, SEO. Serving Johannesburg, Cape Town, Durban, Pretoria. Get instant quote.">
-<meta name="keywords" content="website design south africa, web design johannesburg, website developers cape town, wordpress website sa, ecommerce website design, how much does a website cost, affordable web design">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "How much does a website cost in South Africa?",
-    "acceptedAnswer": {"@type": "Answer", "text": "A professional website costs R2,400 per page in South Africa. A 5 page business website is R12,000 once-off with no monthly fees."}
-  },{
-    "@type": "Question",
-    "name": "How long does it take to build a website?",
-    "acceptedAnswer": {"@type": "Answer", "text": "Standard delivery is 14 days. We offer 7-Day rush delivery for an additional R3,000."}
-  },{
-    "@type": "Question",
-    "name": "Do you offer WordPress websites?",
-    "acceptedAnswer": {"@type": "Answer", "text": "Yes. All our websites are built on WordPress so you can easily update content yourself after we hand it over."}
-  },{
-    "@type": "Question",
-    "name": "Is SEO included in the website price?",
-    "acceptedAnswer": {"@type": "Answer", "text": "Yes. SEO foundation including speed optimization, mobile friendly design, and proper structure is included in every website at no extra cost."}
-  }]
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<title>Website Design South Africa | AJ ROIse</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --emerald:#16A34A;
-  --emerald-dark:#15803d;
-  --cyan:#06B6D4;
-  --bg:#ffffff;
-  --text:#111827;
-  --muted:#6B7280;
-  --card:#F9FAFB;
-  --radius:20px;
-  --border:rgba(0,0,0,.08);
-}
-[data-theme="dark"]{
-  --bg:#0B0F19;
-  --text:#F9FAFB;
-  --muted:#9CA3AF;
-  --card:#111827;
-  --border:rgba(255,255,255,.08);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s;padding-top:80px}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-h1,h2,h3,h4{font-family:Poppins,sans-serif;font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--bg:#070707;--bg2:#0E0E0E;--card:#161616;--card2:#181818;--border:rgba(255,255,255,0.08);--green:#10B981;--text:#F5F5F5;--text2:#8A8A8A;--section:96px;--browser-top:#1C1C1C;--float-bg:#121212;--float-text:#fff;--float-border:rgba(255,255,255,.14)}
+[data-theme="light"]{--bg:#FFFEFB;--bg2:#F5F2EB;--card:#FFF;--card2:#FFF;--border:#E8E2D6;--text:#111;--text2:#6B7280;--browser-top:#F0EDE7;--float-bg:#fff;--float-text:#111;--float-border:#E8E2D6}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);padding-top:72px;line-height:1.6;overflow-x:hidden}
+.container{max-width:1280px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:800;letter-spacing:-1.2px}
+header{position:fixed;top:0;width:100%;background:rgba(7,7,7,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:100}
+[data-theme="light"] header{background:rgba(255,254,251,.92)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800;font-size:1.5rem;color:var(--text);text-decoration:none}.logo span{color:var(--green)}
+.nav-right{display:flex;gap:12px;align-items:center}.nav-links{display:flex;gap:20px}.nav-links a{color:var(--text2);text-decoration:none;font-weight:600;font-size:.88rem}
+.nav-cta{background:var(--text);color:var(--bg)!important;padding:10px 18px;border-radius:100px;font-weight:800;text-decoration:none}
+.theme-toggle{width:42px;height:42px;border-radius:100px;border:1px solid var(--border);background:var(--card2);cursor:pointer;display:grid;place-items:center}
+.burger{display:none;flex-direction:column;gap:5px;width:28px;cursor:pointer}.burger span{height:2px;background:var(--text);border-radius:2px}
+.mobile-nav{display:none;position:fixed;top:64px;left:10px;right:10px;background:var(--card2);border:1px solid var(--border);border-radius:18px;padding:16px;z-index:99}.mobile-nav.active{display:flex;flex-direction:column;gap:4px}.mobile-nav a{padding:11px;color:var(--text);text-decoration:none;font-weight:600}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}}
 
-/* HEADER - SAME AS ALL PAGES */
-header{background:var(--card);padding:16px 0;border-bottom:1px solid var(--border);position:fixed;top:0;left:0;right:0;width:100%;z-index:99}
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.logo-text{font-family:Poppins,sans-serif;font-size:1.8rem;font-weight:800;color:var(--text);text-decoration:none;flex-shrink:0}
-.logo-text span{color:var(--emerald)}
-.nav-buttons{display:flex;gap:10px;align-items:center;flex-shrink:0}
+/* DESKTOP HERO NICER */
+.hero{position:relative;background:var(--bg2);border-bottom:1px solid var(--border);overflow:hidden;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 600px at 8% 0%, rgba(16,185,129,.18), transparent 60%), radial-gradient(800px 600px at 95% 15%, rgba(16,185,129,.06), transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);background-size:48px 48px;opacity:.18;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 70%, transparent 110%);pointer-events:none}
+.hero-wrap{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:580px 1fr;align-items:center;gap:56px;padding:88px 20px;min-height:820px}
+.hero-left{max-width:560px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.20);padding:8px 16px;border-radius:100px;font-size:.65rem;font-weight:800;letter-spacing:.9px;color:var(--green);margin-bottom:22px}
+.badge i{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 10px var(--green);display:inline-block}
+.hero h1{font-size:clamp(2.9rem,4.6vw,4.9rem);line-height:.90;margin-bottom:20px;letter-spacing:-2px}
+.hero h1 span{background:linear-gradient(90deg,#10B981,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--text2);font-size:1.12rem;max-width:500px;line-height:1.6;margin-bottom:30px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:16px 26px;border-radius:100px;text-decoration:none;font-weight:800;display:inline-flex;justify-content:center;align-items:center;gap:8px;border:none;cursor:pointer;font-size:.92rem;transition:.2s}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 18px 40px rgba(16,185,129,.35)}.btn-green:hover{transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--text);backdrop-filter:blur(10px)}
+[data-theme="light"] .btn-ghost{background:#fff}
+.hero-proof{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:20px;border-top:1px solid var(--border)}
+.avatars{display:flex}.av{width:34px;height:34px;border-radius:50%;border:2px solid var(--bg2);background:var(--card2);display:grid;place-items:center;font-size:.72rem;font-weight:800;margin-left:-8px}.av:first-child{margin-left:0}.av.green{background:var(--green);color:#fff}
+.hero-proof-text{font-size:.86rem;color:var(--text2);font-weight:600}.hero-proof-text b{color:var(--text)}
+.hero-visual{position:relative;display:flex;justify-content:flex-end;align-items:center}
+.glow{position:absolute;width:640px;height:640px;background:radial-gradient(circle, rgba(16,185,129,.20), transparent 70%);filter:blur(32px);top:50%;left:60%;transform:translate(-50%,-50%);pointer-events:none}
+.browser-wrap{position:relative;width:100%;max-width:560px}
+.back-card{position:absolute;top:22px;right:-18px;width:92%;height:100%;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));border:1px solid var(--border);border-radius:22px;transform:rotate(3deg);z-index:0}
+.browser{position:relative;z-index:1;width:100%;background:#0F0F0F;border:1px solid rgba(255,255,255,.12);border-radius:22px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06) inset}
+[data-theme="light"] .browser{background:#fff;border:1px solid var(--border)}
+.browser-top{height:44px;background:var(--browser-top);display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid var(--border)}
+.dots{display:flex;gap:7px}.dot{width:10px;height:10px;border-radius:50%}.r{background:#ff5f56}.y{background:#ffbd2e}.g{background:#27c93f}
+.browser-body{background:#fff;height:420px;display:flex;flex-direction:column}
+.bb-top{height:48px;display:flex;justify-content:space-between;align-items:center;padding:0 18px;border-bottom:1px solid #EDEDED}
+.bb-logo{width:26px;height:26px;background:#111;border-radius:7px}
+.bb-links{display:flex;gap:10px;align-items:center}.bb-links span{width:36px;height:6px;background:#E5E5E5;border-radius:10px;display:block}.bb-links span:last-child{width:64px;height:24px;background:#111;border-radius:100px}
+.bb-main{padding:24px 20px;flex:1;background:linear-gradient(180deg,#fff 0%, #f7f9f8 100%)}
+.bb-pill{background:#EEF6F1;border:1px solid #D4E9DE;color:#059669;font-size:.58rem;font-weight:800;padding:5px 10px;border-radius:100px;display:inline-block;margin-bottom:16px}
+.bb-h{font-family:'Space Grotesk';font-size:1.5rem;line-height:.92;color:#111;font-weight:800;letter-spacing:-.9px}
+.bb-h span{color:var(--green)}
+.bb-p{font-size:.74rem;color:#777;margin-top:10px;line-height:1.45;max-width:240px}
+.bb-btns{display:flex;gap:8px;margin-top:18px}
+.bb-btn{padding:9px 16px;border-radius:100px;font-size:.64rem;font-weight:800}.bb-btn.black{background:#111;color:#fff}.bb-btn.outline{border:1px solid #ddd;color:#111;background:#fff}
+.bb-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.bb-card{border:1px solid #EDEDED;border-radius:14px;padding:12px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.bb-card b{font-size:.9rem;color:#111;display:block;line-height:1}.bb-card span{font-size:.58rem;color:#888}
+.float{position:absolute;background:var(--float-bg);border:1px solid var(--float-border);border-radius:100px;padding:8px 14px 8px 8px;display:flex;align-items:center;gap:9px;box-shadow:0 18px 50px rgba(0,0,0,.22);font-size:.8rem;font-weight:800;white-space:nowrap;z-index:3;color:var(--float-text)}
+.float .f-icon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:.8rem}
+.float1{top:-14px;right:-10px}.float1 .f-icon{background:#111;color:#22c55e;border:1px solid var(--border)}
+.float2{bottom:28px;left:-18px}.float2 .f-icon{background:var(--green);color:#fff}
+@media(min-width:1280px){.hero-wrap{grid-template-columns:600px 1fr;gap:80px}.browser-wrap{max-width:600px}.browser-body{height:440px}}
+@media(max-width:1100px){.hero-wrap{grid-template-columns:1fr 1fr;gap:32px;min-height:720px}.browser-wrap{max-width:100%}}
+@media(max-width:900px){.hero{display:block}.hero-wrap{grid-template-columns:1fr;min-height:auto;padding:40px 20px 60px;gap:32px}.hero-visual{justify-content:center}.back-card{display:none}.browser-wrap{max-width:400px}.browser-body{height:340px}.float1{top:0;right:0}.float2{bottom:0;left:0}}
 
-.theme-toggle{background:none;border:2px solid var(--border);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:.3s;flex-shrink:0}
-.theme-toggle:hover{background:var(--card);border-color:var(--emerald)}
-
-.btn{background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;display:inline-flex;align-items:center;justify-content:center;transition:.3s;border:none;cursor:pointer;font-size:.95rem;box-shadow:0 8px 20px rgba(22,163,74,.3);white-space:nowrap}
-.btn:hover{transform:translateY(-2px)}
-.btn-whatsapp{background:#25D366}
-.btn-back{background:transparent;color:var(--emerald);border:2px solid var(--emerald);padding:12px 20px;font-size:.9rem;box-shadow:none}
-.btn-back:hover{background:var(--emerald);color:#fff}
-
-.hero{padding:120px 0;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);animation:pulse 4s ease-in-out infinite;z-index:1}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
-.hero h1{font-size:3.2rem;margin-bottom:16px;position:relative;z-index:2}
-.hero-sub{font-size:1.3rem;opacity:.95;margin-bottom:30px;position:relative;z-index:2}
-.section{padding:100px 0}
-.section-title{text-align:center;font-size:2.5rem;margin-bottom:16px;background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px;font-size:1.1rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
-.card{background:var(--card);padding:35px;border-radius:var(--radius);border:1px solid var(--border);transition:.4s;position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--emerald),var(--cyan))}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
-.card .icon{font-size:3rem;margin-bottom:16px}
-
-/* CALCULATOR */
-.layout-2col{display:grid;grid-template-columns:1fr 450px;gap:50px;align-items:start}
-@media(max-width:900px){.layout-2col{grid-template-columns:1fr}}
-.calc-sidebar{position:sticky;top:120px}
-.calc-box{background:linear-gradient(135deg,var(--card) 0%,rgba(22,163,74,.05) 100%);padding:35px;border-radius:24px;border:2px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,.08)}
-.calc-title{text-align:center;margin-bottom:25px;font-size:1.5rem}
-.slider-wrap{margin:30px 0}
-.slider-label{display:flex;justify-content:space-between;margin-bottom:12px;font-weight:600;font-size:1.1rem}
-.slider{width:100%;height:10px;border-radius:10px;background:var(--border);outline:none;-webkit-appearance:none}
-.slider::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--cyan));cursor:pointer;box-shadow:0 4px 12px rgba(22,163,74,.4)}
-.slider::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--cyan));cursor:pointer;border:none;box-shadow:0 4px 12px rgba(22,163,74,.4)}
-.page-display{text-align:center;padding:20px;background:rgba(22,163,74,.1);border-radius:16px;margin:20px 0}
-.page-num{font-size:3.5rem;font-weight:800;color:var(--emerald);line-height:1}
-.page-price{font-size:1.2rem;color:var(--muted)}
-.addon-section{margin-top:25px;padding-top:25px;border-top:2px solid var(--border)}
-.addon-section h4{margin-bottom:15px;color:var(--emerald)}
-.addon-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-.addon-item label{display:flex;align-items:center;gap:12px;cursor:pointer;font-weight:500}
-.addon-item input{width:20px;height:20px;accent-color:var(--emerald)}
-.addon-price{font-weight:700;color:var(--emerald)}
-.calc-total{background:linear-gradient(135deg,var(--emerald) 0%,var(--cyan) 100%);color:#fff;padding:35px;border-radius:20px;text-align:center;margin-top:25px}
-.calc-total .total-label{font-size:.95rem;opacity:.9}
-.calc-total .total-num{font-size:3.5rem;font-weight:800;line-height:1;margin:8px 0}
-.page-count{font-size:1.1rem;font-weight:600}
-.faq-item{margin-bottom:16px}
-.floating-wa{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;width:65px;height:65px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;z-index:999;box-shadow:0 10px 25px rgba(37,211,102,.4)}
-footer{padding:50px 0;text-align:center;color:var(--muted);background:var(--card);border-top:1px solid var(--border)}
-
-/* MOBILE FIX */
-@media(max-width:768px){
-  html, body{overflow-x:hidden; width:100%}
-  body{padding-top:140px}
-
-  nav{flex-direction:column;align-items:stretch;gap:12px}
-  .logo-text{text-align:center;font-size:1.6rem}
-  .nav-buttons{width:100%;display:grid;grid-template-columns:44px 1fr 1fr;gap:10px}
-  .btn,.btn-back{padding:12px 10px;font-size:.85rem;width:100%}
-  .theme-toggle{width:100%}
-
-  .hero h1{font-size:2.2rem}
-  .calc-sidebar{position:static}
-}
+.section{padding:96px 20px}.section-head{text-align:center;max-width:760px;margin:0 auto 40px}.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.05}.section-head p{color:var(--text2);margin-top:10px;font-size:1.02rem}
+.vs{max-width:900px;margin:0 auto}.vs-h{display:grid;grid-template-columns:1.2fr .9fr 1fr;font-size:.65rem;font-weight:900;letter-spacing:1px;color:var(--text2);padding:0 16px 8px;text-transform:uppercase}.vs-h div:last-child{color:var(--green)}.vs-box{background:var(--card2);border:1px solid var(--border);border-radius:20px;overflow:hidden}.vs-r{display:grid;grid-template-columns:1.2fr .9fr 1fr;border-bottom:1px solid var(--border)}.vs-r:last-child{border-bottom:none}.vs-r>div{padding:14px 14px;display:flex;align-items:center;gap:8px;font-size:.88rem}.vs-r>div:first-child{font-weight:700;background:var(--bg)}.vs-r>div:nth-child(2){color:var(--text2);font-size:.84rem}.vs-r>div:last-child{font-weight:700;background:rgba(16,185,129,.06);border-left:1px solid var(--border);font-size:.84rem}.ico{width:22px;height:22px;min-width:22px;border-radius:50%;display:grid;place-items:center}.ico-x{background:#242424}.ico-t{background:var(--green)}
+[data-theme="light"] .ico-x{background:#F5F2EB;border:1px solid var(--border)}
+@media(max-width:700px){.vs-h{display:none}.vs-r{grid-template-columns:1fr 1fr;grid-template-areas:"f f" "o m"}.vs-r>div:first-child{grid-area:f;padding:12px 14px;border-bottom:1px solid var(--border);background:var(--card2)}.vs-r>div:nth-child(2){grid-area:o;padding:10px 12px;background:var(--bg);border-right:1px solid var(--border)}.vs-r>div:last-child{grid-area:m;padding:10px 12px}}
+.process{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:800px){.process{grid-template-columns:1fr;gap:12px}}
+.step{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:22px;position:relative}
+.step-num{font-size:2.4rem;font-weight:800;color:var(--green);line-height:1}.step h3{margin-top:10px;font-size:1.05rem}.step p{color:var(--text2);font-size:.86rem;margin-top:8px;line-height:1.6}
+.step .tag{position:absolute;top:14px;right:14px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--green);font-size:.62rem;font-weight:800;padding:4px 8px;border-radius:100px;letter-spacing:.6px}
+.guarantee{max-width:1000px;margin:20px auto 0;background:linear-gradient(135deg, rgba(16,185,129,.12), rgba(16,185,129,.04));border:1px solid rgba(16,185,129,.22);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;max-width:1280px;margin:0 auto}
+@media(max-width:960px){.grid2{grid-template-columns:1fr}}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+@media(max-width:600px){.features{grid-template-columns:1fr}}
+.fe{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}.fe .ic{width:38px;height:38px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.15);border-radius:10px;display:grid;place-items:center;margin-bottom:10px}.fe h3{font-size:.95rem}.fe p{color:var(--text2);font-size:.82rem;margin-top:4px;line-height:1.5}
+.work-card{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:10px;overflow:hidden;transition:.2s}.work-card:hover{transform:translateY(-2px);border-color:rgba(16,185,129,.25)}
+.work-preview{height:180px;background:#fff;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden}
+.work-info{padding:14px 8px 6px}.work-info b{font-size:.96rem;display:block}.work-info span{font-size:.8rem;color:var(--text2);margin-top:2px;display:block}
+.calc{position:sticky;top:86px}.calc-box{background:var(--card2);border:1px solid var(--border);border-radius:22px;padding:20px}
+.slider{width:100%;height:6px;border-radius:10px;background:var(--border);-webkit-appearance:none}.slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--green);cursor:pointer}
+.total{background:linear-gradient(135deg,#10B981 0%,#059669 100%);color:#fff;padding:18px;border-radius:16px;text-align:center;margin-top:14px}.total .num{font-size:2.4rem;font-weight:800;line-height:1}
+.faq{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--card2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.faq-q{padding:16px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700;font-size:.92rem;user-select:none}
+.faq-a{display:none;padding:0 18px 16px;color:var(--text2);font-size:.88rem;line-height:1.6}.faq-item.open .faq-a{display:block}.faq-item.open{border-color:rgba(16,185,129,.25)}
+.cta{min-height:60vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(600px 300px at 50% 0%, rgba(16,185,129,.18), transparent), var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;padding:80px 20px}
+[data-theme="light"] .cta{background:radial-gradient(600px 300px at 50% 0%, rgba(16,185,129,.10), transparent), var(--bg2)}
+#waFloat{position:fixed;bottom:18px;right:18px;display:flex;align-items:center;gap:8px;z-index:999}.wa-lab{background:var(--card2);border:1px solid var(--border);padding:7px 12px;border-radius:100px;font-size:.75rem;font-weight:700;display:flex;gap:6px;align-items:center;color:var(--text)}.wa-btn{background:#25D366;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 20px rgba(37,211,102,.4)}
+footer{padding:32px 0;text-align:center;color:var(--text2);font-size:.78rem;border-top:1px solid var(--border);background:var(--bg2)}
+@media(max-width:700px){:root{--section:64px} .section{padding:64px 20px} .cta{min-height:auto;padding:56px 20px}}
 </style>
 </head>
 <body>
+<header><div class="container"><nav>
+<a href="/" class="logo">AJ <span>ROIse</span></a>
+<div class="nav-right"><div class="nav-links"><a href="#process">Process</a><a href="#work">Work</a><a href="#calc">Pricing</a><a href="https://wa.me/27690151081" class="nav-cta">Chat</a></div><button class="theme-toggle" id="themeToggle">🌙</button><div class="burger" id="burgerBtn"><span></span><span></span><span></span></div></div>
+</nav></div></header>
+<div class="mobile-nav" id="mobileNav"><a href="/website-design">Website Design</a><a href="#process">Process</a><a href="#work">Work</a><a href="#calc">Pricing</a><a href="https://wa.me/27690151081" style="background:var(--text);color:var(--bg);border-radius:100px;text-align:center;margin-top:8px;font-weight:800">WhatsApp Me</a></div>
 
-<header>
-<div class="container">
-  <nav>
-    <a href="/" class="logo-text">AJ <span>ROIse</span></a>
-    <div class="nav-buttons">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
-      <a href="/#services" class="btn btn-back">← Back to Services</a>
-      <a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">Free Quote</a>
-    </div>
-  </nav>
+<section class="hero"><div class="hero-wrap">
+<div class="hero-left">
+<div class="badge"><i></i> WEBSITE DESIGN SOUTH AFRICA • JOHANNESBURG • 7 DAYS</div>
+<h1>Websites that <span>bring customers</span>, not just likes</h1>
+<p class="hero-sub">I build fast, mobile-first sites that rank on Google and push leads straight to your WhatsApp. You own 100%. No monthly rent.</p>
+<div class="hero-ctas"><a href="#calc" class="btn btn-green">Get Instant Quote →</a><a href="#work" class="btn btn-ghost">See My Work</a></div>
+<div class="hero-proof"><div class="avatars"><div class="av">AJ</div><div class="av green">✓</div><div class="av">5★</div></div><div class="hero-proof-text"><b>Built for SA brands</b> • 7-day delivery • You own it</div></div>
 </div>
-</header>
-
-<section class="hero"><div class="container">
-<h1>Website Design South Africa</h1>
-<p class="hero-sub">Use the slider to get your instant quote. R2,400 per page. 5 Pages = R12,000. No monthly fees.</p>
+<div class="hero-visual"><div class="glow"></div><div class="browser-wrap"><div class="back-card"></div>
+<div class="browser">
+<div class="browser-top"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div><span style="font-size:.62rem;color:var(--text2);font-weight:700;letter-spacing:.4px">yourbusiness.co.za • 98/100</span></div>
+<div class="browser-body">
+<div class="bb-top"><div class="bb-logo"></div><div class="bb-links"><span></span><span></span><span></span><span></span></div></div>
+<div class="bb-main">
+<div class="bb-pill">● 7-day build • You own 100%</div>
+<div class="bb-h">Websites that<br><span>bring customers</span></div>
+<div class="bb-p">Fast, mobile-first. Leads go straight to WhatsApp.</div>
+<div class="bb-btns"><span class="bb-btn black">Get Quote →</span><span class="bb-btn outline">Work</span></div>
+<div class="bb-cards"><div class="bb-card"><b>1.2s</b><span>Load time</span></div><div class="bb-card"><b>100%</b><span>Owned</span></div></div>
+</div>
+</div>
+</div>
+<div class="float float1"><span class="f-icon">⚡</span> 98 PageSpeed</div>
+<div class="float float2"><span class="f-icon">↗</span> +243% leads</div>
+</div></div>
 </div></section>
 
-<section class="section"><div class="container layout-2col">
+<section class="section" style="background:var(--bg2)"><div class="container">
+<div class="section-head"><h2>Other agencies rent you a site. I build you an asset.</h2></div>
+<div class="vs"><div class="vs-h"><div>Feature</div><div>Other Agencies</div><div>AJ ROIse</div></div><div class="vs-box">
+<div class="vs-r"><div>Price</div><div><span class="ico ico-x">✕</span> Hidden fees</div><div><span class="ico ico-t">✓</span> Fixed once-off</div></div>
+<div class="vs-r"><div>Ownership</div><div><span class="ico ico-x">✕</span> They hold it</div><div><span class="ico ico-t">✓</span> 100% yours</div></div>
+<div class="vs-r"><div>SEO</div><div><span class="ico ico-x">✕</span> Extra monthly</div><div><span class="ico ico-t">✓</span> Included</div></div>
+<div class="vs-r"><div>Delivery</div><div><span class="ico ico-x">✕</span> 4-8 weeks</div><div><span class="ico ico-t">✓</span> 7 days</div></div>
+</div></div></div></section>
+
+<section class="section" id="process"><div class="container">
+<div class="section-head"><div class="badge"><i></i> HOW IT WORKS</div><h2>From WhatsApp to live in <span style="color:var(--green)">7 days</span></h2><p>Simple process — no meetings, no jargon</p></div>
+<div class="process">
+<div class="step"><span class="tag">DAY 1-2</span><div class="step-num">01</div><h3>Design</h3><p>You send logo, services, photos on WhatsApp. I wireframe your brand — built around your business, not a template. You approve layout.</p></div>
+<div class="step"><span class="tag">DAY 3-5</span><div class="step-num">02</div><h3>Build</h3><p>Mobile-first, SEO foundation, WhatsApp conversion, Maps embed. You get a live preview link to review on your phone.</p></div>
+<div class="step"><span class="tag">DAY 6-7</span><div class="step-num">03</div><h3>Launch</h3><p>Move to your hosting, connect domain, hand over all logins + files. You own 100%. 7-day support included.</p></div>
+</div>
+<div class="guarantee"><div style="width:36px;height:36px;background:var(--green);border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-weight:900;color:#fff">✓</div><div><b>Ownership Guarantee:</b><span style="color:var(--text2)"> Domain in your name, hosting in your name, all files. No lock-in, ever. SA wide — Johannesburg, Cape Town, Durban, Pretoria.</span></div></div>
+</div></section>
+
+<section class="section" id="work" style="background:var(--bg2);border-top:1px solid var(--border)"><div class="container">
+<div class="section-head"><div class="badge"><i></i> RECENT WORK</div><h2>Built for <span style="color:var(--green)">their business</span></h2><p>Every site custom-designed around their brand — not templates</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;max-width:1100px;margin:0 auto">
+<div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#f8fafc,#eef2f7)"><div style="width:84px;height:84px;background:#0f172a;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center;line-height:1.1">SANDTON<br>CO</div></div><div class="work-info"><b>Consulting — Sandton</b><span>Professional • Minimal • Corporate authority</span></div></div>
+<div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#fefce8,#fef9c3)"><div style="width:84px;height:84px;background:#111;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.7rem;text-align:center">BARBER<br>LAB</div></div><div class="work-info"><b>Barber — Johannesburg</b><span>Bold • Street culture • Premium feel</span></div></div>
+<div class="work-card"><div class="work-preview" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><div style="width:84px;height:84px;background:#fff;border:1px solid #eee;border-radius:16px;display:grid;place-items:center;color:#111;font-weight:800;font-size:.7rem">BLOOM</div></div><div class="work-info"><b>Bakery — Boutique</b><span>Warm • Handcrafted • Editorial layout</span></div></div>
+</div></div></section>
+
+<section class="section" id="calc"><div class="container grid2">
 <div>
-<h2 class="section-title" style="text-align:left">What You Get</h2>
-<p class="section-sub" style="text-align:left;margin:0 0 40px">Every page includes everything below. No hidden fees.</p>
-<div class="grid" style="grid-template-columns:1fr">
-<div class="card"><div class="icon">📱</div><h3>Mobile-First Design</h3><p>85% of SA traffic is mobile. Your site will be lightning fast and perfect on any phone.</p></div>
-<div class="card"><div class="icon">⚡</div><h3>Speed Optimized</h3><p>Under 2 second load times. We beat load-shedding and bad data.</p></div>
-<div class="card"><div class="icon">📈</div><h3>SEO Foundation Included</h3><p>Proper structure, schema, and mobile friendly. This is standard, not an upsell.</p></div>
-<div class="card"><div class="icon">✍️</div><h3>Professional Copy</h3><p>We help write copy that converts South African customers. Included.</p></div>
-<div class="card"><div class="icon">🔒</div><h3>SSL + Security</h3><p>Free SSL certificate and security setup. Google and customers trust you.</p></div>
-<div class="card"><div class="icon">💬</div><h3>WhatsApp Integration</h3><p>1-click WhatsApp button. Turn visitors into leads instantly.</p></div>
+<h2 style="font-size:clamp(1.9rem,4vw,2.7rem)">Everything included — <span style="color:var(--green)">you own it</span></h2>
+<p style="color:var(--text2);margin-top:8px;font-size:1.02rem">No monthly fees. No hidden costs. One price to own it.</p>
+<div class="features">
+<div class="fe"><div class="ic">⚡</div><h3>Under 2s Load</h3><p>Mobile-first SA speed</p></div>
+<div class="fe"><div class="ic">🔍</div><h3>SEO Foundation</h3><p>Schema, sitemap, H1s</p></div>
+<div class="fe"><div class="ic">📍</div><h3>Local SEO + Maps</h3><p>City optimized + GBP embed</p></div>
+<div class="fe"><div class="ic">💬</div><h3>WhatsApp Sales</h3><p>Floating WA + form → WA</p></div>
 </div>
 </div>
+<div class="calc"><div class="calc-box">
+<div style="text-align:center"><b>⚡ Instant Quote</b></div>
+<div style="display:flex;justify-content:space-between;margin-top:14px;font-weight:800;font-size:.88rem"><span>Pages</span><span id="pageLabel">5 Pages</span></div>
+<input type="range" min="1" max="10" value="5" class="slider" id="pageSlider" style="margin-top:8px">
+<div style="text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px;margin-top:10px"><div id="pageNum" style="font-family:'Space Grotesk';font-size:2.4rem;font-weight:800;color:var(--green);line-height:1">5</div><div id="basePrice" style="font-size:.8rem;color:var(--text2)">Save</div></div>
+<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:12px"><div style="font-size:.66rem;font-weight:900;color:var(--green);letter-spacing:1px">ADD-ONS</div>
+<label style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem"><span style="display:flex;gap:8px"><input type="checkbox" id="logo"> Logo</span><span style="color:var(--green);font-weight:700">+R800</span></label>
+<label style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem"><span style="display:flex;gap:8px"><input type="checkbox" id="copy"> Copywriting</span><span style="color:var(--green);font-weight:700">+R600</span></label>
+<label style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem"><span style="display:flex;gap:8px"><input type="checkbox" id="blog"> Blog</span><span style="color:var(--green);font-weight:700">+R500</span></label>
+<label style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem"><span style="display:flex;gap:8px"><input type="checkbox" id="booking"> Booking</span><span style="color:var(--green);font-weight:700">+R700</span></label>
+<label style="display:flex;justify-content:space-between;padding:10px 0;font-size:.88rem"><span style="display:flex;gap:8px"><input type="checkbox" id="rush"> 3-Day Rush</span><span style="color:var(--green);font-weight:700">+R800</span></label>
+</div>
+<div class="total"><div style="font-size:.68rem;opacity:.9">TOTAL ONCE-OFF</div><div class="num" id="totalPrice">R4,200</div><div id="saveText" style="font-size:.7rem;background:rgba(255,255,255,.18);display:inline-block;padding:3px 8px;border-radius:100px;margin-top:4px">Save</div><a id="calcWhatsAppBtn" href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:#059669;width:100%;margin-top:12px">Get Quote on WhatsApp →</a></div>
+</div></div></div></section>
 
-<div class="calc-sidebar">
-<div class="calc-box">
-<h3 class="calc-title">⚡ Instant Quote Calculator</h3>
+<section class="section" id="faq" style="background:var(--bg2);border-top:1px solid var(--border)"><div class="container">
+<div class="section-head"><h2>Website Design FAQs</h2><p>What SA business owners actually search for</p></div>
+<div class="faq">
+<div class="faq-item"><div class="faq-q">What is included in professional website design? <span>+</span></div><div class="faq-a">Mobile-responsive, on-page SEO, contact forms, WhatsApp, SSL, sitemap and training so you can update it yourself. Domain and hosting are separate.</div></div>
+<div class="faq-item"><div class="faq-q">How long does it take to build a website? <span>+</span></div><div class="faq-a">5-10 working days when content is ready. Most delays come from missing logos or photos, not coding.</div></div>
+<div class="faq-item"><div class="faq-q">WordPress vs custom code — which is better? <span>+</span></div><div class="faq-a">WordPress for 90% of small businesses. You can edit it yourself and blog for SEO. Custom code is for web apps, not brochure sites.</div></div>
+<div class="faq-item"><div class="faq-q">Will it work on mobile phones? <span>+</span></div><div class="faq-a">It has to. 85%+ of traffic in SA is mobile. Google ranks mobile-first and customers leave if it loads slowly.</div></div>
+<div class="faq-item"><div class="faq-q">Will my website show on Google? <span>+</span></div><div class="faq-a">Needs proper SEO foundation: headings, meta titles, schema, sitemap, and Google Business Profile connection. Ranking then comes from content and consistency.</div></div>
+<div class="faq-item"><div class="faq-q">Do I need to provide content and images? <span>+</span></div><div class="faq-a">Yes. You provide services, area coverage, and real photos of your work. Stock photos hurt conversions.</div></div>
+<div class="faq-item"><div class="faq-q">Can I update the site myself after launch? <span>+</span></div><div class="faq-a">Yes if it’s built on a CMS like WordPress. You should be able to edit text, add photos, and post blogs without paying a developer each time.</div></div>
+</div></div></section>
 
-<div class="slider-wrap">
-<div class="slider-label">
-<span>Number of Pages</span>
-<span id="pageLabel">5 Pages</span>
-</div>
-<input type="range" min="1" max="10" value="5" class="slider" id="pageSlider">
-<div class="page-display">
-<div class="page-num" id="pageNum">5</div>
-<div class="page-price" id="basePrice">R12,000</div>
-</div>
-</div>
-
-<div class="addon-section">
-<h4>Add-Ons</h4>
-<div class="addon-item">
-<label><input type="checkbox" id="logo" data-price="1500"> Logo Design</label>
-<span class="addon-price">+R1,500</span>
-</div>
-<div class="addon-item">
-<label><input type="checkbox" id="ecom" data-price="5000"> eCommerce Store</label>
-<span class="addon-price">+R5,000</span>
-</div>
-<div class="addon-item">
-<label><input type="checkbox" id="blog" data-price="2500"> Blog + News Section</label>
-<span class="addon-price">+R2,500</span>
-</div>
-<div class="addon-item">
-<label><input type="checkbox" id="rush" data-price="3000"> 7-Day Rush Delivery</label>
-<span class="addon-price">+R3,000</span>
-</div>
-</div>
-
-<div class="calc-total">
-<div class="total-label">Total Once-Off</div>
-<div class="total-num" id="totalPrice">R12,000</div>
-<div class="page-count" id="pageText">5 Page Website</div>
-<a href="https://wa.me/27690151081" target="_blank" class="btn" style="background:#fff;color:var(--emerald);margin-top:20px;width:100%" id="calcWhatsAppBtn">Get This Quote on WhatsApp</a>
-</div>
-<p style="font-size:.85rem;margin-top:15px;opacity:.8;text-align:center">*Includes Design, Mobile, Speed, SEO, Copy, SSL. Ex VAT.</p>
-</div>
-</div>
-
+<section class="cta"><div class="container" style="max-width:760px">
+<h2 style="font-size:clamp(1.9rem,4vw,2.7rem)">Ready to own your site in 7 days?</h2>
+<p style="color:var(--text2);margin-top:10px;font-size:1.02rem">Send business name on WhatsApp, I send demo in 24h.</p>
+<div style="display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap"><a href="https://wa.me/27690151081?text=Hi%20Alvirno%20-%20Website%20Design" class="btn btn-green">Chat on WhatsApp →</a><a href="#calc" class="btn btn-ghost">Calculate Price</a></div>
 </div></section>
 
-<section class="section" style="background:var(--card)"><div class="container">
-<h2 class="section-title">Types of Websites We Build in SA</h2>
-<p class="section-sub">From WordPress to eCommerce, we build what works for South African businesses</p>
-<div class="grid">
-<div class="card"><div class="icon">💼</div><h3>Business Website Design</h3><p>5-10 page sites for SA businesses. Services, About, Contact pages. Perfect for local companies. R2,400 per page.</p></div>
-<div class="card"><div class="icon">🛒</div><h3>eCommerce Website Design</h3><p>Shopify and WooCommerce stores. Sell products online across South Africa. Includes payment setup. +R5,000.</p></div>
-<div class="card"><div class="icon">📝</div><h3>WordPress Website Design</h3><p>Easy to update yourself. We build custom WordPress sites that are fast, secure and SEO ready.</p></div>
-<div class="card"><div class="icon">🎯</div><h3>Landing Page Design</h3><p>1 Page high-converting landing pages for Google Ads and Facebook Ads. From R2,400.</p></div>
-</div>
-</div></section>
+<div id="waFloat"><div class="wa-lab"><span style="width:8px;height:8px;background:#25D366;border-radius:50%;box-shadow:0 0 8px #25D366;display:inline-block"></span> AJ ROIse on WhatsApp</div><a href="https://wa.me/27690151081" target="_blank" class="wa-btn"><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z"/></svg></a></div>
 
-<section class="section"><div class="container">
-<h2 class="section-title">Website Design Services Across South Africa</h2>
-<p class="section-sub">Local web designers serving businesses nationwide</p>
-<div class="grid">
-<div class="card"><h3>🌍 Website Design Johannesburg</h3><p>Professional business websites for JHB companies. From Sandton to Soweto. Fast, local support and in-person meetings available.</p></div>
-<div class="card"><h3>🌊 Website Design Cape Town</h3><p>Mobile-first websites for CT businesses. We understand the local tourism, retail and tech market.</p></div>
-<div class="card"><h3>🏖️ Website Design Durban</h3><p>SEO-ready websites for KZN businesses. Get found when locals search "business near me" on Google.</p></div>
-<div class="card"><h3>🏛️ Website Design Pretoria</h3><p>Corporate and government website design in Tshwane. Professional, secure and compliant.</p></div>
-</div>
-</div></section>
-
-<section class="section" style="background:var(--card)"><div class="container">
-<h2 class="section-title">Website Design FAQ South Africa</h2>
-<p class="section-sub">Answers to the most common questions</p>
-<div style="max-width:800px;margin:0 auto">
-<div class="card faq-item"><h3>How much does a website cost in South Africa?</h3><p>A professional website costs R2,400 per page. So a 5 page business website is R12,000 once-off. No monthly fees. This includes design, mobile, SEO, and copy.</p></div>
-<div class="card faq-item"><h3>How long does it take to build a website?</h3><p>Standard delivery is 14 days. We offer 7-Day rush delivery for +R3,000.</p></div>
-<div class="card faq-item"><h3>Do you offer WordPress websites?</h3><p>Yes. All our websites are built on WordPress so you can easily update content, blog posts and images yourself after we hand it over.</p></div>
-<div class="card faq-item"><h3>Is SEO included in the website price?</h3><p>Yes. SEO foundation including speed optimization, mobile friendly design, and proper structure is included in every website at no extra cost.</p></div>
-<div class="card faq-item"><h3>Do you do monthly website maintenance?</h3><p>No monthly fees required. Your website is 100% yours. We do offer optional monthly support packages if you need updates.</p></div>
-</div>
-</div></section>
-
-<section class="section"><div class="container" style="text-align:center">
-<h2 class="section-title">Ready to Launch Your Website?</h2>
-<p style="max-width:600px;margin:0 auto 30px">Get a professional website that ranks and sells. Serving businesses across Johannesburg, Cape Town, Durban, Pretoria and all of South Africa.</p>
-<a href="https://wa.me/27690151081" target="_blank" class="btn btn-whatsapp">WhatsApp Alvirno for a Free Consult</a>
-</div></section>
-
-<a href="https://wa.me/27690151081" target="_blank" class="floating-wa">💬</a>
-<footer><div class="container"><p>© 2026 AJ ROIse. Website Design South Africa | Web Developers Johannesburg, Cape Town, Durban, Pretoria</p></div></footer>
+<footer><div class="container">© 2026 AJ ROIse • Website Design South Africa</div></footer>
 
 <script>
-const pricePerPage = 2400;
-const slider = document.getElementById('pageSlider');
-const pageNumEl = document.getElementById('pageNum');
-const pageLabelEl = document.getElementById('pageLabel');
-const basePriceEl = document.getElementById('basePrice');
-const totalEl = document.getElementById('totalPrice');
-const pageTextEl = document.getElementById('pageText');
-const waBtn = document.getElementById('calcWhatsAppBtn');
-const checkboxes = document.querySelectorAll('.addon-item input[type="checkbox"]');
-
-function updateTotal(){
-  const pages = parseInt(slider.value);
-  const basePrice = pages * pricePerPage;
-  let total = basePrice;
-  let addons = [];
-
-  pageNumEl.textContent = pages;
-  pageLabelEl.textContent = `${pages} Page${pages > 1 ? 's' : ''}`;
-  basePriceEl.textContent = `R${basePrice.toLocaleString()}`;
-
-  if(document.getElementById('logo').checked){ total += 1500; addons.push("Logo +R1,500"); }
-  if(document.getElementById('ecom').checked){ total += 5000; addons.push("eCommerce +R5,000"); }
-  if(document.getElementById('blog').checked){ total += 2500; addons.push("Blog +R2,500"); }
-  if(document.getElementById('rush').checked){ total += 3000; addons.push("Rush +R3,000"); }
-
-  totalEl.textContent = 'R' + total.toLocaleString();
-  pageTextEl.textContent = `${pages} Page Website`;
-  
-  let message = `Hi Alvirno, I need a website quote:\n\n${pages} Pages - R${basePrice.toLocaleString()}`;
-  if(addons.length > 0) message += `\nAdd-Ons:\n- ${addons.join("\n- ")}`;
-  message += `\n\nTotal Once-Off: R${total.toLocaleString()}\n\nPlease send me next steps.`;
-  waBtn.href = "https://wa.me/27690151081?text=" + encodeURIComponent(message);
-}
-
-slider.addEventListener('input', updateTotal);
-checkboxes.forEach(cb => cb.addEventListener('change', updateTotal));
-updateTotal();
-
-// THEME TOGGLE
-const themeToggle = document.getElementById('themeToggle');
-const html = document.documentElement;
-const savedTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark'? 'light' : 'dark';
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-  themeToggle.innerText = theme === 'dark'? '☀️' : '🌙';
-}
+function getPrice(p){if(p==1)return 1200;if(p==2)return 2000;if(p==3)return 2800;if(p==4)return 3500;if(p==5)return 4200;return 4200+(p-5)*800}
+const slider=document.getElementById('pageSlider');
+function upd(){const p=parseInt(slider.value);const base=getPrice(p);const save=p*1200-base;let tot=base;if(logo.checked)tot+=800;if(copy.checked)tot+=600;if(blog.checked)tot+=500;if(booking.checked)tot+=700;if(rush.checked)tot+=800;pageNum.textContent=p;pageLabel.textContent=p+' Page'+(p>1?'s':'');basePrice.textContent=save>0?`R${base.toLocaleString()} (Save R${save.toLocaleString()})`:`R${base.toLocaleString()}`;totalPrice.textContent='R'+tot.toLocaleString();saveText.textContent=save>0?`Save R${save.toLocaleString()}`:'R1,200/page';calcWhatsAppBtn.href='https://wa.me/27690151081?text='+encodeURIComponent(`Hi Alvirno, Website Design ${p} pages total R${tot}`)}
+slider.addEventListener('input',upd);document.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener('change',upd));upd();
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}));
+const themeToggle=document.getElementById('themeToggle');const html=document.documentElement;const st=localStorage.getItem('aj-theme-v2')||'dark';html.setAttribute('data-theme',st);themeToggle.textContent=st=='dark'?'🌙':'☀️';themeToggle.onclick=()=>{const cur=html.getAttribute('data-theme');const nxt=cur=='dark'?'light':'dark';html.setAttribute('data-theme',nxt);localStorage.setItem('aj-theme-v2',nxt);themeToggle.textContent=nxt=='dark'?'🌙':'☀️'};
+const burgerBtn=document.getElementById('burgerBtn');const mobileNav=document.getElementById('mobileNav');burgerBtn.onclick=e=>{e.stopPropagation();mobileNav.classList.toggle('active')};document.addEventListener('click',e=>{if(!mobileNav.contains(e.target)&&!burgerBtn.contains(e.target))mobileNav.classList.remove('active')});
 </script>
 </body>
 </html>
