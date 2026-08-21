@@ -3,185 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FADE ROOM — Barbershop</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>FADE ROOM — Barbershop — Concept Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;overflow-x:hidden}
-body{font-family:Inter,sans-serif;background:#FAF9F6;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:Inter,sans-serif;background:#FAF9F6;color:#111;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 img{width:100%;display:block;background:#EDEBE7}
-.btn{border-radius:100px;padding:14px 22px;font-weight:600;font-size:.85rem;min-height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;transition:.18s;cursor:pointer;white-space:nowrap}
-.btn:active{transform:scale(.98)}
+.btn{border-radius:100px;padding:15px 24px;font-weight:600;font-size:.84rem;min-height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;transition:.18s;cursor:pointer}
 .btn-black{background:#111;color:#fff}
 .btn-light{background:#fff;border-color:#E9E6E1;color:#111}
-.btn-ghost{border-color:#E9E6E1;color:#111;background:transparent}
-.nav{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #E9E6E1;background:rgba(250,249,246,.85);backdrop-filter:blur(18px);position:sticky;top:0;z-index:50;max-width:1120px;margin:0 auto;padding:0 20px;width:100%}
-@media(min-width:900px){.nav{padding:0 24px;height:68px}}
+.btn:active{transform:scale(.98)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+@media(min-width:900px){.wrap{padding:0 24px}}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #E9E6E1;background:rgba(250,249,246,.9);backdrop-filter:blur(18px);position:sticky;top:42px;z-index:40}
 .logo{font-weight:700;letter-spacing:-.02em;font-size:1.15rem;display:flex;align-items:center;gap:10px}
 .dot{width:8px;height:8px;background:#111;border-radius:50%}
-.hero{max-width:1120px;margin:0 auto;padding:20px 20px 0;display:grid;gap:16px}
-@media(min-width:900px){.hero{padding:24px 24px 0;grid-template-columns:1.05fr .95fr;gap:20px;min-height:620px}}
-.hero-img{border-radius:28px;overflow:hidden;position:relative;min-height:540px;background:#111}
-@media(min-width:900px){.hero-img{min-height:620px;border-radius:32px}}
+.eyebrow{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#9A9590;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px}
+.eyebrow::before,.eyebrow::after{content:'';width:24px;height:1px;background:#E9E6E1;display:inline-block}
+.hero{text-align:center;padding:40px 0 20px;display:grid;gap:24px}
+@media(min-width:1024px){.hero{padding:56px 0 24px;max-width:840px;margin:0 auto}}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:.92;letter-spacing:-.04em;font-weight:700;text-align:center}
+.hero h1 i{font-weight:300;color:#9A9590;font-style:normal}
+.hero-copy{font-size:1.02rem;color:#5A5652;max-width:520px;margin:14px auto 0;font-weight:400;line-height:1.7;text-align:center}
+.hero-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.hero-img{border-radius:32px;overflow:hidden;position:relative;height:560px;background:#111;text-align:left}
+@media(min-width:1024px){.hero-img{height:600px;border-radius:36px}}
 .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.06) 60%)}
-.hero-text{position:absolute;left:22px;right:22px;bottom:22px;z-index:2;color:#fff}
-.hero-text h1{font-size:clamp(2.2rem,4.2vw,3.2rem);line-height:.95;letter-spacing:-.03em;font-weight:700}
-.hero-side{display:grid;gap:16px;align-content:start}
-.card{background:#fff;border:1px solid #E9E6E1;border-radius:24px;padding:22px}
-@media(min-width:900px){.card{border-radius:28px;padding:26px}}
-.kicker{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#9A9590;margin-bottom:12px}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.05) 55%)}
+.hero-badge{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-radius:20px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.sec{padding:64px 0;border-top:1px solid #E9E6E1;text-align:center}
+@media(min-width:900px){.sec{padding:84px 0}}
+.sec h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:.98;letter-spacing:-.03em;font-weight:700;max-width:620px;margin:0 auto;text-align:center}
+.sec-sub{color:#8A8580;font-size:.92rem;max-width:480px;margin:12px auto 0;line-height:1.6;text-align:center}
+.card{background:#fff;border:1px solid #E9E6E1;border-radius:28px;padding:24px;text-align:left}
 .book{display:grid;gap:10px;margin-top:16px}
-.book select,.book input{width:100%;padding:14px 16px;border-radius:100px;border:1px solid #E9E6E1;background:#FAF9F6;font-weight:500;font-size:.88rem;color:#111;outline:none}
-.sec{max-width:1120px;margin:0 auto;padding:56px 20px;border-top:1px solid #E9E6E1}
-@media(min-width:900px){.sec{padding:80px 24px}}
-.sec h2{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.05;letter-spacing:-.02em;font-weight:700;max-width:560px}
-.menu-list{margin-top:24px;border:1px solid #E9E6E1;border-radius:24px;overflow:hidden;background:#fff}
+.book select,.book input{width:100%;padding:14px 16px;border-radius:100px;border:1px solid #E9E6E1;background:#FAF9F6;font-weight:500;font-size:.88rem;outline:none}
+.menu-list{margin-top:28px;border:1px solid #E9E6E1;border-radius:28px;overflow:hidden;background:#fff;text-align:left}
 .menu-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 22px;border-bottom:1px solid #E9E6E1;align-items:center}
 @media(min-width:900px){.menu-row{grid-template-columns:1fr 120px 140px;padding:22px 26px}}
 .menu-row:last-child{border-bottom:none}
-.price{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;text-align:right}
-.pill{padding:6px 10px;border-radius:100px;background:#F2F1EE;border:1px solid #E9E6E1;font-size:.68rem;font-weight:600;color:#6B6762;display:inline-block}
-.why-grid{display:grid;gap:16px;margin-top:24px}
+.price{font-size:1.25rem;font-weight:700;text-align:right}
+.why-grid{display:grid;gap:16px;margin-top:28px;text-align:left}
 @media(min-width:900px){.why-grid{grid-template-columns:repeat(3,1fr)}}
-.why{display:flex;gap:14px;padding:20px;background:#fff;border:1px solid #E9E6E1;border-radius:24px}
-.icon{width:36px;height:36px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem;flex-shrink:0}
-.t{border-radius:24px;overflow:hidden;border:1px solid #E9E6E1;background:#fff;height:400px;position:relative}
-@media(min-width:900px){.t{border-radius:28px;height:460px}}
-.t img{width:100%;height:100%;object-fit:cover}
+.why{display:flex;gap:14px;padding:20px;background:#fff;border:1px solid #E9E6E1;border-radius:24px;flex-direction:column;align-items:center;text-align:center}
+.icon{width:36px;height:36px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.trans{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;text-align:left}
+.t{border-radius:24px;overflow:hidden;border:1px solid #E9E6E1;height:420px;position:relative}
+@media(min-width:900px){.t{height:480px;border-radius:28px}}
+.t img{height:100%;object-fit:cover}
 .t-label{position:absolute;left:14px;top:14px;background:#fff;border:1px solid #E9E6E1;padding:7px 12px;border-radius:100px;font-size:.7rem;font-weight:600}
 .t-label.dark{background:#111;color:#fff;border-color:#111}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
 @media(min-width:900px){.gallery{grid-template-columns:repeat(4,1fr)}}
-.g{border-radius:20px;overflow:hidden;border:1px solid #E9E6E1;height:220px;background:#fff}
+.g{border-radius:20px;overflow:hidden;border:1px solid #E9E6E1;height:240px;background:#fff}
 @media(min-width:900px){.g{height:260px;border-radius:24px}}
 .g img{height:100%;object-fit:cover}
-.review-grid{display:grid;gap:12px;margin-top:24px}
+.review-grid{display:grid;gap:14px;margin-top:28px;text-align:left}
 @media(min-width:900px){.review-grid{grid-template-columns:repeat(3,1fr)}}
 .rev{background:#fff;border:1px solid #E9E6E1;border-radius:24px;padding:20px}
-.faq{display:grid;gap:10px;margin-top:24px}
-.faq-item{background:#fff;border:1px solid #E9E6E1;border-radius:20px;padding:18px 20px}
-.cta{max-width:1120px;margin:16px 20px 90px;background:#111;border-radius:28px;padding:28px;color:#fff}
-@media(min-width:900px){.cta{margin:24px auto 40px;padding:48px;border-radius:32px}}
+.cta{margin:24px 16px 90px;background:#111;border-radius:32px;padding:36px;text-align:center;color:#fff}
+@media(min-width:1024px){.cta{margin:40px auto 60px;padding:56px;max-width:1120px}}
 .sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:99;background:#111;color:#fff;border-radius:100px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center}
 @media(min-width:900px){.sticky{display:none}}
 </style>
 </head>
 <body>
 
-<div class="nav">
-<div class="logo"><div class="dot"></div> FADE ROOM <span style="font-weight:500;color:#9A9590;font-size:.7rem;margin-left:6px">BARBERSHOP • CONCEPT</span></div>
+<div style="background:#111;color:#fff;text-align:center;padding:10px 16px;font-size:.76rem;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:100;border-bottom:1px solid #222">
+<span style="color:#9A9590">FADE ROOM — Barber concept demo by AJ ROIse</span>
+<a href="/website-design.html" style="background:#fff;color:#111;padding:6px 14px;border-radius:100px;font-weight:600;font-size:.74rem">← Back to Website Design</a>
+<a href="https://wa.me/27690151081?text=Hi%20Alvirno%20-%20I%20need%20a%20barber%20website%20like%20FADE%20ROOM" style="color:#fff;text-decoration:underline;font-weight:600">Get yours R1,800/page →</a>
+</div>
+
+<div class="wrap nav">
+<div class="logo"><div class="dot"></div> FADE ROOM <span style="font-weight:400;color:#9A9590;font-size:.68rem;margin-left:6px">BARBERSHOP</span></div>
 <a href="https://wa.me/27690151081?text=Book%20FADE%20ROOM%20now" class="btn btn-black">Book now</a>
 </div>
 
-<div class="hero">
+<div class="wrap hero">
+<div>
+<div class="eyebrow">Senior barbers • Soweto • Est. 2019</div>
+<h1>Clean fades.<br><i>Booked in 10s.</i></h1>
+<p class="hero-copy">No queue. Book on WhatsApp, pull up, sharp in 30. Senior barbers only. Free re-line in 3 days.</p>
+<div class="hero-ctas">
+<a href="https://wa.me/27690151081?text=Book%20FADE%20ROOM%20now" class="btn btn-black">Book on WhatsApp → No deposit</a>
+<a href="#menu" class="btn btn-light">Menu from R180</a>
+</div>
+</div>
+
 <div class="hero-img">
-<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="Barber cutting fade">
-<div class="hero-text"><h1>Clean fades. Booked in 10 seconds.</h1><p style="font-size:.9rem;color:rgba(255,255,255,.8);margin-top:10px;max-width:360px">No queue. Book on WhatsApp, pull up, sharp in 30. Senior barbers only.</p></div>
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="Barber cutting skin fade">
+<div class="hero-badge"><div><b style="font-size:.92rem">Today: 3 chairs left • 8am - 8pm</b><p style="font-size:.78rem;color:#6B6762">Book, pull up, sharp in 30 — no queue</p></div><div style="width:36px;height:36px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center">↗</div></div>
 </div>
-<div class="side">
-<div class="card"><div class="kicker">Reserve your chair — 10s</div><h3 style="font-size:1.2rem;font-weight:700">3 chairs left today • 8am - 8pm</h3><p style="font-size:.84rem;color:#6B6762;margin-top:6px">No deposit • Pay after cut • Free re-line in 3 days.</p><div class="book"><select id="cut"><option>Skin Fade — R180 • 30 min</option><option>Skin Fade + Beard — R250 • Most booked</option><option>Fade Room Ritual — R380 • Wash + Mask</option><option>Beard Sculpt — R120</option></select><select id="barber"><option>Any barber — Next available</option><option>Thabo — Fade • 8 yrs</option><option>Musa — Beard • 6 yrs</option><option>Kay — Design • 5 yrs</option></select><input id="time" type="text" placeholder="Today 3PM / Tomorrow 10AM"><a href="#" onclick="book()" class="btn btn-black" style="width:100%;margin-top:4px">Book on WhatsApp → No deposit</a></div></div>
-<div class="card" style="background:#111;color:#fff;border-color:#111"><div class="kicker" style="color:#9A9590">First visit?</div><h3 style="font-size:1.2rem;font-weight:700">R30 off your first cut</h3><p style="font-size:.85rem;color:#9A9590;margin-top:6px">Book on WhatsApp, show this site.</p><a href="https://wa.me/27690151081?text=Claim%20R30%20off%20first%20cut%20FADE%20ROOM" class="btn btn-light" style="width:100%;margin-top:16px">Claim R30 off</a></div>
+
+<div style="display:grid;gap:16px;grid-template-columns:1fr 1fr;margin-top:8px;text-align:left">
+<div class="card" style="text-align:center">
+<div class="eyebrow" style="justify-content:center;margin-bottom:8px">Reserve • 10s</div>
+<h3 style="font-size:1.15rem;font-weight:700">3 chairs left today</h3>
+<p style="font-size:.82rem;color:#6B6762;margin-top:4px">No deposit • Pay after cut • Free re-line 3 days</p>
+<div class="book">
+<select id="cut"><option>Skin Fade — R180 • 30 min</option><option>Skin Fade + Beard — R250 • Most booked</option><option>Fade Room Ritual — R380</option><option>Beard Sculpt — R120</option></select>
+<select id="barber"><option>Any barber — Next available</option><option>Thabo — Fade • 8 yrs</option><option>Musa — Beard • 6 yrs</option><option>Kay — Design • 5 yrs</option></select>
+<input id="time" type="text" placeholder="Today 3PM / Tomorrow 10AM">
+<a href="#" onclick="book()" class="btn btn-black" style="width:100%">Book on WhatsApp →</a>
+</div>
+</div>
+<div class="card" style="background:#111;color:#fff;border-color:#111;text-align:center">
+<div class="eyebrow" style="color:#9A9590;justify-content:center">First visit?</div>
+<h3 style="font-size:1.2rem;font-weight:700;margin-top:8px">R30 off your first cut</h3>
+<p style="font-size:.84rem;color:#9A9590;margin-top:6px">Book on WhatsApp, show this site. Senior only.</p>
+<a href="https://wa.me/27690151081?text=Claim%20R30%20off%20FADE%20ROOM" class="btn" style="background:#fff;color:#111;width:100%;margin-top:16px">Claim R30 off</a>
+<div style="margin-top:16px;border-radius:16px;overflow:hidden;height:140px"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Barber fade close up"></div>
+</div>
 </div>
 </div>
 
-<div class="sec">
-<div class="kicker">The menu — Rands</div>
+<div class="wrap sec" id="menu">
+<div class="eyebrow">The menu — Rands</div>
 <h2>Three cuts, done properly.</h2>
+<p class="sec-sub">No R80 bulk fade. 0.5 to 2 blend, razor line, hot towel — lasts 14 days.</p>
 <div class="menu-list">
-<div class="menu-row"><div><b style="font-size:1rem;font-weight:700">Skin Fade</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Low, mid, high. 0.5 to 2 blend, straight razor line, hot towel.</p></div><div class="price">R180</div><a href="https://wa.me/27690151081?text=Book%20Skin%20Fade%20R180%20FADE%20ROOM" class="btn btn-ghost" style="min-height:40px">Book R180</a></div>
-<div class="menu-row" style="background:#FAF9F6"><div><b style="font-size:1rem;font-weight:700">Skin Fade + Beard Sculpt</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">CEO clean. Fade + beard map, oil + balm. Most booked.</p></div><div class="price">R250</div><a href="https://wa.me/27690151081?text=Book%20Skin%20Fade%20Beard%20R250%20FADE%20ROOM" class="btn btn-black" style="min-height:40px">Book R250</a></div>
-<div class="menu-row"><div><b style="font-size:1rem;font-weight:700">Fade Room Ritual</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Cut + beard + wash + mask + massage. Private chair.</p></div><div class="price">R380</div><a href="https://wa.me/27690151081?text=Book%20Ritual%20R380%20FADE%20ROOM" class="btn btn-ghost" style="min-height:40px">Book R380</a></div>
+<div class="menu-row"><div><b>Skin Fade</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Low, mid, high. 0.5 to 2 blend, straight razor line, hot towel.</p></div><div class="price">R180</div><a href="https://wa.me/27690151081?text=Book%20Skin%20Fade%20R180" class="btn" style="border-color:#E9E6E1;background:#fff;min-height:40px">Book</a></div>
+<div class="menu-row" style="background:#FAF9F6"><div><b>Skin Fade + Beard Sculpt</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">CEO clean. Fade + beard map, oil + balm. Most booked.</p></div><div class="price">R250</div><a href="https://wa.me/27690151081?text=Book%20R250%20FADE%20ROOM" class="btn btn-black" style="min-height:40px">Book</a></div>
+<div class="menu-row"><div><b>Fade Room Ritual</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Cut + beard + wash + mask + massage. Private chair.</p></div><div class="price">R380</div><a href="https://wa.me/27690151081?text=Book%20Ritual%20R380" class="btn" style="border-color:#E9E6E1;background:#fff;min-height:40px">Book</a></div>
 </div>
 </div>
 
-<div class="sec" style="background:#fff">
-<div class="kicker">Why Fade Room vs R80 shop</div>
+<div class="wrap sec" style="background:#fff;border-top:1px solid #E9E6E1">
+<div class="eyebrow">Why Fade Room vs R80 shop</div>
 <h2>R80 fades grow out in 4 days. Ours lasts 14.</h2>
 <div class="why-grid">
 <div class="why"><div class="icon">1</div><div><b>No bulk after 3 days</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Proper 0.5 to 2 blend, not 1 guard all over.</p></div></div>
 <div class="why"><div class="icon">2</div><div><b>Straight razor line</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">Sharp hairline that lasts 2 weeks, hot towel finish.</p></div></div>
-<div class="why"><div class="icon">3</div><div><b>Barbicide + fresh blade</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">New blade opened in front of you. Clippers disinfected.</p></div></div>
+<div class="why"><div class="icon">3</div><div><b>Barbicide + fresh blade</b><p style="font-size:.84rem;color:#6B6762;margin-top:4px">New blade opened in front of you.</p></div></div>
 </div>
-<div class="card" style="padding:0;overflow:hidden;margin-top:16px;min-height:320px;position:relative;background:#111">
-<!-- ONLY RELIABLE ID -->
-<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=80" alt="Barber tools">
-<div style="position:absolute;left:16px;right:16px;bottom:16px;background:#fff;border-radius:20px;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center">
-<div><b style="font-size:.92rem">Wahl Seniors • Andis Masters • Feather razor • Barbicide</b><p style="font-size:.82rem;color:#6B6762;margin-top:4px">Senior only • No juniors • Premium concept • Built by AJ ROIse</p></div>
-<span class="pill">3 chairs • Senior only</span>
-</div>
+<div class="card" style="padding:0;overflow:hidden;margin-top:16px;min-height:340px;position:relative;background:#111">
+<img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1100&q=80" alt="Barber tools and scissors">
+<div style="position:absolute;left:16px;right:16px;bottom:16px;background:#fff;border-radius:20px;padding:16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><div><b style="font-size:.92rem">Wahl Seniors • Andis Masters • Feather razor</b><p style="font-size:.82rem;color:#6B6762">Senior only • No juniors • Built by AJ ROIse</p></div><span style="padding:6px 10px;border-radius:100px;background:#F2F1EE;border:1px solid #E9E6E1;font-size:.68rem;font-weight:600">3 chairs • Senior only</span></div>
 </div>
 </div>
 
-<div class="sec">
-<div class="kicker">Transformations</div>
+<div class="wrap sec">
+<div class="eyebrow">Transformations</div>
 <h2>Same head, 30 minutes apart.</h2>
-<div style="margin-top:24px;display:grid;gap:16px;grid-template-columns:1fr 1fr">
-<div class="t"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Before"><span class="t-label">Before</span></div>
-<div class="t"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="After"><span class="t-label dark">After • 30 min • R250</span></div>
+<div class="trans">
+<div class="t"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Man before haircut"><span class="t-label">Before</span></div>
+<div class="t"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80&crop=top" alt="Man after fresh fade"><span class="t-label dark">After • 30 min • R250</span></div>
 </div>
 </div>
 
-<div class="sec" style="background:#fff">
-<div class="kicker">Reviews • 4.9 / 120+</div>
+<div class="wrap sec" style="background:#fff;border-top:1px solid #E9E6E1;border-bottom:1px solid #E9E6E1">
+<div class="eyebrow">Reviews • 4.9 / 120+</div>
 <h2>Not a chop shop. Senior craft.</h2>
 <div class="review-grid">
-<div class="rev"><div style="font-weight:700;font-size:.85rem">★★★★★ 5.0</div><p style="font-size:.88rem;margin-top:8px;line-height:1.6">"Cleanest fade I had. Lasted 2 weeks, no bulk. Thabo knows blending."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Sipho • Skin Fade + Beard • R250</span></div>
-<div class="rev"><div style="font-weight:700;font-size:.85rem">★★★★★ 5.0</div><p style="font-size:.88rem;margin-top:8px;line-height:1.6">"Booked on WhatsApp in 10 sec, no queue. Razor line sharp."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Lethu • Skin Fade • R180</span></div>
-<div class="rev"><div style="font-weight:700;font-size:.85rem">★★★★★ 5.0</div><p style="font-size:.88rem;margin-top:8px;line-height:1.6">"Ritual is worth it. Wash + mask + massage, private chair, no rush."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Kamo • Ritual • R380</span></div>
-</div>
+<div class="rev" style="text-align:center"><div style="font-weight:700">★★★★★ 5.0</div><p style="font-size:.92rem;margin-top:10px">"Cleanest fade I had. Lasted 2 weeks, no bulk."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Sipho • R250</span></div>
+<div class="rev" style="text-align:center"><div style="font-weight:700">★★★★★ 5.0</div><p style="font-size:.92rem;margin-top:10px">"Booked in 10 sec, no queue. Razor line sharp."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Lethu • R180</span></div>
+<div class="rev" style="text-align:center"><div style="font-weight:700">★★★★★ 5.0</div><p style="font-size:.92rem;margin-top:10px">"Ritual worth it. Wash + mask + massage."</p><span style="font-size:.78rem;color:#9A9590;margin-top:8px;display:block">— Kamo • R380</span></div>
 </div>
 
-<div class="sec">
-<div class="kicker">Gallery • @faderoom</div>
-<h2>Recent cuts — no filter.</h2>
+<!-- FIXED GALLERY - 4 WORKING IMAGES ONLY - NO GREY BOXES -->
 <div class="gallery">
-<!-- ALL 4 NOW USE ONLY RELIABLE IDS THAT SHOW FOR YOU -->
-<div class="g"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Fade 1"></div>
-<div class="g"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Fade 2"></div>
-<div class="g"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Fade 3"></div>
-<div class="g"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Fade 4"></div>
-</div>
-<a href="https://wa.me/27690151081?text=Book%20FADE%20ROOM%20now" class="btn btn-ghost" style="margin-top:16px">Book same fade → R180</a>
-</div>
-
-<div class="sec" style="background:#fff">
-<div style="display:grid;gap:16px;grid-template-columns:1fr;align-items:start">
-<div style="display:grid;gap:16px">
-<div>
-<div class="kicker">Hours + location</div>
-<h2>Open today 8am - 8pm.</h2>
-</div>
-<div class="card"><b style="font-size:.92rem">Hours</b><p style="font-size:.84rem;color:#6B6762;margin-top:8px;line-height:1.7">Mon - Fri: 8am - 8pm<br>Sat: 8am - 7pm<br>Sun: 9am - 5pm<br><br>3 chairs • Senior only • No walk-in queue — book on WhatsApp, pull up sharp.</p><a href="https://wa.me/27690151081?text=Book%20FADE%20ROOM%20now" class="btn btn-black" style="width:100%;margin-top:16px">Book on WhatsApp → No deposit</a></div>
-<div class="card"><b style="font-size:.92rem">Find us</b><p style="font-size:.84rem;color:#6B6762;margin-top:8px">Private shop • Pin sent after booking • Parking inside • Card + cash • Barbicide hygiene</p><div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><span class="pill">Barbicide</span><span class="pill">Fresh blade</span><span class="pill">Wahl Seniors</span></div></div>
-</div>
-<div class="card" style="padding:0;overflow:hidden;min-height:420px;background:#111;position:relative">
-<!-- ONLY RELIABLE ID -->
-<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Barbershop interior">
-<div style="position:absolute;left:16px;right:16px;bottom:16px;background:#fff;border-radius:20px;padding:16px"><b style="font-size:.92rem">3 chairs • Private • No juniors</b><p style="font-size:.82rem;color:#6B6762;margin-top:4px">Book, get pin, pull up, sharp in 30. Concept barbershop demo.</p></div>
-</div>
-</div>
-</div>
-
-<div class="sec">
-<div class="kicker">FAQ</div>
-<h2>Quick answers.</h2>
-<div class="faq">
-<div class="faq-item"><b>Do I need to pay deposit?</b><p style="font-size:.84rem;color:#6B6762;margin-top:6px">No. Book on WhatsApp, pay after cut.</p></div>
-<div class="faq-item"><b>How long does skin fade last?</b><p style="font-size:.84rem;color:#6B6762;margin-top:6px">Our blend grows out clean for 12-14 days.</p></div>
-<div class="faq-item"><b>What if my line is not sharp after 3 days?</b><p style="font-size:.84rem;color:#6B6762;margin-top:6px">Come back, we re-line free within 3 days.</p></div>
-<div class="faq-item"><b>Do you cut kids?</b><p style="font-size:.84rem;color:#6B6762;margin-top:6px">Yes — Kids R150 • 25 min • Same senior barber, fresh blade.</p></div>
+<div class="g"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Skin fade gallery 1"></div>
+<div class="g"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Skin fade gallery 2"></div>
+<div class="g"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Barber tools gallery"></div>
+<div class="g"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Fresh cut gallery"></div>
 </div>
 </div>
 
 <div class="cta">
-<div class="kicker" style="color:#9A9590">Concept demo • By AJ ROIse</div>
-<h2 style="font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.05;font-weight:700;max-width:600px">This barber concept is built to book — not just look good.</h2>
-<p style="color:#fff;font-size:.88rem;margin-top:14px;font-weight:600">My pricing: R1,800 per page startup • 3 pages R4,200 • 5 pages R6,500 once-off — you own it. No monthly fees.</p>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px">
-<a href="https://wa.me/27690151081?text=Hi%20Alvirno%20-%20I%20need%20a%20barber%20website%20like%20FADE%20ROOM%20-%20R1800%20per%20page%20startup" class="btn" style="background:#fff;color:#111">Get my barber site → R1,800 per page • Start</a>
-<a href="/website-design.html" class="btn" style="background:transparent;border-color:#fff;color:#fff">← View pricing & work</a>
+<div class="eyebrow" style="color:#9A9590">Concept demo • By AJ ROIse</div>
+<h2 style="font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.05;font-weight:700;max-width:600px;margin:12px auto 0;color:#fff">This barber concept is built to book — not just look good.</h2>
+<p style="color:#9A9590;font-size:.88rem;margin-top:14px">R1,800 per page startup • 3 pages R4,200 • 5 pages R6,500 once-off</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px">
+<a href="/website-design.html" class="btn btn-light">← Back to Website Design</a>
+<a href="https://wa.me/27690151081?text=Hi%20Alvirno%20-%20I%20need%20a%20barber%20website%20like%20FADE%20ROOM" class="btn" style="background:transparent;border-color:#fff;color:#fff">Get my barber site → R1,800/page</a>
 </div>
 </div>
 
@@ -192,8 +189,7 @@ function book(){
 const c=document.getElementById('cut').value;
 const b=document.getElementById('barber').value;
 const t=document.getElementById('time').value||'Today ASAP';
-const m=`Hi FADE ROOM - I want to book:%0A%0ACut: ${c}%0ABarber: ${b}%0ATime: ${t}%0A%0AFrom FADE ROOM clean barber concept website by AJ ROIse - Rands`;
-window.open(`https://wa.me/27690151081?text=${m}`,'_blank');
+window.open(`https://wa.me/27690151081?text=${encodeURIComponent(`Hi FADE ROOM - I want to book:\nCut: ${c}\nBarber: ${b}\nTime: ${t}\nFrom FADE ROOM concept`)}`,'_blank');
 }
 </script>
 </body>
